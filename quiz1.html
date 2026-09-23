@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz 1 - Constituants, Radioactivité & Bohr</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .quiz-question {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            border-left: 5px solid var(--secondary);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .quiz-question h3 {
+            color: var(--primary);
+            margin-top: 0;
+        }
+        .quiz-option {
+            display: block;
+            margin: 10px 0;
+            padding: 12px;
+            background: #f9f9f9;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 0.95rem;
+        }
+        .quiz-option:hover {
+            background: #e8f0fe;
+            border-color: var(--secondary);
+        }
+        .quiz-option.selected {
+            background: #d0e1fd;
+            border-color: var(--secondary);
+        }
+        .quiz-option.correct {
+            background: var(--success) !important;
+            border-color: #28a745 !important;
+            font-weight: bold;
+        }
+        .quiz-option.incorrect {
+            background: var(--error) !important;
+            border-color: #dc3545 !important;
+        }
+        .explanation {
+            display: none;
+            margin-top: 15px;
+            padding: 12px;
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+        .explanation.show {
+            display: block;
+        }
+        #results {
+            display: none;
+            background: var(--accent);
+            padding: 25px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 30px 0;
+            border: 3px solid var(--secondary);
+        }
+        #results h2 {
+            color: var(--primary);
+            margin-top: 0;
+        }
+        .score {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--secondary);
+            margin: 15px 0;
+        }
+        .btn-submit {
+            background: var(--secondary);
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 20px 0;
+        }
+        .btn-submit:hover {
+            background: var(--primary);
+        }
+        .timer {
+            position: fixed;
+            top: 80px;
+            right: 20px;
+            background: var(--primary);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 6px;
+            font-weight: bold;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🎯 Quiz 1 - Constituants, Radioactivité & Bohr</h1>
+        <p>10 minutes max | 15 questions | Notions 1, 2 et 3</p>
+    </header>
+    
+    <nav>
+        <a href="main.html">Accueil</a>
+        <a href="resume.html">Résumé (Pareto 20%)</a>
+        <a href="notion1.html">Notion 1</a>
+        <a href="notion2.html">Notion 2</a>
+        <a href="notion3.html">Notion 3</a>
+        <a href="notion4.html">Notion 4</a>
+        <a href="notion5.html">Notion 5</a>
+        <a href="quiz1.html">Quiz 1</a>
+        <a href="quiz2.html">Quiz 2</a>
+        <a href="textesatrous.html">Textes à Trous</a>
+    </nav>
+
+    <div class="timer" id="timer">⏱️ 10:00</div>
+
+    <div class="container">
+        <div class="card">
+            <h2>📝 Instructions</h2>
+            <ul>
+                <li>Réponds aux 15 questions en <strong>10 minutes maximum</strong></li>
+                <li>Ce quiz couvre les <strong>Notions 1, 2 et 3</strong> (Constituants, Radioactivité, Loi de désintégration, Bohr, de Broglie, Heisenberg)</li>
+                <li>Clique sur une réponse pour la sélectionner</li>
+                <li>Clique sur <strong>"Valider mes réponses"</strong> à la fin</li>
+                <li>La correction s'affiche avec des explications</li>
+                <li>Objectif : <strong>80% de bonnes réponses</strong> (12/15)</li>
+            </ul>
+            <button class="btn-submit" onclick="startQuiz()">Commencer le Quiz</button>
+        </div>
+
+        <div id="quiz-container" style="display: none;">
+            <!-- Les questions seront générées en JavaScript -->
+        </div>
+
+        <div id="results">
+            <h2>🎉 Résultat</h2>
+            <div class="score" id="score"></div>
+            <p id="message"></p>
+            <button class="btn-submit" onclick="resetQuiz()">Recommencer</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>Quiz 1 généré pour tes révisions du soir | Bonne chance !</p>
+    </footer>
+
+    <script>
+        const questions = [
+            {
+                q: "1. Quel est le nombre de neutrons dans l'atome de carbone 14 (¹⁴₆C) ?",
+                options: ["6", "8", "14", "20"],
+                correct: 1,
+                explanation: "N = A - Z = 14 - 6 = 8 neutrons"
+            },
+            {
+                q: "2. Les isotopes d'un même élément ont :",
+                options: ["Le même nombre de masse A", "Le même numéro atomique Z", "Le même nombre de neutrons N", "La même masse"],
+                correct: 1,
+                explanation: "Les isotopes ont le même Z (même élément) mais un A différent (donc N différent)"
+            },
+            {
+                q: "3. La radioactivité α correspond à l'émission :",
+                options: ["D'un électron", "D'un photon", "D'un noyau d'hélium ⁴₂He", "D'un positon"],
+                correct: 2,
+                explanation: "La radioactivité α émet un noyau d'hélium ⁴₂He (2 protons + 2 neutrons)"
+            },
+            {
+                q: "4. La demi-vie T d'un radionucléide est liée à la constante radioactive λ par :",
+                options: ["T = λ", "T = 1/λ", "T = ln(2)/λ", "T = λ/ln(2)"],
+                correct: 2,
+                explanation: "T = ln(2)/λ ≈ 0,693/λ. À connaître par cœur !"
+            },
+            {
+                q: "5. L'activité radioactive s'exprime en :",
+                options: ["Joule (J)", "Becquerel (Bq)", "Électron-volt (eV)", "Hertz (Hz)"],
+                correct: 1,
+                explanation: "1 Bq = 1 désintégration par seconde"
+            },
+            {
+                q: "6. L'effet photoélectrique a été expliqué par :",
+                options: ["Newton", "Maxwell", "Einstein", "Bohr"],
+                correct: 2,
+                explanation: "Einstein (1905) a expliqué l'effet photoélectrique en proposant que la lumière est quantifiée en photons (E = hν)"
+            },
+            {
+                q: "7. Dans le modèle de Bohr, l'énergie de l'électron dans l'atome d'hydrogène (Z=1) au niveau n=2 est :",
+                options: ["-13,6 eV", "-6,8 eV", "-3,4 eV", "-1,5 eV"],
+                correct: 2,
+                explanation: "Eₙ = -13,6 × Z²/n² = -13,6 × 1²/2² = -13,6/4 = -3,4 eV"
+            },
+            {
+                q: "8. La dualité onde-corpuscule de de Broglie s'exprime par :",
+                options: ["E = mc²", "λ = h/(m·v)", "Δx·Δp ≥ ħ/2", "E = hν"],
+                correct: 1,
+                explanation: "λ = h/p = h/(m·v) : toute particule a une longueur d'onde associée"
+            },
+            {
+                q: "9. Le principe d'incertitude de Heisenberg stipule que :",
+                options: [
+                    "L'énergie est quantifiée",
+                    "On ne peut pas connaître simultanément avec précision la position et la quantité de mouvement",
+                    "La lumière est une onde et une particule",
+                    "Les électrons tournent autour du noyau"
+                ],
+                correct: 1,
+                explanation: "Δx·Δp ≥ ħ/2 : c'est une limite fondamentale de la nature, pas un problème technique"
+            },
+            {
+                q: "10. La loi de désintégration radioactive s'écrit :",
+                options: ["N(t) = N₀ · λt", "N(t) = N₀ · e^(-λt)", "N(t) = N₀ / (1+λt)", "N(t) = N₀ · (1-λt)"],
+                correct: 1,
+                explanation: "La loi de désintégration est exponentielle : N(t) = N₀ · e^(-λt)"
+            },
+            {
+                q: "11. Après 3 demi-vies, l'activité d'un échantillon est divisée par :",
+                options: ["3", "6", "8", "9"],
+                correct: 2,
+                explanation: "Après n demi-vies : A = A₀ · (1/2)^n. Pour n=3 : A = A₀ · (1/2)³ = A₀/8"
+            },
+            {
+                q: "12. Le rayon de la première orbite de l'atome d'hydrogène (rayon de Bohr) vaut :",
+                options: ["0,529 Å", "1,06 Å", "2,12 Å", "5,29 Å"],
+                correct: 0,
+                explanation: "a₀ = 5,29 × 10⁻¹¹ m = 0,529 Å. Pour n=2 : r₂ = 4 × 0,529 = 2,12 Å"
+            },
+            {
+                q: "13. La radioactivité β⁻ correspond à la transformation :",
+                options: [
+                    "Un proton en neutron",
+                    "Un neutron en proton",
+                    "Un électron en positon",
+                    "Un photon en électron"
+                ],
+                correct: 1,
+                explanation: "β⁻ : n → p + e⁻ + ν̄ (un neutron se transforme en proton avec émission d'un électron et d'un antineutrino)"
+            },
+            {
+                q: "14. La constante de Planck h vaut approximativement :",
+                options: ["6,626 × 10⁻³⁴ J·s", "6,626 × 10⁻¹⁹ J·s", "1,6 × 10⁻¹⁹ J·s", "9,1 × 10⁻³¹ J·s"],
+                correct: 0,
+                explanation: "h = 6,626 × 10⁻³⁴ J·s. Les autres valeurs correspondent à d'autres constantes (e, mₑ)"
+            },
+            {
+                q: "15. Pour dater un échantillon au carbone 14, on utilise la formule :",
+                options: [
+                    "t = λ · ln(A(t)/A₀)",
+                    "t = -ln(A(t)/A₀) / λ",
+                    "t = A₀ / (A(t) · λ)",
+                    "t = ln(2) · A(t) / A₀"
+                ],
+                correct: 1,
+                explanation: "À partir de A(t) = A₀ · e^(-λt), on isole t : t = -ln(A(t)/A₀) / λ"
+            }
+        ];
+
+        let userAnswers = new Array(questions.length).fill(-1);
+        let timerInterval;
+        let timeLeft = 600; // 10 minutes en secondes
+
+        function startQuiz() {
+            document.querySelector('.card').style.display = 'none';
+            document.getElementById('quiz-container').style.display = 'block';
+            renderQuiz();
+            startTimer();
+        }
+
+        function startTimer() {
+            timerInterval = setInterval(() => {
+                timeLeft--;
+                const minutes = Math.floor(timeLeft / 60);
+                const seconds = timeLeft % 60;
+                document.getElementById('timer').textContent = `⏱️ ${minutes}:${seconds.toString().padStart(2, '0')}`;
+                
+                if (timeLeft <= 0) {
+                    clearInterval(timerInterval);
+                    submitQuiz();
+                }
+            }, 1000);
+        }
+
+        function renderQuiz() {
+            const container = document.getElementById('quiz-container');
+            container.innerHTML = '';
+            
+            questions.forEach((q, index) => {
+                const questionDiv = document.createElement('div');
+                questionDiv.className = 'quiz-question';
+                questionDiv.innerHTML = `
+                    <h3>Question ${index + 1}</h3>
+                    <p>${q.q}</p>
+                    ${q.options.map((opt, optIndex) => `
+                        <div class="quiz-option" onclick="selectOption(${index}, ${optIndex})" id="q${index}-opt${optIndex}">
+                            ${opt}
+                        </div>
+                    `).join('')}
+                    <div class="explanation" id="exp${index}">
+                        <strong>Explication :</strong> ${q.explanation}
+                    </div>
+                `;
+                container.appendChild(questionDiv);
+            });
+
+            const submitBtn = document.createElement('button');
+            submitBtn.className = 'btn-submit';
+            submitBtn.textContent = 'Valider mes réponses';
+            submitBtn.onclick = submitQuiz;
+            container.appendChild(submitBtn);
+        }
+
+        function selectOption(questionIndex, optionIndex) {
+            userAnswers[questionIndex] = optionIndex;
+            
+            // Reset all options for this question
+            for (let i = 0; i < questions[questionIndex].options.length; i++) {
+                document.getElementById(`q${questionIndex}-opt${i}`).classList.remove('selected');
+            }
+            
+            // Highlight selected option
+            document.getElementById(`q${questionIndex}-opt${optionIndex}`).classList.add('selected');
+        }
+
+        function submitQuiz() {
+            clearInterval(timerInterval);
+            
+            let score = 0;
+            questions.forEach((q, index) => {
+                const userAnswer = userAnswers[index];
+                const correctAnswer = q.correct;
+                
+                // Show correct answer
+                document.getElementById(`q${index}-opt${correctAnswer}`).classList.add('correct');
+                
+                // Show incorrect answer if user selected wrong
+                if (userAnswer !== -1 && userAnswer !== correctAnswer) {
+                    document.getElementById(`q${index}-opt${userAnswer}`).classList.add('incorrect');
+                }
+                
+                // Show explanation
+                document.getElementById(`exp${index}`).classList.add('show');
+                
+                if (userAnswer === correctAnswer) {
+                    score++;
+                }
+                
+                // Disable further clicks
+                for (let i = 0; i < q.options.length; i++) {
+                    document.getElementById(`q${index}-opt${i}`).onclick = null;
+                    document.getElementById(`q${index}-opt${i}`).style.cursor = 'default';
+                }
+            });
+            
+            // Show results
+            const percentage = Math.round((score / questions.length) * 100);
+            document.getElementById('score').textContent = `${score}/${questions.length} (${percentage}%)`;
+            
+            let message = '';
+            if (percentage >= 80) {
+                message = '🎉 Excellent ! Tu maîtrises bien les notions 1, 2 et 3. Continue comme ça !';
+            } else if (percentage >= 60) {
+                message = '👍 Pas mal ! Relis les notions où tu as fait des erreurs.';
+            } else {
+                message = '📚 Il faut revoir les notions 1, 2 et 3. Reprends les constituants, la radioactivité et le modèle de Bohr.';
+            }
+            document.getElementById('message').textContent = message;
+            
+            document.getElementById('results').style.display = 'block';
+            document.getElementById('results').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function resetQuiz() {
+            userAnswers = new Array(questions.length).fill(-1);
+            timeLeft = 600;
+            document.getElementById('results').style.display = 'none';
+            document.getElementById('quiz-container').style.display = 'none';
+            document.querySelector('.card').style.display = 'block';
+            document.getElementById('timer').textContent = '⏱️ 10:00';
+        }
+    </script>
+</body>
+</html>

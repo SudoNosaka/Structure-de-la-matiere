@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Résumé Pareto - Structure de la Matière</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🎯 Résumé Pareto (20% du cours = 80% des points)</h1>
+        <p>L'essentiel à savoir par cœur pour l'examen</p>
+    </header>
+    
+    <nav>
+        <a href="main.html">Accueil</a>
+        <a href="resume.html">Résumé (Pareto 20%)</a>
+        <a href="notion1.html">Notion 1</a>
+        <a href="notion2.html">Notion 2</a>
+        <a href="notion3.html">Notion 3</a>
+        <a href="notion4.html">Notion 4</a>
+        <a href="notion5.html">Notion 5</a>
+        <a href="quiz1.html">Quiz 1</a>
+        <a href="quiz2.html">Quiz 2</a>
+        <a href="textesatrous.html">Textes à Trous</a>
+    </nav>
+
+    <div class="container">
+        <div class="card">
+            <h2>1. Constituants de l'atome</h2>
+            <table class="table-custom">
+                <tr><th>Particule</th><th>Symbole</th><th>Charge</th><th>Masse (kg)</th></tr>
+                <tr><td>Proton</td><td>p ou ¹₁H</td><td>+e (1,6 × 10⁻¹⁹ C)</td><td>1,672 × 10⁻²⁷</td></tr>
+                <tr><td>Neutron</td><td>n ou ¹₀n</td><td>0</td><td>1,674 × 10⁻²⁷</td></tr>
+                <tr><td>Électron</td><td>e⁻ ou ⁰₋₁e</td><td>-e</td><td>9,108 × 10⁻³¹</td></tr>
+            </table>
+            <p><strong>Isotopes :</strong> Même Z (protons), mais A (nucléons) différent. Ex: ¹⁶O, ¹⁷O, ¹⁸O.</p>
+        </div>
+
+        <div class="card">
+            <h2>2. Radioactivité (Les 3 rayonnements)</h2>
+            <ul>
+                <li><strong>Alpha (α) :</strong> Noyau d'Hélium (⁴₂He). Chargé +, très ionisant, <u>peu pénétrant</u> (arrêté par une feuille de papier).</li>
+                <li><strong>Bêta (β⁻) :</strong> Électron (⁰₋₁e). Chargé -, ionisant, <u>moyennement pénétrant</u> (arrêté par une feuille d'aluminium).</li>
+                <li><strong>Gamma (γ) :</strong> Photon (onde EM). Non chargé, peu ionisant, <u>très pénétrant</u> (arrêté par plusieurs cm de plomb).</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>3. Loi de Désintégration Radioactive</h2>
+            <div class="formula">N(t) = N₀ · e<sup>-λt</sup></div>
+            <div class="formula">T (demi-vie) = ln(2) / λ ≈ 0,693 / λ</div>
+            <div class="formula">A(t) = λ · N(t) = A₀ · e<sup>-λt</sup></div>
+            <p><strong>Activité (A)</strong> : Nombre de désintégrations par seconde. Unité SI : le <strong>Becquerel (Bq)</strong> (1 Bq = 1 dps).</p>
+        </div>
+
+        <div class="card">
+            <h2>4. Structure Électronique (Modèle de Bohr)</h2>
+            <div class="formula">Eₙ = -13,6 × (Z² / n²) eV</div>
+            <p>Où <strong>n</strong> est le nombre quantique principal (n = 1, 2, 3...). n=1 est l'état fondamental.</p>
+            <div class="formula">|ΔE| = E<sub>photon</sub> = h·ν = h·c / λ</div>
+        </div>
+
+        <div class="card">
+            <h2>5. Mécanique Quantique (Concepts Clés)</h2>
+            <ul>
+                <li><strong>Dualité onde-corpuscule (de Broglie) :</strong> <div class="formula">λ = h / p = h / (m·v)</div></li>
+                <li><strong>Principe d'incertitude (Heisenberg) :</strong> <div class="formula">Δx · Δp ≥ ħ/2</div></li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>6. Équation de Schrödinger & Orbitales ⭐ NOUVEAU</h2>
+            <div class="formula">Ĥ · Ψ = E · Ψ</div>
+            <p>La fonction d'onde <strong>Ψ(r,θ,φ)</strong> décrit l'état de l'électron. Sa probabilité de présence :</p>
+            <div class="formula">dP = |Ψ|² · dτ</div>
+            <p>Ψ se sépare en partie <strong>radiale R(r)</strong> et <strong>angulaire Y(θ,φ)</strong>.</p>
+            
+            <h3>Les 3 Nombres Quantiques (orbitales)</h3>
+            <table class="table-custom">
+                <tr><th>Symbole</th><th>Nom</th><th>Valeurs</th><th>Définit</th></tr>
+                <tr><td>n</td><td>Principal</td><td>1, 2, 3...</td><td>Couche (taille, énergie)</td></tr>
+                <tr><td>l</td><td>Azimutal</td><td>0 à n-1</td><td>Sous-couche (forme : s, p, d, f)</td></tr>
+                <tr><td>m (ou m<sub>l</sub>)</td><td>Magnétique</td><td>-l à +l</td><td>Orientation spatiale</td></tr>
+            </table>
+            
+            <h3>Le 4ème : le Spin (m<sub>s</sub>)</h3>
+            <div class="formula">m<sub>s</sub> = +½ ou -½</div>
+            <p>Moment cinétique intrinsèque de l'électron (il "tourne sur lui-même").</p>
+        </div>
+
+        <div class="card">
+            <h2>7. Configuration Électronique ⭐ NOUVEAU</h2>
+            <p>Les 3 règles fondamentales :</p>
+            <ul>
+                <li><strong>① Principe de Pauli :</strong> 2 électrons d'un même atome ne peuvent pas avoir les <strong>4 mêmes nombres quantiques</strong>. Une orbitale = 2 électrons max (spins opposés).</li>
+                <li><strong>② Règle de Klechkowski :</strong> Remplissage par <strong>n+l croissants</strong>. En cas d'égalité, on remplit d'abord le plus petit n.</li>
+                <li><strong>③ Règle de Hund :</strong> Dans une sous-couche, le <strong>spin total doit être maximal</strong> (électrons célibataires avec spins parallèles d'abord).</li>
+            </ul>
+
+            <h3>Ordre de remplissage à connaître par cœur</h3>
+            <div class="formula">1s &lt; 2s &lt; 2p &lt; 3s &lt; 3p &lt; 4s &lt; 3d &lt; 4p &lt; 5s &lt; 4d &lt; 5p &lt; 6s &lt; 4f &lt; 5d...</div>
+
+            <h3>Capacité max des sous-couches</h3>
+            <table class="table-custom">
+                <tr><th>Sous-couche</th><th>l</th><th>Nb d'orbitales</th><th>Nb max d'électrons</th></tr>
+                <tr><td>s</td><td>0</td><td>1</td><td>2</td></tr>
+                <tr><td>p</td><td>1</td><td>3</td><td>6</td></tr>
+                <tr><td>d</td><td>2</td><td>5</td><td>10</td></tr>
+                <tr><td>f</td><td>3</td><td>7</td><td>14</td></tr>
+            </table>
+
+            <h3>Exceptions majeures (à connaître)</h3>
+            <ul>
+                <li><strong>Chrome Cr (Z=24) :</strong> [Ar] 3d⁵ 4s¹ (et non 3d⁴ 4s²) → demi-couche d pleine</li>
+                <li><strong>Cuivre Cu (Z=29) :</strong> [Ar] 3d¹⁰ 4s¹ (et non 3d⁹ 4s²) → sous-couche d pleine</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>🎯 Formules à connaître par cœur</h2>
+            <div class="formula">N(t) = N₀ · e<sup>-λt</sup> | T = ln(2)/λ | A = λ·N</div>
+            <div class="formula">Eₙ = -13,6 · Z²/n² eV | λ = h/(m·v) | Δx·Δp ≥ ħ/2</div>
+            <div class="formula">h = 6,626 × 10⁻³⁴ J·s | 1 eV = 1,6 × 10⁻¹⁹ J | N<sub>A</sub> = 6,022 × 10²³ mol⁻¹</div>
+        </div>
+    </div>
+
+    <footer>
+        <p>À relire chaque soir pendant 10 min max avant de faire les Quiz !</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notion 3 - Structure Électronique Quantique</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Notion 3 : Structure Électronique Quantique</h1>
+        <p>De Bohr à la mécanique quantique moderne</p>
+    </header>
+    
+    <nav>
+        <a href="main.html">Accueil</a>
+        <a href="resume.html">Résumé (Pareto 20%)</a>
+        <a href="notion1.html">Notion 1</a>
+        <a href="notion2.html">Notion 2</a>
+        <a href="notion3.html">Notion 3</a>
+        <a href="quiz.html">Quiz Rapide</a>
+    </nav>
+
+    <div class="container">
+        <div class="card">
+            <h2>📖 Introduction : Vers la Mécanique Quantique</h2>
+            <p>À la fin du 19ème siècle, les physiciens pensaient avoir tout compris... jusqu'à ce que 2 phénomènes viennent bouleverser la physique classique :</p>
+            <ul>
+                <li><strong>L'effet photoélectrique</strong> → la lumière se comporte aussi comme des particules (photons)</li>
+                <li><strong>Les spectres de raies</strong> → l'énergie des électrons dans l'atome est quantifiée</li>
+            </ul>
+            <p>Ces observations ont mené au <strong>modèle de Bohr</strong> (1913), puis à la <strong>mécanique quantique</strong> (1925-1927) avec de Broglie, Heisenberg et Schrödinger.</p>
+        </div>
+
+        <div class="card">
+            <h2>1. L'Effet Photoélectrique (Einstein, 1905)</h2>
+            <h3>1.1 L'Expérience</h3>
+            <p>On éclaire une plaque métallique avec de la lumière. Des électrons sont éjectés. Observations surprenantes :</p>
+            <ul>
+                <li>Si la fréquence ν &lt; ν₀ (fréquence seuil) : <strong>aucun électron n'est éjecté</strong>, quelle que soit l'intensité</li>
+                <li>Si ν &gt; ν₀ : l'énergie cinétique des électrons dépend <strong>linéairement de ν</strong>, pas de l'intensité</li>
+                <li>L'intensité lumineuse change le <strong>nombre</strong> d'électrons éjectés, mais pas leur énergie</li>
+            </ul>
+            <p>⚠️ <strong>Ces résultats contredisent la théorie ondulatoire classique !</strong></p>
+
+            <h3>1.2 L'Explication d'Einstein</h3>
+            <p>La lumière est constituée de <strong>grains d'énergie</strong> appelés <strong>photons</strong>. Chaque photon a une énergie :</p>
+            <div class="formula">E = h·ν = h·c/λ</div>
+            <p>Où <strong>h = 6,626 × 10⁻³⁴ J·s</strong> est la constante de Planck.</p>
+            <p>L'équation de l'effet photoélectrique :</p>
+            <div class="formula">h·ν = W + ½·m·v²</div>
+            <p>Où <strong>W = h·ν₀</strong> est le travail d'extraction (énergie minimale pour arracher l'électron).</p>
+        </div>
+
+        <div class="card">
+            <h2>2. Spectres d'Émission et d'Absorption</h2>
+            <h3>2.1 Observation</h3>
+            <p>Quand on chauffe un gaz (ex: hydrogène) ou qu'on le soumet à une décharge électrique, il émet de la lumière. En décomposant cette lumière avec un prisme, on observe un <strong>spectre de raies</strong> (pas un spectre continu).</p>
+            <p>→ <strong>Seules certaines fréquences sont émises</strong>. L'énergie des électrons dans l'atome est donc <strong>quantifiée</strong>.</p>
+
+            <h3>2.2 Formule de Rydberg (pour l'hydrogène)</h3>
+            <div class="formula">1/λ = R<sub>H</sub> · (1/n² - 1/p²)</div>
+            <p>Avec :</p>
+            <ul>
+                <li><strong>R<sub>H</sub> = 1,097 × 10⁷ m⁻¹</strong> (constante de Rydberg)</li>
+                <li><strong>n</strong> et <strong>p</strong> sont des entiers, avec <strong>p &gt; n</strong></li>
+            </ul>
+            <p><strong>Séries spectrales de l'hydrogène :</strong></p>
+            <table class="table-custom">
+                <tr><th>Série</th><th>n</th><th>Domaine</th></tr>
+                <tr><td>Lyman</td><td>1</td><td>Ultraviolet</td></tr>
+                <tr><td>Balmer</td><td>2</td><td>Visible</td></tr>
+                <tr><td>Paschen</td><td>3</td><td>Infrarouge</td></tr>
+                <tr><td>Brackett</td><td>4</td><td>Infrarouge</td></tr>
+                <tr><td>Pfund</td><td>5</td><td>Infrarouge</td></tr>
+            </table>
+        </div>
+
+        <div class="card">
+            <h2>3. Le Modèle de Bohr (1913)</h2>
+            <h3>3.1 Les 4 Postulats de Bohr</h3>
+            <ol>
+                <li>L'électron ne peut se trouver que dans des <strong>états stationnaires</strong> d'énergie bien définie (orbites circulaires)</li>
+                <li>Dans un état stationnaire, l'atome <strong>n'émet pas de rayonnement</strong></li>
+                <li>L'émission/absorption d'un photon se fait lors d'une transition entre 2 niveaux : <strong>h·ν = |ΔE|</strong></li>
+                <li>Le moment angulaire de l'électron est <strong>quantifié</strong> : <strong>L = n·h/(2π)</strong></li>
+            </ol>
+
+            <h3>3.2 Énergie de l'Électron (Atome Hydrogénoïde)</h3>
+            <p>Pour un atome à <strong>1 seul électron</strong> (H, He⁺, Li²⁺...) de numéro atomique Z :</p>
+            <div class="formula">E<sub>n</sub> = -13,6 × (Z²/n²) eV</div>
+            <p>Où <strong>n = 1, 2, 3...</strong> est le nombre quantique principal.</p>
+            <p><strong>Interprétation :</strong></p>
+            <ul>
+                <li>L'énergie est <strong>négative</strong> → énergie de liaison (il faut fournir de l'énergie pour arracher l'électron)</li>
+                <li><strong>n = 1</strong> : état fondamental (énergie la plus basse, la plus stable)</li>
+                <li><strong>n &gt; 1</strong> : états excités</li>
+                <li><strong>n → ∞</strong> : E → 0, l'électron est arraché (ionisation)</li>
+            </ul>
+
+            <h3>3.3 Rayon de l'Orbite</h3>
+            <div class="formula">r<sub>n</sub> = n² × a₀ / Z</div>
+            <p>Avec <strong>a₀ = 5,29 × 10⁻¹¹ m = 0,529 Å</strong> (rayon de Bohr, rayon de la première orbite de l'hydrogène).</p>
+
+            <h3>3.4 Exemple : Hydrogène (Z=1)</h3>
+            <ul>
+                <li>n=1 : r₁ = 0,529 Å, E₁ = -13,6 eV</li>
+                <li>n=2 : r₂ = 4 × 0,529 = 2,12 Å, E₂ = -13,6/4 = -3,4 eV</li>
+                <li>n=3 : r₃ = 9 × 0,529 = 4,76 Å, E₃ = -13,6/9 = -1,51 eV</li>
+            </ul>
+
+            <h3>3.5 Transition Électronique</h3>
+            <p>Lors d'une transition du niveau p vers le niveau n (p &gt; n), un photon est émis :</p>
+            <div class="formula">|ΔE| = E<sub>p</sub> - E<sub>n</sub> = h·ν = h·c/λ</div>
+            <p><strong>Exemple :</strong> Transition n=3 → n=2 de l'hydrogène (raie Hα de Balmer, rouge) :</p>
+            <ul>
+                <li>ΔE = -1,51 - (-3,4) = 1,89 eV</li>
+                <li>λ = h·c/ΔE = (6,626×10⁻³⁴ × 3×10⁸) / (1,89 × 1,6×10⁻¹⁹) = 656 nm (rouge)</li>
+            </ul>
+
+            <h3>3.6 Limites du Modèle de Bohr</h3>
+            <ul>
+                <li>❌ Ne fonctionne que pour les atomes <strong>hydrogénoïdes</strong> (1 électron)</li>
+                <li>❌ Ne peut pas expliquer les spectres des atomes polyélectroniques</li>
+                <li>❌ Ne donne pas d'explication à la liaison chimique</li>
+                <li>❌ D'après l'électromagnétisme classique, l'électron en orbite devrait rayonner et s'écraser sur le noyau !</li>
+            </ul>
+            <p>→ Il fallait une <strong>nouvelle mécanique</strong> : la mécanique quantique.</p>
+        </div>
+
+        <div class="card">
+            <h2>4. La Dualité Onde-Corpuscule (de Broglie, 1923)</h2>
+            <h3>4.1 Le Principe</h3>
+            <p>Si la lumière (onde) peut se comporter comme une particule (photon), alors la matière (particule) peut se comporter comme une onde !</p>
+            <p>Toute particule de quantité de mouvement <strong>p = m·v</strong> a une <strong>longueur d'onde associée</strong> :</p>
+            <div class="formula">λ = h/p = h/(m·v)</div>
+
+            <h3>4.2 Exemples</h3>
+            <ul>
+                <li><strong>Balle de baseball</strong> (m=140 g, v=40 m/s) : λ = 1,18 × 10⁻³⁴ m → <strong>indétectable</strong> (comportement corpusculaire)</li>
+                <li><strong>Électron</strong> (m=9,1 × 10⁻³¹ kg, v=1% de c) : λ = 2,42 × 10⁻¹⁰ m = 2,42 Å → <strong>observable</strong> (comportement ondulatoire)</li>
+            </ul>
+            <p>✅ <strong>Confirmé expérimentalement</strong> par Davisson et Germer (1925) : diffraction d'électrons par un cristal.</p>
+        </div>
+
+        <div class="card">
+            <h2>5. Le Principe d'Incertitude de Heisenberg (1927)</h2>
+            <h3>5.1 L'Énoncé</h3>
+            <p>Il est <strong>impossible</strong> de connaître simultanément avec une précision infinie :</p>
+            <ul>
+                <li>La <strong>position x</strong> d'une particule</li>
+                <li>La <strong>quantité de mouvement p = m·v</strong> de cette particule</li>
+            </ul>
+            <div class="formula">Δx · Δp ≥ ħ/2</div>
+            <p>Où <strong>ħ = h/(2π) = 1,055 × 10⁻³⁴ J·s</strong> (constante de Planck réduite).</p>
+
+            <h3>5.2 Interprétation</h3>
+            <p>Ce n'est <strong>PAS</strong> un problème de précision des instruments ! C'est une <strong>limite fondamentale</strong> de la nature, due à la dualité onde-corpuscule.</p>
+            <ul>
+                <li>Si on localise précisément l'électron (Δx petit) → Δp devient grand (vitesse très incertaine)</li>
+                <li>Si on connaît précisément la vitesse (Δp petit) → Δx devient grand (position très incertaine)</li>
+            </ul>
+
+            <h3>5.3 Autre Forme : Énergie-Temps</h3>
+            <div class="formula">ΔE · Δt ≥ ħ/2</div>
+
+            <h3>5.4 Conséquence</h3>
+            <p>On ne peut plus parler de <strong>trajectoire</strong> classique pour un électron. On utilise une <strong>fonction d'onde ψ</strong> qui donne une <strong>description probabiliste</strong> de la position de l'électron.</p>
+        </div>
+
+        <div class="card">
+            <h2>6. La Mécanique Quantique : Orbitales Atomiques</h2>
+            <h3>6.1 Fonction d'Onde et Orbitale</h3>
+            <p>L'électron est décrit par une <strong>fonction d'onde ψ(x,y,z)</strong>, solution de l'équation de Schrödinger.</p>
+            <p>Le carré <strong>|ψ|²</strong> représente la <strong>densité de probabilité</strong> de présence de l'électron en un point.</p>
+            <p>Une <strong>orbitale atomique (OA)</strong> est la région de l'espace où la probabilité de trouver l'électron est élevée (≈ 90%).</p>
+
+            <h3>6.2 Les 4 Nombres Quantiques</h3>
+            <p>Chaque électron dans un atome est caractérisé par 4 nombres quantiques :</p>
+            <table class="table-custom">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Symbole</th>
+                    <th>Valeurs</th>
+                    <th>Définit</th>
+                </tr>
+                <tr>
+                    <td>Principal</td>
+                    <td>n</td>
+                    <td>1, 2, 3, ...</td>
+                    <td>Couche électronique (taille, énergie)</td>
+                </tr>
+                <tr>
+                    <td>Azimutal (secondaire)</td>
+                    <td>l</td>
+                    <td>0, 1, ..., n-1</td>
+                    <td>Sous-couche (forme de l'OA)</td>
+                </tr>
+                <tr>
+                    <td>Magnétique</td>
+                    <td>m<sub>l</sub></td>
+                    <td>-l, ..., 0, ..., +l</td>
+                    <td>Orientation de l'OA dans l'espace</td>
+                </tr>
+                <tr>
+                    <td>Spin</td>
+                    <td>m<sub>s</sub></td>
+                    <td>+½ ou -½</td>
+                    <td>Sens de rotation de l'électron sur lui-même</td>
+                </tr>
+            </table>
+
+            <h3>6.3 Les Sous-Couches (l = 0, 1, 2, 3)</h3>
+            <table class="table-custom">
+                <tr>
+                    <th>Valeur de l</th>
+                    <th>Nom</th>
+                    <th>Forme</th>
+                    <th>Nb d'OA</th>
+                    <th>Nb max d'électrons</th>
+                </tr>
+                <tr><td>0</td><td>s</td><td>Sphérique</td><td>1</td><td>2</td></tr>
+                <tr><td>1</td><td>p</td><td>Haltère (2 lobes)</td><td>3</td><td>6</td></tr>
+                <tr><td>2</td><td>d</td><td>Trèfle (4 lobes)</td><td>5</td><td>10</td></tr>
+                <tr><td>3</td><td>f</td><td>Complexe</td><td>7</td><td>14</td></tr>
+            </table>
+            <p><strong>Moyen mnémotechnique :</strong> <strong>s</strong>harpe, <strong>p</strong>ear, <strong>d</strong>aisy, <strong>f</strong>lower</p>
+        </div>
+
+        <div class="card">
+            <h2>7. Configuration Électronique</h2>
+            <h3>7.1 Les 3 Règles à Respecter</h3>
+            
+            <p><strong>① Principe d'exclusion de Pauli :</strong></p>
+            <p>Deux électrons d'un même atome ne peuvent pas avoir les <strong>4 mêmes nombres quantiques</strong>. Donc une orbitale ne peut contenir que <strong>2 électrons max</strong>, de spins opposés.</p>
+
+            <p><strong>② Règle de Klechkowski :</strong></p>
+            <p>Les électrons remplissent les sous-couches par <strong>ordre d'énergie croissante</strong> :</p>
+            <div class="formula">1s &lt; 2s &lt; 2p &lt; 3s &lt; 3p &lt; 4s &lt; 3d &lt; 4p &lt; 5s &lt; 4d &lt; 5p &lt; 6s &lt; 4f &lt; 5d &lt; 6p &lt; 7s...</div>
+            <p><strong>Astuce :</strong> Remplir par diagonales (règle de la diagonale) :</p>
+            <pre>
+1s
+2s  2p
+3s  3p  3d
+4s  4p  4d  4f
+5s  5p  5d  5f
+6s  6p  6d
+7s  7p
+            </pre>
+
+            <p><strong>③ Règle de Hund (règle du spin maximum) :</strong></p>
+            <p>Lorsqu'une sous-couche possède plusieurs orbitales dégénérées (même énergie, ex: les 3 orbitales p), les électrons se répartissent d'abord <strong>un par un</strong> avec des <strong>spins parallèles</strong>, avant de s'apparier.</p>
+
+            <h3>7.2 Exemples de Configurations</h3>
+            <p><strong>Hydrogène H (Z=1) :</strong> 1s¹</p>
+            <p><strong>Hélium He (Z=2) :</strong> 1s²</p>
+            <p><strong>Carbone C (Z=6) :</strong> 1s² 2s² 2p²</p>
+            <p style="margin-left: 20px;">→ En détail : 2p<sub>x</sub>¹ 2p<sub>y</sub>¹ 2p<sub>z</sub>⁰ (règle de Hund : spins parallèles)</p>
+            <p><strong>Oxygène O (Z=8) :</strong> 1s² 2s² 2p⁴</p>
+            <p style="margin-left: 20px;">→ En détail : 2p<sub>x</sub>² 2p<sub>y</sub>¹ 2p<sub>z</sub>¹</p>
+            <p><strong>Fer Fe (Z=26) :</strong> 1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d⁶</p>
+            <p style="margin-left: 20px;">Ou en notation condensée : [Ar] 4s² 3d⁶</p>
+
+            <h3>7.3 Électrons de Valence</h3>
+            <p>Les électrons de valence sont ceux de la <strong>couche externe</strong> (n le plus grand). Ils déterminent les <strong>propriétés chimiques</strong> de l'élément.</p>
+            <p><strong>Exemple :</strong> Carbone → couche externe n=2 → 4 électrons de valence (2s² 2p²)</p>
+        </div>
+
+        <div class="card">
+            <h2>🎯 Points Clés à Retenir</h2>
+            <ul>
+                <li>Effet photoélectrique : E = h·ν (la lumière est quantifiée en photons)</li>
+                <li>Spectres de raies → énergie quantifiée dans l'atome</li>
+                <li>Modèle de Bohr : E<sub>n</sub> = -13,6 × Z²/n² eV (atomes hydrogénoïdes uniquement)</li>
+                <li>Dualité onde-corpuscule : λ = h/(m·v)</li>
+                <li>Heisenberg : Δx·Δp ≥ ħ/2 (limite fondamentale, pas technique)</li>
+                <li>4 nombres quantiques : n, l, m<sub>l</sub>, m<sub>s</sub></li>
+                <li>Sous-couches : s(2e⁻), p(6e⁻), d(10e⁻), f(14e⁻)</li>
+                <li>Configuration électronique : Pauli + Klechkowski + Hund</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>⚠️ Pièges Classiques en QCM</h2>
+            <ul>
+                <li><strong>Valeurs de l :</strong> l va de 0 à n-1 (pas de 1 à n !). Donc pour n=2, l = 0 ou 1 (pas 2)</li>
+                <li><strong>Valeurs de m<sub>l</sub> :</strong> de -l à +l (incluant 0). Pour l=1, m<sub>l</sub> = -1, 0, +1</li>
+                <li><strong>Ordre de remplissage :</strong> 4s se remplit AVANT 3d (mais 4s se vide AVANT 3d pour les ions !)</li>
+                <li><strong>Règle de Hund :</strong> Les électrons se mettent d'abord célibataires avec spins parallèles</li>
+                <li><strong>Modèle de Bohr :</strong> Uniquement pour H, He⁺, Li²⁺... (1 seul électron)</li>
+                <li><strong>Unités d'énergie :</strong> 1 eV = 1,6 × 10⁻¹⁹ J (conversion fréquente)</li>
+                <li><strong>Énergie négative :</strong> Plus E est négative, plus l'électron est lié (stable)</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>Notion 3 terminée | Passe au Quiz pour tester tes connaissances !</p>
+    </footer>
+</body>
+</html>
