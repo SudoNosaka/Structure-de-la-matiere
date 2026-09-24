@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TD1 - Énergie, Particules et Noyaux</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .exercise {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            border-left: 5px solid var(--secondary);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .exercise h3 {
+            color: var(--primary);
+            margin-top: 0;
+        }
+        .hint {
+            background: #d1ecf1;
+            border-left: 4px solid #17a2b8;
+            padding: 12px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .hint h4 {
+            color: #0c5460;
+            margin-top: 0;
+        }
+        .solution {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 12px;
+            margin: 15px 0;
+            border-radius: 4px;
+            display: none;
+        }
+        .solution.show {
+            display: block;
+        }
+        .solution h4 {
+            color: #155724;
+            margin-top: 0;
+        }
+        .btn-toggle {
+            background: var(--secondary);
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 10px 0;
+        }
+        .btn-toggle:hover {
+            background: var(--primary);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>TD1 - Énergie, Particules et Noyaux</h1>
+        <p>Exercices d'entraînement avec corrections</p>
+    </header>
+    
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="td1.html">TD1</a>
+        <a href="td2.html">TD2</a>
+        <a href="td3.html">TD3</a>
+        <a href="td4.html">TD4</a>
+        <a href="td5.html">TD5</a>
+        <a href="td6.html">TD6</a>
+        <a href="td7.html">TD7</a>
+    </nav>
+
+    <div class="container">
+        <div class="card">
+            <h2>📋 Données du TD</h2>
+            <ul>
+                <li>masse de l'électron : m<sub>e</sub> = 9,1.10<sup>-31</sup> kg</li>
+                <li>constante de Planck : h = 6,626.10<sup>-34</sup> J.s</li>
+                <li>charge de l'électron : q = -e = -1,6.10<sup>-19</sup> C</li>
+                <li>constante d'Avogadro : N<sub>A</sub> = 6,022.10<sup>23</sup> mol<sup>-1</sup></li>
+                <li>1 J = 6,25.10<sup>+18</sup> eV</li>
+                <li>vitesse de la lumière : c = 3.10<sup>+8</sup> m.s<sup>-1</sup></li>
+                <li>masse du proton : m<sub>p</sub> = 1,007565 u.m.a</li>
+                <li>masse du neutron : m<sub>n</sub> = 1,008665 u.m.a</li>
+                <li>1 u.m.a = 1,66055.10<sup>-27</sup> kg</li>
+                <li>permittivité du vide : ε<sub>0</sub> = 8,85418782.10<sup>-12</sup> F.m<sup>-1</sup></li>
+            </ul>
+        </div>
+
+        <!-- Exercice 1.1 -->
+        <div class="exercise">
+            <h3>Exercice 1.1 : Rayons atomiques et nucléaires</h3>
+            <p>On veut réaliser la maquette d'un atome d'hydrogène <sup>1</sup><sub>1</sub>H, on prendra pour ce faire les grandeurs vues en cours à savoir diamètre d'un nucléon : 1,5.10<sup>-15</sup> m et diamètre d'un électron : 10<sup>-18</sup> m.</p>
+            <p><strong>1°)</strong> Quelles sont les particules qui composent un atome d'hydrogène ?</p>
+            <p><strong>2°)</strong> Pour représenter le noyau on choisit une bille de 1 cm de diamètre,</p>
+            <p>a. Quel sera le diamètre de la maquette de l'atome (diamètre = 0,75 Å) ?</p>
+            <p>b. Quel sera le diamètre de l'électron ?</p>
+            
+            <div class="hint">
+                <h4>💡 Aide de résolution</h4>
+                <p><strong>1°)</strong> L'hydrogène <sup>1</sup><sub>1</sub>H a Z=1 et A=1. Combien de protons, neutrons et électrons ?</p>
+                <p><strong>2°)</strong> Utilise une règle de proportionnalité (produit en croix) :</p>
+                <p>Échelle = diamètre maquette / diamètre réel</p>
+                <p>Applique cette échelle au diamètre de l'atome et de l'électron.</p>
+            </div>
+            
+            <button class="btn-toggle" onclick="toggleSolution('sol1')">Afficher la correction</button>
+            <div class="solution" id="sol1">
+                <h4>✅ Correction</h4>
+                <p><strong>1°)</strong> L'atome d'hydrogène <sup>1</sup><sub>1</sub>H est composé de :</p>
+                <ul>
+                    <li>1 proton (Z=1)</li>
+                    <li>0 neutron (A-Z = 1-1 = 0)</li>
+                    <li>1 électron (atome neutre)</li>
+                </ul>
+                
+                <p><strong>2°a)</strong> Échelle de la maquette :</p>
+                <div class="formula">Échelle = 1 cm / 1,5.10<sup>-15</sup> m = 10<sup>-2</sup> m / 1,5.10<sup>-15</sup> m = 6,67.10<sup>12</sup></div>
+                <p>Diamètre de l'atome en maquette :</p>
+                <div class="formula">d<sub>atome</sub> = 0,75 Å × 6,67.10<sup>12</sup> = 0,75.10<sup>-10</sup> × 6,67.10<sup>12</sup> = 5 m</div>
+                
+                <p><strong>2°b)</strong> Diamètre de l'électron en maquette :</p>
+                <div class="formula">d<sub>électron</sub> = 10<sup>-18</sup> m × 6,67.10<sup>12</sup> = 6,67.10<sup>-6</sup> m = 6,67 µm</div>
+            </div>
+        </div>
+
+        <!-- Exercice 1.2 -->
+        <div class="exercise">
+            <h3>Exercice 1.2 : Masse atomique, masse moléculaire</h3>
+            <p><strong>1°)</strong> Quelle est la masse m<sub>H</sub> d'un atome d'hydrogène <sup>1</sup><sub>1</sub>H ?</p>
+            <p><strong>2°)</strong> Quelle est la proportion de cette masse due aux électrons ?</p>
+            <p><strong>3°)</strong> Quelle est la masse m<sub>H2</sub> d'une molécule de dihydrogène (H<sub>2</sub>) ?</p>
+            
+            <div class="hint">
+                <h4>💡 Aide de résolution</h4>
+                <p><strong>1°)</strong> La masse de l'atome = masse du proton + masse de l'électron (négliger le neutron car il n'y en a pas dans <sup>1</sup>H).</p>
+                <p><strong>2°)</strong> Proportion = masse électron / masse totale × 100</p>
+                <p><strong>3°)</strong> Masse de H<sub>2</sub> = 2 × masse de H</p>
+            </div>
+            
+            <button class="btn-toggle" onclick="toggleSolution('sol2')">Afficher la correction</button>
+            <div class="solution" id="sol2">
+                <h4>✅ Correction</h4>
+                <p><strong>1°)</strong> Masse d'un atome d'hydrogène :</p>
+                <div class="formula">m<sub>H</sub> = m<sub>p</sub> + m<sub>e</sub> = 1,673.10<sup>-27</sup> + 9,1.10<sup>-31</sup> = 1,673.10<sup>-27</sup> kg</div>
+                <p>(La masse de l'électron est négligeable devant celle du proton)</p>
+                
+                <p><strong>2°)</strong> Proportion due aux électrons :</p>
+                <div class="formula">Proportion = (9,1.10<sup>-31</sup> / 1,673.10<sup>-27</sup>) × 100 = 0,054 %</div>
+                <p>→ La masse de l'atome est essentiellement concentrée dans le noyau.</p>
+                
+                <p><strong>3°)</strong> Masse d'une molécule de H<sub>2</sub> :</p>
+                <div class="formula">m<sub>H2</sub> = 2 × m<sub>H</sub> = 2 × 1,673.10<sup>-27</sup> = 3,346.10<sup>-27</sup> kg</div>
+            </div>
+        </div>
+
+        <!-- Exercice 1.3 -->
+        <div class="exercise">
+            <h3>Exercice 1.3 : Masse atomique, masse molaire</h3>
+            <p>On considère une masse de balance de 1 kg en cuivre pur.</p>
+            <p><strong>1°)</strong> Combien d'atomes de cuivre contient cette masse ?</p>
+            <p><strong>2°)</strong> Combien de moles contient cette masse ?</p>
+            <p><strong>3°)</strong> Quelle est la masse M<sub>Cu</sub> d'une mole de cuivre ?</p>
+            <p><strong>Données :</strong> masse d'un atome de cuivre m<sub>Cu</sub> = 1,056.10<sup>-25</sup> kg</p>
+            
+            <div class="hint">
+                <h4>💡 Aide de résolution</h4>
+                <p><strong>1°)</strong> Nombre d'atomes = masse totale / masse d'un atome</p>
+                <p><strong>2°)</strong> Nombre de moles = nombre d'atomes / N<sub>A</sub></p>
+                <p><strong>3°)</strong> Masse molaire = masse totale / nombre de moles</p>
+            </div>
+            
+            <button class="btn-toggle" onclick="toggleSolution('sol3')">Afficher la correction</button>
+            <div class="solution" id="sol3">
+                <h4>✅ Correction</h4>
+                <p><strong>1°)</strong> Nombre d'atomes de cuivre :</p>
+                <div class="formula">N = 1 kg / 1,056.10<sup>-25</sup> kg = 9,47.10<sup>24</sup> atomes</div>
+                
+                <p><strong>2°)</strong> Nombre de moles :</p>
+                <div class="formula">n = N / N<sub>A</sub> = 9,47.10<sup>24</sup> / 6,022.10<sup>23</sup> = 15,7 mol</div>
+                
+                <p><strong>3°)</strong> Masse molaire du cuivre :</p>
+                <div class="formula">M<sub>Cu</sub> = 1 kg / 15,7 mol = 0,0637 kg/mol = 63,7 g/mol</div>
+            </div>
+        </div>
+
+        <!-- Exercice 1.4 -->
+        <div class="exercise">
+            <h3>Exercice 1.4 : Inventaire des constituants d'atomes et d'ions</h3>
+            <p>Indiquez le nombre de protons, neutrons et électrons pour chaque atome ou ion suivant :</p>
+            <p><sup>27</sup><sub>13</sub>Al, <sup>131</sup><sub>54</sub>Xe, <sup>56</sup><sub>26</sub>Fe, <sup>19</sup><sub>9</sub>F<sup>-</sup>, <sup>9</sup><sub>4</sub>Be<sup>2+</sup>, <sup>32</sup><sub>16</sub>S<sup>2-</sup></p>
+            
+            <div class="hint">
+                <h4>💡 Aide de résolution</h4>
+                <p>Pour un atome ou ion <sup>A</sup><sub>Z</sub>X<sup>q</sup> :</p>
+                <ul>
+                    <li>Nombre de protons = Z</li>
+                    <li>Nombre de neutrons = A - Z</li>
+                    <li>Nombre d'électrons = Z - q (attention au signe de q !)</li>
+                </ul>
+            </div>
+            
+            <button class="btn-toggle" onclick="toggleSolution('sol4')">Afficher la correction</button>
+            <div class="solution" id="sol4">
+                <h4>✅ Correction</h4>
+                <table class="table-custom">
+                    <tr><th>Élément</th><th>Protons (Z)</th><th>Neutrons (A-Z)</th><th>Électrons (Z-q)</th></tr>
+                    <tr><td><sup>27</sup><sub>13</sub>Al</td><td>13</td><td>14</td><td>13</td></tr>
+                    <tr><td><sup>131</sup><sub>54</sub>Xe</td><td>54</td><td>77</td><td>54</td></tr>
+                    <tr><td><sup>56</sup><sub>26</sub>Fe</td><td>26</td><td>30</td><td>26</td></tr>
+                    <tr><td><sup>19</sup><sub>9</sub>F<sup>-</sup></td><td>9</td><td>10</td><td>10 (9-(-1))</td></tr>
+                    <tr><td><sup>9</sup><sub>4</sub>Be<sup>2+</sup></td><td>4</td><td>5</td><td>2 (4-2)</td></tr>
+                    <tr><td><sup>32</sup><sub>16</sub>S<sup>2-</sup></td><td>16</td><td>16</td><td>18 (16-(-2))</td></tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Exercice 1.5 -->
+        <div class="exercise">
+            <h3>Exercice 1.5 : Savoir convertir une énergie</h3>
+            <p>Compléter les égalités suivantes :</p>
+            <p><strong>1°)</strong> 3 eV = ?? J</p>
+            <p><strong>2°)</strong> 0,89 J = ?? MeV</p>
+            <p><strong>3°)</strong> 6.10<sup>-20</sup> J = ?? meV</p>
+            <p><strong>4°)</strong> 1 kcal = ?? J</p>
+            
+            <div class="hint">
+                <h4>💡 Aide de résolution</h4>
+                <p>Utilise les conversions :</p>
+                <ul>
+                    <li>1 eV = 1,6.10<sup>-19</sup> J</li>
+                    <li>1 MeV = 10<sup>6</sup> eV</li>
+                    <li>1 meV = 10<sup>-3</sup> eV</li>
+                    <li>1 cal = 4,184 J</li>
+                </ul>
+            </div>
+            
+            <button class="btn-toggle" onclick="toggleSolution('sol5')">Afficher la correction</button>
+            <div class="solution" id="sol5">
+                <h4>✅ Correction</h4>
+                <p><strong>1°)</strong> 3 eV en J :</p>
+                <div class="formula">3 eV = 3 × 1,6.10<sup>-19</sup> = 4,8.10<sup>-19</sup> J</div>
+                
+                <p><strong>2°)</strong> 0,89 J en MeV :</p>
+                <div class="formula">0,89 J = 0,89 / (1,6.10<sup>-19</sup>) = 5,56.10<sup>18</sup> eV = 5,56.10<sup>12</sup> MeV</div>
+                
+                <p><strong>3°)</strong> 6.10<sup>-20</sup> J en meV :</p>
+                <div class="formula">6.10<sup>-20</sup> J = 6.10<sup>-20</sup> / (1,6.10<sup>-19</sup>) = 0,375 eV = 375 meV</div>
+                
+                <p><strong>4°)</strong> 1 kcal en J :</p>
+                <div class="formula">1 kcal = 1000 cal = 1000 × 4,184 = 4184 J</div>
+            </div>
+        </div>
+
+        <!-- Exercice 1.6 -->
+        <div class="exercise">
+            <h3>Exercice 1.6 : Connaître la relation période-constante radioactive</h3>
+            <p>Déterminer la constante radioactive du <sup>14</sup>C sachant que sa période est de 5570 ans.</p>
+            
+            <div class="hint">
+                <h4>💡 Aide de résolution</h4>
+                <p>Utilise la relation : T = ln(2) / λ</p>
+                <p>Attention aux unités : convertis T en secondes avant de calculer λ.</p>
+            </div>
+            
+            <button class="btn-toggle" onclick="toggleSolution('sol6')">Afficher la correction</button>
+            <div class="solution" id="sol6">
+                <h4>✅ Correction</h4>
+                <p>Conversion de T en secondes :</p>
+                <div class="formula">T = 5570 ans × 365,25 × 24 × 3600 = 1,76.10<sup>11</sup> s</div>
+                <p>Calcul de λ :</p>
+                <div class="formula">λ = ln(2) / T = 0,693 / 1,76.10<sup>11</sup> = 3,94.10<sup>-12</sup> s<sup>-1</sup></div>
+            </div>
+        </div>
+
+        <!-- Exercice 1.7 -->
+        <div class="exercise">
+            <h3>Exercice 1.7 : Savoir utiliser la loi de désintégration radioactive</h3>
+            <p>Soient 4,2.10<sup>13</sup> noyaux de tritium (<sup>3</sup>H). Sachant que la constante radioactive du tritium est de 1,79.10<sup>-9</sup> s<sup>-1</sup>, déterminer le nombre de noyaux restant après un temps t = 20 ans.</p>
+            
+            <div class="hint">
+                <h4>💡 Aide de résolution</h4>
+                <p>Utilise la loi de désintégration : N(t) = N<sub>0</sub> × e<sup>-λt</sup></p>
+                <p>Attention : convertis t en secondes pour que les unités soient cohérentes avec λ.</p>
+            </div>
+            
+            <button class="btn-toggle" onclick="toggleSolution('sol7')">Afficher la correction</button>
+            <div class="solution" id="sol7">
+                <h4>✅ Correction</h4>
+                <p>Conversion de t en secondes :</p>
+                <div class="formula">t = 20 ans × 365,25 × 24 × 3600 = 6,31.10<sup>8</sup> s</div>
+                <p>Application de la loi de désintégration :</p>
+                <div class="formula">N(t) = 4,2.10<sup>13</sup> × e<sup>-(1,79.10<sup>-9</sup> × 6,31.10<sup>8</sup>)</sup> = 4,2.10<sup>13</sup> × e<sup>-1,13</sup></div>
+                <div class="formula">N(t) = 4,2.10<sup>13</sup> × 0,323 = 1,36.10<sup>13</sup> noyaux</div>
+            </div>
+        </div>
+
+        <!-- Exercice 1.8 -->
+        <div class="exercise">
+            <h3>Exercice 1.8 : Savoir calculer une activité</h3>
+            <p>Déterminer l'activité absolue A<sub>0</sub> de 1 g de <sup>60</sup>Co sachant que sa constante radioactive λ est de 4,18.10<sup>-9</sup> s<sup>-1</sup>.</p>
+            
+            <div class="hint">
+                <h4>💡 Aide de résolution</h4>
+                <p>Étapes :</p>
+                <ol>
+                    <li>Calculer le nombre de moles : n = m / M</li>
+                    <li>Calculer le nombre de noyaux : N = n × N<sub>A</sub></li>
+                    <li>Calculer l'activité : A = λ × N</li>
+                </ol>
+                <p>Donnée : M(<sup>60</sup>Co) = 59,933819 g/mol</p>
+            </div>
+            
+            <button class="btn-toggle" onclick="toggleSolution('sol8')">Afficher la correction</button>
+            <div class="solution" id="sol8">
+                <h4>✅ Correction</h4>
+                <p>Nombre de moles :</p>
+                <div class="formula">n = 1 g / 59,93 g/mol = 0,0167 mol</div>
+                <p>Nombre de noyaux :</p>
+                <div class="formula">N = 0,0167 × 6,022.10<sup>23</sup> = 1,006.10<sup>22</sup> noyaux</div>
+                <p>Activité :</p>
+                <div class="formula">A = λ × N = 4,18.10<sup>-9</sup> × 1,006.10<sup>22</sup> = 4,20.10<sup>13</sup> Bq</div>
+            </div>
+        </div>
+
+        <!-- Exercice 1.9 -->
+        <div class="exercise">
+            <h3>Exercice 1.9 : Savoir équilibrer une réaction nucléaire</h3>
+            <p>Écrire les réactions suivantes :</p>
+            <p><strong>1°)</strong> L'iode I(Z=53, A=122) réagit avec une particule α pour donner du Césium Cs.</p>
+            <p><strong>2°)</strong> L'iode(Z=53, A=122) se décompose en Tellure Te en émettant une particule β<sup>+</sup>.</p>
+            <p><strong>3°)</strong> Le thorium Th se décompose en proactinium Pa(Z=91, A=234) en émettant une particule β<sup>-</sup>.</p>
+            
+            <div class="hint">
+                <h4>💡 Aide de résolution</h4>
+                <p>Conservation de A (nombre de masse) et Z (numéro atomique) :</p>
+                <ul>
+                    <li>Particule α : <sup>4</sup><sub>2</sub>He</li>
+                    <li>Particule β<sup>+</sup> : <sup>0</sup><sub>+1</sub>e (positon)</li>
+                    <li>Particule β<sup>-</sup> : <sup>0</sup><sub>-1</sub>e (électron)</li>
+                </ul>
+            </div>
+            
+            <button class="btn-toggle" onclick="toggleSolution('sol9')">Afficher la correction</button>
+            <div class="solution" id="sol9">
+                <h4>✅ Correction</h4>
+                <p><strong>1°)</strong> Réaction avec particule α :</p>
+                <div class="formula"><sup>122</sup><sub>53</sub>I + <sup>4</sup><sub>2</sub>He → <sup>A</sup><sub>Z</sub>Cs</div>
+                <p>Conservation : A = 122 + 4 = 126 | Z = 53 + 2 = 55</p>
+                <div class="formula"><sup>122</sup><sub>53</sub>I + <sup>4</sup><sub>2</sub>He → <sup>126</sup><sub>55</sub>Cs</div>
+                
+                <p><strong>2°)</strong> Décomposition β<sup>+</sup> :</p>
+                <div class="formula"><sup>122</sup><sub>53</sub>I → <sup>A</sup><sub>Z</sub>Te + <sup>0</sup><sub>+1</sub>e</div>
+                <p>Conservation : A = 122 | Z = 53 - 1 = 52</p>
+                <div class="formula"><sup>122</sup><sub>53</sub>I → <sup>122</sup><sub>52</sub>Te + <sup>0</sup><sub>+1</sub>e</div>
+                
+                <p><strong>3°)</strong> Décomposition β<sup>-</sup> :</p>
+                <div class="formula"><sup>A</sup><sub>Z</sub>Th → <sup>234</sup><sub>91</sub>Pa + <sup>0</sup><sub>-1</sub>e</div>
+                <p>Conservation : A = 234 | Z = 91 + 1 = 92</p>
+                <div class="formula"><sup>234</sup><sub>92</sub>Th → <sup>234</sup><sub>91</sub>Pa + <sup>0</sup><sub>-1</sub>e</div>
+            </div>
+        </div>
+
+        <!-- Exercice 1.10 -->
+        <div class="exercise">
+            <h3>Exercice 1.10 : Énergie de liaison des nucléons</h3>
+            <p><strong>1°)</strong> Donner le nombre de neutrons et de protons dans un noyau de fer <sup>56</sup>Fe (Z=26).</p>
+            <p><strong>2°)</strong> Donner la valeur de Z pour l'ion Fe<sup>2+</sup>.</p>
+            <p><strong>3°)</strong> Calculer l'énergie de liaison moyenne par nucléon en MeV.</p>
+            <p><strong>Données :</strong> M(<sup>56</sup>Fe) = 55,913 g/mol</p>
+            
+            <div class="hint">
+                <h4>💡 Aide de résolution</h4>
+                <p><strong>3°)</strong> Étapes :</p>
+                <ol>
+                    <li>Calculer le défaut de masse : Δm = Z×m<sub>p</sub> + N×m<sub>n</sub> - m<sub>noyau</sub></li>
+                    <li>Convertir Δm en énergie : E = Δm × c²</li>
+                    <li>Convertir en MeV (1 u = 931,5 MeV/c²)</li>
+                    <li>Diviser par A pour avoir l'énergie par nucléon</li>
+                </ol>
+            </div>
+            
+            <button class="btn-toggle" onclick="toggleSolution('sol10')">Afficher la correction</button>
+            <div class="solution" id="sol10">
+                <h4>✅ Correction</h4>
+                <p><strong>1°)</strong> Pour <sup>56</sup>Fe (Z=26, A=56) :</p>
+                <ul>
+                    <li>Nombre de protons : Z = 26</li>
+                    <li>Nombre de neutrons : N = A - Z = 56 - 26 = 30</li>
+                </ul>
+                
+                <p><strong>2°)</strong> Pour l'ion Fe<sup>2+</sup>, Z reste inchangé : Z = 26</p>
+                <p>(Seul le nombre d'électrons change : 26 - 2 = 24 électrons)</p>
+                
+                <p><strong>3°)</strong> Énergie de liaison :</p>
+                <p>Masse du noyau de Fe :</p>
+                <div class="formula">m<sub>noyau</sub> = 55,913 / 6,022.10<sup>23</sup> = 9,285.10<sup>-23</sup> g = 9,285.10<sup>-26</sup> kg</div>
+                <p>En uma :</p>
+                <div class="formula">m<sub>noyau</sub> = 9,285.10<sup>-26</sup> / 1,66055.10<sup>-27</sup> = 55,913 u</div>
+                <p>Défaut de masse :</p>
+                <div class="formula">Δm = 26 × 1,007565 + 30 × 1,008665 - 55,913 = 0,528 u</div>
+                <p>Énergie de liaison totale :</p>
+                <div class="formula">E<sub>l</sub> = 0,528 × 931,5 = 491,8 MeV</div>
+                <p>Énergie de liaison par nucléon :</p>
+                <div class="formula">E<sub>l</sub>/A = 491,8 / 56 = 8,78 MeV/nucléon</div>
+            </div>
+        </div>
+
+        <!-- Exercice 1.11 -->
+        <div class="exercise">
+            <h3>Exercice 1.11 : Abondance isotopique</h3>
+            <p>Le néon se trouve à l'état naturel sous la forme d'un mélange des deux isotopes majoritaires suivants <sup>20</sup><sub>10</sub>Ne et <sup>22</sup><sub>10</sub>Ne de masses molaires respectives 19,9924 et 21,9914 g.mol<sup>-1</sup>. La masse molaire moyenne du néon est égale à 20,1707 g.mol<sup>-1</sup>. Calculer l'abondance isotopique des deux isotopes du néon.</p>
+            
+            <div class="hint">
+                <h4>💡 Aide de résolution</h4>
+                <p>Soit x l'abondance de <sup>20</sup>Ne et (1-x) celle de <sup>22</sup>Ne.</p>
+                <p>Masse molaire moyenne = x × M<sub>20</sub> + (1-x) × M<sub>22</sub></p>
+                <p>Résous l'équation pour trouver x.</p>
+            </div>
+            
+            <button class="btn-toggle" onclick="toggleSolution('sol11')">Afficher la correction</button>
+            <div class="solution" id="sol11">
+                <h4>✅ Correction</h4>
+                <p>Équation :</p>
+                <div class="formula">20,1707 = x × 19,9924 + (1-x) × 21,9914</div>
+                <p>Développement :</p>
+                <div class="formula">20,1707 = 19,9924x + 21,9914 - 21,9914x</div>
+                <div class="formula">20,1707 - 21,9914 = (19,9924 - 21,9914)x</div>
+                <div class="formula">-1,8207 = -1,999x</div>
+                <div class="formula">x = 0,911</div>
+                <p>Abondance isotopique :</p>
+                <ul>
+                    <li><sup>20</sup>Ne : 91,1 %</li>
+                    <li><sup>22</sup>Ne : 8,9 %</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Exercice 1.12 -->
+        <div class="exercise">
+            <h3>Exercice 1.12 : Énergie de liaison entre 2 atomes</h3>
+            <p>L'énergie libérée lors de la formation d'une liaison H-Cl entre les 2 atomes H et Cl, pris à l'état gazeux, est de 4,43 eV. Quelle est l'énergie, exprimée en kJ dégagée lors de la formation d'une mole de H-Cl ?</p>
+            
+            <div class="hint">
+                <h4>💡 Aide de résolution</h4>
+                <p>Étapes :</p>
+                <ol>
+                    <li>Convertir 4,43 eV en J (1 eV = 1,6×10<sup>-19</sup> J)</li>
+                    <li>Multiplicier par N<sub>A</sub> pour avoir l'énergie par mole</li>
+                    <li>Convertir en kJ (diviser par 1000)</li>
+                </ol>
+            </div>
+            
+            <button class="btn-toggle" onclick="toggleSolution('sol12')">Afficher la correction</button>
+            <div class="solution" id="sol12">
+                <h4>✅ Correction</h4>
+                <p>Conversion en J :</p>
+                <div class="formula">E = 4,43 × 1,6.10<sup>-19</sup> = 7,088.10<sup>-19</sup> J par liaison</div>
+                <p>Énergie pour une mole :</p>
+                <div class="formula">E<sub>mol</sub> = 7,088.10<sup>-19</sup> × 6,022.10<sup>23</sup> = 4,27.10<sup>5</sup> J</div>
+                <p>Conversion en kJ :</p>
+                <div class="formula">E<sub>mol</sub> = 4,27.10<sup>5</sup> / 1000 = 427 kJ/mol</div>
+            </div>
+        </div>
+
+        <!-- Exercice 1.13 -->
+        <div class="exercise">
+            <h3>Exercice 1.13 : Réaction de fission</h3>
+            <p>Soit la réaction de fission :</p>
+            <div class="formula"><sup>235</sup><sub>92</sub>U + <sup>1</sup><sub>0</sub>n → <sup>146</sup><sub>57</sub>La + <sup>87</sup><sub>35</sub>Br + 3 <sup>1</sup><sub>0</sub>n</div>
+            <p>Calculer l'énergie dégagée par :</p>
+            <p><strong>1°)</strong> la fission d'un noyau d'uranium-235 (en MeV)</p>
+            <p><strong>2°)</strong> la fission d'une mole de noyaux d'uranium-235 (en kJ.mol<sup>-1</sup>). Comparer avec ce que vous avez trouvé dans l'exercice 1.12</p>
+            <p><strong>Données :</strong></p>
+            <ul>
+                <li>M(<sup>235</sup>U) = 235,044 u.m.a</li>
+                <li>M(<sup>146</sup>La) = 145,943 u.m.a</li>
+                <li>M(<sup>87</sup>Br) = 86,912 u.m.a</li>
+                <li>M(<sup>1</sup>n) = 1,008665 u.m.a</li>
+                <li>1 u.m.a = 931,5 MeV/c²</li>
+            </ul>
+            
+            <div class="hint">
+                <h4>💡 Aide de résolution</h4>
+                <p><strong>1°)</strong> Étapes :</p>
+                <ol>
+                    <li>Calculer le défaut de masse : Δm = m(réactifs) - m(produits)</li>
+                    <li>Convertir Δm en énergie : E = Δm × 931,5 MeV</li>
+                </ol>
+                <p><strong>2°)</strong> Multiplier par N<sub>A</sub> et convertir en kJ</p>
+            </div>
+            
+            <button class="btn-toggle" onclick="toggleSolution('sol13')">Afficher la correction</button>
+            <div class="solution" id="sol13">
+                <h4>✅ Correction</h4>
+                <p><strong>1°)</strong> Masse des réactifs :</p>
+                <div class="formula">m<sub>r</sub> = 235,044 + 1,008665 = 236,0527 u.m.a</div>
+                <p>Masse des produits :</p>
+                <div class="formula">m<sub>p</sub> = 145,943 + 86,912 + 3 × 1,008665 = 235,8790 u.m.a</div>
+                <p>Défaut de masse :</p>
+                <div class="formula">Δm = 236,0527 - 235,8790 = 0,1737 u.m.a</div>
+                <p>Énergie dégagée par fission :</p>
+                <div class="formula">E = 0,1737 × 931,5 = 161,8 MeV</div>
+                
+                <p><strong>2°)</strong> Énergie pour une mole :</p>
+                <div class="formula">E<sub>mol</sub> = 161,8 MeV × 6,022.10<sup>23</sup> = 9,74.10<sup>25</sup> MeV</div>
+                <p>Conversion en J (1 MeV = 1,6.10<sup>-13</sup> J) :</p>
+                <div class="formula">E<sub>mol</sub> = 9,74.10<sup>25</sup> × 1,6.10<sup>-13</sup> = 1,56.10<sup>13</sup> J</div>
+                <p>Conversion en kJ :</p>
+                <div class="formula">E<sub>mol</sub> = 1,56.10<sup>10</sup> kJ/mol</div>
+                <p><strong>Comparaison :</strong> L'énergie de fission nucléaire (~10<sup>10</sup> kJ/mol) est environ <strong>10 millions de fois plus grande</strong> que l'énergie de liaison chimique (~427 kJ/mol). Cela illustre la différence fondamentale entre réactions nucléaires et chimiques.</p>
+            </div>
+        </div>
+
+        <div class="card" style="text-align: center; margin-top: 30px;">
+            <h2>🎯 Fin du TD1</h2>
+            <p>Tu as terminé le TD1 ! Passe au TD2 pour continuer.</p>
+            <a href="td2.html" class="btn">Passer au TD2</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>TD1 - Énergie, Particules et Noyaux | Correction complète disponible</p>
+    </footer>
+
+    <script>
+        function toggleSolution(id) {
+            const solution = document.getElementById(id);
+            if (solution.classList.contains('show')) {
+                solution.classList.remove('show');
+            } else {
+                solution.classList.add('show');
+            }
+        }
+    </script>
+</body>
+</html>

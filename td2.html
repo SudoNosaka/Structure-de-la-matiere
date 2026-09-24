@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TD2 - Effet Photoélectrique, de Broglie & Heisenberg</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .exercise {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            border-left: 5px solid var(--secondary);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .exercise h3 {
+            color: var(--primary);
+            margin-top: 0;
+        }
+        .hint {
+            background: #d1ecf1;
+            border-left: 4px solid #17a2b8;
+            padding: 12px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .hint h4 {
+            color: #0c5460;
+            margin-top: 0;
+        }
+        .solution {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 12px;
+            margin: 15px 0;
+            border-radius: 4px;
+            display: none;
+        }
+        .solution.show {
+            display: block;
+        }
+        .solution h4 {
+            color: #155724;
+            margin-top: 0;
+        }
+        .btn-toggle {
+            background: var(--secondary);
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 10px 0;
+        }
+        .btn-toggle:hover {
+            background: var(--primary);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>TD2 - Effet Photoélectrique, de Broglie & Heisenberg</h1>
+        <p>Exercices d'entraînement avec corrections</p>
+    </header>
+    
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="td1.html">TD1</a>
+        <a href="td2.html">TD2</a>
+        <a href="td3.html">TD3</a>
+        <a href="td4.html">TD4</a>
+        <a href="td5.html">TD5</a>
+        <a href="td6.html">TD6</a>
+        <a href="td7.html">TD7</a>
+    </nav>
+
+    <div class="container">
+        <div class="card">
+            <h2>📋 Données utiles pour ce TD</h2>
+            <ul>
+                <li>Constante de Planck : h = 6,626.10<sup>-34</sup> J.s</li>
+                <li>Constante de Planck réduite : ħ = h/(2π) = 1,055.10<sup>-34</sup> J.s</li>
+                <li>Vitesse de la lumière : c = 3.10<sup>8</sup> m.s<sup>-1</sup></li>
+                <li>Charge élémentaire : e = 1,6.10<sup>-19</sup> C</li>
+                <li>Masse de l'électron : m<sub>e</sub> = 9,1.10<sup>-31</sup> kg</li>
+                <li>Masse du proton : m<sub>p</sub> = 1,67.10<sup>-27</sup> kg</li>
+                <li>1 eV = 1,6.10<sup>-19</sup> J</li>
+                <li>Constante de Rydberg : R<sub>H</sub> = 1,097.10<sup>7</sup> m<sup>-1</sup></li>
+            </ul>
+        </div>
+
+        <!-- Exercice 2.1 -->
+        <div class="exercise">
+            <h3>Exercice 2.1 : Effet photoélectrique</h3>
+            <p>On éclaire une plaque de sodium avec une lumière de longueur d'onde λ = 400 nm. On observe que des électrons sont éjectés avec une énergie cinétique maximale E<sub>c</sub> = 0,88 eV.</p>
+            <p><strong>1°)</strong> Calculer l'énergie des photons incidents (en eV).</p>
+            <p><strong>2°)</strong> En déduire le travail d'extraction W du sodium (en eV).</p>
+            <p><strong>3°)</strong> Calculer la fréquence seuil ν<sub>0</sub> du sodium.</p>
+            <p><strong>4°)</strong> Quelle est la longueur d'onde seuil λ<sub>0</sub> ?</p>
+            
+            <div class="hint">
+                <h4>💡 Aide de résolution</h4>
+                <p><strong>1°)</strong> Énergie d'un photon : E = h·c/λ (penser à convertir λ en mètres)</p>
+                <p><strong>2°)</strong> Équation de l'effet photoélectrique : h·ν = W + E<sub>c</sub></p>
+                <p><strong>3°)</strong> À la fréquence seuil : h·ν<sub>0</sub> = W</p>
+                <p><strong>4°)</strong> λ<sub>0</sub> = c/ν<sub>0</sub></p>
+            </div>
+            
+            <button class="btn-toggle" onclick="toggleSolution('sol1')">Afficher la correction</button>
+            <div class="solution" id="sol1">
+                <h4>✅ Correction</h4>
+                <p><strong>1°)</strong> Énergie des photons incidents :</p>
+                <div class="formula">E = h·c/λ = (6,626.10<sup>-34</sup> × 3.10<sup>8</sup>) / (400.10<sup>-9</sup>) = 4,97.10<sup>-19</sup> J</div>
+                <p>Conversion en eV :</p>
+                <div class="formula">E = 4,97.10<sup>-19</sup> / (1,6.10<sup>-19</sup>) = 3,11 eV</div>
+                
+                <p><strong>2°)</strong> Travail d'extraction :</p>
+                <div class="formula">W = h·ν - E<sub>c</sub> = 3,11 - 0,88 = 2,23 eV</div>
+                
+                <p><strong>3°)</strong> Fréquence seuil :</p>
+                <div class="formula">ν<sub>0</sub> = W/h = (2,23 × 1,6.10<sup>-19</sup>) / 6,626.10<sup>-34</sup> = 5,38.10<sup>14</sup> Hz</div>
+                
+                <p><strong>4°)</strong> Longueur d'onde seuil :</p>
+                <div class="formula">λ<sub>0</sub> = c/ν<sub>0</sub> = 3.10<sup>8</sup> / 5,38.10<sup>14</sup> = 557 nm</div>
+                <p>→ Au-delà de 557 nm (lumière plus rouge), aucun électron n'est éjecté.</p>
+            </div>
+        </div>
+
+        <!-- Exercice 2.2 -->
+        <div class="exercise">
+            <h3>Exercice 2.2 : Longueur d'onde de de Broglie</h3>
+            <p>Calculer la longueur d'onde de de Broglie associée :</p>
+            <p><strong>1°)</strong> À un électron se déplaçant à la vitesse v = 10<sup>6</sup> m.s<sup>-1</sup></p>
+            <p><strong>2°)</strong> À une balle de tennis de masse m = 58 g se déplaçant à v = 50 m.s<sup>-1</sup></p>
+            <p><strong>3°)</strong> Conclure sur l'aspect ondulatoire ou corpusculaire de chaque cas.</p>
+            
+            <div class="hint">
+                <h4>💡 Aide de résolution</h4>
+                <p>Formule de de Broglie : λ = h/p = h/(m·v)</p>
+                <p>Comparer λ à une taille caractéristique du système :</p>
+                <ul>
+                    <li>Si λ est du même ordre de grandeur que la taille du système → aspect ondulatoire</li>
+                    <li>Si λ est très petite devant la taille → aspect corpusculaire</li>
+                </ul>
+            </div>
+            
+            <button class="btn-toggle" onclick="toggleSolution('sol2')">Afficher la correction</button>
+            <div class="solution" id="sol2">
+                <h4>✅ Correction</h4>
+                <p><strong>1°)</strong> Électron :</p>
+                <div class="formula">λ = h/(m<sub>e</sub>·v) = 6,626.10<sup>-34</sup> / (9,1.10<sup>-31</sup> × 10<sup>6</sup>) = 7,28.10<sup>-10</sup> m = 7,28 Å</div>
+                
+                <p><strong>2°)</strong> Balle de tennis :</p>
+                <div class="formula">λ = h/(m·v) = 6,626.10<sup>-34</sup> / (0,058 × 50) = 2,28.10<sup>-34</sup> m</div>
+                
+                <p><strong>3°)</strong> Conclusion :</p>
+                <ul>
+                    <li><strong>Électron :</strong> λ ≈ 7 Å, du même ordre de grandeur que la taille d'un atome (~1 Å) → <strong>aspect ondulatoire</strong> observable (diffraction par un cristal par exemple)</li>
+                    <li><strong>Balle de tennis :</strong> λ ≈ 10<sup>-34</sup> m, totalement négligeable devant la taille de la balle (~6 cm) → <strong>aspect purement corpusculaire</strong>, l'aspect ondulatoire est indétectable</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Exercice 2.3 -->
+        <div class="exercise">
+            <h3>Exercice 2.3 : Principe d'incertitude de Heisenberg</h3>
+            <p>Un électron se déplace avec une vitesse v = 5.10<sup>5</sup> m.s<sup>-1</sup> connue avec une incertitude relative de 0,1%.</p>
+            <p><strong>1°)</strong> Quelle est l'incertitude absolue Δv sur la vitesse ?</p>
+            <p><strong>2°)</strong> En déduire l'incertitude minimale Δx sur la position de l'électron.</p>
+            <p><strong>3°)</strong> Conclure.</p>
+            
+            <div class="hint">
+                <h4>💡 Aide de résolution</h4>
+                <p><strong>1°)</strong> Δv = 0,1% × v = 0,001 × v</p>
+                <p><strong>2°)</strong> Principe d'incertitude : Δx · Δp ≥ ħ/2, avec Δp = m<sub>e</sub>·Δv</p>
+                <p>Donc Δx ≥ ħ/(2·m<sub>e</sub>·Δv)</p>
+            </div>
+            
+            <button class="btn-toggle" onclick="toggleSolution('sol3')">Afficher la correction</button>
+            <div class="solution" id="sol3">
+                <h4>✅ Correction</h4>
+                <p><strong>1°)</strong> Incertitude sur la vitesse :</p>
+                <div class="formula">Δv = 0,001 × 5.10<sup>5</sup> = 500 m.s<sup>-1</sup></div>
+                
+                <p><strong>2°)</strong> Incertitude sur la position :</p>
+                <div class="formula">Δx ≥ ħ/(2·m<sub>e</sub>·Δv) = 1,055.10<sup>-34</sup> / (2 × 9,1.10<sup>-31</sup> × 500)</div>
+                <div class="formula">Δx ≥ 1,16.10<sup>-7</sup> m = 116 nm</div>
+                
+                <p><strong>3°)</strong> Conclusion :</p>
+                <p>L'incertitude sur la position (~100 nm) est du même ordre de grandeur que la taille d'un petit objet (virus, grosse molécule). Pour un électron, on ne peut donc pas connaître simultanément sa position et sa vitesse avec une grande précision. C'est une <strong>limite fondamentale de la nature</strong>, pas un problème technique.</p>
+            </div>
+        </div>
+
+        <!-- Exercice 2.4 -->
+        <div class="exercise">
+            <h3>Exercice 2.4 : Modèle de Bohr de l'atome d'hydrogène</h3>
+            <p><strong>1°)</strong> Rappeler les postulats de Bohr.</p>
+            <p><strong>2°)</strong> Calculer l'énergie de l'électron dans l'atome d'hydrogène pour n = 1, 2, 3 et ∞ (en eV).</p>
+            <p><strong>3°)</strong> Calculer la longueur d'onde du photon émis lors de la transition n = 3 → n = 2.</p>
+            <p><strong>4°)</strong> À quelle série spectrale appartient cette raie ? Dans quel domaine du spectre ?</p>
+            
+            <div class="hint">
+                <h4>💡 Aide de résolution</h4>
+                <p><strong>2°)</strong> E<sub>n</sub> = -13,6 × Z²/n² eV (pour H, Z = 1)</p>
+                <p><strong>3°)</strong> |ΔE| = h·c/λ → λ = h·c/|ΔE|</p>
+                <p><strong>4°)</strong> Série de Balmer : transitions vers n = 2 (domaine visible)</p>
+            </div>
+            
+            <button class="btn-toggle" onclick="toggleSolution('sol4')">Afficher la correction</button>
+            <div class="solution" id="sol4">
+                <h4>✅ Correction</h4>
+                <p><strong>1°)</strong> Postulats de Bohr :</p>
+                <ul>
+                    <li>L'électron ne peut se trouver que dans des <strong>états stationnaires</strong> d'énergie bien définie (orbites circulaires)</li>
+                    <li>Dans un état stationnaire, l'atome <strong>n'émet pas de rayonnement</strong></li>
+                    <li>L'émission/absorption d'un photon se fait lors d'une transition : <strong>h·ν = |ΔE|</strong></li>
+                    <li>Le moment angulaire est quantifié : <strong>L = n·h/(2π)</strong></li>
+                </ul>
+                
+                <p><strong>2°)</strong> Énergies des niveaux :</p>
+                <div class="formula">E<sub>1</sub> = -13,6 eV (état fondamental)</div>
+                <div class="formula">E<sub>2</sub> = -13,6/4 = -3,4 eV</div>
+                <div class="formula">E<sub>3</sub> = -13,6/9 = -1,51 eV</div>
+                <div class="formula">E<sub>∞</sub> = 0 eV (ionisation)</div>
+                
+                <p><strong>3°)</strong> Transition n = 3 → n = 2 :</p>
+                <div class="formula">|ΔE| = E<sub>3</sub> - E<sub>2</sub> = -1,51 - (-3,4) = 1,89 eV</div>
+                <p>Conversion en joules :</p>
+                <div class="formula">|ΔE| = 1,89 × 1,6.10<sup>-19</sup> = 3,02.10<sup>-19</sup> J</div>
+                <p>Longueur d'onde :</p>
+                <div class="formula">λ = h·c/|ΔE| = (6,626.10<sup>-34</sup> × 3.10<sup>8</sup>) / 3,02.10<sup>-19</sup> = 6,59.10<sup>-7</sup> m = 659 nm</div>
+                
+                <p><strong>4°)</strong> Cette raie appartient à la <strong>série de Balmer</strong> (transitions vers n = 2). Elle se situe dans le <strong>domaine visible</strong> (rouge). C'est la raie H<sub>α</sub>.</p>
+            </div>
+        </div>
+
+        <!-- Exercice 2.5 -->
+        <div class="exercise">
+            <h3>Exercice 2.5 : Séries spectrales de l'hydrogène</h3>
+            <p>On considère les séries spectrales suivantes de l'atome d'hydrogène :</p>
+            <ul>
+                <li>Série de Lyman : transitions vers n = 1</li>
+                <li>Série de Balmer : transitions vers n = 2</li>
+                <li>Série de Paschen : transitions vers n = 3</li>
+            </ul>
+            <p><strong>1°)</strong> Calculer la plus grande et la plus petite longueur d'onde de la série de Lyman.</p>
+            <p><strong>2°)</strong> Dans quel domaine spectral se situe cette série ?</p>
+            <p><strong>3°)</strong> Même questions pour la série de Balmer.</p>
+            
+            <div class="hint">
+                <h4>💡 Aide de résolution</h4>
+                <p>Formule de Rydberg : 1/λ = R<sub>H</sub> × (1/n² - 1/p²) avec p &gt; n</p>
+                <ul>
+                    <li><strong>Plus grande λ</strong> : transition la moins énergétique (p = n+1)</li>
+                    <li><strong>Plus petite λ</strong> : transition la plus énergétique (p → ∞)</li>
+                </ul>
+            </div>
+            
+            <button class="btn-toggle" onclick="toggleSolution('sol5')">Afficher la correction</button>
+            <div class="solution" id="sol5">
+                <h4>✅ Correction</h4>
+                <p><strong>1°)</strong> Série de Lyman (n = 1) :</p>
+                <p><strong>Plus grande λ</strong> (transition 2 → 1) :</p>
+                <div class="formula">1/λ = R<sub>H</sub> × (1/1² - 1/2²) = 1,097.10<sup>7</sup> × (1 - 1/4) = 8,23.10<sup>6</sup> m<sup>-1</sup></div>
+                <div class="formula">λ = 1 / 8,23.10<sup>6</sup> = 1,215.10<sup>-7</sup> m = 121,5 nm</div>
+                
+                <p><strong>Plus petite λ</strong> (transition ∞ → 1) :</p>
+                <div class="formula">1/λ = R<sub>H</sub> × (1/1² - 1/∞²) = R<sub>H</sub> = 1,097.10<sup>7</sup> m<sup>-1</sup></div>
+                <div class="formula">λ = 1 / 1,097.10<sup>7</sup> = 9,11.10<sup>-8</sup> m = 91,1 nm</div>
+                
+                <p><strong>2°)</strong> La série de Lyman se situe dans l'<strong>ultraviolet</strong> (91,1 nm - 121,5 nm).</p>
+                
+                <p><strong>3°)</strong> Série de Balmer (n = 2) :</p>
+                <p><strong>Plus grande λ</strong> (transition 3 → 2) :</p>
+                <div class="formula">1/λ = R<sub>H</sub> × (1/2² - 1/3²) = 1,097.10<sup>7</sup> × (1/4 - 1/9) = 1,524.10<sup>6</sup> m<sup>-1</sup></div>
+                <div class="formula">λ = 656 nm (raie H<sub>α</sub>, rouge)</div>
+                
+                <p><strong>Plus petite λ</strong> (transition ∞ → 2) :</p>
+                <div class="formula">1/λ = R<sub>H</sub> × (1/2² - 1/∞²) = R<sub>H</sub>/4 = 2,74.10<sup>6</sup> m<sup>-1</sup></div>
+                <div class="formula">λ = 364,6 nm</div>
+                <p>La série de Balmer se situe dans le <strong>visible</strong> (364,6 nm - 656 nm).</p>
+            </div>
+        </div>
+
+        <!-- Exercice 2.6 -->
+        <div class="exercise">
+            <h3>Exercice 2.6 : Énergie d'ionisation</h3>
+            <p><strong>1°)</strong> Calculer l'énergie d'ionisation de l'atome d'hydrogène (en eV et en kJ.mol<sup>-1</sup>).</p>
+            <p><strong>2°)</strong> Calculer l'énergie d'ionisation de l'ion He<sup>+</sup> (Z = 2).</p>
+            <p><strong>3°)</strong> Comparer et conclure.</p>
+            
+            <div class="hint">
+                <h4>💡 Aide de résolution</h4>
+                <p><strong>1°)</strong> L'ionisation correspond à la transition n = 1 → n = ∞</p>
+                <p>E<sub>ionisation</sub> = E<sub>∞</sub> - E<sub>1</sub> = 0 - (-13,6) = 13,6 eV</p>
+                <p>Pour convertir en kJ.mol<sup>-1</sup> : multiplier par N<sub>A</sub> et convertir en kJ</p>
+                <p><strong>2°)</strong> Pour un atome hydrogénoïde : E<sub>n</sub> = -13,6 × Z²/n² eV</p>
+            </div>
+            
+            <button class="btn-toggle" onclick="toggleSolution('sol6')">Afficher la correction</button>
+            <div class="solution" id="sol6">
+                <h4>✅ Correction</h4>
+                <p><strong>1°)</strong> Énergie d'ionisation de H :</p>
+                <div class="formula">E<sub>ion</sub> = E<sub>∞</sub> - E<sub>1</sub> = 0 - (-13,6) = 13,6 eV</div>
+                <p>Conversion en J :</p>
+                <div class="formula">E<sub>ion</sub> = 13,6 × 1,6.10<sup>-19</sup> = 2,176.10<sup>-18</sup> J</div>
+                <p>Conversion en kJ.mol<sup>-1</sup> :</p>
+                <div class="formula">E<sub>ion</sub> = 2,176.10<sup>-18</sup> × 6,022.10<sup>23</sup> / 1000 = 1310 kJ.mol<sup>-1</sup></div>
+                
+                <p><strong>2°)</strong> Énergie d'ionisation de He<sup>+</sup> (Z = 2) :</p>
+                <div class="formula">E<sub>1</sub>(He<sup>+</sup>) = -13,6 × 2²/1² = -54,4 eV</div>
+                <div class="formula">E<sub>ion</sub>(He<sup>+</sup>) = 0 - (-54,4) = 54,4 eV</div>
+                
+                <p><strong>3°)</strong> Comparaison :</p>
+                <p>E<sub>ion</sub>(He<sup>+</sup>) / E<sub>ion</sub>(H) = 54,4 / 13,6 = 4 = Z²</p>
+                <p>→ L'énergie d'ionisation d'un atome hydrogénoïde est proportionnelle à <strong>Z²</strong>. Plus Z est grand, plus l'électron est fortement attiré par le noyau, et plus il est difficile à arracher.</p>
+            </div>
+        </div>
+
+        <!-- Exercice 2.7 -->
+        <div class="exercise">
+            <h3>Exercice 2.7 : Rayon de l'orbite de Bohr</h3>
+            <p><strong>1°)</strong> Rappeler l'expression du rayon de l'orbite de Bohr r<sub>n</sub> en fonction de n et Z.</p>
+            <p><strong>2°)</strong> Calculer le rayon de la première orbite de l'atome d'hydrogène (rayon de Bohr a<sub>0</sub>).</p>
+            <p><strong>3°)</strong> Calculer le rayon de la première orbite de l'ion He<sup>+</sup>.</p>
+            <p><strong>4°)</strong> Comparer et conclure.</p>
+            
+            <div class="hint">
+                <h4>💡 Aide de résolution</h4>
+                <p><strong>1°)</strong> r<sub>n</sub> = n² × a<sub>0</sub> / Z avec a<sub>0</sub> = 0,529 Å</p>
+                <p><strong>2°)</strong> Pour H (Z=1, n=1) : r<sub>1</sub> = a<sub>0</sub></p>
+                <p><strong>3°)</strong> Pour He<sup>+</sup> (Z=2, n=1) : r<sub>1</sub> = a<sub>0</sub>/2</p>
+            </div>
+            
+            <button class="btn-toggle" onclick="toggleSolution('sol7')">Afficher la correction</button>
+            <div class="solution" id="sol7">
+                <h4>✅ Correction</h4>
+                <p><strong>1°)</strong> Expression du rayon :</p>
+                <div class="formula">r<sub>n</sub> = n² × a<sub>0</sub> / Z</div>
+                <p>Avec a<sub>0</sub> = 0,529 Å = 5,29.10<sup>-11</sup> m (rayon de Bohr)</p>
+                
+                <p><strong>2°)</strong> Pour H (Z=1, n=1) :</p>
+                <div class="formula">r<sub>1</sub>(H) = 1² × 0,529 / 1 = 0,529 Å</div>
+                
+                <p><strong>3°)</strong> Pour He<sup>+</sup> (Z=2, n=1) :</p>
+                <div class="formula">r<sub>1</sub>(He<sup>+</sup>) = 1² × 0,529 / 2 = 0,265 Å</div>
+                
+                <p><strong>4°)</strong> Comparaison :</p>
+                <p>r<sub>1</sub>(He<sup>+</sup>) / r<sub>1</sub>(H) = 0,265 / 0,529 = 1/2 = 1/Z</p>
+                <p>→ Plus Z est grand, plus l'électron est <strong>proche du noyau</strong> (car il est plus fortement attiré). Le rayon de l'orbite est inversement proportionnel à Z.</p>
+            </div>
+        </div>
+
+        <!-- Exercice 2.8 -->
+        <div class="exercise">
+            <h3>Exercice 2.8 : Limites du modèle de Bohr</h3>
+            <p><strong>1°)</strong> Citer 3 limites du modèle de Bohr.</p>
+            <p><strong>2°)</strong> Quel modèle a permis de les dépasser ?</p>
+            <p><strong>3°)</strong> Quels sont les 3 grands principes de ce nouveau modèle ?</p>
+            
+            <div class="hint">
+                <h4>💡 Aide de résolution</h4>
+                <p>Pense aux observations expérimentales que Bohr ne peut pas expliquer, et aux concepts introduits par la mécanique quantique (Schrödinger, Heisenberg, de Broglie).</p>
+            </div>
+            
+            <button class="btn-toggle" onclick="toggleSolution('sol8')">Afficher la correction</button>
+            <div class="solution" id="sol8">
+                <h4>✅ Correction</h4>
+                <p><strong>1°)</strong> Limites du modèle de Bohr :</p>
+                <ul>
+                    <li>❌ Ne fonctionne <strong>que pour les atomes hydrogénoïdes</strong> (1 seul électron : H, He<sup>+</sup>, Li<sup>2+</sup>...)</li>
+                    <li>❌ Ne peut pas expliquer les <strong>spectres des atomes polyélectroniques</strong></li>
+                    <li>❌ Ne donne aucune image de la <strong>liaison chimique</strong></li>
+                    <li>❌ D'après l'électromagnétisme classique, l'électron en orbite devrait <strong>rayonner</strong> et s'écraser sur le noyau (atome instable)</li>
+                    <li>❌ Ne peut pas expliquer la <strong>structure fine</strong> des raies spectrales</li>
+                </ul>
+                
+                <p><strong>2°)</strong> Le modèle qui a permis de les dépasser est la <strong>mécanique quantique</strong> (1925-1927), avec :</p>
+                <ul>
+                    <li>L'équation de Schrödinger (1926)</li>
+                    <li>Le principe d'incertitude de Heisenberg (1927)</li>
+                    <li>La dualité onde-corpuscule de de Broglie (1923)</li>
+                </ul>
+                
+                <p><strong>3°)</strong> Grands principes de la mécanique quantique :</p>
+                <ul>
+                    <li><strong>Dualité onde-corpuscule</strong> : toute particule a une longueur d'onde associée (λ = h/p)</li>
+                    <li><strong>Principe d'incertitude</strong> : on ne peut pas connaître simultanément avec précision position et quantité de mouvement (Δx·Δp ≥ ħ/2)</li>
+                    <li><strong>Description probabiliste</strong> : l'électron n'a pas de trajectoire définie, il est décrit par une fonction d'onde Ψ dont |Ψ|² donne la densité de probabilité de présence</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card" style="text-align: center; margin-top: 30px;">
+            <h2>🎯 Fin du TD2</h2>
+            <p>Tu as terminé le TD2 ! Passe au TD3 pour continuer.</p>
+            <a href="td3.html" class="btn">Passer au TD3</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>TD2 - Effet Photoélectrique, de Broglie & Heisenberg | Correction complète disponible</p>
+    </footer>
+
+    <script>
+        function toggleSolution(id) {
+            const solution = document.getElementById(id);
+            if (solution.classList.contains('show')) {
+                solution.classList.remove('show');
+            } else {
+                solution.classList.add('show');
+            }
+        }
+    </script>
+</body>
+</html>

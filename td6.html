@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TD6 - Propriétés Périodiques</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .exercise {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            border-left: 5px solid var(--secondary);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .exercise h3 {
+            color: var(--primary);
+            margin-top: 0;
+        }
+        .hint {
+            background: #d1ecf1;
+            border-left: 4px solid #17a2b8;
+            padding: 12px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .hint h4 {
+            color: #0c5460;
+            margin-top: 0;
+        }
+        .solution {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 12px;
+            margin: 15px 0;
+            border-radius: 4px;
+            display: none;
+        }
+        .solution.show {
+            display: block;
+        }
+        .solution h4 {
+            color: #155724;
+            margin-top: 0;
+        }
+        .btn-toggle {
+            background: var(--secondary);
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 10px 0;
+        }
+        .btn-toggle:hover {
+            background: var(--primary);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>TD6 - Propriétés Périodiques</h1>
+        <p>Rayons atomiques, énergies d'ionisation, électronégativité</p>
+    </header>
+    
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="td1.html">TD1</a>
+        <a href="td2.html">TD2</a>
+        <a href="td3.html">TD3</a>
+        <a href="td4.html">TD4</a>
+        <a href="td5.html">TD5</a>
+        <a href="td6.html">TD6</a>
+        <a href="td7.html">TD7</a>
+    </nav>
+
+    <div class="container">
+        <div class="card">
+            <h2>📋 Rappels sur les propriétés périodiques</h2>
+            <table class="table-custom">
+                <tr>
+                    <th>Propriété</th>
+                    <th>Le long d'une période (→)</th>
+                    <th>Le long d'une colonne (↓)</th>
+                </tr>
+                <tr>
+                    <td>Rayon atomique</td>
+                    <td>Diminue</td>
+                    <td>Augmente</td>
+                </tr>
+                <tr>
+                    <td>Énergie d'ionisation</td>
+                    <td>Augmente</td>
+                    <td>Diminue</td>
+                </tr>
+                <tr>
+                    <td>Affinité électronique</td>
+                    <td>Augmente (en valeur absolue)</td>
+                    <td>Diminue</td>
+                </tr>
+                <tr>
+                    <td>Électronégativité</td>
+                    <td>Augmente</td>
+                    <td>Diminue</td>
+                </tr>
+                <tr>
+                    <td>Caractère métallique</td>
+                    <td>Diminue</td>
+                    <td>Augmente</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Exercice 6.1 -->
+        <div class="exercise">
+            <h3>Exercice 6.1 : Rayons atomiques - Comparaison</h3>
+            <p>Classer les atomes suivants par rayon atomique croissant :</p>
+            <p><strong>1°)</strong> Li, Na, K, Rb</p>
+            <p><strong>2°)</strong> C, N, O, F</p>
+            <p><strong>3°)</strong> Na, Mg, Al, Si</p>
+            <p><strong>4°)</strong> O, S, Se, Te</p>
+            
+            <div class="hint">
+                <h4>💡 Aide de résolution</h4>
+                <ul>
+                    <li>Le long d'une colonne (↓) : le rayon <strong>augmente</strong> (n augmente)</li>
+                    <li>Le long d'une période (→) : le rayon <strong>diminue</strong> (Z<sub>eff</sub> augmente)</li>
+                </ul>
+            </div>
+            
+            <button class="btn-toggle" onclick="toggleSolution('sol1')">Afficher la correction</button>
+            <div class="solution" id="sol1">
+                <h4>✅ Correction</h4>
+                <p><strong>1°)</strong> Li, Na, K, Rb (colonne 1) :</p>
+                <div class="formula">Li &lt; Na &lt; K &lt; Rb</div>
+                <p>→ Le rayon augmente le long d'une colonne (n croissant)</p>
+                
+                <p><strong>2°)</strong> C, N, O, F (période 2) :</p>
+                <div class="formula">F &lt; O &lt; N &lt; C</div>
+                <p>→ Le rayon diminue le long d'une période (Z<sub>eff</sub> croissant)</p>
+                
+                <p><strong>3°)</strong> Na, Mg, Al, Si (période 3) :</p>
+                <div class="formula">Si &lt; Al &lt; Mg &lt; Na</div>
+                <p>→ Même raison que ci-dessus</p>
+                
+                <p><strong>4°)</strong> O, S, Se, Te (colonne 16) :</p>
+                <div class="formula">O &lt; S &lt; Se &lt; Te</div>
+                <p>→ Le rayon augmente le long d'une colonne</p>
+            </div>
+        </div>
+
+        <!-- Exercice 6.2 -->
+        <div class="exercise">
+            <h3>Exercice 6.2 : Énergies d'ionisation successives</h3>
+            <p>Voici les 5 premières énergies d'ionisation (en eV) d'un élément X :</p>
+            <table class="table-custom">
+                <tr><th>E<sub>I1</sub></th><th>E<sub>I2</sub></th><th>E<sub>I3</sub></th><th>E<sub>I4</sub></th><th>E<sub>I5</sub></th></tr>
+                <tr><td>5,14</td><td>47,29</td><td>71,64</td><td>98,91</td><td>138,39</td></tr>
+            </table>
+            <p><strong>1°)</strong> À quelle famille appartient l'élément X ?</p>
+            <p><strong>2°)</strong> Identifier l'élément X.</p>
+            <p><strong>3°)</strong> Expliquer la forte augmentation entre EI<sub>1</sub> et EI<sub>2</sub>.</p>
+            
+            <div class="hint">
+                <h4>💡 Aide de résolution</h4>
+                <ul>
+                    <li>Une forte augmentation entre EI<sub>n</sub> et EI<sub>n+1</sub> indique qu'on a enlevé tous les électrons de valence</li>
+                    <li>Le nombre d'électrons de valence = n</li>
+                    <li>Comparer EI<sub>1</sub> avec les valeurs connues</li>
+                </ul>
+            </div>
+            
+            <button class="btn-toggle" onclick="toggleSolution('sol2')">Afficher la correction</button>
+            <div class="solution" id="sol2">
+                <h4>✅ Correction</h4>
+                <p><strong>1°)</strong> Famille :</p>
+                <p>On observe une <strong>très forte augmentation</strong> entre EI<sub>1</sub> (5,14 eV) et EI<sub>2</sub> (47,29 eV) : facteur ~9 !</p>
+                <p>→ Cela signifie que le <strong>1er électron</strong> est un électron de valence, et le 2ème est un électron de cœur (beaucoup plus difficile à arracher).</p>
+                <p>L'élément X a donc <strong>1 seul électron de valence</strong> → il appartient à la <strong>colonne 1 (alcalins)</strong>.</p>
+                
+                <p><strong>2°)</strong> Identification :</p>
+                <p>EI<sub>1</sub> = 5,14 eV correspond exactement à l'énergie d'ionisation du <strong>Sodium (Na)</strong>.</p>
+                <p>Vérification : Na (Z=11) : (1s)²(2s)²(2p)⁶(3s)¹ → 1 électron de valence ✓</p>
+                
+                <p><strong>3°)</strong> Explication :</p>
+                <ul>
+                    <li>EI<sub>1</sub> : on arrache l'électron 3s¹ (faiblement lié, Z<sub>eff</sub> faible)</li>
+                    <li>EI<sub>2</sub> : on arrache un électron 2p (couche interne, très fortement lié, Z<sub>eff</sub> élevé)</li>
+                    <li>La différence énorme s'explique par le passage d'une couche de valence à une couche de cœur</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Exercice 6.3 -->
+        <div class="exercise">
+            <h3>Exercice 6.3 : Électronégativité</h3>
+            <p>Classer les éléments suivants par électronégativité croissante :</p>
+            <p><strong>1°)</strong> F, O, N, C</p>
+            <p><strong>2°)</strong> Li, Na, K</p>
+            <p><strong>3°)</strong> Na, Mg, Al, Si, P, S, Cl</p>
+            <p><strong>4°)</strong> Quel est l'élément le plus électronégatif ? Le moins électronégatif ?</p>
+            
+            <div class="hint">
+                <h4>💡 Aide de résolution</h4>
+                <ul>
+                    <li>Le long d'une période (→) : électronégativité <strong>augmente</strong></li>
+                    <li>Le long d'une colonne (↓) : électronégativité <strong>diminue</strong></li>
+                    <li>Le plus électronégatif : F (en haut à droite du tableau)</li>
+                    <li>Le moins électronégatif : Fr ou Cs (en bas à gauche)</li>
+                </ul>
+            </div>
+            
+            <button class="btn-toggle" onclick="toggleSolution('sol3')">Afficher la correction</button>
+            <div class="solution" id="sol3">
+                <h4>✅ Correction</h4>
+                <p><strong>1°)</strong> F, O, N, C (période 2, de droite à gauche) :</p>
+                <div class="formula">C &lt; N &lt; O &lt; F</div>
+                
+                <p><strong>2°)</strong> Li, Na, K (colonne 1) :</p>
+                <div class="formula">K &lt; Na &lt; Li</div>
+                
+                <p><strong>3°)</strong> Na, Mg, Al, Si, P, S, Cl (période 3) :</p>
+                <div class="formula">Na &lt; Mg &lt; Al &lt; Si &lt; P &lt; S &lt; Cl</div>
+                
+                <p><strong>4°)</strong> Extrêmes :</p>
+                <ul>
+                    <li><strong>Plus électronégatif :</strong> Fluor (F) - χ ≈ 4,0 (échelle de Pauling)</li>
+                    <li><strong>Moins électronégatif :</strong> Francium (Fr) ou Césium (Cs) - χ ≈ 0,7</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Exercice 6.4 -->
+        <div class="exercise">
+            <h3>Exercice 6.4 : Rayons ioniques</h3>
+            <p>Classer les ions suivants par rayon ionique croissant :</p>
+            <p><strong>1°)</strong> Na⁺, Mg²⁺, Al³⁺ (isoelectroniques : 10 électrons)</p>
+            <p><strong>2°)</strong> F⁻, Na⁺, Mg²⁺ (isoelectroniques : 10 électrons)</p>
+            <p><strong>3°)</strong> O²⁻, F⁻, Na⁺, Mg²⁺, Al³⁺ (isoelectroniques : 10 électrons)</p>
+            <p><strong>4°)</strong> Conclure sur l'effet de la charge sur le rayon ionique pour des ions isoelectroniques.</p>
+            
+            <div class="hint">
+                <h4>💡 Aide de résolution</h4>
+                <ul>
+                    <li>Ions isoelectroniques = même nombre d'électrons</li>
+                    <li>Plus Z est grand, plus les électrons sont attirés par le noyau → rayon plus petit</li>
+                    <li>Pour des ions isoelectroniques : rayon <strong>diminue</strong> quand Z augmente</li>
+                </ul>
+            </div>
+            
+            <button class="btn-toggle" onclick="toggleSolution('sol4')">Afficher la correction</button>
+            <div class="solution" id="sol4">
+                <h4>✅ Correction</h4>
+                <p><strong>1°)</strong> Na⁺ (Z=11), Mg²⁺ (Z=12), Al³⁺ (Z=13) :</p>
+                <div class="formula">Al³⁺ &lt; Mg²⁺ &lt; Na⁺</div>
+                <p>→ Même nombre d'électrons (10), mais Z croissant → attraction nucléaire croissante → rayon décroissant</p>
+                
+                <p><strong>2°)</strong> F⁻ (Z=9), Na⁺ (Z=11), Mg²⁺ (Z=12) :</p>
+                <div class="formula">Mg²⁺ &lt; Na⁺ &lt; F⁻</div>
+                
+                <p><strong>3°)</strong> O²⁻ (Z=8), F⁻ (Z=9), Na⁺ (Z=11), Mg²⁺ (Z=12), Al³⁺ (Z=13) :</p>
+                <div class="formula">Al³⁺ &lt; Mg²⁺ &lt; Na⁺ &lt; F⁻ &lt; O²⁻</div>
+                
+                <p><strong>4°)</strong> Conclusion :</p>
+                <p>Pour des ions <strong>isoelectroniques</strong> (même nombre d'électrons) :</p>
+                <ul>
+                    <li>Le rayon ionique <strong>diminue</strong> quand Z augmente</li>
+                    <li>Les cations (charge +) sont plus petits que les atomes neutres</li>
+                    <li>Les anions (charge -) sont plus grands que les atomes neutres</li>
+                    <li>Plus la charge positive est grande, plus l'ion est petit</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Exercice 6.5 -->
+        <div class="exercise">
+            <h3>Exercice 6.5 : Anomalies dans les énergies d'ionisation</h3>
+            <p>On observe que EI<sub>1</sub>(O) &lt; EI<sub>1</sub>(N) alors que O est à droite de N dans le tableau.</p>
+            <p><strong>1°)</strong> Écrire les configurations électroniques de N et O.</p>
+            <p><strong>2°)</strong> Représenter les cases quantiques de la sous-couche 2p pour N et O.</p>
+            <p><strong>3°)</strong> Expliquer l'anomalie observée.</p>
+            <p><strong>4°)</strong> Même question pour Be et B.</p>
+            
+            <div class="hint">
+                <h4>💡 Aide de résolution</h4>
+                <ul>
+                    <li>Penser à la stabilité des configurations (demi-couche pleine, sous-couche pleine)</li>
+                    <li>Penser à la répulsion entre électrons appariés dans une même orbitale</li>
+                </ul>
+            </div>
+            
+            <button class="btn-toggle" onclick="toggleSolution('sol5')">Afficher la correction</button>
+            <div class="solution" id="sol5">
+                <h4>✅ Correction</h4>
+                <p><strong>1°)</strong> Configurations :</p>
+                <ul>
+                    <li>N (Z=7) : (1s)²(2s)²(2p)³</li>
+                    <li>O (Z=8) : (1s)²(2s)²(2p)⁴</li>
+                </ul>
+                
+                <p><strong>2°)</strong> Cases quantiques 2p :</p>
+                <div class="orbital-diagram">
+                    N (2p³) : ↑ &nbsp; ↑ &nbsp; ↑<br>
+                    O (2p⁴) : ↑↓ &nbsp; ↑ &nbsp; ↑
+                </div>
+                
+                <p><strong>3°)</strong> Explication de l'anomalie N/O :</p>
+                <ul>
+                    <li><strong>N</strong> a une <strong>demi-couche 2p pleine</strong> (3 électrons célibataires) → configuration particulièrement stable → difficile à ioniser</li>
+                    <li><strong>O</strong> a 4 électrons 2p : 1 doublet + 2 célibataires. Les 2 électrons du doublet sont dans la même orbitale → <strong>répulsion électron-électron</strong> → l'un d'eux est plus facile à arracher</li>
+                    <li>→ EI<sub>1</sub>(O) &lt; EI<sub>1</sub>(N) malgré Z(O) &gt; Z(N)</li>
+                </ul>
+                
+                <p><strong>4°)</strong> Anomalie Be/B :</p>
+                <ul>
+                    <li>Be (Z=4) : (1s)²(2s)² → sous-couche 2s pleine (stable)</li>
+                    <li>B (Z=5) : (1s)²(2s)²(2p)¹ → 1 électron 2p (moins bien protégé)</li>
+                    <li>L'électron 2p de B est moins bien écranté que les électrons 2s de Be → plus facile à arracher</li>
+                    <li>→ EI<sub>1</sub>(B) &lt; EI<sub>1</sub>(Be)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Exercice 6.6 -->
+        <div class="exercise">
+            <h3>Exercice 6.6 : Caractère métallique</h3>
+            <p>Classer les éléments suivants par caractère métallique croissant :</p>
+            <p><strong>1°)</strong> Na, Mg, Al, Si, P, S, Cl</p>
+            <p><strong>2°)</strong> B, Al, Ga, In, Tl</p>
+            <p><strong>3°)</strong> Parmi les éléments suivants, lesquels sont des métaux ? Des non-métaux ? Des métalloïdes ?</p>
+            <p style="margin-left: 20px;">C, Si, Ge, Sn, Pb, N, P, As, Sb, Bi</p>
+            
+            <div class="hint">
+                <h4>💡 Aide de résolution</h4>
+                <ul>
+                    <li>Le caractère métallique <strong>diminue</strong> le long d'une période (→)</li>
+                    <li>Le caractère métallique <strong>augmente</strong> le long d'une colonne (↓)</li>
+                    <li>Métaux : gauche du tableau | Non-métaux : droite | Métalloïdes : frontière</li>
+                </ul>
+            </div>
+            
+            <button class="btn-toggle" onclick="toggleSolution('sol6')">Afficher la correction</button>
+            <div class="solution" id="sol6">
+                <h4>✅ Correction</h4>
+                <p><strong>1°)</strong> Période 3 :</p>
+                <div class="formula">Cl &lt; S &lt; P &lt; Si &lt; Al &lt; Mg &lt; Na</div>
+                <p>→ Caractère métallique décroissant de gauche à droite</p>
+                
+                <p><strong>2°)</strong> Colonne 13 :</p>
+                <div class="formula">B &lt; Al &lt; Ga &lt; In &lt; Tl</div>
+                <p>→ Caractère métallique croissant de haut en bas</p>
+                
+                <p><strong>3°)</strong> Classification :</p>
+                <table class="table-custom">
+                    <tr><th>Type</th><th>Éléments</th></tr>
+                    <tr><td>Métaux</td><td>Sn, Pb, Sb, Bi</td></tr>
+                    <tr><td>Non-métaux</td><td>C, N, P</td></tr>
+                    <tr><td>Métalloïdes</td><td>Si, Ge, As</td></tr>
+                </table>
+                <p><strong>Note :</strong> La frontière entre métaux et non-métaux suit une ligne diagonale dans le tableau périodique (de B à Po). Les éléments proches de cette ligne sont des métalloïdes.</p>
+            </div>
+        </div>
+
+        <!-- Exercice 6.7 -->
+        <div class="exercise">
+            <h3>Exercice 6.7 : Affinité électronique</h3>
+            <p>L'affinité électronique est l'énergie libérée lorsqu'un atome gazeux capte un électron :</p>
+            <div class="formula">X(g) + e⁻ → X⁻(g) + énergie</div>
+            <p><strong>1°)</strong> Pourquoi l'affinité électronique des gaz nobles est-elle proche de zéro (voire positive) ?</p>
+            <p><strong>2°)</strong> Pourquoi les halogènes ont-ils une affinité électronique très élevée ?</p>
+            <p><strong>3°)</strong> Pourquoi l'affinité électronique de l'oxygène est-elle plus faible que celle du soufre ?</p>
+            
+            <div class="hint">
+                <h4>💡 Aide de résolution</h4>
+                <ul>
+                    <li>Penser à la stabilité des configurations électroniques</li>
+                    <li>Penser à la répulsion électron-électron dans les petites orbitales</li>
+                </ul>
+            </div>
+            
+            <button class="btn-toggle" onclick="toggleSolution('sol7')">Afficher la correction</button>
+            <div class="solution" id="sol7">
+                <h4>✅ Correction</h4>
+                <p><strong>1°)</strong> Gaz nobles :</p>
+                <ul>
+                    <li>Configuration ns² np⁶ (couche externe pleine) → très stable</li>
+                    <li>Ajouter un électron nécessiterait de le placer dans la couche (n+1), très éloignée du noyau</li>
+                    <li>→ Affinité électronique proche de zéro ou positive (il faut fournir de l'énergie)</li>
+                </ul>
+                
+                <p><strong>2°)</strong> Halogènes :</p>
+                <ul>
+                    <li>Configuration ns² np⁵ → il manque 1 électron pour atteindre la configuration du gaz noble</li>
+                    <li>Capter un électron permet d'atteindre ns² np⁶ (très stable)</li>
+                    <li>→ Affinité électronique très élevée (énergie libérée importante)</li>
+                    <li>Exemple : F : 328 kJ/mol | Cl : 349 kJ/mol</li>
+                </ul>
+                
+                <p><strong>3°)</strong> Anomalie O/S :</p>
+                <ul>
+                    <li>O : AE = 141 kJ/mol | S : AE = 200 kJ/mol</li>
+                    <li>L'atome d'oxygène est très <strong>petit</strong> → la densité électronique est très élevée</li>
+                    <li>Quand on ajoute un électron à O, il subit une <strong>forte répulsion</strong> des autres électrons (orbitale 2p petite et dense)</li>
+                    <li>Le soufre est plus grand → moins de répulsion → affinité électronique plus élevée</li>
+                    <li>→ Même anomalie observée pour F/Cl et N/P</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Exercice 6.8 -->
+        <div class="exercise">
+            <h3>Exercice 6.8 : Synthèse - Prédiction de réactivité</h3>
+            <p>On considère les éléments suivants : Na, Mg, Al, Si, P, S, Cl</p>
+            <p><strong>1°)</strong> Quel est l'élément le plus réactif pour former un cation ? Pourquoi ?</p>
+            <p><strong>2°)</strong> Quel est l'élément le plus réactif pour former un anion ? Pourquoi ?</p>
+            <p><strong>3°)</strong> Quel composé ionique formerez-vous entre Na et Cl ? Entre Mg et Cl ?</p>
+            <p><strong>4°)</strong> Quel est le caractère acide/base de l'oxyde de Na (Na₂O) ? De l'oxyde de Cl (Cl₂O₇) ?</p>
+            
+            <div class="hint">
+                <h4>💡 Aide de résolution</h4>
+                <ul>
+                    <li>Pour former un cation : faible énergie d'ionisation → caractère métallique</li>
+                    <li>Pour former un anion : forte affinité électronique → caractère non-métallique</li>
+                    <li>Oxydes métalliques = basiques | Oxydes non-métalliques = acides</li>
+                </ul>
+            </div>
+            
+            <button class="btn-toggle" onclick="toggleSolution('sol8')">Afficher la correction</button>
+            <div class="solution" id="sol8">
+                <h4>✅ Correction</h4>
+                <p><strong>1°)</strong> Cation :</p>
+                <ul>
+                    <li>L'élément le plus réactif pour former un cation est <strong>Na</strong></li>
+                    <li>Car c'est le plus métallique (colonne 1, faible EI, 1 électron de valence facile à perdre)</li>
+                    <li>Na → Na⁺ + e⁻ (EI₁ = 5,14 eV, très faible)</li>
+                </ul>
+                
+                <p><strong>2°)</strong> Anion :</p>
+                <ul>
+                    <li>L'élément le plus réactif pour former un anion est <strong>Cl</strong></li>
+                    <li>Car c'est le plus non-métallique (colonne 17, forte AE, 1 électron manquant pour l'octet)</li>
+                    <li>Cl + e⁻ → Cl⁻ (AE = 349 kJ/mol, très élevée)</li>
+                </ul>
+                
+                <p><strong>3°)</strong> Composés ioniques :</p>
+                <ul>
+                    <li>Na + Cl → <strong>NaCl</strong> (chlorure de sodium)</li>
+                    <li>Mg + 2Cl → <strong>MgCl₂</strong> (chlorure de magnésium)</li>
+                </ul>
+                
+                <p><strong>4°)</strong> Caractère des oxydes :</p>
+                <ul>
+                    <li><strong>Na₂O</strong> : oxyde métallique → <strong>basique</strong></li>
+                    <li style="margin-left: 20px;">Na₂O + H₂O → 2NaOH (base forte)</li>
+                    <li><strong>Cl₂O₇</strong> : oxyde non-métallique → <strong>acide</strong></li>
+                    <li style="margin-left: 20px;">Cl₂O₇ + H₂O → 2HClO₄ (acide perchlorique, acide fort)</li>
+                </ul>
+                <p><strong>Règle générale :</strong> Le long d'une période, le caractère des oxydes passe de basique → amphotère → acide.</p>
+            </div>
+        </div>
+
+        <div class="card" style="text-align: center; margin-top: 30px;">
+            <h2>🎯 Fin du TD6</h2>
+            <p>Tu as terminé le TD6 ! Passe au TD7 (synthèse finale) pour terminer.</p>
+            <a href="td7.html" class="btn">Passer au TD7</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>TD6 - Propriétés Périodiques | Correction complète disponible</p>
+    </footer>
+
+    <script>
+        function toggleSolution(id) {
+            const solution = document.getElementById(id);
+            if (solution.classList.contains('show')) {
+                solution.classList.remove('show');
+            } else {
+                solution.classList.add('show');
+            }
+        }
+    </script>
+</body>
+</html>
