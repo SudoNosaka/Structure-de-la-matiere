@@ -13,15 +13,13 @@
     </header>
     
     <nav>
-        <a href="main.html">Accueil</a>
+        <a href="index.html">Accueil</a>
+        <a href="bases.html">Bases</a>
         <a href="resume.html">Résumé (Pareto 20%)</a>
-        <a href="notion1.html">Notion 1</a>
-        <a href="notion2.html">Notion 2</a>
-        <a href="notion3.html">Notion 3</a>
-        <a href="notion4.html">Notion 4</a>
-        <a href="notion5.html">Notion 5</a>
+        <a href="#notions">Notions</a>
         <a href="quiz1.html">Quiz 1</a>
         <a href="quiz2.html">Quiz 2</a>
+        <a href="quiz3.html">Quiz 3</a>
         <a href="textesatrous.html">Textes à Trous</a>
     </nav>
 
@@ -70,7 +68,7 @@
         </div>
 
         <div class="card">
-            <h2>6. Équation de Schrödinger & Orbitales ⭐ NOUVEAU</h2>
+            <h2>6. Équation de Schrödinger & Orbitales</h2>
             <div class="formula">Ĥ · Ψ = E · Ψ</div>
             <p>La fonction d'onde <strong>Ψ(r,θ,φ)</strong> décrit l'état de l'électron. Sa probabilité de présence :</p>
             <div class="formula">dP = |Ψ|² · dτ</div>
@@ -90,7 +88,7 @@
         </div>
 
         <div class="card">
-            <h2>7. Configuration Électronique ⭐ NOUVEAU</h2>
+            <h2>7. Configuration Électronique</h2>
             <p>Les 3 règles fondamentales :</p>
             <ul>
                 <li><strong>① Principe de Pauli :</strong> 2 électrons d'un même atome ne peuvent pas avoir les <strong>4 mêmes nombres quantiques</strong>. Une orbitale = 2 électrons max (spins opposés).</li>
@@ -118,9 +116,80 @@
         </div>
 
         <div class="card">
+            <h2>8. Approximation Hydrogénoïde & Slater ⭐ NOUVEAU</h2>
+            <h3>Effet d'écran et charge effective</h3>
+            <div class="formula">Z<sub>eff</sub> = Z - σ</div>
+            <p>Où <strong>σ</strong> est la constante d'écran calculée par la méthode de Slater.</p>
+            
+            <div class="formula">E<sub>n</sub> = -13,6 × (Z<sub>eff</sub>² / n²) eV</div>
+            
+            <h3>Règles de Slater (à connaître par cœur)</h3>
+            <table class="table-custom">
+                <tr>
+                    <th>Pour un électron dans...</th>
+                    <th>Contribution des autres e⁻ de la même sous-couche</th>
+                    <th>Contribution des e⁻ de la couche (n-1)</th>
+                    <th>Contribution des e⁻ des couches ≤ (n-2)</th>
+                </tr>
+                <tr>
+                    <td><strong>ns ou np</strong></td>
+                    <td>0,35</td>
+                    <td>0,85</td>
+                    <td>1,00</td>
+                </tr>
+                <tr>
+                    <td><strong>nd</strong></td>
+                    <td>0,35</td>
+                    <td>1,00</td>
+                    <td>1,00</td>
+                </tr>
+            </table>
+            
+            <div class="tip-box">
+                <h3>💡 Points importants</h3>
+                <ul>
+                    <li>Un électron n'écrante <strong>pas lui-même</strong> (ne pas se compter)</li>
+                    <li>Les électrons d'une <strong>couche externe</strong> n'ont <strong>aucun effet</strong> sur une couche interne (σ = 0)</li>
+                    <li>Avec Slater : <strong>E(ns) = E(np)</strong> (même Z<sub>eff</sub>)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>9. Tableau Périodique ⭐ NOUVEAU</h2>
+            <h3>Structure</h3>
+            <ul>
+                <li><strong>7 périodes</strong> (lignes)</li>
+                <li><strong>18 colonnes</strong> (familles)</li>
+                <li><strong>4 blocs</strong> : s, p, d, f</li>
+            </ul>
+            
+            <h3>Les blocs</h3>
+            <table class="table-custom">
+                <tr><th>Bloc</th><th>Sous-couche de valence</th><th>Colonnes</th><th>Éléments</th></tr>
+                <tr><td>s</td><td>ns¹ ou ns²</td><td>1-2</td><td>Alcalins, Alcalino-terreux</td></tr>
+                <tr><td>p</td><td>np¹ à np⁶</td><td>13-18</td><td>Métaux pauvres, Non-métaux, Gaz nobles</td></tr>
+                <tr><td>d</td><td>(n-1)d¹ à (n-1)d¹⁰</td><td>3-12</td><td>Métaux de transition</td></tr>
+                <tr><td>f</td><td>(n-2)f¹ à (n-2)f¹⁴</td><td>Lanthanides/Actinides</td><td>Terres rares</td></tr>
+            </table>
+            
+            <h3>Familles importantes</h3>
+            <table class="table-custom">
+                <tr><th>Famille</th><th>Colonne</th><th>Config. de valence</th><th>Exemples</th></tr>
+                <tr><td>Alcalins</td><td>1</td><td>ns¹</td><td>Li, Na, K</td></tr>
+                <tr><td>Alcalino-terreux</td><td>2</td><td>ns²</td><td>Be, Mg, Ca</td></tr>
+                <tr><td>Halogènes</td><td>17</td><td>ns² np⁵</td><td>F, Cl, Br, I</td></tr>
+                <tr><td>Gaz nobles</td><td>18</td><td>ns² np⁶ (sauf He: 1s²)</td><td>He, Ne, Ar</td></tr>
+            </table>
+            
+            <p><strong>⚠️ Règle d'or :</strong> Même colonne = même configuration de valence = propriétés chimiques similaires.</p>
+        </div>
+
+        <div class="card">
             <h2>🎯 Formules à connaître par cœur</h2>
             <div class="formula">N(t) = N₀ · e<sup>-λt</sup> | T = ln(2)/λ | A = λ·N</div>
-            <div class="formula">Eₙ = -13,6 · Z²/n² eV | λ = h/(m·v) | Δx·Δp ≥ ħ/2</div>
+            <div class="formula">Eₙ = -13,6 · Z²/n² eV | Eₙ = -13,6 · Zeff²/n² eV</div>
+            <div class="formula">λ = h/(m·v) | Δx·Δp ≥ ħ/2 | Zeff = Z - σ</div>
             <div class="formula">h = 6,626 × 10⁻³⁴ J·s | 1 eV = 1,6 × 10⁻¹⁹ J | N<sub>A</sub> = 6,022 × 10²³ mol⁻¹</div>
         </div>
     </div>

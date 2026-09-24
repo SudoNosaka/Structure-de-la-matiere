@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bases Fondamentales - Structure de la Matière</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .prerequisite {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 6px 6px 0;
+        }
+        .prerequisite h3 {
+            color: #856404;
+            margin-top: 0;
+        }
+        .must-know {
+            background: #f8d7da;
+            border-left: 5px solid #dc3545;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 6px 6px 0;
+        }
+        .must-know h3 {
+            color: #721c24;
+            margin-top: 0;
+        }
+        .tip-box {
+            background: #d1ecf1;
+            border-left: 5px solid #17a2b8;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 6px 6px 0;
+        }
+        .tip-box h3 {
+            color: #0c5460;
+            margin-top: 0;
+        }
+        .example {
+            background: #e2e3e5;
+            padding: 12px;
+            border-radius: 6px;
+            margin: 10px 0;
+            border-left: 4px solid #6c757d;
+        }
+        .example strong {
+            color: var(--primary);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🧱 Bases Fondamentales à Maîtriser</h1>
+        <p>Les prérequis indispensables avant d'aborder le cours</p>
+    </header>
+    
+    <nav>
+        <a href="main.html">Accueil</a>
+        <a href="resume.html">Résumé (Pareto 20%)</a>
+        <a href="bases.html">Bases</a>
+        <a href="notion1.html">Notion 1</a>
+        <a href="notion2.html">Notion 2</a>
+        <a href="notion3.html">Notion 3</a>
+        <a href="notion4.html">Notion 4</a>
+        <a href="notion5.html">Notion 5</a>
+        <a href="quiz1.html">Quiz 1</a>
+        <a href="quiz2.html">Quiz 2</a>
+        <a href="textesatrous.html">Textes à Trous</a>
+    </nav>
+
+    <div class="container">
+        <div class="card">
+            <h2>🎯 À quoi sert ce fichier ?</h2>
+            <p>Ce fichier contient les <strong>bases fondamentales</strong> que tu dois maîtriser <strong>avant</strong> d'aborder le cours de Structure de la Matière. Si tu ne comprends pas une notion de ce fichier, tu auras du mal à suivre le cours.</p>
+            <div class="must-know">
+                <h3>⚠️ À savoir PAR CŒUR</h3>
+                <p>Les sections marquées d'un ⭐ doivent être connues par cœur. Les autres doivent être comprises et maîtrisées.</p>
+            </div>
+        </div>
+
+        <!-- SECTION 1 : MATHÉMATIQUES -->
+        <div class="card">
+            <h2>📐 1. Mathématiques Indispensables</h2>
+            
+            <h3>1.1 ⭐ Les Puissances de 10 (Notation Scientifique)</h3>
+            <p>Tout le cours utilise la notation scientifique. Tu dois maîtriser :</p>
+            <div class="formula">a × 10ⁿ × b × 10ᵐ = (a×b) × 10ⁿ⁺ᵐ</div>
+            <div class="formula">(a × 10ⁿ) / (b × 10ᵐ) = (a/b) × 10ⁿ⁻ᵐ</div>
+            <div class="formula">(10ⁿ)ᵐ = 10ⁿˣᵐ</div>
+            
+            <div class="example">
+                <strong>Exemple :</strong> (3 × 10⁵) × (2 × 10³) = 6 × 10⁸<br>
+                <strong>Exemple :</strong> (6 × 10⁸) / (2 × 10³) = 3 × 10⁵<br>
+                <strong>Exemple :</strong> (10²)³ = 10⁶
+            </div>
+
+            <h3>1.2 ⭐ Les Logarithmes</h3>
+            <p>Le <strong>logarithme népérien (ln)</strong> est utilisé partout dans ce cours (radioactivité, énergie...). À connaître par cœur :</p>
+            <div class="formula">ln(eˣ) = x</div>
+            <div class="formula">e^(ln(x)) = x</div>
+            <div class="formula">ln(a × b) = ln(a) + ln(b)</div>
+            <div class="formula">ln(a/b) = ln(a) - ln(b)</div>
+            <div class="formula">ln(aⁿ) = n × ln(a)</div>
+            <div class="formula">ln(1) = 0 | ln(e) = 1</div>
+            
+            <div class="must-know">
+                <h3>⭐ À connaître par cœur</h3>
+                <p><strong>ln(2) ≈ 0,693</strong> → Cette valeur apparaît partout dans les calculs de demi-vie !</p>
+            </div>
+
+            <div class="example">
+                <strong>Application typique :</strong> Résoudre N(t) = N₀·e^(-λt) pour trouver t<br>
+                N(t)/N₀ = e^(-λt)<br>
+                ln(N(t)/N₀) = -λt<br>
+                <strong>t = -ln(N(t)/N₀) / λ</strong>
+            </div>
+
+            <h3>1.3 Les Dérivées (Notion de base)</h3>
+            <p>La dérivée représente la <strong>vitesse de variation</strong> d'une fonction. Dans ce cours :</p>
+            <div class="formula">dN/dt = taux de variation de N par rapport au temps</div>
+            <p>Si N(t) = N₀·e^(-λt), alors :</p>
+            <div class="formula">dN/dt = -λ · N₀ · e^(-λt) = -λ · N(t)</div>
+            
+            <div class="tip-box">
+                <h3>💡 À retenir</h3>
+                <p>La dérivée de e^(kx) est k·e^(kx). C'est la seule règle de dérivation vraiment utile dans ce cours.</p>
+            </div>
+
+            <h3>1.4 Résolution d'une Équation Différentielle Simple</h3>
+            <p>Une équation différentielle du type :</p>
+            <div class="formula">dy/dt = -k·y</div>
+            <p>a pour solution :</p>
+            <div class="formula">y(t) = y₀ · e^(-k·t)</div>
+            <p>C'est exactement la forme de la loi de désintégration radioactive !</p>
+        </div>
+
+        <!-- SECTION 2 : UNITÉS ET CONVERSIONS -->
+        <div class="card">
+            <h2>📏 2. Unités et Conversions</h2>
+            
+            <h3>2.1 ⭐ Le Système International (SI)</h3>
+            <table class="table-custom">
+                <tr><th>Grandeur</th><th>Unité SI</th><th>Symbole</th></tr>
+                <tr><td>Longueur</td><td>mètre</td><td>m</td></tr>
+                <tr><td>Masse</td><td>kilogramme</td><td>kg</td></tr>
+                <tr><td>Temps</td><td>seconde</td><td>s</td></tr>
+                <tr><td>Courant électrique</td><td>ampère</td><td>A</td></tr>
+                <tr><td>Température</td><td>kelvin</td><td>K</td></tr>
+                <tr><td>Quantité de matière</td><td>mole</td><td>mol</td></tr>
+                <tr><td>Énergie</td><td>joule</td><td>J</td></tr>
+                <tr><td>Charge électrique</td><td>coulomb</td><td>C</td></tr>
+            </table>
+
+            <h3>2.2 ⭐ Les Préfixes du SI</h3>
+            <table class="table-custom">
+                <tr><th>Préfixe</th><th>Symbole</th><th>Valeur</th><th>Exemple</th></tr>
+                <tr><td>Téra</td><td>T</td><td>10¹²</td><td>1 THz = 10¹² Hz</td></tr>
+                <tr><td>Giga</td><td>G</td><td>10⁹</td><td>1 GHz = 10⁹ Hz</td></tr>
+                <tr><td>Méga</td><td>M</td><td>10⁶</td><td>1 MHz = 10⁶ Hz</td></tr>
+                <tr><td>kilo</td><td>k</td><td>10³</td><td>1 km = 10³ m</td></tr>
+                <tr><td>milli</td><td>m</td><td>10⁻³</td><td>1 mm = 10⁻³ m</td></tr>
+                <tr><td>micro</td><td>µ</td><td>10⁻⁶</td><td>1 µm = 10⁻⁶ m</td></tr>
+                <tr><td>nano</td><td>n</td><td>10⁻⁹</td><td>1 nm = 10⁻⁹ m</td></tr>
+                <tr><td>pico</td><td>p</td><td>10⁻¹²</td><td>1 pm = 10⁻¹² m</td></tr>
+                <tr><td>femto</td><td>f</td><td>10⁻¹⁵</td><td>1 fm = 10⁻¹⁵ m (taille noyau)</td></tr>
+            </table>
+
+            <h3>2.3 ⭐ Conversions de Longueur Essentielles</h3>
+            <div class="formula">1 Å (Angström) = 10⁻¹⁰ m (taille d'un atome)</div>
+            <div class="formula">1 nm = 10⁻⁹ m = 10 Å</div>
+            <div class="formula">1 fm (femtomètre) = 10⁻¹⁵ m (taille d'un noyau)</div>
+            
+            <div class="tip-box">
+                <h3>💡 Ordre de grandeur à retenir</h3>
+                <ul>
+                    <li>Taille d'un atome : ~10⁻¹⁰ m = 1 Å</li>
+                    <li>Taille d'un noyau : ~10⁻¹⁵ m = 1 fm</li>
+                    <li>Ratio atome/noyau : 10⁵ (l'atome est 100 000 fois plus grand que son noyau !)</li>
+                </ul>
+            </div>
+
+            <h3>2.4 ⭐ Conversions d'Énergie</h3>
+            <div class="formula">1 eV (électron-volt) = 1,602 × 10⁻¹⁹ J</div>
+            <div class="formula">1 J = 6,242 × 10¹⁸ eV</div>
+            <div class="formula">1 cal = 4,184 J</div>
+            
+            <div class="must-know">
+                <h3>⭐ À connaître par cœur</h3>
+                <p>L'électron-volt (eV) est l'unité privilégiée en physique atomique car les énergies en joules sont trop petites. À retenir : <strong>1 eV = 1,6 × 10⁻¹⁹ J</strong></p>
+            </div>
+
+            <div class="example">
+                <strong>Exemple :</strong> Convertir 13,6 eV en joules<br>
+                13,6 eV = 13,6 × 1,6 × 10⁻¹⁹ = 2,18 × 10⁻¹⁸ J<br>
+                (C'est l'énergie de l'état fondamental de l'hydrogène !)
+            </div>
+
+            <h3>2.5 Conversion Temps : Années ↔ Secondes</h3>
+            <div class="formula">1 an = 365,25 × 24 × 3600 ≈ 3,156 × 10⁷ s</div>
+            <div class="formula">1 jour = 24 × 3600 = 86 400 s</div>
+            
+            <div class="example">
+                <strong>Exemple :</strong> Convertir 5730 ans (demi-vie du ¹⁴C) en secondes<br>
+                T = 5730 × 3,156 × 10⁷ = 1,81 × 10¹¹ s
+            </div>
+        </div>
+
+        <!-- SECTION 3 : GRANDEURS FONDAMENTALES -->
+        <div class="card">
+            <h2>⚛️ 3. Grandeurs Fondamentales</h2>
+            
+            <h3>3.1 ⭐ Les Particules de Base</h3>
+            <table class="table-custom">
+                <tr><th>Particule</th><th>Symbole</th><th>Masse (kg)</th><th>Charge (C)</th></tr>
+                <tr><td>Électron</td><td>e⁻</td><td>9,109 × 10⁻³¹</td><td>-1,602 × 10⁻¹⁹</td></tr>
+                <tr><td>Proton</td><td>p</td><td>1,673 × 10⁻²⁷</td><td>+1,602 × 10⁻¹⁹</td></tr>
+                <tr><td>Neutron</td><td>n</td><td>1,675 × 10⁻²⁷</td><td>0</td></tr>
+            </table>
+
+            <div class="must-know">
+                <h3>⭐ À connaître par cœur</h3>
+                <ul>
+                    <li>Charge élémentaire : <strong>e = 1,6 × 10⁻¹⁹ C</strong></li>
+                    <li>Masse de l'électron : <strong>mₑ = 9,1 × 10⁻³¹ kg</strong></li>
+                    <li>Masse du proton : <strong>mₚ ≈ 1,67 × 10⁻²⁷ kg</strong></li>
+                    <li>Ratio mₚ/mₑ ≈ 1836 (le proton est ~1836 fois plus lourd que l'électron)</li>
+                </ul>
+            </div>
+
+            <h3>3.2 ⭐ Unité de Masse Atomique (uma)</h3>
+            <div class="formula">1 u (ou uma) = 1/12 de la masse d'un atome de ¹²C</div>
+            <div class="formula">1 u = 1,6605 × 10⁻²⁷ kg</div>
+            <div class="formula">1 u = 931,5 MeV/c²</div>
+            
+            <p>En uma :</p>
+            <ul>
+                <li>m(p) ≈ 1,0073 u</li>
+                <li>m(n) ≈ 1,0087 u</li>
+                <li>m(e⁻) ≈ 0,00055 u (négligeable devant les nucléons)</li>
+            </ul>
+
+            <h3>3.3 ⭐ Énergie et Masse (Einstein)</h3>
+            <div class="formula">E = m · c²</div>
+            <p>Avec <strong>c = 3 × 10⁸ m/s</strong> (vitesse de la lumière dans le vide).</p>
+            
+            <div class="example">
+                <strong>Exemple :</strong> Équivalence masse-énergie d'1 u<br>
+                E = 1,6605 × 10⁻²⁷ × (3 × 10⁸)² = 1,49 × 10⁻¹⁰ J<br>
+                En eV : 1,49 × 10⁻¹⁰ / 1,6 × 10⁻¹⁹ = 9,31 × 10⁸ eV = 931,5 MeV
+            </div>
+        </div>
+
+        <!-- SECTION 4 : CONSTANTES FONDAMENTALES -->
+        <div class="card">
+            <h2>🔢 4. ⭐ Constantes Fondamentales à Connaître par Cœur</h2>
+            
+            <table class="table-custom">
+                <tr><th>Constante</th><th>Symbole</th><th>Valeur</th><th>Utilisation</th></tr>
+                <tr>
+                    <td>Constante de Planck</td>
+                    <td>h</td>
+                    <td>6,626 × 10⁻³⁴ J·s</td>
+                    <td>Énergie des photons, dualité onde-corpuscule</td>
+                </tr>
+                <tr>
+                    <td>Constante de Planck réduite</td>
+                    <td>ħ = h/(2π)</td>
+                    <td>1,055 × 10⁻³⁴ J·s</td>
+                    <td>Principe d'incertitude</td>
+                </tr>
+                <tr>
+                    <td>Vitesse de la lumière</td>
+                    <td>c</td>
+                    <td>3 × 10⁸ m/s</td>
+                    <td>E = mc², λ = c/ν</td>
+                </tr>
+                <tr>
+                    <td>Charge élémentaire</td>
+                    <td>e</td>
+                    <td>1,602 × 10⁻¹⁹ C</td>
+                    <td>Charge du proton/électron</td>
+                </tr>
+                <tr>
+                    <td>Nombre d'Avogadro</td>
+                    <td>Nₐ</td>
+                    <td>6,022 × 10²³ mol⁻¹</td>
+                    <td>Passage microscopique ↔ macroscopique</td>
+                </tr>
+                <tr>
+                    <td>Constante de Boltzmann</td>
+                    <td>k<sub>B</sub></td>
+                    <td>1,38 × 10⁻²³ J/K</td>
+                    <td>Énergie thermique</td>
+                </tr>
+                <tr>
+                    <td>Permittivité du vide</td>
+                    <td>ε₀</td>
+                    <td>8,85 × 10⁻¹² F/m</td>
+                    <td>Force de Coulomb</td>
+                </tr>
+                <tr>
+                    <td>Rayon de Bohr</td>
+                    <td>a₀</td>
+                    <td>5,29 × 10⁻¹¹ m = 0,529 Å</td>
+                    <td>Taille de l'atome H</td>
+                </tr>
+                <tr>
+                    <td>Constante de Rydberg</td>
+                    <td>R<sub>H</sub></td>
+                    <td>1,097 × 10⁷ m⁻¹</td>
+                    <td>Spectre de l'hydrogène</td>
+                </tr>
+            </table>
+
+            <div class="must-know">
+                <h3>⭐ Top 5 à connaître ABSOLUMENT</h3>
+                <ol>
+                    <li><strong>h = 6,626 × 10⁻³⁴ J·s</strong></li>
+                    <li><strong>c = 3 × 10⁸ m/s</strong></li>
+                    <li><strong>e = 1,6 × 10⁻¹⁹ C</strong></li>
+                    <li><strong>Nₐ = 6,022 × 10²³ mol⁻¹</strong></li>
+                    <li><strong>ln(2) ≈ 0,693</strong></li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- SECTION 5 : CHIMIE DE BASE -->
+        <div class="card">
+            <h2>🧪 5. Chimie de Base</h2>
+            
+            <h3>5.1 ⭐ La Mole et le Nombre d'Avogadro</h3>
+            <div class="formula">1 mole = Nₐ entités = 6,022 × 10²³ entités</div>
+            <p>La mole est le "pont" entre le monde microscopique (atomes) et macroscopique (grammes).</p>
+            
+            <div class="formula">n = m / M</div>
+            <p>Où :</p>
+            <ul>
+                <li><strong>n</strong> : quantité de matière (en mol)</li>
+                <li><strong>m</strong> : masse (en g)</li>
+                <li><strong>M</strong> : masse molaire (en g/mol)</li>
+            </ul>
+
+            <div class="formula">N = n × Nₐ</div>
+            <p>Où <strong>N</strong> est le nombre d'entités (atomes, molécules...).</p>
+
+            <div class="example">
+                <strong>Exemple :</strong> Nombre d'atomes dans 12 g de carbone ¹²C<br>
+                n = 12 g / 12 g/mol = 1 mol<br>
+                N = 1 × 6,022 × 10²³ = 6,022 × 10²³ atomes
+            </div>
+
+            <h3>5.2 ⭐ Masses Molaires à Connaître</h3>
+            <table class="table-custom">
+                <tr><th>Élément</th><th>Symbole</th><th>Masse molaire (g/mol)</th></tr>
+                <tr><td>Hydrogène</td><td>H</td><td>1,0</td></tr>
+                <tr><td>Carbone</td><td>C</td><td>12,0</td></tr>
+                <tr><td>Azote</td><td>N</td><td>14,0</td></tr>
+                <tr><td>Oxygène</td><td>O</td><td>16,0</td></tr>
+                <tr><td>Eau</td><td>H₂O</td><td>18,0</td></tr>
+            </table>
+
+            <h3>5.3 Structure de l'Atome (Rappel)</h3>
+            <p>Un atome est noté <strong>ᴬ_Z X</strong> avec :</p>
+            <ul>
+                <li><strong>Z</strong> : numéro atomique = nombre de protons (définit l'élément)</li>
+                <li><strong>A</strong> : nombre de masse = nombre de nucléons (protons + neutrons)</li>
+                <li><strong>N = A - Z</strong> : nombre de neutrons</li>
+            </ul>
+            <p>Dans un atome neutre : <strong>nombre d'électrons = Z</strong></p>
+
+            <div class="example">
+                <strong>Exemple :</strong> ¹⁴₆C (carbone 14)<br>
+                Z = 6 → 6 protons<br>
+                A = 14 → 14 nucléons<br>
+                N = 14 - 6 = 8 neutrons<br>
+                Atome neutre → 6 électrons
+            </div>
+
+            <h3>5.4 Isotopes, Isobares, Isotones</h3>
+            <table class="table-custom">
+                <tr><th>Terme</th><th>Même...</th><th>Exemple</th></tr>
+                <tr><td>Isotopes</td><td>Z (même élément)</td><td>¹²C, ¹³C, ¹⁴C</td></tr>
+                <tr><td>Isobares</td><td>A (même masse)</td><td>¹⁴C et ¹⁴N</td></tr>
+                <tr><td>Isotones</td><td>N (même nb de neutrons)</td><td>¹³C (N=7) et ¹⁴N (N=7)</td></tr>
+            </table>
+        </div>
+
+        <!-- SECTION 6 : RELATIONS CLÉS -->
+        <div class="card">
+            <h2>🔗 6. Relations Mathématiques Clés du Cours</h2>
+            
+            <h3>6.1 Onde et Photon</h3>
+            <div class="formula">c = λ × ν</div>
+            <p>Où λ est la longueur d'onde (m) et ν la fréquence (Hz).</p>
+            
+            <div class="formula">E = h × ν = h × c / λ</div>
+            <p>Énergie d'un photon.</p>
+
+            <h3>6.2 Dualité Onde-Corpuscule</h3>
+            <div class="formula">λ = h / p = h / (m × v)</div>
+            <p>Longueur d'onde associée à une particule de quantité de mouvement p = m·v.</p>
+
+            <h3>6.3 Principe d'Incertitude</h3>
+            <div class="formula">Δx · Δp ≥ ħ/2</div>
+            <p>Limite fondamentale sur la précision simultanée position/quantité de mouvement.</p>
+
+            <h3>6.4 Modèle de Bohr</h3>
+            <div class="formula">Eₙ = -13,6 × Z² / n² eV</div>
+            <p>Énergie de l'électron dans un atome hydrogénoïde.</p>
+
+            <h3>6.5 Loi de Désintégration</h3>
+            <div class="formula">N(t) = N₀ · e^(-λt)</div>
+            <div class="formula">T = ln(2) / λ</div>
+            <div class="formula">A(t) = λ · N(t)</div>
+        </div>
+
+        <!-- SECTION 7 : CHECKLIST -->
+        <div class="card">
+            <h2>✅ Checklist : Suis-je prêt pour le cours ?</h2>
+            <p>Coche mentalement chaque point. Si tu ne maîtrises pas un point, revois-le avant d'aller plus loin !</p>
+            
+            <h3>🔢 Mathématiques</h3>
+            <ul>
+                <li>☐ Je sais manipuler les puissances de 10</li>
+                <li>☐ Je connais les propriétés de ln (ln(ab), ln(a/b), ln(aⁿ))</li>
+                <li>☐ Je sais que ln(2) ≈ 0,693</li>
+                <li>☐ Je sais résoudre une équation du type eˣ = a</li>
+                <li>☐ Je comprends ce qu'est une dérivée (taux de variation)</li>
+            </ul>
+
+            <h3>📏 Unités et Conversions</h3>
+            <ul>
+                <li>☐ Je connais les préfixes du SI (nano, micro, milli, kilo, Méga...)</li>
+                <li>☐ Je sais convertir entre m, nm, Å, fm</li>
+                <li>☐ Je sais convertir entre J et eV (1 eV = 1,6 × 10⁻¹⁹ J)</li>
+                <li>☐ Je sais convertir des années en secondes</li>
+            </ul>
+
+            <h3>⚛️ Grandeurs Physiques</h3>
+            <ul>
+                <li>☐ Je connais les masses et charges de e⁻, p, n</li>
+                <li>☐ Je sais ce qu'est l'unité de masse atomique (uma)</li>
+                <li>☐ Je comprends E = mc²</li>
+            </ul>
+
+            <h3>🔢 Constantes</h3>
+            <ul>
+                <li>☐ Je connais h, c, e, Nₐ par cœur</li>
+                <li>☐ Je connais le rayon de Bohr (a₀ = 0,529 Å)</li>
+            </ul>
+
+            <h3>🧪 Chimie</h3>
+            <ul>
+                <li>☐ Je sais utiliser n = m/M et N = n·Nₐ</li>
+                <li>☐ Je comprends la notation ᴬ_Z X</li>
+                <li>☐ Je sais faire la différence entre isotopes, isobares, isotones</li>
+            </ul>
+
+            <div class="tip-box">
+                <h3>💡 Conseil</h3>
+                <p>Si tu as des lacunes sur un de ces points, <strong>ne panique pas</strong>. Prends 30 minutes pour revoir la notion avant d'attaquer le cours. Tu peux aussi me demander de t'expliquer un point précis !</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>🎯 Prochaine étape</h2>
+            <p>Une fois que tu maîtrises ces bases :</p>
+            <ol>
+                <li>Commence par lire le <a href="resume.html">Résumé Pareto (20%)</a> pour avoir une vue d'ensemble</li>
+                <li>Enchaîne avec les <strong>Notions 1 à 5</strong> dans l'ordre</li>
+                <li>Teste-toi avec les <strong>Quiz 1 et 2</strong></li>
+                <li>Consolide avec les <strong>Textes à Trous</strong></li>
+            </ol>
+            <a href="resume.html" class="btn">Passer au Résumé Pareto</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>Bases fondamentales | À maîtriser avant d'aborder le cours</p>
+    </footer>
+</body>
+</html>

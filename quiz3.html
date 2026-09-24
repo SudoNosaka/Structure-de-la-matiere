@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz 3 - Slater & Tableau Périodique</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .quiz-question {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            border-left: 5px solid var(--secondary);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .quiz-question h3 {
+            color: var(--primary);
+            margin-top: 0;
+        }
+        .quiz-option {
+            display: block;
+            margin: 10px 0;
+            padding: 12px;
+            background: #f9f9f9;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 0.95rem;
+        }
+        .quiz-option:hover {
+            background: #e8f0fe;
+            border-color: var(--secondary);
+        }
+        .quiz-option.selected {
+            background: #d0e1fd;
+            border-color: var(--secondary);
+        }
+        .quiz-option.correct {
+            background: var(--success) !important;
+            border-color: #28a745 !important;
+            font-weight: bold;
+        }
+        .quiz-option.incorrect {
+            background: var(--error) !important;
+            border-color: #dc3545 !important;
+        }
+        .explanation {
+            display: none;
+            margin-top: 15px;
+            padding: 12px;
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+        .explanation.show {
+            display: block;
+        }
+        #results {
+            display: none;
+            background: var(--accent);
+            padding: 25px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 30px 0;
+            border: 3px solid var(--secondary);
+        }
+        #results h2 {
+            color: var(--primary);
+            margin-top: 0;
+        }
+        .score {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--secondary);
+            margin: 15px 0;
+        }
+        .btn-submit {
+            background: var(--secondary);
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 20px 0;
+        }
+        .btn-submit:hover {
+            background: var(--primary);
+        }
+        .timer {
+            position: fixed;
+            top: 80px;
+            right: 20px;
+            background: var(--primary);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 6px;
+            font-weight: bold;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🎯 Quiz 3 - Slater & Tableau Périodique</h1>
+        <p>10 minutes max | 15 questions | Notion 6</p>
+    </header>
+    
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="bases.html">Bases</a>
+        <a href="resume.html">Résumé (Pareto 20%)</a>
+        <a href="#notions">Notions</a>
+        <a href="quiz1.html">Quiz 1</a>
+        <a href="quiz2.html">Quiz 2</a>
+        <a href="quiz3.html">Quiz 3</a>
+        <a href="textesatrous.html">Textes à Trous</a>
+    </nav>
+
+    <div class="timer" id="timer">⏱️ 10:00</div>
+
+    <div class="container">
+        <div class="card">
+            <h2>📝 Instructions</h2>
+            <ul>
+                <li>Réponds aux 15 questions en <strong>10 minutes maximum</strong></li>
+                <li>Ce quiz couvre la <strong>Notion 6</strong> (Approximation hydrogénoïde, Slater, Tableau périodique)</li>
+                <li>Clique sur une réponse pour la sélectionner</li>
+                <li>Clique sur <strong>"Valider mes réponses"</strong> à la fin</li>
+                <li>La correction s'affiche avec des explications</li>
+                <li>Objectif : <strong>80% de bonnes réponses</strong> (12/15)</li>
+            </ul>
+            <button class="btn-submit" onclick="startQuiz()">Commencer le Quiz</button>
+        </div>
+
+        <div id="quiz-container" style="display: none;">
+            <!-- Les questions seront générées en JavaScript -->
+        </div>
+
+        <div id="results">
+            <h2>🎉 Résultat</h2>
+            <div class="score" id="score"></div>
+            <p id="message"></p>
+            <button class="btn-submit" onclick="resetQuiz()">Recommencer</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>Quiz 3 généré pour tes révisions du soir | Bonne chance !</p>
+    </footer>
+
+    <script>
+        const questions = [
+            {
+                q: "1. L'effet d'écran correspond à :",
+                options: [
+                    "L'augmentation de la charge nucléaire ressentie",
+                    "La diminution de la charge nucléaire ressentie par un électron due aux autres électrons",
+                    "L'attraction entre électrons",
+                    "La répulsion entre noyaux"
+                ],
+                correct: 1,
+                explanation: "L'effet d'écran est la diminution de la charge nucléaire ressentie par un électron, due à la présence des autres électrons qui 'font écran' au noyau."
+            },
+            {
+                q: "2. La charge nucléaire effective est définie par :",
+                options: ["Zeff = Z + σ", "Zeff = Z - σ", "Zeff = σ - Z", "Zeff = Z × σ"],
+                correct: 1,
+                explanation: "Zeff = Z - σ, où Z est la charge réelle du noyau et σ la constante d'écran (0 ≤ σ ≤ Z-1)."
+            },
+            {
+                q: "3. Dans l'approximation hydrogénoïde, l'énergie d'un électron vaut :",
+                options: [
+                    "En = -13,6 × Z/n² eV",
+                    "En = -13,6 × Zeff²/n² eV",
+                    "En = -13,6 × Z²/n eV",
+                    "En = -13,6 × n²/Zeff² eV"
+                ],
+                correct: 1,
+                explanation: "En = -13,6 × Zeff²/n² eV. C'est la même formule que pour l'atome H, mais avec Zeff au lieu de Z."
+            },
+            {
+                q: "4. Dans la méthode de Slater, la contribution d'un électron d'une couche externe à l'écran d'un électron d'une couche interne est :",
+                options: ["0,35", "0,85", "1,00", "0 (nul)"],
+                correct: 3,
+                explanation: "Un électron d'une couche externe n'a AUCUN effet d'écran sur un électron d'une couche plus interne. Sa contribution est donc nulle (σ = 0)."
+            },
+            {
+                q: "5. Pour un électron dans une sous-couche 2p, la contribution des autres électrons de la même sous-couche (2p) est :",
+                options: ["0,31", "0,35", "0,85", "1,00"],
+                correct: 1,
+                explanation: "Pour un électron dans une sous-couche (ns, np), les autres électrons de la même sous-couche contribuent à hauteur de 0,35."
+            },
+            {
+                q: "6. Pour un électron dans une sous-couche 3s, la contribution des électrons de la couche n=2 est :",
+                options: ["0,35", "0,85", "1,00", "0"],
+                correct: 1,
+                explanation: "Pour un électron dans une sous-couche (ns, np), les électrons de la couche (n-1) contribuent à hauteur de 0,85. Ici n=3, donc la couche n-1=2 contribue à 0,85."
+            },
+            {
+                q: "7. Pour un électron dans une sous-couche 3d, la contribution des électrons de la couche n=2 est :",
+                options: ["0,35", "0,85", "1,00", "0"],
+                correct: 2,
+                explanation: "Pour un électron dans une sous-couche nd, TOUS les électrons des couches ≤ (n-1) contribuent à hauteur de 1,00. Donc les électrons de n=2 contribuent à 1,00."
+            },
+            {
+                q: "8. Dans la méthode de Slater, l'énergie des sous-couches 2s et 2p est :",
+                options: [
+                    "E(2s) < E(2p) (2s plus stable)",
+                    "E(2s) > E(2p) (2p plus stable)",
+                    "E(2s) = E(2p) (même énergie)",
+                    "Impossible à déterminer"
+                ],
+                correct: 2,
+                explanation: "Avec les paramètres de Slater, on obtient Zeff(2s) = Zeff(2p), donc E(2s) = E(2p). C'est une conséquence des règles de Slater."
+            },
+            {
+                q: "9. Le tableau périodique moderne est classé par :",
+                options: [
+                    "Masse atomique croissante",
+                    "Numéro atomique Z croissant",
+                    "Nombre de neutrons croissant",
+                    "Électronégativité croissante"
+                ],
+                correct: 1,
+                explanation: "Depuis 1913 (Moseley), les éléments sont classés par numéro atomique Z croissant, ce qui est plus pertinent que la masse atomique."
+            },
+            {
+                q: "10. Le tableau périodique comporte :",
+                options: [
+                    "6 périodes et 18 colonnes",
+                    "7 périodes et 18 colonnes",
+                    "8 périodes et 20 colonnes",
+                    "7 périodes et 8 colonnes"
+                ],
+                correct: 1,
+                explanation: "Le tableau périodique comporte 7 lignes (périodes) et 18 colonnes (familles)."
+            },
+            {
+                q: "11. Les éléments du bloc d sont :",
+                options: [
+                    "Les alcalins et alcalino-terreux",
+                    "Les halogènes et gaz nobles",
+                    "Les métaux de transition",
+                    "Les lanthanides et actinides"
+                ],
+                correct: 2,
+                explanation: "Le bloc d (colonnes 3 à 12) correspond aux métaux de transition. Le bloc f correspond aux lanthanides et actinides (terres rares)."
+            },
+            {
+                q: "12. Les alcalins (colonne 1) ont pour configuration de valence :",
+                options: ["ns¹", "ns²", "ns² np¹", "ns² np⁵"],
+                correct: 0,
+                explanation: "Les alcalins (Li, Na, K, Rb, Cs) ont tous 1 électron de valence : ns¹. C'est pour ça qu'ils forment tous des ions M⁺."
+            },
+            {
+                q: "13. Les gaz nobles (colonne 18) ont pour configuration de valence :",
+                options: [
+                    "ns² np⁶ (sauf He: 1s²)",
+                    "ns² np⁵",
+                    "ns¹",
+                    "ns² np²"
+                ],
+                correct: 0,
+                explanation: "Les gaz nobles ont une couche externe complète : ns² np⁶ (octet). Exception : l'Hélium (He) qui est 1s² (duet)."
+            },
+            {
+                q: "14. Les éléments d'une même colonne (famille) ont :",
+                options: [
+                    "La même masse atomique",
+                    "Le même nombre de neutrons",
+                    "La même configuration électronique de valence",
+                    "Le même nombre d'électrons au total"
+                ],
+                correct: 2,
+                explanation: "Les éléments d'une même famille ont la même configuration électronique de valence, ce qui explique leurs propriétés chimiques similaires."
+            },
+            {
+                q: "15. Pour calculer l'énergie d'ionisation d'un atome, on utilise :",
+                options: [
+                    "ΔE = E(atome) - E(ion)",
+                    "ΔE = E(ion) - E(atome)",
+                    "ΔE = E(atome) × E(ion)",
+                    "ΔE = E(atome) + E(ion)"
+                ],
+                correct: 1,
+                explanation: "L'énergie d'ionisation est l'énergie nécessaire pour arracher un électron : ΔE = E(ion) - E(atome) > 0. Il faut fournir de l'énergie."
+            }
+        ];
+
+        let userAnswers = new Array(questions.length).fill(-1);
+        let timerInterval;
+        let timeLeft = 600; // 10 minutes en secondes
+
+        function startQuiz() {
+            document.querySelector('.card').style.display = 'none';
+            document.getElementById('quiz-container').style.display = 'block';
+            renderQuiz();
+            startTimer();
+        }
+
+        function startTimer() {
+            timerInterval = setInterval(() => {
+                timeLeft--;
+                const minutes = Math.floor(timeLeft / 60);
+                const seconds = timeLeft % 60;
+                document.getElementById('timer').textContent = `⏱️ ${minutes}:${seconds.toString().padStart(2, '0')}`;
+                
+                if (timeLeft <= 0) {
+                    clearInterval(timerInterval);
+                    submitQuiz();
+                }
+            }, 1000);
+        }
+
+        function renderQuiz() {
+            const container = document.getElementById('quiz-container');
+            container.innerHTML = '';
+            
+            questions.forEach((q, index) => {
+                const questionDiv = document.createElement('div');
+                questionDiv.className = 'quiz-question';
+                questionDiv.innerHTML = `
+                    <h3>Question ${index + 1}</h3>
+                    <p>${q.q}</p>
+                    ${q.options.map((opt, optIndex) => `
+                        <div class="quiz-option" onclick="selectOption(${index}, ${optIndex})" id="q${index}-opt${optIndex}">
+                            ${opt}
+                        </div>
+                    `).join('')}
+                    <div class="explanation" id="exp${index}">
+                        <strong>Explication :</strong> ${q.explanation}
+                    </div>
+                `;
+                container.appendChild(questionDiv);
+            });
+
+            const submitBtn = document.createElement('button');
+            submitBtn.className = 'btn-submit';
+            submitBtn.textContent = 'Valider mes réponses';
+            submitBtn.onclick = submitQuiz;
+            container.appendChild(submitBtn);
+        }
+
+        function selectOption(questionIndex, optionIndex) {
+            userAnswers[questionIndex] = optionIndex;
+            
+            // Reset all options for this question
+            for (let i = 0; i < questions[questionIndex].options.length; i++) {
+                document.getElementById(`q${questionIndex}-opt${i}`).classList.remove('selected');
+            }
+            
+            // Highlight selected option
+            document.getElementById(`q${questionIndex}-opt${optionIndex}`).classList.add('selected');
+        }
+
+        function submitQuiz() {
+            clearInterval(timerInterval);
+            
+            let score = 0;
+            questions.forEach((q, index) => {
+                const userAnswer = userAnswers[index];
+                const correctAnswer = q.correct;
+                
+                // Show correct answer
+                document.getElementById(`q${index}-opt${correctAnswer}`).classList.add('correct');
+                
+                // Show incorrect answer if user selected wrong
+                if (userAnswer !== -1 && userAnswer !== correctAnswer) {
+                    document.getElementById(`q${index}-opt${userAnswer}`).classList.add('incorrect');
+                }
+                
+                // Show explanation
+                document.getElementById(`exp${index}`).classList.add('show');
+                
+                if (userAnswer === correctAnswer) {
+                    score++;
+                }
+                
+                // Disable further clicks
+                for (let i = 0; i < q.options.length; i++) {
+                    document.getElementById(`q${index}-opt${i}`).onclick = null;
+                    document.getElementById(`q${index}-opt${i}`).style.cursor = 'default';
+                }
+            });
+            
+            // Show results
+            const percentage = Math.round((score / questions.length) * 100);
+            document.getElementById('score').textContent = `${score}/${questions.length} (${percentage}%)`;
+            
+            let message = '';
+            if (percentage >= 80) {
+                message = '🎉 Excellent ! Tu maîtrises bien la Notion 6. Continue comme ça !';
+            } else if (percentage >= 60) {
+                message = '👍 Pas mal ! Relis la Notion 6 sur Slater et le tableau périodique.';
+            } else {
+                message = '📚 Il faut revoir la Notion 6. Reprends l\'approximation hydrogénoïde, Slater et le tableau périodique.';
+            }
+            document.getElementById('message').textContent = message;
+            
+            document.getElementById('results').style.display = 'block';
+            document.getElementById('results').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function resetQuiz() {
+            userAnswers = new Array(questions.length).fill(-1);
+            timeLeft = 600;
+            document.getElementById('results').style.display = 'none';
+            document.getElementById('quiz-container').style.display = 'none';
+            document.querySelector('.card').style.display = 'block';
+            document.getElementById('timer').textContent = '⏱️ 10:00';
+        }
+    </script>
+</body>
+</html>
