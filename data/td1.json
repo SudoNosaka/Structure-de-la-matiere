@@ -1,0 +1,115 @@
+{
+  "titre": "TD1 - Énergie, particules et noyaux",
+  "donnees": [
+    "me = 9,1.10⁻³¹ kg",
+    "h = 6,626.10⁻³⁴ J.s",
+    "e = 1,6.10⁻¹⁹ C",
+    "NA = 6,022.10²³ mol⁻¹",
+    "1 J = 6,25.10¹⁸ eV",
+    "c = 3.10⁸ m.s⁻¹",
+    "mp = 1,007565 u.m.a",
+    "mn = 1,008665 u.m.a",
+    "1 u.m.a = 1,66055.10⁻²⁷ kg",
+    "ε₀ = 8,854.10⁻¹² F.m⁻¹",
+    "1 cal = 4,184 J",
+    "M(⁴He) = 4,0026 u.m.a",
+    "M(⁸⁷Br) = 86,912 u.m.a",
+    "M(¹⁴⁶La) = 145,943 u.m.a",
+    "M(²³⁵U) = 235,044 u.m.a",
+    "M(⁶⁰Co) = 59,933819 g.mol⁻¹",
+    "M(⁵⁶Fe) = 55,913 g.mol⁻¹"
+  ],
+  "exercices": [
+    {
+      "id": "1.1",
+      "titre": "Rayons atomiques et nucléaires",
+      "enonce": "On veut réaliser la maquette d'un atome d'hydrogène ¹₁H. Diamètre d'un nucléon : 1,5.10⁻¹⁵ m et diamètre d'un électron : 10⁻¹⁸ m.\n1°) Quelles sont les particules qui composent un atome d'hydrogène ?\n2°) Pour représenter le noyau on choisit une bille de 1 cm de diamètre.\na. Quel sera le diamètre de la maquette de l'atome (diamètre = 0,75 Å) ?\nb. Quel sera le diamètre de l'électron ?",
+      "aide": "Produit en croix : échelle = diamètre maquette / diamètre réel",
+      "solution": "1°) 1 proton, 0 neutron, 1 électron\n2°a) Échelle = 10⁻² / 1,5.10⁻¹⁵ = 6,67.10¹² → d_atome = 0,75.10⁻¹⁰ × 6,67.10¹² = 5 m\n2°b) d_électron = 10⁻¹⁸ × 6,67.10¹² = 6,67.10⁻⁶ m = 6,67 µm"
+    },
+    {
+      "id": "1.2",
+      "titre": "Masse atomique, masse moléculaire",
+      "enonce": "1°) Quelle est la masse mH d'un atome d'hydrogène ¹₁H ?\n2°) Quelle est la proportion de cette masse due aux électrons ?\n3°) Quelle est la masse mH₂ d'une molécule de dihydrogène (H₂) ?",
+      "aide": "m_H = m_p + m_e. Proportion = m_e / m_H × 100",
+      "solution": "1°) m_H = 1,673.10⁻²⁷ + 9,1.10⁻³¹ ≈ 1,673.10⁻²⁷ kg\n2°) Proportion = 9,1.10⁻³¹ / 1,673.10⁻²⁷ × 100 = 0,054%\n3°) m_H₂ = 2 × m_H = 3,346.10⁻²⁷ kg"
+    },
+    {
+      "id": "1.3",
+      "titre": "Masse atomique, masse molaire",
+      "enonce": "On considère une masse de balance de 1 kg en cuivre pur.\n1°) Combien d'atomes de cuivre contient cette masse ?\n2°) Combien de moles contient cette masse ?\n3°) Quelle est la masse M_Cu d'une mole de cuivre ?\nDonnée : m_Cu = 1,056.10⁻²⁵ kg",
+      "aide": "N = m_total / m_atome | n = N / NA | M = m / n",
+      "solution": "1°) N = 1 / 1,056.10⁻²⁵ = 9,47.10²⁴ atomes\n2°) n = 9,47.10²⁴ / 6,022.10²³ = 15,7 mol\n3°) M_Cu = 1 / 15,7 = 0,0637 kg/mol = 63,7 g/mol"
+    },
+    {
+      "id": "1.4",
+      "titre": "Inventaire des constituants",
+      "enonce": "Indiquez le nombre de protons, neutrons et électrons pour : ²⁷₁₃Al, ¹³¹₅₄Xe, ⁵⁶₂₆Fe, ¹⁹₉F⁻, ⁹₄Be²⁺, ³²₁₆S²⁻",
+      "aide": "Protons = Z | Neutrons = A - Z | Électrons = Z - charge",
+      "solution": "Al : 13p, 14n, 13e⁻ | Xe : 54p, 77n, 54e⁻ | Fe : 26p, 30n, 26e⁻ | F⁻ : 9p, 10n, 10e⁻ | Be²⁺ : 4p, 5n, 2e⁻ | S²⁻ : 16p, 16n, 18e⁻"
+    },
+    {
+      "id": "1.5",
+      "titre": "Conversions d'énergie",
+      "enonce": "Compléter :\n1°) 3 eV = ?? J\n2°) 0,89 J = ?? MeV\n3°) 6.10⁻²⁰ J = ?? meV\n4°) 1 kcal = ?? J",
+      "aide": "1 eV = 1,6.10⁻¹⁹ J | 1 MeV = 10⁶ eV | 1 cal = 4,184 J",
+      "solution": "1°) 3 × 1,6.10⁻¹⁹ = 4,8.10⁻¹⁹ J\n2°) 0,89 / 1,6.10⁻¹⁹ / 10⁶ = 5,56.10¹² MeV\n3°) 6.10⁻²⁰ / 1,6.10⁻¹⁹ × 10³ = 375 meV\n4°) 1000 × 4,184 = 4184 J"
+    },
+    {
+      "id": "1.6",
+      "titre": "Relation période-constante radioactive",
+      "enonce": "Déterminer la constante radioactive du ¹⁴C sachant que sa période est de 5570 ans.",
+      "aide": "λ = ln(2) / T. Convertir T en secondes.",
+      "solution": "T = 5570 × 365,25 × 24 × 3600 = 1,76.10¹¹ s\nλ = 0,693 / 1,76.10¹¹ = 3,94.10⁻¹² s⁻¹"
+    },
+    {
+      "id": "1.7",
+      "titre": "Loi de désintégration",
+      "enonce": "Soient 4,2.10¹³ noyaux de tritium (³H). λ = 1,79.10⁻⁹ s⁻¹. Déterminer le nombre de noyaux restant après t = 20 ans.",
+      "aide": "N(t) = N₀ · e^(-λt). Convertir t en secondes.",
+      "solution": "t = 20 × 365,25 × 24 × 3600 = 6,31.10⁸ s\nN(t) = 4,2.10¹³ × e^(-1,79.10⁻⁹ × 6,31.10⁸) = 1,36.10¹³ noyaux"
+    },
+    {
+      "id": "1.8",
+      "titre": "Calculer une activité",
+      "enonce": "Déterminer l'activité absolue A₀ de 1 g de ⁶⁰Co sachant que λ = 4,18.10⁻⁹ s⁻¹.",
+      "aide": "n = m/M → N = n·NA → A = λ·N",
+      "solution": "n = 1/59,93 = 0,0167 mol\nN = 0,0167 × 6,022.10²³ = 1,006.10²² noyaux\nA = 4,18.10⁻⁹ × 1,006.10²² = 4,20.10¹³ Bq"
+    },
+    {
+      "id": "1.9",
+      "titre": "Équilibrer une réaction nucléaire",
+      "enonce": "Écrire les réactions :\n1°) I(Z=53, A=122) + α → Cs\n2°) I(Z=53, A=122) → Te + β⁺\n3°) Th → Pa(Z=91, A=234) + β⁻",
+      "aide": "Conservation de A et Z. α = ⁴₂He | β⁺ = ⁰₊₁e | β⁻ = ⁰₋₁e",
+      "solution": "1°) ¹²²₅₃I + ⁴₂He → ¹²⁶₅₅Cs\n2°) ¹²²₅₃I → ¹²²₅₂Te + ⁰₊₁e\n3°) ²³⁴₉₂Th → ²³⁴₉₁Pa + ⁰₋₁e"
+    },
+    {
+      "id": "1.10",
+      "titre": "Énergie de liaison des nucléons",
+      "enonce": "1°) Nombre de neutrons et protons dans ⁵⁶Fe (Z=26).\n2°) Valeur de Z pour Fe²⁺.\n3°) Énergie de liaison moyenne par nucléon en MeV.",
+      "aide": "Δm = Z·mp + N·mn - m_noyau | E_l = Δm × 931,5 MeV",
+      "solution": "1°) 26 protons, 30 neutrons\n2°) Z = 26 (inchangé)\n3°) Δm = 26×1,007565 + 30×1,008665 - 55,913 = 0,528 u\nE_l = 0,528 × 931,5 = 491,8 MeV → E_l/A = 491,8/56 = 8,78 MeV/nucléon"
+    },
+    {
+      "id": "1.11",
+      "titre": "Abondance isotopique",
+      "enonce": "Le néon est un mélange de ²⁰₁₀Ne (M=19,9924) et ²²₁₀Ne (M=21,9914). M_moyenne = 20,1707. Calculer l'abondance isotopique.",
+      "aide": "M_moy = x·M₁ + (1-x)·M₂",
+      "solution": "20,1707 = x×19,9924 + (1-x)×21,9914\nx = 0,911 → ²⁰Ne : 91,1% | ²²Ne : 8,9%"
+    },
+    {
+      "id": "1.12",
+      "titre": "Énergie de liaison entre 2 atomes",
+      "enonce": "L'énergie libérée lors de la formation de H-Cl est de 4,43 eV. Quelle est l'énergie (en kJ) dégagée lors de la formation d'une mole de H-Cl ?",
+      "aide": "E_mol = E × NA / 1000",
+      "solution": "E = 4,43 × 1,6.10⁻¹⁹ = 7,088.10⁻¹⁹ J\nE_mol = 7,088.10⁻¹⁹ × 6,022.10²³ / 1000 = 427 kJ/mol"
+    },
+    {
+      "id": "1.13",
+      "titre": "Réaction de fission",
+      "enonce": "²³⁵₉₂U + ¹₀n → ¹⁴⁶₅₇La + ⁸⁷₃₅Br + 3 ¹₀n\n1°) Énergie dégagée par fission d'un noyau (MeV)\n2°) Énergie par mole (kJ/mol). Comparer avec ex 1.12.",
+      "aide": "Δm = m_réactifs - m_produits | E = Δm × 931,5 MeV",
+      "solution": "1°) Δm = 236,0527 - 235,8790 = 0,1737 u → E = 161,8 MeV\n2°) E_mol = 161,8 × 10⁶ × 1,6.10⁻¹⁹ × 6,022.10²³ / 1000 = 1,56.10¹⁰ kJ/mol\n→ Fission ~10 millions de fois plus énergétique qu'une liaison chimique"
+    }
+  ]
+}

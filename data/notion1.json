@@ -1,0 +1,92 @@
+{
+  "title": "Constituants de la Matière & Radioactivité",
+  "subtitle": "De l'atome aux rayonnements ionisants",
+  "sections": [
+    {
+      "id": "intro",
+      "title": "Introduction",
+      "content": "La structure de la matière commence par comprendre ce qui compose l'atome. En L1, tu dois maîtriser la notation symbolique, les notions d'isotopes, et les bases de la radioactivité. Ces concepts sont fondamentaux pour la suite (chimie, biologie, physique nucléaire)."
+    },
+    {
+      "id": "structure-atome",
+      "title": "Structure de l'Atome",
+      "subsections": [
+        {
+          "title": "Le Noyau",
+          "content": "Le noyau est constitué de nucléons :",
+          "list": [
+            "Protons (p) : charge +e, masse ≈ 1,672 × 10⁻²⁷ kg",
+            "Neutrons (n) : charge neutre, masse ≈ 1,674 × 10⁻²⁷ kg"
+          ]
+        },
+        {
+          "title": "Le Cortège Électronique",
+          "content": "Les électrons (e⁻) gravitent autour du noyau. Leur masse est négligeable devant celle des nucléons (≈ 1/1836). Dans un atome neutre : nombre d'électrons = nombre de protons = Z."
+        }
+      ]
+    },
+    {
+      "id": "notation",
+      "title": "Notation Symbolique",
+      "formula": "ᴬ_Z X",
+      "content": "Où :",
+      "list": [
+        "X : symbole de l'élément (ex: C pour carbone)",
+        "A : nombre de masse = nombre total de nucléons (protons + neutrons)",
+        "Z : numéro atomique = nombre de protons",
+        "N = A - Z : nombre de neutrons"
+      ],
+      "example": "¹²₆C → 6 protons, 6 neutrons, 6 électrons (atome neutre)"
+    },
+    {
+      "id": "isotopes",
+      "title": "Isotopes, Isobares, Isotones",
+      "table": [
+        {"term": "Isotopes", "definition": "Même Z (même élément), mais A différent", "example": "¹²C, ¹³C, ¹⁴C"},
+        {"term": "Isobares", "definition": "Même A, mais Z différent", "example": "¹⁴C et ¹⁴N"},
+        {"term": "Isotones", "definition": "Même N (nombre de neutrons), mais Z différent", "example": "¹³C (N=7) et ¹⁴N (N=7)"}
+      ],
+      "warning": "Les isotopes ont les mêmes propriétés chimiques (même Z = même configuration électronique), mais des propriétés physiques différentes (masse, stabilité nucléaire)."
+    },
+    {
+      "id": "radioactivite",
+      "title": "Radioactivité : Les 3 Rayonnements",
+      "content": "Un noyau instable se désintègre spontanément en émettant un rayonnement pour atteindre un état plus stable.",
+      "types": [
+        {
+          "name": "Alpha (α)",
+          "emission": "Noyau d'hélium (⁴₂He)",
+          "charge": "+2e",
+          "penetration": "Très faible",
+          "protection": "Feuille de papier"
+        },
+        {
+          "name": "Bêta Moins (β⁻)",
+          "emission": "Électron (⁰₋₁e)",
+          "charge": "-e",
+          "penetration": "Moyenne",
+          "protection": "Quelques mm d'aluminium"
+        },
+        {
+          "name": "Gamma (γ)",
+          "emission": "Photon",
+          "charge": "0",
+          "penetration": "Très élevée",
+          "protection": "Plusieurs cm de plomb"
+        }
+      ]
+    },
+    {
+      "id": "conservation",
+      "title": "Conservation dans les Réactions Nucléaires",
+      "content": "Dans toute réaction nucléaire, il y a conservation :",
+      "list": [
+        "du nombre de masse A (nombre total de nucléons)",
+        "du numéro atomique Z (charge électrique totale)",
+        "de l'énergie totale",
+        "de la quantité de mouvement"
+      ],
+      "example": "¹⁴₆C → ¹⁴₇N + ⁰₋₁e : A : 14 = 14 + 0 ✓ | Z : 6 = 7 + (-1) ✓"
+    }
+  ]
+}

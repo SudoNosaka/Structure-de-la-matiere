@@ -1,0 +1,125 @@
+{
+  "title": "Configuration Électronique",
+  "subtitle": "Pauli, Klechkowski, Hund et exceptions",
+  "sections": [
+    {
+      "id": "intro",
+      "title": "Introduction",
+      "content": "Nous n'allons plus nous contenter d'écrire les configurations électroniques en indiquant le nombre d'électrons par couche (ex: K² L⁸ M²). Nous allons indiquer le nombre d'électrons présents dans chaque sous-couche avec le formalisme : (sc1)^n1 (sc2)^n2 (sc3)^n3... avec sci : nom de la sous-couche et ni : nombre d'électrons présents dans la sous-couche sci.",
+      "list": [
+        "Le remplissage des sous-couches va devoir répondre à certaines règles :",
+        "Principe de Pauli",
+        "Règle du remplissage de Klechkowski",
+        "Règle de Hund"
+      ]
+    },
+    {
+      "id": "pauli",
+      "title": "Principe de Pauli (principe d'exclusion)",
+      "content": "Dans un atome, 2 électrons ne peuvent avoir le même jeu de 5 nombres quantiques n, l, m, s et ms. s vaut toujours ½ pour l'électron, donc 2 électrons ne peuvent avoir le même jeu de 4 nombres quantiques n, l, m et ms.",
+      "list": [
+        "Autre formulation : dans un système à plusieurs électrons, 2 électrons ne peuvent être décrits par la même spin-orbitale.",
+        "n caractérise une couche",
+        "n et l caractérisent une sous-couche",
+        "n, l et m caractérisent une orbitale",
+        "n, l, m et ms caractérisent une spin-orbitale"
+      ],
+      "subsections": [
+        {
+          "title": "Capacité maximale",
+          "content": "Le principe de Pauli nous permet de connaître le nombre maximum d'électrons :",
+          "list": [
+            "spin-orbitale → 1 électron",
+            "orbitale → 2 électrons max",
+            "On représentera une orbitale à l'aide d'une case quantique : □ vide | ↑ électron célibataire | ↑↓ électrons appariés (doublet)"
+          ]
+        },
+        {
+          "title": "Sous-couches",
+          "table": [
+            {"sous_couche": "s (l=0)", "nb_orbitales": "1", "nb_electrons_max": "2"},
+            {"sous_couche": "p (l=1)", "nb_orbitales": "3 (m=-1,0,1)", "nb_electrons_max": "6"},
+            {"sous_couche": "d (l=2)", "nb_orbitales": "5 (m=-2,-1,0,1,2)", "nb_electrons_max": "10"},
+            {"sous_couche": "f (l=3)", "nb_orbitales": "7 (m=-3...3)", "nb_electrons_max": "14"}
+          ],
+          "list": [
+            "2l+1 cases quantiques par sous-couche de type l",
+            "2(2l+1) électrons max par sous-couche de type l"
+          ]
+        },
+        {
+          "title": "Couches",
+          "table": [
+            {"couche": "n=1 (lmax=0)", "sous_couches": "1s", "nb_electrons": "2"},
+            {"couche": "n=2 (lmax=1)", "sous_couches": "2s, 2p", "nb_electrons": "8"},
+            {"couche": "n=3 (lmax=2)", "sous_couches": "3s, 3p, 3d", "nb_electrons": "18"},
+            {"couche": "n=4 (lmax=3)", "sous_couches": "4s, 4p, 4d, 4f", "nb_electrons": "32"}
+          ],
+          "list": [
+            "max 2n² électrons par couche n",
+            "Le principe de Pauli est TOUJOURS vérifié !"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "klechkowski",
+      "title": "Règle de remplissage de Klechkowski",
+      "content": "L'ordre de remplissage des sous-couches :",
+      "list": [
+        "L'ordre de remplissage des sous-couches se fait par valeur de n+l croissantes",
+        "En cas d'égalité de n+l, on remplit d'abord celle de plus faible n (couche la plus interne)"
+      ],
+      "formula": "1s → 2s → 2p → 3s → 3p → 4s → 3d → 4p → 5s → 4d → 5p → 6s → 4f → 5d → 6p...",
+      "subsections": [
+        {
+          "title": "Ordre de remplissage vs écriture",
+          "content": "Habituellement, on écrit la configuration électronique par ordre de couche (n croissant) et à l'intérieur d'une couche par ordre de sous-couche (l croissant).",
+          "example": "Fe (Z=26) : Ordre de Remplissage (OR) : (1s)²(2s)²(2p)⁶(3s)²(3p)⁶(4s)²(3d)⁶ | Configuration électronique [Fe] : (1s)²(2s)²(2p)⁶(3s)²(3p)⁶(3d)⁶(4s)²"
+        },
+        {
+          "title": "Exceptions",
+          "content": "Il existe des exceptions à la règle de Klechkowski :",
+          "list": [
+            "Cr, Mo",
+            "Cu, Ag, Au",
+            "Quelques éléments parmi les lanthanides et les actinides"
+          ],
+          "warning": "Plus un élément est « profond » dans le tableau périodique, plus grandes sont les probabilités qu'il déroge à la règle de Klechkowski."
+        }
+      ],
+      "warning": "La règle de Klechkowski est vérifiée pour l'état fondamental, pas pour un état excité."
+    },
+    {
+      "id": "hund",
+      "title": "Règle de Hund",
+      "content": "Dans une sous-couche, le spin total doit être maximal :",
+      "list": [
+        "Les électrons occupent un maximum de cases quantiques dans une sous-couche possédant plusieurs orbitales",
+        "Dans une même sous-couche, les électrons célibataires possèdent des spins parallèles"
+      ],
+      "warning": "La règle de Hund est vérifiée pour l'état fondamental, pas pour un état excité.",
+      "example": "Remplissage de la sous-couche 2p avec 4 électrons : ↑↓ ↑ ↑ (Hund OK) = état fondamental | ↑↓ ↑↓ (Hund pb) = état excité",
+      "consequence": "La règle de Hund ne peut s'observer que si on écrit la configuration électronique à l'aide des cases quantiques. On ne peut la vérifier lorsque l'on a une configuration écrite comme : (1s)²(2s)²(2p)⁴"
+    },
+    {
+      "id": "exemples",
+      "title": "Exemples de configurations électroniques",
+      "table": [
+        {"element": "Carbone (Z=6)", "config": "[C] : (1s)²(2s)²(2p)²"},
+        {"element": "Oxygène (Z=8)", "config": "[O] : (1s)²(2s)²(2p)⁴"},
+        {"element": "Calcium (Z=20)", "config": "[Ca] : (1s)²(2s)²(2p)⁶(3s)²(3p)⁶(4s)²"},
+        {"element": "Chrome (Z=24)", "config": "OR : (1s)²(2s)²(2p)⁶(3s)²(3p)⁶(4s)¹(3d)⁵ | [Cr] : (1s)²(2s)²(2p)⁶(3s)²(3p)⁶(3d)⁵(4s)¹", "note": "Exception"},
+        {"element": "Cuivre (Z=29)", "config": "OR : (1s)²(2s)²(2p)⁶(3s)²(3p)⁶(4s)¹(3d)¹⁰ | [Cu] : (1s)²(2s)²(2p)⁶(3s)²(3p)⁶(3d)¹⁰(4s)¹", "note": "Exception"},
+        {"element": "Iode (Z=53)", "config": "[I] : (1s)²(2s)²(2p)⁶(3s)²(3p)⁶(3d)¹⁰(4s)²(4p)⁶(4d)¹⁰(5s)²(5p)⁵"},
+        {"element": "Plomb (Z=82)", "config": "[Pb] : (1s)²(2s)²(2p)⁶(3s)²(3p)⁶(3d)¹⁰(4s)²(4p)⁶(4d)¹⁰(4f)¹⁴(5s)²(5p)⁶(5d)¹⁰(6s)²(6p)²"}
+      ]
+    },
+    {
+      "id": "polyelectroniques",
+      "title": "Énergie des systèmes polyélectroniques",
+      "content": "Remplacer un système à N électrons par N systèmes à 1 électron !",
+      "warning": "Pour les atomes polyélectroniques, l'énergie dépend maintenant de n ET de l (levée de dégénérescence)."
+    }
+  ]
+}

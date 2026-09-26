@@ -1,0 +1,112 @@
+{
+  "title": "Quiz 3 - Slater & Tableau Périodique",
+  "subtitle": "10 minutes | 15 questions | Notion 6",
+  "duration": 600,
+  "questions": [
+    {
+      "id": 1,
+      "question": "L'effet d'écran correspond à :",
+      "options": ["L'augmentation de la charge nucléaire ressentie", "La diminution de la charge nucléaire ressentie par un électron due aux autres électrons", "L'attraction entre électrons", "La répulsion entre noyaux"],
+      "correct": 1,
+      "explanation": "L'effet d'écran est la diminution de la charge nucléaire ressentie par un électron, due à la présence des autres électrons qui 'font écran' au noyau."
+    },
+    {
+      "id": 2,
+      "question": "La charge nucléaire effective est définie par :",
+      "options": ["Zeff = Z + σ", "Zeff = Z - σ", "Zeff = σ - Z", "Zeff = Z × σ"],
+      "correct": 1,
+      "explanation": "Zeff = Z - σ, où Z est la charge réelle du noyau et σ la constante d'écran"
+    },
+    {
+      "id": 3,
+      "question": "Dans l'approximation hydrogénoïde, l'énergie d'un électron vaut :",
+      "options": ["En = -13,6 × Z/n² eV", "En = -13,6 × Zeff²/n² eV", "En = -13,6 × Z²/n eV", "En = -13,6 × n²/Zeff² eV"],
+      "correct": 1,
+      "explanation": "En = -13,6 × Zeff²/n² eV. C'est la même formule que pour l'atome H, mais avec Zeff au lieu de Z."
+    },
+    {
+      "id": 4,
+      "question": "Dans la méthode de Slater, la contribution d'un électron d'une couche externe à l'écran d'un électron d'une couche interne est :",
+      "options": ["0,35", "0,85", "1,00", "0 (nul)"],
+      "correct": 3,
+      "explanation": "Un électron d'une couche externe n'a AUCUN effet d'écran sur un électron d'une couche plus interne."
+    },
+    {
+      "id": 5,
+      "question": "Pour un électron dans une sous-couche 2p, la contribution des autres électrons de la même sous-couche (2p) est :",
+      "options": ["0,31", "0,35", "0,85", "1,00"],
+      "correct": 1,
+      "explanation": "Pour un électron dans une sous-couche (ns, np), les autres électrons de la même sous-couche contribuent à hauteur de 0,35."
+    },
+    {
+      "id": 6,
+      "question": "Pour un électron dans une sous-couche 3s, la contribution des électrons de la couche n=2 est :",
+      "options": ["0,35", "0,85", "1,00", "0"],
+      "correct": 1,
+      "explanation": "Pour un électron dans une sous-couche (ns, np), les électrons de la couche (n-1) contribuent à hauteur de 0,85."
+    },
+    {
+      "id": 7,
+      "question": "Pour un électron dans une sous-couche 3d, la contribution des électrons de la couche n=2 est :",
+      "options": ["0,35", "0,85", "1,00", "0"],
+      "correct": 2,
+      "explanation": "Pour un électron dans une sous-couche nd, TOUS les électrons des couches ≤ (n-1) contribuent à hauteur de 1,00."
+    },
+    {
+      "id": 8,
+      "question": "Dans la méthode de Slater, l'énergie des sous-couches 2s et 2p est :",
+      "options": ["E(2s) < E(2p) (2s plus stable)", "E(2s) > E(2p) (2p plus stable)", "E(2s) = E(2p) (même énergie)", "Impossible à déterminer"],
+      "correct": 2,
+      "explanation": "Avec les paramètres de Slater, on obtient Zeff(2s) = Zeff(2p), donc E(2s) = E(2p)."
+    },
+    {
+      "id": 9,
+      "question": "Le tableau périodique moderne est classé par :",
+      "options": ["Masse atomique croissante", "Numéro atomique Z croissant", "Nombre de neutrons croissant", "Électronégativité croissante"],
+      "correct": 1,
+      "explanation": "Depuis 1913 (Moseley), les éléments sont classés par numéro atomique Z croissant."
+    },
+    {
+      "id": 10,
+      "question": "Le tableau périodique comporte :",
+      "options": ["6 périodes et 18 colonnes", "7 périodes et 18 colonnes", "8 périodes et 20 colonnes", "7 périodes et 8 colonnes"],
+      "correct": 1,
+      "explanation": "Le tableau périodique comporte 7 lignes (périodes) et 18 colonnes (familles)."
+    },
+    {
+      "id": 11,
+      "question": "Les éléments du bloc d sont :",
+      "options": ["Les alcalins et alcalino-terreux", "Les halogènes et gaz nobles", "Les métaux de transition", "Les lanthanides et actinides"],
+      "correct": 2,
+      "explanation": "Le bloc d (colonnes 3 à 12) correspond aux métaux de transition."
+    },
+    {
+      "id": 12,
+      "question": "Les alcalins (colonne 1) ont pour configuration de valence :",
+      "options": ["ns¹", "ns²", "ns² np¹", "ns² np⁵"],
+      "correct": 0,
+      "explanation": "Les alcalins (Li, Na, K, Rb, Cs) ont tous 1 électron de valence : ns¹."
+    },
+    {
+      "id": 13,
+      "question": "Les gaz nobles (colonne 18) ont pour configuration de valence :",
+      "options": ["ns² np⁶ (sauf He: 1s²)", "ns² np⁵", "ns¹", "ns² np²"],
+      "correct": 0,
+      "explanation": "Les gaz nobles ont une couche externe complète : ns² np⁶ (octet). Exception : l'Hélium (He) qui est 1s²."
+    },
+    {
+      "id": 14,
+      "question": "Les éléments d'une même colonne (famille) ont :",
+      "options": ["La même masse atomique", "Le même nombre de neutrons", "La même configuration électronique de valence", "Le même nombre d'électrons au total"],
+      "correct": 2,
+      "explanation": "Les éléments d'une même famille ont la même configuration électronique de valence, ce qui explique leurs propriétés chimiques similaires."
+    },
+    {
+      "id": 15,
+      "question": "Pour calculer l'énergie d'ionisation d'un atome, on utilise :",
+      "options": ["ΔE = E(atome) - E(ion)", "ΔE = E(ion) - E(atome)", "ΔE = E(atome) × E(ion)", "ΔE = E(atome) + E(ion)"],
+      "correct": 1,
+      "explanation": "L'énergie d'ionisation est l'énergie nécessaire pour arracher un électron : ΔE = E(ion) - E(atome) > 0."
+    }
+  ]
+}

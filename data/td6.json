@@ -1,0 +1,53 @@
+{
+  "titre": "TD6 - Propriétés périodiques",
+  "donnees": [
+    "Rayon atomique : augmente ↓, diminue →",
+    "Énergie d'ionisation : diminue ↓, augmente →",
+    "Électronégativité : diminue ↓, augmente →",
+    "1 eV = 96,485 kJ/mol"
+  ],
+  "exercices": [
+    {
+      "id": "6.1",
+      "titre": "Rayons atomiques",
+      "enonce": "Quel atome est le plus volumineux ?\na) Ca, Ba | b) S, Na | c) O, F",
+      "aide": "Rayon augmente ↓ et diminue →",
+      "solution": "a) Ba | b) Na | c) O"
+    },
+    {
+      "id": "6.2",
+      "titre": "Électronégativité et EI",
+      "enonce": "1°) Comparer EI et électronégativité de F, K, Mg à Na\n2°) Électrons de valence et structure gaz rare. Réactions d'ionisation.",
+      "aide": "F : 7e⁻ valence | K : 1e⁻ | Mg : 2e⁻ | Na : 1e⁻",
+      "solution": "1°) EI : F > Na > Mg > K | χ : F > Na > Mg > K\n2°) F : gagne 1e⁻ → F⁻ | K : perd 1e⁻ → K⁺ | Mg : perd 2e⁻ → Mg²⁺ | Na : perd 1e⁻ → Na⁺"
+    },
+    {
+      "id": "6.3",
+      "titre": "Nombres d'oxydation",
+      "enonce": "Formules des oxydes, halogénures et hydroxydes de : Na, Mg, B, Al, Cu, Zn",
+      "aide": "Nb e⁻ valence → Nb oxydation",
+      "solution": "Na : Na₂O, NaCl, NaOH | Mg : MgO, MgCl₂, Mg(OH)₂ | B : B₂O₃, BCl₃, B(OH)₃ | Al : Al₂O₃, AlCl₃, Al(OH)₃ | Cu : Cu₂O/CuO, CuCl/CuCl₂, CuOH/Cu(OH)₂ | Zn : ZnO, ZnCl₂, Zn(OH)₂"
+    },
+    {
+      "id": "6.4",
+      "titre": "Électronégativité selon Pauling",
+      "enonce": "Δχ_AB = √(E_AB - √(E_AA·E_BB))\nE(H-H)=435 | E(F-F)=155 | E(Cl-Cl)=242 | E(H-F)=566 | E(H-Cl)=431 kJ/mol\n1°) Convertir en eV/atome\n2°) Δχ(H,F) → χ_H\n3°) Δχ(H,Cl) → χ_Cl\n4°) Moment dipolaire HF et HCl",
+      "aide": "1 eV = 96,485 kJ/mol | μ = q × d",
+      "solution": "1°) H-H: 4,51 | F-F: 1,61 | Cl-Cl: 2,51 | H-F: 5,86 | H-Cl: 4,47 eV\n2°) Δχ = 1,78 → χ_H = 2,22\n3°) Δχ = 0,94 → χ_Cl = 3,16\n4°) μ_HF = 1,79 D | μ_HCl = 1,08 D"
+    },
+    {
+      "id": "6.5",
+      "titre": "EI et électronégativité",
+      "enonce": "Éléments A à G sur tableau partiel. Déterminer :\n1°) Alcalin, halogène, gaz rare, métal transition, alcalino-terreux\n2°) Configuration électronique\n3°) Forme ionique probable\n4°) Parmi A, B, C, D : EI la plus faible, χ la plus élevée, rayon le plus petit, config en p⁶",
+      "aide": "Propriétés périodiques",
+      "solution": "1°) Selon position | 2°) Selon Z | 3°) Selon famille | 4°) Alcalin : EI faible | Halogène : χ élevée | Gaz rare : rayon petit | Colonne p⁶"
+    },
+    {
+      "id": "6.6",
+      "titre": "Rayons atomiques et ioniques",
+      "enonce": "1°) Na vs Na⁺. Comparer Na⁺ et Ne.\n2°) F (0,72 Å), O (0,74 Å), F⁻ (1,33 Å), O²⁻ (1,40 Å)",
+      "aide": "Cations < atomes | Anions > atomes",
+      "solution": "1°) Na > Na⁺ | Na⁺ et Ne isoelectroniques (10e⁻) | r_Na⁺ < r_Ne (Z plus grand)\n2°) O²⁻ > F⁻ > F > O (anions plus grands, même Z plus petit → plus grand)"
+    }
+  ]
+}

@@ -1,0 +1,201 @@
+{
+  "title": "Équation de Schrödinger & Orbitales",
+  "subtitle": "De la fonction d'onde aux orbitales s, p, d, f",
+  "sections": [
+    {
+      "id": "equation",
+      "title": "L'Équation de Schrödinger (1926)",
+      "formula": "Ĥ · Ψ = E · Ψ",
+      "content": "E. Schrödinger propose une équation pour déterminer la fonction d'onde d'un système quelconque.",
+      "list": [
+        "Ψ : fonction d'onde",
+        "Ĥ : opérateur hamiltonien",
+        "E : énergie du système"
+      ],
+      "subsections": [
+        {
+          "title": "Version dépendante du temps",
+          "formula": "Ĥ · Ψ(x,t) = iħ · ∂Ψ(x,t)/∂t",
+          "content": "Dans ce qui suit, nous nous intéresserons uniquement à des états stationnaires."
+        },
+        {
+          "title": "Interprétation de Ψ",
+          "content": "En mécanique quantique, l'état d'un système est complètement décrit par une fonction d'onde qui dépend des coordonnées de la particule.",
+          "formula": "dP = Ψ*(r) · Ψ(r) · dτ = |Ψ(r)|² · dτ",
+          "list": [
+            "|Ψ(r)|² : densité de probabilité de présence",
+            "Ψ(r) : amplitude de probabilité (pas de sens physique direct)",
+            "La fonction d'onde est normée : ∫|Ψ|²dτ = 1 sur tout l'espace"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hydrogene",
+      "title": "L'Atome d'Hydrogène et les Ions Hydrogénoïdes",
+      "content": "Ion hydrogénoïde = noyau + 1 électron (même configuration électronique que H : He⁺, Li²⁺, Be³⁺...)",
+      "subsections": [
+        {
+          "title": "Hamiltonien",
+          "content": "On néglige l'énergie cinétique du noyau. Il reste 2 termes à évaluer :",
+          "list": [
+            "Énergie cinétique de l'électron",
+            "Énergie potentielle d'interaction entre le noyau et l'électron"
+          ]
+        },
+        {
+          "title": "Coordonnées sphériques",
+          "content": "Le potentiel électrostatique présente une symétrie sphérique → utilisation du système de coordonnées sphériques (r, θ, φ) :",
+          "formulas": [
+            "x = r · sin(θ) · cos(φ)",
+            "y = r · sin(θ) · sin(φ)",
+            "z = r · cos(θ)"
+          ],
+          "list": [
+            "r ∈ [0 ; +∞]",
+            "θ ∈ [0 ; π] (latitude)",
+            "φ ∈ [0 ; 2π] (longitude)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "resolution",
+      "title": "Résolution & Nombres Quantiques",
+      "formula": "Ψ_{n,l,m}(r,θ,φ) = R_{n,l}(r) · Y_{l,m}(θ,φ)",
+      "content": "La résolution de l'équation de Schrödinger conduit à :",
+      "list": [
+        "Séparation des variables angulaires et radiale",
+        "Apparition de 3 nombres quantiques (autant que de degrés de liberté au problème)"
+      ],
+      "table": [
+        {"symbole": "n", "nom": "Principal", "valeurs": "entier ≥ 1", "quantifie": "l'énergie (couche)"},
+        {"symbole": "l", "nom": "Azimutal", "valeurs": "0, 1, ..., n-1", "quantifie": "la forme (sous-couche)"},
+        {"symbole": "m", "nom": "Magnétique", "valeurs": "0, ±1, ..., ±l (2l+1 valeurs)", "quantifie": "l'orientation"}
+      ],
+      "subsections": [
+        {
+          "title": "Moment cinétique orbital",
+          "content": "La partie angulaire décrit le mouvement de rotation de l'électron autour du noyau, caractérisé par le moment cinétique orbital L :",
+          "formulas": [
+            "|L|² = l(l+1) · ħ²",
+            "L_z = m · ħ"
+          ],
+          "conclusion": "l et m quantifient le moment cinétique orbital, n quantifie l'énergie."
+        }
+      ]
+    },
+    {
+      "id": "orbitales",
+      "title": "Orbitales Atomiques",
+      "content": "Les fonctions d'onde solutions de l'équation de Schrödinger sont appelées orbitales atomiques. Une orbitale est caractérisée par un jeu de 3 nombres quantiques n, l et m.",
+      "subsections": [
+        {
+          "title": "Nomenclature",
+          "formula": "chiffre_lettre_{indices}",
+          "table": [
+            {"l": "0", "lettre": "s", "origine": "sharp", "symetrie": "sphérique"},
+            {"l": "1", "lettre": "p", "origine": "principal", "symetrie": "haltère"},
+            {"l": "2", "lettre": "d", "origine": "diffuse", "symetrie": "trèfle"},
+            {"l": "3", "lettre": "f", "origine": "fundamental", "symetrie": "complexe"}
+          ]
+        },
+        {
+          "title": "Exemples",
+          "list": [
+            "2s : n=2, l=0, m=0",
+            "2p_z : n=2, l=1, m=0",
+            "2p_x, 2p_y : n=2, l=1, m=±1 (combinaisons linéaires)",
+            "3d_{xy} : n=3, l=2, m=±2"
+          ]
+        },
+        {
+          "title": "Fonctions d'onde de l'atome H",
+          "content": "Orbitale 1s (n=1, l=0, m=0) :",
+          "formula": "Ψ_{1s} = (1/√π) · (Z/a₀)^{3/2} · e^{-Zr/a₀}",
+          "content2": "Orbitale 2s (n=2, l=0, m=0) :",
+          "formula2": "Ψ_{2s} = (1/4√2π) · (Z/a₀)^{3/2} · (2 - Zr/a₀) · e^{-Zr/(2a₀)}"
+        }
+      ]
+    },
+    {
+      "id": "representations",
+      "title": "Représentation Graphique des Orbitales",
+      "content": "3 variables (r, θ, φ) → nécessiteraient une représentation à 4 dimensions ! → Représentations partielles :",
+      "list": [
+        "Courbes radiales : R(r) et R²(r)",
+        "Fonction de distribution radiale : r² · R²(r)",
+        "Parties angulaires : Y(θ,φ) et Y²(θ,φ)",
+        "Surfaces d'isoprobabilité",
+        "Enveloppe du domaine de probabilité"
+      ],
+      "subsections": [
+        {
+          "title": "Formes des orbitales",
+          "table": [
+            {"type": "s (l=0)", "forme": "Sphère", "caracteristiques": "Symétrie sphérique, pas de nœud angulaire"},
+            {"type": "p (l=1)", "forme": "2 lobes (haltère)", "caracteristiques": "3 orientations : p_x, p_y, p_z. 1 plan nodal"},
+            {"type": "d (l=2)", "forme": "4 lobes (trèfle)", "caracteristiques": "5 orientations : d_{xy}, d_{xz}, d_{yz}, d_{z²}, d_{x²-y²}. 2 plans nodaux"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "polyelectroniques",
+      "title": "Les Atomes Polyélectroniques",
+      "content": "Exemple : atome d'Hélium (noyau +2e, 2 électrons). L'hamiltonien contient 5 termes :",
+      "formula": "Ĥ = Ec_{e1} + V_{N-e1} + Ec_{e2} + V_{N-e2} + V_{e1-e2}",
+      "warning": "Le 5ème terme (répulsion e⁻/e⁻) rend la séparation des variables impossible. Sans lui, on aurait Ψ(r₁,r₂) = Ψ₁(r₁)·Ψ₂(r₂) et E_totale = E₁ + E₂.",
+      "content2": "Avec ce terme, la résolution exacte est impossible → il faut utiliser des approximations (méthode des variations, méthode des perturbations...). Les orbitales de l'atome H servent de base pour décrire les atomes et ions polyélectroniques.",
+      "subsections": [
+        {
+          "title": "Conséquences",
+          "list": [
+            "Les orbitales obtenues sont semblables à celles de H",
+            "Couches : n (orbitales ayant la même valeur de n)",
+            "Sous-couches : n et l (orbitales ayant la même valeur de n et l)",
+            "L'énergie dépend à présent de n ET de l → 2 sous-couches différentes n'auront pas la même énergie !"
+          ]
+        },
+        {
+          "title": "Nombre d'orbitales et d'électrons",
+          "formulas": [
+            "Nb d'orbitales dans la couche n = n²",
+            "Nb max d'électrons dans la couche n = 2n²",
+            "Nb d'orbitales dans la sous-couche l = 2l+1",
+            "Nb max d'électrons dans la sous-couche l = 2(2l+1)"
+          ],
+          "table": [
+            {"couche": "K (n=1)", "sous_couches": "1s", "nb_orbitales": "1", "nb_electrons": "2"},
+            {"couche": "L (n=2)", "sous_couches": "2s, 2p", "nb_orbitales": "4", "nb_electrons": "8"},
+            {"couche": "M (n=3)", "sous_couches": "3s, 3p, 3d", "nb_orbitales": "9", "nb_electrons": "18"},
+            {"couche": "N (n=4)", "sous_couches": "4s, 4p, 4d, 4f", "nb_orbitales": "16", "nb_electrons": "32"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "spin",
+      "title": "Le Spin (4ème Nombre Quantique)",
+      "content": "Une particule ponctuelle chargée et dotée d'un moment cinétique L crée un champ magnétique.",
+      "observations": [
+        "Pour l'état s, le moment cinétique orbital est nul, or on observe un champ magnétique → autre moment cinétique !",
+        "Spectre fin de l'hydrogène → couplage spin-orbite"
+      ],
+      "subsections": [
+        {
+          "title": "Moment cinétique intrinsèque",
+          "content": "Image classique : comme si 'l'électron tournait sur lui-même'. Ne peut s'étudier qu'avec la mécanique quantique relativiste !",
+          "formulas": [
+            "S² = s(s+1) · ħ²  avec  s = ½",
+            "S_z = m_s · ħ  avec  m_s = ±½"
+          ]
+        },
+        {
+          "title": "Spin-orbitale",
+          "content": "Fonction d'onde qui comprend les variables d'espace ET la variable de spin. Elle est caractérisée par 4 nombres quantiques : n, l, m, m_s."
+        }
+      ]
+    }
+  ]
+}

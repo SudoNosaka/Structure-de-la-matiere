@@ -1,0 +1,126 @@
+{
+  "title": "Textes à Trous - Structure de la Matière",
+  "subtitle": "Exercice de rappel actif | 10-15 min max",
+  "sections": [
+    {
+      "id": "section1",
+      "title": "Section 1 : Constituants de la Matière & Radioactivité",
+      "texts": [
+        {
+          "id": "t1",
+          "content": "Un atome est constitué d'un {noyau} contenant des protons (charge {+e}) et des neutrons (charge {nulle}), autour duquel gravitent des {electrons} de charge {-e}.",
+          "hint": "Pense à la structure de base de l'atome"
+        },
+        {
+          "id": "t2",
+          "content": "Le nombre de protons est appelé numéro {atomique} et noté {Z}. Le nombre total de nucléons est noté {A}. Le nombre de neutrons vaut N = {A-Z}.",
+          "hint": "Notation ᴬ_Z X"
+        },
+        {
+          "id": "t3",
+          "content": "Les isotopes d'un même élément chimique ont le même nombre de {protons} (même Z) mais un nombre de {neutrons} différent (donc A différent).",
+          "hint": "Définition des isotopes"
+        }
+      ]
+    },
+    {
+      "id": "section2",
+      "title": "Section 2 : Loi de Désintégration Radioactive",
+      "texts": [
+        {
+          "id": "t4",
+          "content": "Le nombre de noyaux radioactifs à l'instant t suit la loi : N(t) = N₀ · e^{-λt}",
+          "hint": "Loi exponentielle de décroissance"
+        },
+        {
+          "id": "t5",
+          "content": "La demi-vie T est le temps au bout duquel la {moitie} des noyaux initiaux se sont désintégrés. Elle est liée à λ par : T = {ln(2)/λ} ≈ {0,693/λ}",
+          "hint": "Relation T et λ"
+        },
+        {
+          "id": "t6",
+          "content": "L'activité A représente le nombre de {desintegrations} par unité de temps. Son unité SI est le {becquerel} (Bq), où 1 Bq = {1} désintégration par seconde.",
+          "hint": "Définition de l'activité"
+        }
+      ]
+    },
+    {
+      "id": "section3",
+      "title": "Section 3 : Structure Électronique - Modèle de Bohr",
+      "texts": [
+        {
+          "id": "t7",
+          "content": "L'effet photoélectrique a été expliqué par {einstein} en 1905. La lumière est constituée de grains d'énergie appelés {photons}, dont l'énergie vaut E = {h*nu}.",
+          "hint": "Einstein et les photons"
+        },
+        {
+          "id": "t8",
+          "content": "Dans le modèle de Bohr, l'énergie de l'électron dans un atome hydrogénoïde est quantifiée : Eₙ = {-13,6*Z²/n²} eV",
+          "hint": "Formule de Bohr"
+        },
+        {
+          "id": "t9",
+          "content": "En 1923, {de broglie} propose que toute particule a une longueur d'onde associée : λ = {h/p} = h/(m·v)",
+          "hint": "Dualité onde-corpuscule"
+        },
+        {
+          "id": "t10",
+          "content": "Le principe d'incertitude de Heisenberg : Δx · Δp ≥ {ħ/2}. Ce n'est {pas} un problème technique, mais une limite {fondamentale} de la nature.",
+          "hint": "Heisenberg"
+        }
+      ]
+    },
+    {
+      "id": "section4",
+      "title": "Section 4 : Équation de Schrödinger & Orbitales",
+      "texts": [
+        {
+          "id": "t11",
+          "content": "L'équation de Schrödinger pour un état stationnaire s'écrit : {Ĥ*Ψ=E*Ψ}. La signification physique de |Ψ|² est la densité de {probabilite de presence} de l'électron.",
+          "hint": "Équation fondamentale"
+        },
+        {
+          "id": "t12",
+          "content": "Une orbitale atomique est caractérisée par {3} nombres quantiques : n (principal), l ({azimutal}) et m ({magnetique}). Un électron est caractérisé par {4} nombres quantiques (on ajoute le {spin}).",
+          "hint": "Nombres quantiques"
+        },
+        {
+          "id": "t13",
+          "content": "Pour l = 0, on a une orbitale de type {s}, de forme {spherique}. Pour l = 1, on a une orbitale de type {p}, de forme en {haltère}. Pour l = 2, on a une orbitale de type {d}, de forme en {trèfle}.",
+          "hint": "Formes des orbitales"
+        }
+      ]
+    },
+    {
+      "id": "section5",
+      "title": "Section 5 : Configuration Électronique",
+      "texts": [
+        {
+          "id": "t14",
+          "content": "Le principe d'exclusion de {pauli} stipule que 2 électrons d'un même atome ne peuvent pas avoir les mêmes {4 nombres quantiques}. Une orbitale peut contenir au maximum {2} électrons, de spins {opposes}.",
+          "hint": "Pauli"
+        },
+        {
+          "id": "t15",
+          "content": "La règle de {klechkowski} indique que les sous-couches se remplissent par valeur de {n+l} croissantes. Ordre de remplissage : 1s → 2s → 2p → 3s → 3p → {4s} → {3d} → 4p → 5s...",
+          "hint": "Klechkowski"
+        },
+        {
+          "id": "t16",
+          "content": "La règle de {hund} stipule que dans une sous-couche, le spin {total} doit être maximal. Les électrons célibataires ont des spins {paralleles}.",
+          "hint": "Hund"
+        },
+        {
+          "id": "t17",
+          "content": "Une sous-couche s peut contenir {2} électrons max. Une sous-couche p peut contenir {6} électrons max. Une sous-couche d peut contenir {10} électrons max. Une sous-couche f peut contenir {14} électrons max.",
+          "hint": "Capacités des sous-couches"
+        },
+        {
+          "id": "t18",
+          "content": "Le chrome Cr (Z=24) a pour configuration réelle : ...4s{1} 3d{5} (et non 4s² 3d⁴). Le cuivre Cu (Z=29) a pour configuration réelle : ...4s{1} 3d{10} (et non 4s² 3d⁹).",
+          "hint": "Exceptions"
+        }
+      ]
+    }
+  ]
+}

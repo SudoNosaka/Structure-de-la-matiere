@@ -1,0 +1,111 @@
+{
+  "title": "Loi de Désintégration Radioactive",
+  "subtitle": "Cinétique nucléaire & Applications",
+  "sections": [
+    {
+      "id": "intro",
+      "title": "Introduction",
+      "content": "La radioactivité est un phénomène aléatoire à l'échelle d'un noyau, mais prévisible statistiquement à l'échelle d'un grand nombre de noyaux. Cette loi exponentielle est fondamentale et tombe très souvent en examen."
+    },
+    {
+      "id": "loi",
+      "title": "Loi de Désintégration Radioactive",
+      "subsections": [
+        {
+          "title": "Équation Différentielle",
+          "content": "Le nombre de désintégrations par unité de temps est proportionnel au nombre de noyaux présents :",
+          "formula": "dN/dt = -λ·N(t)",
+          "list": [
+            "N(t) : nombre de noyaux radioactifs à l'instant t",
+            "λ : constante radioactive (en s⁻¹), caractéristique du radionucléide",
+            "dN/dt : vitesse de désintégration (négative car N diminue)"
+          ]
+        },
+        {
+          "title": "Solution de l'Équation",
+          "content": "En résolvant cette équation différentielle du premier ordre, on obtient :",
+          "formula": "N(t) = N₀ · e^(-λt)",
+          "content2": "Où N₀ est le nombre initial de noyaux à t = 0.",
+          "interpretation": "Le nombre de noyaux décroît de façon exponentielle au cours du temps. Plus λ est grand, plus la décroissance est rapide."
+        }
+      ]
+    },
+    {
+      "id": "demie-vie",
+      "title": "Demi-Vie (T ou T₁/₂)",
+      "subsections": [
+        {
+          "title": "Définition",
+          "content": "La demi-vie (ou période radioactive) est le temps nécessaire pour que la moitié des noyaux initiaux se désintègrent :",
+          "formula": "N(T) = N₀ / 2"
+        },
+        {
+          "title": "Relation avec λ",
+          "content": "En injectant dans la loi de désintégration et en simplifiant :",
+          "formula": "T = ln(2) / λ ≈ 0,693 / λ",
+          "warning": "Formule à connaître par cœur !"
+        },
+        {
+          "title": "Exemples de Demi-Vies",
+          "table": [
+            {"isotope": "¹⁴C", "demi_vie": "5 730 ans", "application": "Datation archéologique"},
+            {"isotope": "¹³¹I", "demi_vie": "8 jours", "application": "Médecine nucléaire (thyroïde)"},
+            {"isotope": "²³⁸U", "demi_vie": "4,5 milliards d'années", "application": "Datation géologique"},
+            {"isotope": "⁶⁰Co", "demi_vie": "5,27 ans", "application": "Radiothérapie"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "activite",
+      "title": "Activité Radioactive (A)",
+      "subsections": [
+        {
+          "title": "Définition",
+          "content": "L'activité est le nombre de désintégrations par seconde :",
+          "formula": "A(t) = -dN/dt = λ · N(t)",
+          "formula2": "A(t) = λ · N₀ · e^(-λt) = A₀ · e^(-λt)",
+          "content2": "Où A₀ = λ · N₀ est l'activité initiale."
+        },
+        {
+          "title": "Unité : le Becquerel (Bq)",
+          "formula": "1 Bq = 1 désintégration par seconde (dps)",
+          "content": "Ancienne unité : le Curie (Ci). 1 Ci = 3,7 × 10¹⁰ Bq (activité d'1 g de ²²⁶Ra)."
+        },
+        {
+          "title": "Relation Activité - Nombre de Noyaux",
+          "content": "Pour calculer l'activité à partir de la masse d'un échantillon :",
+          "list": [
+            "Calculer le nombre de moles : n = m / M (où M est la masse molaire)",
+            "Calculer le nombre de noyaux : N = n · Nₐ (où Nₐ = 6,022 × 10²³ mol⁻¹)",
+            "Calculer l'activité : A = λ · N"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "applications",
+      "title": "Applications de la Radioactivité",
+      "subsections": [
+        {
+          "title": "Datation au Carbone 14",
+          "content": "Les êtres vivants absorbent du ¹⁴C (radioactif) pendant leur vie. À leur mort, l'absorption s'arrête et le ¹⁴C se désintègre.",
+          "method": [
+            "Mesurer l'activité actuelle A(t) de l'échantillon",
+            "Connaître l'activité initiale A₀ (activité du ¹⁴C dans l'atmosphère)",
+            "Utiliser la loi de désintégration pour trouver t"
+          ],
+          "formula": "t = -ln(A(t)/A₀) / λ",
+          "warning": "Au-delà de ~50 000 ans (≈ 9 demi-vies), l'activité devient trop faible pour être mesurée."
+        },
+        {
+          "title": "Médecine Nucléaire",
+          "list": [
+            "Diagnostic : Injection de traceurs radioactifs (ex: ⁹⁹ᵐTc) et détection par gamma-caméra",
+            "Thérapie : Utilisation de rayonnements pour détruire des cellules cancéreuses (ex: ⁶⁰Co, ¹³¹I)"
+          ]
+        }
+      ]
+    }
+  ]
+}

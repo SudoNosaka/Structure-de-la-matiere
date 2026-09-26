@@ -1,0 +1,18 @@
+{
+  "titre": "TD5 - Charge effective & Slater",
+  "donnees": [
+    "Z_eff = Z - σ",
+    "E_n = -13,6 × Z_eff²/n² eV",
+    "Règles de Slater : ns/np → même sous-couche: 0,35 | couche n-1: 0,85 | couches ≤ n-2: 1,00",
+    "nd → même sous-couche: 0,35 | tout le reste: 1,00"
+  ],
+  "exercices": [
+    {
+      "id": "5.1",
+      "titre": "Énergie de 1ère ionisation du Mg (Z=12)",
+      "enonce": "1°) Équation de 1ère ionisation + structures électroniques\n2°) EI en fonction des énergies\n3°) Charges effectives utiles\n4°) Énergies des sous-couches\n5°) EI et λ du photon\n6°) Comparer à 7,64 eV\n7°) 2ème et 3ème ionisation → état d'ionisation probable\n8°) λ_i = 9,512 Å → domaine. Expliquer.",
+      "aide": "Z_eff = Z - σ (Slater) | E_n = -13,6 × Z_eff²/n²",
+      "solution": "1°) Mg → Mg⁺ + e⁻ | Mg : [Ne] 3s² | Mg⁺ : [Ne] 3s¹\n3°) Z_eff(3s) = 12 - (8×0,85 + 2×1) = 3,2\n4°) E(3s) = -13,6 × 3,2²/9 = -15,4 eV\n5°) EI = 15,4 eV → λ = 80,5 nm\n6°) Écart : théorie surestime\n7°) EI₂ et EI₃ très élevées → Mg²⁺ est l'état stable\n8°) UV | Électron 3s arraché"
+    }
+  ]
+}

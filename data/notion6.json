@@ -1,0 +1,128 @@
+{
+  "title": "Approximation Hydrogénoïde & Tableau Périodique",
+  "subtitle": "De Slater à la classification des éléments",
+  "sections": [
+    {
+      "id": "approx-hydrogenoide",
+      "title": "Approximation hydrogénoïde",
+      "content": "Exemple : atome d'Hélium (noyau +2e, 2 électrons).",
+      "subsections": [
+        {
+          "title": "Cas limites",
+          "list": [
+            "Cas limite 1 : l'électron 2 est très proche du noyau → il est attiré par la charge +2 de celui-ci",
+            "Cas limite 2 : l'électron 2 est très éloigné du noyau → tout se passe comme s'il ressentait une charge globale de +1 : +2 du noyau - 1 de l'électron 1"
+          ],
+          "conclusion": "La charge ressentie par l'électron 2 varie entre +1 et +2 ; l'effet d'écran de l'e1 sur l'e2 varie entre 0 et 1."
+        },
+        {
+          "title": "Approximation",
+          "content": "Considérer chaque électron soumis à la charge +Z du noyau corrigé de l'effet d'écran des autres électrons (méthode de Slater).",
+          "formula": "E_n = -13,6 × (Z_eff² / n²) eV"
+        }
+      ]
+    },
+    {
+      "id": "slater",
+      "title": "Approximation de Slater",
+      "content": "Grâce à l'approximation hydrogénoïde, on peut calculer l'énergie d'un électron d'une sous-couche quelconque si l'on connaît Z_eff.",
+      "formula": "Z_eff(i) = Z - Σ σ(j→i)",
+      "table": [
+        {"electron_i\\electron_j": "1s", "2s 2p": "", "3s 3p": "", "3d": "", "4s 4p": ""},
+        {"electron_i\\electron_j": "", "1s": "0,31", "2s 2p": "", "3s 3p": "", "3d": "", "4s 4p": ""},
+        {"electron_i\\electron_j": "", "1s": "0,85", "2s 2p": "0,35", "3s 3p": "", "3d": "", "4s 4p": ""},
+        {"electron_i\\electron_j": "", "1s": "1", "2s 2p": "0,85", "3s 3p": "0,35", "3d": "", "4s 4p": ""},
+        {"electron_i\\electron_j": "", "1s": "1", "2s 2p": "1", "3s 3p": "1", "3d": "0,35", "4s 4p": ""},
+        {"electron_i\\electron_j": "", "1s": "1", "2s 2p": "1", "3s 3p": "0,85", "3d": "0,85", "4s 4p": "0,35"}
+      ],
+      "warning": "Règles importantes :",
+      "list": [
+        "Un électron n'est pas « écranté » par lui-même",
+        "Un électron d'une couche externe n'a pas d'effet d'écran sur un électron d'une couche plus interne",
+        "On retrouve la même énergie pour une sous-couche ns et np → conséquence des paramètres de Slater et non pas de l'approximation hydrogénoïde"
+      ]
+    },
+    {
+      "id": "exemple-slater",
+      "title": "Exemple : Azote N (Z=7)",
+      "content": "Configuration : (1s)²(2s)²(2p)³",
+      "calculations": [
+        {"electron": "1s", "zeff": "7 - 0,31 = 6,69", "energie": "E1s = -608,68 eV"},
+        {"electron": "2s", "zeff": "7 - 2×0,85 - 1×0,35 - 3×0,35 = 3,9", "energie": "E2s = -51,71 eV"},
+        {"electron": "2p", "zeff": "7 - 2×0,85 - 2×0,35 - 2×0,35 = 3,9", "energie": "E2p = -51,71 eV = E2s"}
+      ],
+      "formula": "E_tot(N) = 2×(-608,68) + 2×(-51,71) + 3×(-51,71) = -1475,93 eV",
+      "subsections": [
+        {
+          "title": "Ion N⁺ dans l'état fondamental (Z=7) : (1s)²(2s)²(2p)²",
+          "calculations": [
+            {"electron": "1s", "zeff": "7 - 0,31 = 6,69", "energie": "E1s = -608,68 eV"},
+            {"electron": "2s/2p", "zeff": "7 - 2×0,85 - 2×0,35 - 0,35 = 4,25", "energie": "E2s = E2p = -61,41 eV"}
+          ],
+          "formula": "E_tot(N⁺) = 2×(-608,68) + 2×(-61,41) + 2×(-61,41) = -1463,01 eV"
+        },
+        {
+          "title": "Ion N⁺ dans l'état excité (Z=7) : (1s)¹(2s)²(2p)³",
+          "calculations": [
+            {"electron": "1s", "zeff": "7", "energie": "E1s = -666,4 eV"},
+            {"electron": "2s/2p", "zeff": "7 - 1×0,85 - 3×0,35 - 0,35 = 4,75", "energie": "E2s = E2p = -76,71 eV"}
+          ],
+          "formula": "E_tot(N⁺*) = 1×(-666,4) + 2×(-76,71) + 3×(-76,71) = -1049,96 eV"
+        },
+        {
+          "title": "Énergies d'ionisation",
+          "list": [
+            "Pour arracher un électron N → N⁺ + e⁻ : ΔE = 12,92 eV → photon de λ = 96,1 nm",
+            "Pour arracher un électron N → N⁺* + e⁻ : ΔE = 426 eV → photon de λ = 2,91 nm"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tableau-periodique",
+      "title": "Tableau Périodique",
+      "content": "Dès 1864, une première classification existait, à 1 seule entrée (éléments classés par masse atomique croissante).",
+      "subsections": [
+        {
+          "title": "Mendeleïev (1869)",
+          "content": "Mendeleïev a l'idée d'un classement à 2 entrées (tableau) :",
+          "list": [
+            "Masse atomique croissante",
+            "Éléments ayant des propriétés similaires ensemble"
+          ],
+          "conclusion": "Il a l'idée de laisser des cases vides pour les éléments qui n'ont pas encore été découverts mais dont il suppose l'existence → seront découverts ultérieurement !"
+        },
+        {
+          "title": "Évolution (1913)",
+          "content": "Les éléments sont classés par numéro atomique croissant plutôt que par masse atomique croissante.",
+          "structure": [
+            "7 lignes ≡ 7 périodes (de longueurs variables)",
+            "18 colonnes ≡ 18 familles",
+            "4 blocs : s, p, d, f"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "blocs",
+      "title": "Les 4 blocs du tableau périodique",
+      "table": [
+        {"bloc": "s", "colonnes": "1-2 (IA, IIA)", "sous_couche_valence": "ns¹ ou ns²", "elements": "Alcalins, Alcalino-terreux"},
+        {"bloc": "p", "colonnes": "13-18 (IIIA à VIIIA)", "sous_couche_valence": "np¹ à np⁶", "elements": "Métaux pauvres, Métalloïdes, Non-métaux, Gaz nobles"},
+        {"bloc": "d", "colonnes": "3-12 (IIIB à IIB)", "sous_couche_valence": "(n-1)d¹ à (n-1)d¹⁰", "elements": "Métaux de transition"},
+        {"bloc": "f", "colonnes": "Lanthanides (57-71), Actinides (89-103)", "sous_couche_valence": "(n-2)f¹ à (n-2)f¹⁴", "elements": "Terres rares"}
+      ]
+    },
+    {
+      "id": "familles",
+      "title": "Familles chimiques importantes",
+      "table": [
+        {"famille": "Alcalins", "colonne": "1 (IA)", "config_valence": "ns¹", "exemples": "Li, Na, K, Rb, Cs"},
+        {"famille": "Alcalino-terreux", "colonne": "2 (IIA)", "config_valence": "ns²", "exemples": "Be, Mg, Ca, Sr, Ba"},
+        {"famille": "Halogènes", "colonne": "17 (VIIA)", "config_valence": "ns² np⁵", "exemples": "F, Cl, Br, I"},
+        {"famille": "Gaz nobles", "colonne": "18 (VIIIA)", "config_valence": "ns² np⁶ (sauf He: 1s²)", "exemples": "He, Ne, Ar, Kr, Xe"}
+      ],
+      "warning": "Même colonne = même configuration de valence = propriétés chimiques similaires."
+    }
+  ]
+}

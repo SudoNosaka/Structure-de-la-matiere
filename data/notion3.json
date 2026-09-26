@@ -1,0 +1,132 @@
+{
+  "title": "Structure Électronique Quantique",
+  "subtitle": "De Bohr à la mécanique quantique",
+  "sections": [
+    {
+      "id": "intro",
+      "title": "Introduction",
+      "content": "Sciences = perpétuelle confrontation entre prévision théorique et réalité expérimentale. 3 grands points dans le développement du modèle atomique :",
+      "list": [
+        "Découverte de la nature électrique de la matière (1900) : tubes de Crookes, électrolyse de Faraday",
+        "Découverte de l'atome = noyau entouré d'électrons (1911) : expérience de Rutherford",
+        "Découverte des lois régissant le comportement des électrons dans les atomes (1925)"
+      ]
+    },
+    {
+      "id": "histoire",
+      "title": "Nature électrique de la matière",
+      "list": [
+        "1833 : travaux de Faraday sur l'électrolyse → relation entre matière et charge électrique",
+        "1879 : tubes de Crookes → mise en évidence expérimentale de l'électron",
+        "1897 : expérience de J. J. Thomson → rapport e/m, modèle de l'atome 'plum-pudding'",
+        "1907 : expérience de la goutte de Millikan → charge e et masse m de l'électron",
+        "1909 : expérience de Rutherford → modèle planétaire de l'atome"
+      ],
+      "warning": "L'atome de Rutherford devrait être instable selon l'électromagnétisme classique ! Résolu en partie par Niels Bohr."
+    },
+    {
+      "id": "effet-photoelectrique",
+      "title": "L'Effet Photoélectrique (Einstein, 1905)",
+      "content": "Expérience de Hertz en 1887 : une radiation électromagnétique arrache des électrons d'une surface métallique.",
+      "observations": [
+        "i = 0 si ν < ν₀, quelle que soit l'intensité I",
+        "Si ν > ν₀, l'énergie cinétique Ec varie linéairement avec ν",
+        "Pour ν fixée, si on modifie I, le courant i change mais Ec ne varie pas"
+      ],
+      "formula": "h·ν = h·ν₀ + ½·m·v²",
+      "interpretation": "Einstein explique ce phénomène en proposant que la lumière est quantifiée en photons. L'énergie d'un photon : E = h·ν",
+      "warning": "Ce résultat contredit la théorie ondulatoire classique !"
+    },
+    {
+      "id": "spectres",
+      "title": "Spectres d'Émission et d'Absorption",
+      "content": "Étude de la lumière émise (spectre d'émission) ou absorbée (spectre d'absorption) : seules certaines fréquences sont observées → seules certaines quantités d'énergie sont échangées.",
+      "formula": "1/λ = R_H · (1/n² - 1/p²)",
+      "list": [
+        "n = 1 : série de Lyman (UV)",
+        "n = 2 : série de Balmer (visible)",
+        "n = 3 : série de Paschen (IR)",
+        "n = 4 : série de Brackett (IR)",
+        "n = 5 : série de Pfund (IR)",
+        "p > n : entier",
+        "R_H = 109 677 cm⁻¹ : constante de Rydberg"
+      ],
+      "conclusion": "La longueur d'onde du photon ne peut pas être quelconque mais doit avoir des valeurs bien définies → l'énergie de l'électron est quantifiée. |ΔE| = E_photon = h·ν = h·c/λ"
+    },
+    {
+      "id": "bohr",
+      "title": "Le Modèle de Bohr (1913)",
+      "subsections": [
+        {
+          "title": "Les 4 Postulats",
+          "list": [
+            "Dans un atome, un électron ne peut se trouver que dans des états stationnaires correspondant à une énergie fixe et bien définie",
+            "Dans un de ces états, un atome n'émet pas de rayonnement. Lorsqu'un électron passe d'un état de haute énergie à un état de plus basse énergie, il émet un quantum d'énergie tel que h·ν = |ΔE|",
+            "Un électron dans un de ces états se déplace sur une orbite circulaire",
+            "Les mouvements permis pour les électrons doivent avoir un moment angulaire multiple de h/(2π)"
+          ]
+        },
+        {
+          "title": "Rayon et Énergie",
+          "formulas": [
+            "r_n = n² · a₀ / Z  avec  a₀ = 5,29 × 10⁻¹¹ m",
+            "E_n = -13,6 × (Z²/n²) eV"
+          ],
+          "content": "Avec h = 6,626 × 10⁻³⁴ J·s ; ε₀ = 8,85 × 10⁻¹² F/m ; e = 1,609 × 10⁻¹⁹ C ; m = 9,109 × 10⁻³¹ kg"
+        },
+        {
+          "title": "Pour l'hydrogène (Z=1)",
+          "content": "Pour l'électron sur la première orbite (n=1) : r = 5,29 × 10⁻¹¹ m et E = -13,6 eV"
+        }
+      ]
+    },
+    {
+      "id": "hydrogen",
+      "title": "L'Atome d'Hydrogène et les Ions Hydrogénoïdes",
+      "formula": "E_n = -13,6 × (Z²/n²) eV",
+      "list": [
+        "L'énergie est quantifiée et ne dépend que de n (nombre entier positif = couche)",
+        "Cette énergie est négative (énergie de liaison) et devient nulle quand l'électron est à l'infini du noyau",
+        "L'état de plus basse énergie : n = 1 → état fondamental",
+        "Les autres niveaux de plus haute énergie (n > 1) : états excités"
+      ],
+      "conclusion": "Cette structure énergétique permet de retrouver les spectres d'émission et d'absorption de l'atome d'hydrogène."
+    },
+    {
+      "id": "limites-bohr",
+      "title": "Limites du Modèle de Bohr",
+      "content": "Le modèle de Bohr présente de nombreux succès mais fut abandonné 12 ans plus tard :",
+      "list": [
+        "D'après la théorie de l'électromagnétisme, cet atome ne devrait pas être stable et l'électron devrait 's'écraser' sur le noyau !",
+        "Impossible d'expliquer les spectres des atomes à plusieurs électrons",
+        "Impossible de donner une image de la liaison chimique"
+      ],
+      "warning": "Dans les années 1920, la physique théorique se heurte à 2 difficultés majeures : conflit entre les 2 représentations de la lumière (onde/particule) et nécessité d'introduire l'énergie quantifiée dans la mécanique de Newton. → Nécessité d'élaborer une nouvelle mécanique."
+    },
+    {
+      "id": "de-broglie",
+      "title": "Dualité Onde-Corpuscule (de Broglie, 1923)",
+      "content": "La lumière possède un aspect ondulatoire (diffraction, interférences) et un aspect corpusculaire (effet photoélectrique). Louis de Broglie étend la notion de dualité onde/corpuscule à d'autres particules : 'La matière corpusculaire pourrait, sous certaines conditions, présenter un caractère ondulatoire'.",
+      "formula": "λ = h/p = h/(m·v)",
+      "examples": [
+        {"objet": "Balle de baseball (m=140 g, v=40 m/s)", "lambda": "1,18 × 10⁻³⁴ m", "conclusion": "Indétectable"},
+        {"objet": "Électron (m=9,1 × 10⁻³¹ kg) à 1% de c", "lambda": "2,42 × 10⁻¹⁰ m = 2,42 Å", "conclusion": "Observable"}
+      ],
+      "conclusion": "Expérience de Davisson/Germer en 1925 → diffraction d'électrons. Une particule macroscopique aura toujours une très petite longueur d'onde indétectable."
+    },
+    {
+      "id": "heisenberg",
+      "title": "Principe d'Incertitude de Heisenberg (1927)",
+      "formula": "Δx · Δp ≥ ħ/2",
+      "content": "On ne peut connaître avec une précision arbitraire la quantité de mouvement et la position d'une particule. Avec ħ = h/(2π) = constante de Planck réduite.",
+      "interpretation": "Si l'on souhaite une grande précision sur la vitesse, on aura beaucoup d'imprécision sur la position et inversement.",
+      "warning": "Ce n'est en aucun cas un problème de précision des instruments de mesure. Ceci est dû à la nature quantique de l'objet observé.",
+      "generalisation": "Cette relation est beaucoup plus générale. Exemple avec le couple énergie/temps : ΔE · Δt ≥ ħ/2",
+      "applications": [
+        "Balle de baseball : vitesse connue à 10⁻⁶% → Δx = 9,4 × 10⁻²⁸ m (<< précision instruments)",
+        "Électron localisé sur Δx = 1 Å → Δv = 5,8 × 10⁵ m/s"
+      ],
+      "conclusion": "Cette relation n'a d'intérêt qu'avec les objets microscopiques. Pour les objets microscopiques → nouveau traitement : la fonction d'onde. Trajectoire (mécanique classique) → fonction d'onde (mécanique quantique) = description probabiliste de la particule."
+    }
+  ]
+}

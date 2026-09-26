@@ -1,0 +1,112 @@
+{
+  "title": "Quiz 1 - Constituants, Radioactivité & Bohr",
+  "subtitle": "10 minutes | 15 questions | Notions 1, 2 et 3",
+  "duration": 600,
+  "questions": [
+    {
+      "id": 1,
+      "question": "Quel est le nombre de neutrons dans l'atome de carbone 14 (¹⁴₆C) ?",
+      "options": ["6", "8", "14", "20"],
+      "correct": 1,
+      "explanation": "N = A - Z = 14 - 6 = 8 neutrons"
+    },
+    {
+      "id": 2,
+      "question": "Les isotopes d'un même élément ont :",
+      "options": ["Le même nombre de masse A", "Le même numéro atomique Z", "Le même nombre de neutrons N", "La même masse"],
+      "correct": 1,
+      "explanation": "Les isotopes ont le même Z (même élément) mais un A différent (donc N différent)"
+    },
+    {
+      "id": 3,
+      "question": "La radioactivité α correspond à l'émission :",
+      "options": ["D'un électron", "D'un photon", "D'un noyau d'hélium ⁴₂He", "D'un positon"],
+      "correct": 2,
+      "explanation": "La radioactivité α émet un noyau d'hélium ⁴₂He (2 protons + 2 neutrons)"
+    },
+    {
+      "id": 4,
+      "question": "La demi-vie T d'un radionucléide est liée à la constante radioactive λ par :",
+      "options": ["T = λ", "T = 1/λ", "T = ln(2)/λ", "T = λ/ln(2)"],
+      "correct": 2,
+      "explanation": "T = ln(2)/λ ≈ 0,693/λ. À connaître par cœur !"
+    },
+    {
+      "id": 5,
+      "question": "L'activité radioactive s'exprime en :",
+      "options": ["Joule (J)", "Becquerel (Bq)", "Électron-volt (eV)", "Hertz (Hz)"],
+      "correct": 1,
+      "explanation": "1 Bq = 1 désintégration par seconde"
+    },
+    {
+      "id": 6,
+      "question": "L'effet photoélectrique a été expliqué par :",
+      "options": ["Newton", "Maxwell", "Einstein", "Bohr"],
+      "correct": 2,
+      "explanation": "Einstein (1905) a expliqué l'effet photoélectrique en proposant que la lumière est quantifiée en photons (E = hν)"
+    },
+    {
+      "id": 7,
+      "question": "Dans le modèle de Bohr, l'énergie de l'électron dans l'atome d'hydrogène (Z=1) au niveau n=2 est :",
+      "options": ["-13,6 eV", "-6,8 eV", "-3,4 eV", "-1,5 eV"],
+      "correct": 2,
+      "explanation": "Eₙ = -13,6 × Z²/n² = -13,6 × 1²/2² = -13,6/4 = -3,4 eV"
+    },
+    {
+      "id": 8,
+      "question": "La dualité onde-corpuscule de de Broglie s'exprime par :",
+      "options": ["E = mc²", "λ = h/(m·v)", "Δx·Δp ≥ ħ/2", "E = hν"],
+      "correct": 1,
+      "explanation": "λ = h/p = h/(m·v) : toute particule a une longueur d'onde associée"
+    },
+    {
+      "id": 9,
+      "question": "Le principe d'incertitude de Heisenberg stipule que :",
+      "options": ["L'énergie est quantifiée", "On ne peut pas connaître simultanément avec précision la position et la quantité de mouvement", "La lumière est une onde et une particule", "Les électrons tournent autour du noyau"],
+      "correct": 1,
+      "explanation": "Δx·Δp ≥ ħ/2 : c'est une limite fondamentale de la nature, pas un problème technique"
+    },
+    {
+      "id": 10,
+      "question": "La loi de désintégration radioactive s'écrit :",
+      "options": ["N(t) = N₀ · λt", "N(t) = N₀ · e^(-λt)", "N(t) = N₀ / (1+λt)", "N(t) = N₀ · (1-λt)"],
+      "correct": 1,
+      "explanation": "La loi de désintégration est exponentielle : N(t) = N₀ · e^(-λt)"
+    },
+    {
+      "id": 11,
+      "question": "Après 3 demi-vies, l'activité d'un échantillon est divisée par :",
+      "options": ["3", "6", "8", "9"],
+      "correct": 2,
+      "explanation": "Après n demi-vies : A = A₀ · (1/2)^n. Pour n=3 : A = A₀ · (1/2)³ = A₀/8"
+    },
+    {
+      "id": 12,
+      "question": "Le rayon de la première orbite de l'atome d'hydrogène (rayon de Bohr) vaut :",
+      "options": ["0,529 Å", "1,06 Å", "2,12 Å", "5,29 Å"],
+      "correct": 0,
+      "explanation": "a₀ = 5,29 × 10⁻¹¹ m = 0,529 Å"
+    },
+    {
+      "id": 13,
+      "question": "La radioactivité β⁻ correspond à la transformation :",
+      "options": ["Un proton en neutron", "Un neutron en proton", "Un électron en positon", "Un photon en électron"],
+      "correct": 1,
+      "explanation": "β⁻ : n → p + e⁻ + ν̄ (un neutron se transforme en proton avec émission d'un électron)"
+    },
+    {
+      "id": 14,
+      "question": "La constante de Planck h vaut approximativement :",
+      "options": ["6,626 × 10⁻³⁴ J·s", "6,626 × 10⁻¹⁹ J·s", "1,6 × 10⁻¹⁹ J·s", "9,1 × 10⁻³¹ J·s"],
+      "correct": 0,
+      "explanation": "h = 6,626 × 10⁻³⁴ J·s"
+    },
+    {
+      "id": 15,
+      "question": "Pour dater un échantillon au carbone 14, on utilise la formule :",
+      "options": ["t = λ · ln(A(t)/A₀)", "t = -ln(A(t)/A₀) / λ", "t = A₀ / (A(t) · λ)", "t = ln(2) · A(t) / A₀"],
+      "correct": 1,
+      "explanation": "À partir de A(t) = A₀ · e^(-λt), on isole t : t = -ln(A(t)/A₀) / λ"
+    }
+  ]
+}

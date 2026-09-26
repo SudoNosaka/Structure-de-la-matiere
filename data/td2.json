@@ -1,0 +1,40 @@
+{
+  "titre": "TD2 - Effet photoélectrique, de Broglie, Heisenberg",
+  "donnees": [
+    "h = 6,62.10⁻³⁴ J.s",
+    "c = 3.10⁸ m.s⁻¹",
+    "me = 9,1.10⁻³¹ kg",
+    "e = 1,6.10⁻¹⁹ C",
+    "1 eV = 1,6.10⁻¹⁹ J"
+  ],
+  "exercices": [
+    {
+      "id": "2.1",
+      "titre": "Ondes électromagnétiques",
+      "enonce": "1°) Situer sur l'axe des fréquences croissantes : UV, IR, γ, ondes radio, rayons X\n2°) Limites du visible en nm et couleurs associées\n3°) Nom des corpuscules associés aux ondes EM\n4°) Onde de ν = 6,4.10¹² Hz : vitesse, λ, domaine, énergie du photon\n5°) Lampe à Hg : λ = 350 nm → énergie et domaine\n6°) E = 6,62.10⁻¹⁵ J → λ et domaine\n7°) λ = 3,2 m → domaine, T, ν, E",
+      "aide": "c = λ·ν | E = h·ν = h·c/λ",
+      "solution": "2°) 400-800 nm (violet → rouge)\n3°) Photons\n4°) v = c = 3.10⁸ m/s | λ = c/ν = 4,69.10⁻⁵ m | IR | E = h·ν = 4,24.10⁻²¹ J\n5°) E = hc/λ = 5,68.10⁻¹⁹ J = 3,55 eV (UV)\n6°) λ = hc/E = 3.10⁻¹¹ m (rayons X)\n7°) Radio | T = λ/c = 1,07.10⁻⁸ s | ν = 9,38.10⁷ Hz | E = 6,21.10⁻²⁶ J"
+    },
+    {
+      "id": "2.2",
+      "titre": "Effet photoélectrique (Césium)",
+      "enonce": "Tableau λ (nm) : 480, 500, 520, 540, 560, 580, 600\nv (km/s) : 390, 341, 296, 225, 140, 0, 0\n1°) Calculer Ec et ν puis tracer Ec = f(ν)\n2°) Pente de la courbe ?\n3°) Énergie d'extraction en kJ/mol\n4°) Ec si flux doublé ?",
+      "aide": "Ec = ½mv² | hν = W + Ec",
+      "solution": "2°) Pente = h = 6,62.10⁻³⁴ J.s (constante de Planck)\n3°) W = h·ν₀ ≈ 3,3.10⁻¹⁹ J → W_mol = 199 kJ/mol\n4°) Ec inchangée (dépend de ν, pas de I)"
+    },
+    {
+      "id": "2.3",
+      "titre": "De Broglie et Heisenberg",
+      "enonce": "Déterminer λ associée aux objets suivants se déplaçant à v = 100 m/s :\n- 1 électron (m = 9,1.10⁻³¹ kg)\n- 1 balle de tennis (m = 20 g)\nDéterminer Δx si Δv = 1 m/s.",
+      "aide": "λ = h/(mv) | Δx·Δp ≥ ħ/2",
+      "solution": "λ_e = 6,62.10⁻³⁴ / (9,1.10⁻³¹ × 100) = 7,27.10⁻⁸ m\nλ_balle = 6,62.10⁻³⁴ / (0,02 × 100) = 3,31.10⁻³⁴ m\nΔx_e = ħ/(2·m·Δv) = 5,8.10⁻⁵ m\nΔx_balle ≈ 0 (négligeable)"
+    },
+    {
+      "id": "2.4",
+      "titre": "E = hν",
+      "enonce": "Déterminer l'énergie en eV :\n- d'un photon de λ = 50 nm\n- d'un électron de λ = 50 nm",
+      "aide": "E = hc/λ | λ = h/(mv) → E = ½mv²",
+      "solution": "Photon : E = hc/λ = 24,8 eV\nÉlectron : v = h/(mλ) = 1,46.10⁴ m/s → Ec = 9,69.10⁻⁴ eV"
+    }
+  ]
+}

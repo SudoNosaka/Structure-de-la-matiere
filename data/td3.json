@@ -1,0 +1,33 @@
+{
+  "titre": "TD3 - Spectroscopie",
+  "donnees": [
+    "R_H = 109677,76 cm⁻¹",
+    "h = 6,626.10⁻³⁴ J.s",
+    "c = 3.10⁸ m.s⁻¹",
+    "1 eV = 1,6.10⁻¹⁹ J",
+    "E_n = -13,6 × Z²/n² eV"
+  ],
+  "exercices": [
+    {
+      "id": "3.1",
+      "titre": "Énergie et fréquence d'un photon",
+      "enonce": "Un électron sur un niveau E. Quelle énergie E_photon doit posséder un photon pour faire passer l'électron de E à E' ? En déduire la fréquence.",
+      "aide": "|ΔE| = h·ν",
+      "solution": "E_photon = |E' - E| = h·ν → ν = |E' - E| / h"
+    },
+    {
+      "id": "3.2",
+      "titre": "Spectre de l'hydrogène",
+      "enonce": "Calculer ν̃ (cm⁻¹), λ (nm) et E (J et eV) pour : 1→2, 2→3, 3→2, 3→1, 5→1, 1→∞, 4→5, 7→5.\nPréciser absorption/émission et nom de série.\nRetrouver les résultats de 1→2 avec les niveaux de Bohr.",
+      "aide": "ν̃ = R_H × (1/n² - 1/p²) | E = hc/λ | n=1 Lyman, n=2 Balmer, n=3 Paschen",
+      "solution": "1→2 : Lyman, absorption, λ = 121,5 nm, E = 10,2 eV\n2→3 : Balmer, absorption, λ = 656 nm, E = 1,89 eV\n3→2 : Balmer, émission, λ = 656 nm\n3→1 : Lyman, émission, λ = 102,6 nm\n5→1 : Lyman, émission, λ = 95 nm\n1→∞ : Lyman, absorption, λ = 91,2 nm (ionisation)\n4→5 : Brackett, absorption, λ = 4050 nm\n7→5 : Pfund, émission, λ = 3740 nm"
+    },
+    {
+      "id": "3.3",
+      "titre": "Niveaux d'énergie H et hydrogénoïdes",
+      "enonce": "1°) Atome H :\na) Nombres quantiques de l'état fondamental\nb) État f : n=2, l=1, m_l=0. Énergie du photon pour i→f, λ, domaine.\n2°) Ion hydrogénoïde :\na) Définir un ion hydrogénoïde. Calculer R_H.\nb) He⁺ : λ pour n=3→2, n=3→1, n=2→1. Domaine.\nc) Énergie pour arracher l'électron de He⁺ et Be³⁺.\nd) He⁺ en n=5 émet λ = 108,7 nm. Niveau atteint ?",
+      "aide": "E_n = -13,6 × Z²/n² | ΔE = hc/λ",
+      "solution": "1°a) n=1, l=0, m=0\n1°b) ΔE = 10,2 eV → λ = 121,5 nm (UV)\n2°a) Ion à 1 électron (H, He⁺, Li²⁺...)\n2°b) He⁺ (Z=2) : 3→2 : λ = 164 nm (UV) | 3→1 : λ = 26 nm | 2→1 : λ = 30 nm\n2°c) He⁺ : 54,4 eV | Be³⁺ : 217,6 eV\n2°d) n=2"
+    }
+  ]
+}

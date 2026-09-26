@@ -1,0 +1,24 @@
+{
+  "titre": "TD7 - Lewis et VSEPR",
+  "donnees": [
+    "Règle de l'octet",
+    "VSEPR : AX_mE_n",
+    "Hybridation : sp, sp², sp³, sp³d, sp³d²"
+  ],
+  "exercices": [
+    {
+      "id": "7.1",
+      "titre": "Structure de Lewis d'un oxyde",
+      "enonce": "Atomes : C₆, S₁₆, O₈, Cl₁₇\n1°) Configuration électronique et ionisation probable\n2°) SO₂ et SO₃ : Lewis + VSEPR\n3°) SO₃²⁻ et SO₄²⁻ : Lewis + VSEPR\n4°) SOCl₂, SO₂Cl₂, SO₂, CO₂ : Lewis + géométrie\n5°) CO₂ et SO₂ polaires ? Moments dipolaires",
+      "aide": "Règle de l'octet | VSEPR : AX_mE_n",
+      "solution": "1°) C : [He] 2s² 2p² | S : [Ne] 3s² 3p⁴ | O : [He] 2s² 2p⁴ | Cl : [Ne] 3s² 3p⁵\n2°) SO₂ : coudée (AX₂E₁) | SO₃ : trigonale plane (AX₃)\n3°) SO₃²⁻ : pyramidale (AX₃E₁) | SO₄²⁻ : tétraédrique (AX₄)\n4°) SOCl₂ : pyramidale | SO₂Cl₂ : tétraédrique | SO₂ : coudée | CO₂ : linéaire\n5°) CO₂ : apolaire (symétrie) | SO₂ : polaire"
+    },
+    {
+      "id": "7.2",
+      "titre": "Lewis, géométrie, hybridation",
+      "enonce": "Pour CH₄, H₂CO, HCN, CO₂, H₂O, NH₃, NO₂, BeCl₂, BF₃, SO₃²⁻, ClF₃, PF₅, SF₆ :\n1°) Formules de Lewis\n2°) Géométrie",
+      "aide": "VSEPR + hybridation",
+      "solution": "CH₄ : tétraédrique (sp³) | H₂CO : trigonale plane (sp²) | HCN : linéaire (sp) | CO₂ : linéaire (sp) | H₂O : coudée (sp³) | NH₃ : pyramidale (sp³) | NO₂ : coudée | BeCl₂ : linéaire (sp) | BF₃ : trigonale plane (sp²) | SO₃²⁻ : pyramidale (sp³) | ClF₃ : T (sp³d) | PF₅ : bipyramidale trigonale (sp³d) | SF₆ : octaédrique (sp³d²)"
+    }
+  ]
+}

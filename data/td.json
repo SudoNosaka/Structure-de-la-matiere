@@ -1,0 +1,312 @@
+{
+  "donnees": {
+    "constantes": [
+      "masse de l'électron : me = 9,1.10⁻³¹ kg",
+      "constante de Planck : h = 6,626.10⁻³⁴ J.s",
+      "charge de l'électron : q = -e = -1,6.10⁻¹⁹ C",
+      "constante d'Avogadro : NA = 6,022.10²³ mol⁻¹",
+      "1 J = 6,25.10⁺¹⁸ eV",
+      "vitesse de la lumière : c = 3.10⁺⁸ m.s⁻¹",
+      "masse du proton : mp = 1,007565 u.m.a",
+      "masse du neutron : mn = 1,008665 u.m.a",
+      "1 u.m.a = 1,66055.10⁻²⁷ kg",
+      "permittivité du vide : ε₀ = 8,854.10⁻¹² F.m⁻¹"
+    ]
+  },
+  "themes": [
+    {
+      "id": "td1",
+      "titre": "Thème 1 - Énergie, particules et noyaux",
+      "exercices": [
+        {
+          "id": "1.1",
+          "titre": "Rayons atomiques et nucléaires",
+          "enonce": "On veut réaliser la maquette d'un atome d'hydrogène ¹₁H. Diamètre d'un nucléon : 1,5.10⁻¹⁵ m et diamètre d'un électron : 10⁻¹⁸ m.\n1°) Quelles sont les particules qui composent un atome d'hydrogène ?\n2°) Pour représenter le noyau on choisit une bille de 1 cm de diamètre.\na. Quel sera le diamètre de la maquette de l'atome (diamètre = 0,75 Å) ?\nb. Quel sera le diamètre de l'électron ?",
+          "aide": "Produit en croix : échelle = diamètre maquette / diamètre réel",
+          "solution": "1°) 1 proton, 0 neutron, 1 électron\n2°a) Échelle = 10⁻² / 1,5.10⁻¹⁵ = 6,67.10¹² → d_atome = 0,75.10⁻¹⁰ × 6,67.10¹² = 5 m\n2°b) d_électron = 10⁻¹⁸ × 6,67.10¹² = 6,67.10⁻⁶ m = 6,67 µm"
+        },
+        {
+          "id": "1.2",
+          "titre": "Masse atomique, masse moléculaire",
+          "enonce": "1°) Quelle est la masse mH d'un atome d'hydrogène ¹₁H ?\n2°) Quelle est la proportion de cette masse due aux électrons ?\n3°) Quelle est la masse mH₂ d'une molécule de dihydrogène (H₂) ?",
+          "aide": "m_H = m_p + m_e. Proportion = m_e / m_H × 100",
+          "solution": "1°) m_H = 1,673.10⁻²⁷ + 9,1.10⁻³¹ ≈ 1,673.10⁻²⁷ kg\n2°) Proportion = 9,1.10⁻³¹ / 1,673.10⁻²⁷ × 100 = 0,054%\n3°) m_H₂ = 2 × m_H = 3,346.10⁻²⁷ kg"
+        },
+        {
+          "id": "1.3",
+          "titre": "Masse atomique, masse molaire",
+          "enonce": "On considère une masse de balance de 1 kg en cuivre pur.\n1°) Combien d'atomes de cuivre contient cette masse ?\n2°) Combien de moles contient cette masse ?\n3°) Quelle est la masse M_Cu d'une mole de cuivre ?\nDonnée : m_Cu = 1,056.10⁻²⁵ kg",
+          "aide": "N = m_total / m_atome | n = N / NA | M = m / n",
+          "solution": "1°) N = 1 / 1,056.10⁻²⁵ = 9,47.10²⁴ atomes\n2°) n = 9,47.10²⁴ / 6,022.10²³ = 15,7 mol\n3°) M_Cu = 1 / 15,7 = 0,0637 kg/mol = 63,7 g/mol"
+        },
+        {
+          "id": "1.4",
+          "titre": "Inventaire des constituants",
+          "enonce": "Indiquez le nombre de protons, neutrons et électrons pour : ²⁷₁₃Al, ¹³¹₅₄Xe, ⁵⁶₂₆Fe, ¹⁹₉F⁻, ⁹₄Be²⁺, ³²₁₆S²⁻",
+          "aide": "Protons = Z | Neutrons = A - Z | Électrons = Z - charge",
+          "solution": "Al : 13p, 14n, 13e⁻ | Xe : 54p, 77n, 54e⁻ | Fe : 26p, 30n, 26e⁻ | F⁻ : 9p, 10n, 10e⁻ | Be²⁺ : 4p, 5n, 2e⁻ | S²⁻ : 16p, 16n, 18e⁻"
+        },
+        {
+          "id": "1.5",
+          "titre": "Conversions d'énergie",
+          "enonce": "Compléter :\n1°) 3 eV = ?? J\n2°) 0,89 J = ?? MeV\n3°) 6.10⁻²⁰ J = ?? meV\n4°) 1 kcal = ?? J",
+          "aide": "1 eV = 1,6.10⁻¹⁹ J | 1 MeV = 10⁶ eV | 1 cal = 4,184 J",
+          "solution": "1°) 3 × 1,6.10⁻¹⁹ = 4,8.10⁻¹⁹ J\n2°) 0,89 / 1,6.10⁻¹⁹ / 10⁶ = 5,56.10¹² MeV\n3°) 6.10⁻²⁰ / 1,6.10⁻¹⁹ × 10³ = 375 meV\n4°) 1000 × 4,184 = 4184 J"
+        },
+        {
+          "id": "1.6",
+          "titre": "Relation période-constante radioactive",
+          "enonce": "Déterminer la constante radioactive du ¹⁴C sachant que sa période est de 5570 ans.",
+          "aide": "λ = ln(2) / T. Convertir T en secondes.",
+          "solution": "T = 5570 × 365,25 × 24 × 3600 = 1,76.10¹¹ s\nλ = 0,693 / 1,76.10¹¹ = 3,94.10⁻¹² s⁻¹"
+        },
+        {
+          "id": "1.7",
+          "titre": "Loi de désintégration",
+          "enonce": "Soient 4,2.10¹³ noyaux de tritium (³H). λ = 1,79.10⁻⁹ s⁻¹. Déterminer le nombre de noyaux restant après t = 20 ans.",
+          "aide": "N(t) = N₀ · e^(-λt). Convertir t en secondes.",
+          "solution": "t = 20 × 365,25 × 24 × 3600 = 6,31.10⁸ s\nN(t) = 4,2.10¹³ × e^(-1,79.10⁻⁹ × 6,31.10⁸) = 1,36.10¹³ noyaux"
+        },
+        {
+          "id": "1.8",
+          "titre": "Calculer une activité",
+          "enonce": "Déterminer l'activité absolue A₀ de 1 g de ⁶⁰Co sachant que λ = 4,18.10⁻⁹ s⁻¹. M(⁶⁰Co) = 59,93 g/mol.",
+          "aide": "n = m/M → N = n·NA → A = λ·N",
+          "solution": "n = 1/59,93 = 0,0167 mol\nN = 0,0167 × 6,022.10²³ = 1,006.10²² noyaux\nA = 4,18.10⁻⁹ × 1,006.10²² = 4,20.10¹³ Bq"
+        },
+        {
+          "id": "1.9",
+          "titre": "Équilibrer une réaction nucléaire",
+          "enonce": "Écrire les réactions :\n1°) I(Z=53, A=122) + α → Cs\n2°) I(Z=53, A=122) → Te + β⁺\n3°) Th → Pa(Z=91, A=234) + β⁻",
+          "aide": "Conservation de A et Z. α = ⁴₂He | β⁺ = ⁰₊₁e | β⁻ = ⁰₋₁e",
+          "solution": "1°) ¹²²₅₃I + ⁴₂He → ¹²⁶₅₅Cs\n2°) ¹²²₅₃I → ¹²²₅₂Te + ⁰₊₁e\n3°) ²³⁴₉₂Th → ²³⁴₉₁Pa + ⁰₋₁e"
+        },
+        {
+          "id": "1.10",
+          "titre": "Énergie de liaison des nucléons",
+          "enonce": "1°) Nombre de neutrons et protons dans ⁵⁶Fe (Z=26).\n2°) Valeur de Z pour Fe²⁺.\n3°) Énergie de liaison moyenne par nucléon en MeV. M(⁵⁶Fe) = 55,913 g/mol.",
+          "aide": "Δm = Z·mp + N·mn - m_noyau | E_l = Δm × 931,5 MeV",
+          "solution": "1°) 26 protons, 30 neutrons\n2°) Z = 26 (inchangé)\n3°) Δm = 26×1,007565 + 30×1,008665 - 55,913 = 0,528 u\nE_l = 0,528 × 931,5 = 491,8 MeV → E_l/A = 491,8/56 = 8,78 MeV/nucléon"
+        },
+        {
+          "id": "1.11",
+          "titre": "Abondance isotopique",
+          "enonce": "Le néon est un mélange de ²⁰₁₀Ne (M=19,9924) et ²²₁₀Ne (M=21,9914). M_moyenne = 20,1707. Calculer l'abondance isotopique.",
+          "aide": "M_moy = x·M₁ + (1-x)·M₂",
+          "solution": "20,1707 = x×19,9924 + (1-x)×21,9914\nx = 0,911 → ²⁰Ne : 91,1% | ²²Ne : 8,9%"
+        },
+        {
+          "id": "1.12",
+          "titre": "Énergie de liaison entre 2 atomes",
+          "enonce": "L'énergie libérée lors de la formation de H-Cl est de 4,43 eV. Quelle est l'énergie (en kJ) dégagée lors de la formation d'une mole de H-Cl ?",
+          "aide": "E_mol = E × NA / 1000",
+          "solution": "E = 4,43 × 1,6.10⁻¹⁹ = 7,088.10⁻¹⁹ J\nE_mol = 7,088.10⁻¹⁹ × 6,022.10²³ / 1000 = 427 kJ/mol"
+        },
+        {
+          "id": "1.13",
+          "titre": "Réaction de fission",
+          "enonce": "²³⁵₉₂U + ¹₀n → ¹⁴⁶₅₇La + ⁸⁷₃₅Br + 3 ¹₀n\n1°) Énergie dégagée par fission d'un noyau (MeV)\n2°) Énergie par mole (kJ/mol). Comparer avec ex 1.12.\nDonnées : M(²³⁵U)=235,044 u | M(¹⁴⁶La)=145,943 u | M(⁸⁷Br)=86,912 u | M(n)=1,008665 u",
+          "aide": "Δm = m_réactifs - m_produits | E = Δm × 931,5 MeV",
+          "solution": "1°) Δm = 236,0527 - 235,8790 = 0,1737 u → E = 161,8 MeV\n2°) E_mol = 161,8 × 10⁶ × 1,6.10⁻¹⁹ × 6,022.10²³ / 1000 = 1,56.10¹⁰ kJ/mol\n→ Fission ~10 millions de fois plus énergétique qu'une liaison chimique"
+        }
+      ]
+    },
+    {
+      "id": "td2",
+      "titre": "Thème 2 - Effet photoélectrique, de Broglie, Heisenberg",
+      "exercices": [
+        {
+          "id": "2.1",
+          "titre": "Ondes électromagnétiques",
+          "enonce": "h = 6,62.10⁻³⁴ J.s | c = λ·ν | c = 3.10⁸ m.s⁻¹\n1°) Situer sur l'axe : UV, IR, γ, ondes radio, rayons X\n2°) Limites du visible en nm et couleurs\n3°) Nom des corpuscules associés aux ondes EM\n4°) Onde de ν = 6,4.10¹² Hz : vitesse, λ, domaine, énergie du photon\n5°) Lampe à Hg : λ = 350 nm → énergie et domaine\n6°) E = 6,62.10⁻¹⁵ J → λ et domaine\n7°) λ = 3,2 m → domaine, T, ν, E",
+          "aide": "c = λ·ν | E = h·ν = h·c/λ",
+          "solution": "2°) 400-800 nm (violet → rouge)\n3°) Photons\n4°) v = c = 3.10⁸ m/s | λ = c/ν = 4,69.10⁻⁵ m | IR | E = h·ν = 4,24.10⁻²¹ J\n5°) E = hc/λ = 5,68.10⁻¹⁹ J = 3,55 eV (UV)\n6°) λ = hc/E = 3.10⁻¹¹ m (rayons X)\n7°) Radio | T = λ/c = 1,07.10⁻⁸ s | ν = 9,38.10⁷ Hz | E = 6,21.10⁻²⁶ J"
+        },
+        {
+          "id": "2.2",
+          "titre": "Effet photoélectrique (Césium)",
+          "enonce": "Tableau λ (nm) : 480, 500, 520, 540, 560, 580, 600\nv (km/s) : 390, 341, 296, 225, 140, 0, 0\n1°) Calculer Ec et ν puis tracer Ec = f(ν)\n2°) Pente de la courbe ?\n3°) Énergie d'extraction en kJ/mol\n4°) Ec si flux doublé ?",
+          "aide": "Ec = ½mv² | hν = W + Ec",
+          "solution": "2°) Pente = h = 6,62.10⁻³⁴ J.s (constante de Planck)\n3°) W = h·ν₀ ≈ 3,3.10⁻¹⁹ J → W_mol = 199 kJ/mol\n4°) Ec inchangée (dépend de ν, pas de I)"
+        },
+        {
+          "id": "2.3",
+          "titre": "De Broglie et Heisenberg",
+          "enonce": "Déterminer λ associée aux objets suivants se déplaçant à v = 100 m/s :\n- 1 électron (m = 9,1.10⁻³¹ kg)\n- 1 balle de tennis (m = 20 g)\nDéterminer Δx si Δv = 1 m/s.",
+          "aide": "λ = h/(mv) | Δx·Δp ≥ ħ/2",
+          "solution": "λ_e = 6,62.10⁻³⁴ / (9,1.10⁻³¹ × 100) = 7,27.10⁻⁸ m\nλ_balle = 6,62.10⁻³⁴ / (0,02 × 100) = 3,31.10⁻³⁴ m\nΔx_e = ħ/(2·m·Δv) = 5,8.10⁻⁵ m\nΔx_balle ≈ 0 (négligeable)"
+        },
+        {
+          "id": "2.4",
+          "titre": "E = hν",
+          "enonce": "Déterminer l'énergie en eV :\n- d'un photon de λ = 50 nm\n- d'un électron de λ = 50 nm",
+          "aide": "E = hc/λ | λ = h/(mv) → E = ½mv²",
+          "solution": "Photon : E = hc/λ = 24,8 eV\nÉlectron : λ = h/(mv) → v = h/(mλ) = 1,46.10⁴ m/s → Ec = 9,69.10⁻⁴ eV"
+        }
+      ]
+    },
+    {
+      "id": "td3",
+      "titre": "Thème 3 - Spectroscopie",
+      "exercices": [
+        {
+          "id": "3.1",
+          "titre": "Énergie et fréquence d'un photon",
+          "enonce": "Un électron sur un niveau E. Quelle énergie E_photon doit posséder un photon pour faire passer l'électron de E à E' ? En déduire la fréquence.",
+          "aide": "|ΔE| = h·ν",
+          "solution": "E_photon = |E' - E| = h·ν → ν = |E' - E| / h"
+        },
+        {
+          "id": "3.2",
+          "titre": "Spectre de l'hydrogène",
+          "enonce": "1/λ = R_H × (1/n² - 1/p²) avec R_H = 109677,76 cm⁻¹\nCalculer ν̃, λ (nm) et E (J et eV) pour : 1→2, 2→3, 3→2, 3→1, 5→1, 1→∞, 4→5, 7→5.\nPréciser absorption/émission et nom de série.",
+          "aide": "ν̃ = 1/λ | E = hc/λ | n=1 Lyman, n=2 Balmer, n=3 Paschen",
+          "solution": "1→2 : Lyman, absorption, λ = 121,5 nm, E = 10,2 eV\n2→3 : Balmer, absorption, λ = 656 nm, E = 1,89 eV\n3→2 : Balmer, émission, λ = 656 nm\n3→1 : Lyman, émission, λ = 102,6 nm\n5→1 : Lyman, émission, λ = 95 nm\n1→∞ : Lyman, absorption, λ = 91,2 nm (ionisation)\n4→5 : Brackett, absorption, λ = 4050 nm\n7→5 : Pfund, émission, λ = 3740 nm"
+        },
+        {
+          "id": "3.3",
+          "titre": "Niveaux d'énergie H et hydrogénoïdes",
+          "enonce": "1°) Atome H :\na) Nombres quantiques de l'état fondamental (état i)\nb) État f : n=2, l=1, m_l=0. Énergie du photon pour i→f, λ, domaine spectral.\n2°) Ion hydrogénoïde : E_n = -13,6 × Z²/n² eV\na) Définir un ion hydrogénoïde. Calculer R_H.\nb) He⁺ : λ pour n=3→2, n=3→1, n=2→1. Domaine spectral.\nc) Énergie pour arracher l'électron de He⁺ et Be³⁺ depuis l'état fondamental.\nd) He⁺ en n=5 émet λ = 108,7 nm. Niveau atteint ?",
+          "aide": "E_n = -13,6 × Z²/n² | ΔE = hc/λ",
+          "solution": "1°a) n=1, l=0, m=0\n1°b) ΔE = 10,2 eV → λ = 121,5 nm (UV)\n2°a) Ion à 1 électron (H, He⁺, Li²⁺...)\n2°b) He⁺ (Z=2) : 3→2 : λ = 164 nm (UV) | 3→1 : λ = 26 nm (UV) | 2→1 : λ = 30 nm (UV)\n2°c) He⁺ : 54,4 eV | Be³⁺ : 217,6 eV\n2°d) n=2"
+        }
+      ]
+    },
+    {
+      "id": "td4",
+      "titre": "Thème 4 - Configuration électronique",
+      "exercices": [
+        {
+          "id": "4.1",
+          "titre": "Modèle de Bohr",
+          "enonce": "Pour Be₄, C₆, N₇, O₈, Mg₁₂, Si₁₄, Cl₁₇ :\na) Placer les électrons dans les couches\nb) Couches pleines / incomplètes\n2°) Classer par période\n3°) Classer par famille\n4°) Écrire la configuration électronique",
+          "aide": "Max 2n² électrons par couche n",
+          "solution": "Be : K²L² | C : K²L⁴ | N : K²L⁵ | O : K²L⁶ | Mg : K²L⁸M² | Si : K²L⁸M⁴ | Cl : K²L⁸M⁷\nPériode 2 : Be, C, N, O | Période 3 : Mg, Si, Cl\nFamille 2 : Be, Mg | Famille 4 : C, Si | Famille 5 : N | Famille 6 : O | Famille 7 : Cl"
+        },
+        {
+          "id": "4.2",
+          "titre": "Nombres quantiques",
+          "enonce": "1°) Configurations : état fondamental, excité ou impossible ?\na) 1s² 2s¹ 2p¹ | b) 1s² 2s² 2p⁶ 3s² 3p² 3d² | c) 1s² 2p⁶ 3s³ | d) 1s² 2p⁶ 2d² | e) 1s² 2s² 2p⁶ 3s² 3p⁶ 4s² | f) 1s² 2s² 2p⁶ 3s² 3p⁶ 3d⁵ 4s²\n2°) Vrai ou faux ?\na) l=1 → orbitale d | b) n=2 → m peut être -1 | c) électron d → m peut être 3 | d) l=2 → 10 e⁻ max | e) sous-couche f → n peut être 3\n3°) Jeux (n,l,m) possibles ? Quelle sous-couche ?",
+          "aide": "l ∈ [0, n-1] | m ∈ [-l, +l] | max 2(2l+1) e⁻ par sous-couche",
+          "solution": "1°) a) excité | b) fondamental | c) impossible (3s³) | d) impossible (2d n'existe pas) | e) fondamental (Ca) | f) fondamental (Mn)\n2°) a) Faux (p) | b) Vrai | c) Faux (max 2) | d) Vrai | e) Faux (n≥4)\n3°) (2,0,0) : 2s ✓ | (4,1,-2) : impossible | (3,1,-1) : 3p ✓ | (4,-1,0) : impossible | (2,0,-1) : impossible | (5,3,-3) : 5f ✓ | (4,2,2) : 4d ✓ | (2,3,3) : impossible | (3,0,0) : 3s ✓ | (5,2,-2) : 5d ✓"
+        },
+        {
+          "id": "4.3",
+          "titre": "Configuration de l'oxygène",
+          "enonce": "1°) Configuration électronique de O (Z=8)\n2°) Cases quantiques\n3°) Nombres quantiques de chaque électron\n4°) Niveaux d'énergie différents et dégénérescence",
+          "aide": "Klechkowski + Hund",
+          "solution": "1°) 1s² 2s² 2p⁴\n2°) 1s: ↑↓ | 2s: ↑↓ | 2p: ↑↓ ↑ ↑\n3°) 1s: (1,0,0,±½) × 2 | 2s: (2,0,0,±½) × 2 | 2p: (2,1,-1,±½), (2,1,0,+½), (2,1,+1,+½)\n4°) 3 niveaux (1s, 2s, 2p) | dégénérescences : 1, 1, 3"
+        },
+        {
+          "id": "4.4",
+          "titre": "Configurations d'ions",
+          "enonce": "Donner les configurations de : Fe²⁺, Fe³⁺, F⁻, Na⁺, Al³⁺, Ca²⁺, Cu⁺, Cu²⁺, Cr²⁺",
+          "aide": "Enlever d'abord les e⁻ de la couche externe (4s avant 3d)",
+          "solution": "Fe²⁺ : [Ar] 3d⁶ | Fe³⁺ : [Ar] 3d⁵ | F⁻ : [He] 2s² 2p⁶ | Na⁺ : [He] 2s² 2p⁶ | Al³⁺ : [He] 2s² 2p⁶ | Ca²⁺ : [Ar] | Cu⁺ : [Ar] 3d¹⁰ | Cu²⁺ : [Ar] 3d⁹ | Cr²⁺ : [Ar] 3d⁴"
+        },
+        {
+          "id": "4.5",
+          "titre": "Sans tableau périodique",
+          "enonce": "Compléter le tableau : Cl (période 3, 18/20 neutrons, 17 protons) | ? (période 2, VIA, 8 neutrons) | Mg (12 neutrons, A=24) | ? (période 2, 10 neutrons, A=19) | C (VIA)",
+          "aide": "Z = nb protons | A = Z + N | Période = nb de couches occupées",
+          "solution": "Cl : Z=17, A=35 ou 37, config [Ne] 3s² 3p⁵ | O : Z=8, A=16, config [He] 2s² 2p⁴ | Mg : Z=12, A=24, config [Ne] 3s² | F : Z=9, A=19, config [He] 2s² 2p⁵ | C : Z=6, période 2, config [He] 2s² 2p²"
+        },
+        {
+          "id": "4.6",
+          "titre": "Périodes 4, 5, 6",
+          "enonce": "Compléter : Br (période 4, VIIA) | Cu (période 4, IB) | V (période 4, VB)",
+          "aide": "Attention aux exceptions (Cu)",
+          "solution": "Br : Z=35, [Ar] 3d¹⁰ 4s² 4p⁵ | Cu : Z=29, [Ar] 3d¹⁰ 4s¹ (exception) | V : Z=23, [Ar] 3d³ 4s²"
+        },
+        {
+          "id": "4.7",
+          "titre": "Famille chimique",
+          "enonce": "Atome A (A=121) : 1s² 2s² 2p⁶ 3s² 3p⁶ 3d¹⁰ 4s² 4p⁶ 4d¹⁰ 5s² 5p³\n1°) Z et nombre de neutrons\n2°) Période et colonne\n3°) Famille chimique\n4°) Montrer que A appartient à la même famille que Bi (Z=83)",
+          "aide": "Z = somme des électrons | Colonne = électrons de valence",
+          "solution": "1°) Z = 51 (Sb), N = 70\n2°) Période 5, colonne 15 (VA)\n3°) Famille de l'azote\n4°) Bi : [Xe] 4f¹⁴ 5d¹⁰ 6s² 6p³ → même valence 5p³ → même famille"
+        }
+      ]
+    },
+    {
+      "id": "td5",
+      "titre": "Thème 5 - Charge effective & Slater",
+      "exercices": [
+        {
+          "id": "5.1",
+          "titre": "Énergie de 1ère ionisation du Mg (Z=12)",
+          "enonce": "1°) Équation de 1ère ionisation + structures électroniques\n2°) EI en fonction des énergies\n3°) Charges effectives utiles\n4°) Énergies des sous-couches\n5°) EI et λ du photon\n6°) Comparer à 7,64 eV\n7°) 2ème et 3ème ionisation → état d'ionisation probable\n8°) λ_i = 9,512 Å → domaine. Expliquer.",
+          "aide": "Z_eff = Z - σ (Slater) | E_n = -13,6 × Z_eff²/n²",
+          "solution": "1°) Mg → Mg⁺ + e⁻ | Mg : [Ne] 3s² | Mg⁺ : [Ne] 3s¹\n3°) Z_eff(3s) = 12 - (8×0,85 + 2×1) = 3,2\n4°) E(3s) = -13,6 × 3,2²/9 = -15,4 eV\n5°) EI = 15,4 eV → λ = 80,5 nm\n6°) Écart : théorie surestime\n7°) EI₂ et EI₃ très élevées → Mg²⁺ est l'état stable\n8°) UV | Électron 3s arraché"
+        }
+      ]
+    },
+    {
+      "id": "td6",
+      "titre": "Thème 6 - Propriétés périodiques",
+      "exercices": [
+        {
+          "id": "6.1",
+          "titre": "Rayons atomiques",
+          "enonce": "Quel atome est le plus volumineux ?\na) Ca, Ba | b) S, Na | c) O, F",
+          "aide": "Rayon augmente ↓ et diminue →",
+          "solution": "a) Ba | b) Na | c) O"
+        },
+        {
+          "id": "6.2",
+          "titre": "Électronégativité et EI",
+          "enonce": "1°) Comparer EI et électronégativité de F, K, Mg à Na\n2°) Électrons de valence et structure gaz rare. Réactions d'ionisation.",
+          "aide": "F : 7e⁻ valence | K : 1e⁻ | Mg : 2e⁻ | Na : 1e⁻",
+          "solution": "1°) EI : F > Na > Mg > K | χ : F > Na > Mg > K\n2°) F : gagne 1e⁻ → F⁻ | K : perd 1e⁻ → K⁺ | Mg : perd 2e⁻ → Mg²⁺ | Na : perd 1e⁻ → Na⁺"
+        },
+        {
+          "id": "6.3",
+          "titre": "Nombres d'oxydation",
+          "enonce": "Formules des oxydes, halogénures et hydroxydes de : Na, Mg, B, Al, Cu, Zn",
+          "aide": "Nb e⁻ valence → Nb oxydation",
+          "solution": "Na : Na₂O, NaCl, NaOH | Mg : MgO, MgCl₂, Mg(OH)₂ | B : B₂O₃, BCl₃, B(OH)₃ | Al : Al₂O₃, AlCl₃, Al(OH)₃ | Cu : Cu₂O/CuO, CuCl/CuCl₂, CuOH/Cu(OH)₂ | Zn : ZnO, ZnCl₂, Zn(OH)₂"
+        },
+        {
+          "id": "6.4",
+          "titre": "Électronégativité selon Pauling",
+          "enonce": "Δχ_AB = √(E_AB - √(E_AA·E_BB))\nE(H-H)=435 | E(F-F)=155 | E(Cl-Cl)=242 | E(H-F)=566 | E(H-Cl)=431 kJ/mol\n1°) Convertir en eV/atome\n2°) Δχ(H,F) → χ_H\n3°) Δχ(H,Cl) → χ_Cl\n4°) Moment dipolaire HF et HCl (d_HF=0,92 Å, d_HCl=1,27 Å, q_F=-0,408e, q_Cl=-0,171e)",
+          "aide": "1 eV = 96,485 kJ/mol | μ = q × d",
+          "solution": "1°) H-H: 4,51 | F-F: 1,61 | Cl-Cl: 2,51 | H-F: 5,86 | H-Cl: 4,47 eV\n2°) Δχ = 1,78 → χ_H = 2,22\n3°) Δχ = 0,94 → χ_Cl = 3,16\n4°) μ_HF = 1,79 D | μ_HCl = 1,08 D"
+        },
+        {
+          "id": "6.5",
+          "titre": "EI et électronégativité",
+          "enonce": "Éléments A à G sur tableau partiel. Déterminer :\n1°) Alcalin, halogène, gaz rare, métal transition, alcalino-terreux\n2°) Configuration électronique\n3°) Forme ionique probable\n4°) Parmi A, B, C, D : EI la plus faible, χ la plus élevée, rayon le plus petit, config en p⁶",
+          "aide": "Propriétés périodiques",
+          "solution": "1°) Selon position | 2°) Selon Z | 3°) Selon famille | 4°) Alcalin : EI faible | Halogène : χ élevée | Gaz rare : rayon petit | Colonne p⁶"
+        },
+        {
+          "id": "6.6",
+          "titre": "Rayons atomiques et ioniques",
+          "enonce": "1°) Na vs Na⁺. Comparer Na⁺ et Ne.\n2°) F (0,72 Å), O (0,74 Å), F⁻ (1,33 Å), O²⁻ (1,40 Å)",
+          "aide": "Cations < atomes | Anions > atomes",
+          "solution": "1°) Na > Na⁺ | Na⁺ et Ne isoelectroniques (10e⁻) | r_Na⁺ < r_Ne (Z plus grand)\n2°) O²⁻ > F⁻ > F > O (anions plus grands, même Z plus petit → plus grand)"
+        }
+      ]
+    },
+    {
+      "id": "td7",
+      "titre": "Thème 7 - Lewis et VSEPR",
+      "exercices": [
+        {
+          "id": "7.1",
+          "titre": "Structure de Lewis d'un oxyde",
+          "enonce": "Atomes : C₆, S₁₆, O₈, Cl₁₇\n1°) Configuration électronique et ionisation probable\n2°) SO₂ et SO₃ : Lewis + VSEPR\n3°) SO₃²⁻ et SO₄²⁻ : Lewis + VSEPR\n4°) SOCl₂, SO₂Cl₂, SO₂, CO₂ : Lewis + géométrie\n5°) CO₂ et SO₂ polaires ? Moments dipolaires",
+          "aide": "Règle de l'octet | VSEPR : AX_mE_n",
+          "solution": "1°) C : [He] 2s² 2p² → C⁴⁺/C⁴⁻ | S : [Ne] 3s² 3p⁴ → S²⁻ | O : [He] 2s² 2p⁴ → O²⁻ | Cl : [Ne] 3s² 3p⁵ → Cl⁻\n2°) SO₂ : coudée (AX₂E₁) | SO₃ : trigonale plane (AX₃)\n3°) SO₃²⁻ : pyramidale (AX₃E₁) | SO₄²⁻ : tétraédrique (AX₄)\n4°) SOCl₂ : pyramidale | SO₂Cl₂ : tétraédrique | SO₂ : coudée | CO₂ : linéaire\n5°) CO₂ : apolaire (symétrie) | SO₂ : polaire"
+        },
+        {
+          "id": "7.2",
+          "titre": "Lewis, géométrie, hybridation",
+          "enonce": "Pour CH₄, H₂CO, HCN, CO₂, H₂O, NH₃, NO₂, BeCl₂, BF₃, SO₃²⁻, ClF₃, PF₅, SF₆ :\n1°) Formules de Lewis\n2°) Géométrie",
+          "aide": "VSEPR + hybridation (sp, sp², sp³, sp³d, sp³d²)",
+          "solution": "CH₄ : tétraédrique (sp³) | H₂CO : trigonale plane (sp²) | HCN : linéaire (sp) | CO₂ : linéaire (sp) | H₂O : coudée (sp³) | NH₃ : pyramidale (sp³) | NO₂ : coudée | BeCl₂ : linéaire (sp) | BF₃ : trigonale plane (sp²) | SO₃²⁻ : pyramidale (sp³) | ClF₃ : T (sp³d) | PF₅ : bipyramidale trigonale (sp³d) | SF₆ : octaédrique (sp³d²)"
+        }
+      ]
+    }
+  ]
+}

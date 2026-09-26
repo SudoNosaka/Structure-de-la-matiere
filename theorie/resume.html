@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Résumé Pareto (20%)</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/animations.css">
+</head>
+<body>
+    <header class="fade-in">
+        <div class="header-content">
+            <h1>Résumé Pareto</h1>
+            <p class="subtitle">20% du cours = 80% des points</p>
+        </div>
+        <nav class="main-nav">
+            <a href="../index.html" class="nav-link">Accueil</a>
+            <a href="../parametres.html" class="nav-link settings-icon">⚙</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="content-section fade-in">
+            <h2>Formules Clés</h2>
+            <div class="formula">N(t) = N₀ · e^(-λt)</div>
+            <div class="formula">T = ln(2) / λ</div>
+            <div class="formula">A(t) = λ · N(t)</div>
+            <div class="formula">Eₙ = -13,6 × Z²/n² eV</div>
+        </section>
+
+        <section class="content-section fade-in">
+            <h2>Radioactivité</h2>
+            <table class="table-custom">
+                <tr><th>Type</th><th>Émission</th><th>Pénétration</th></tr>
+                <tr><td>α</td><td>⁴₂He</td><td>Très faible</td></tr>
+                <tr><td>β⁻</td><td>Électron</td><td>Moyenne</td></tr>
+                <tr><td>γ</td><td>Photon</td><td>Très élevée</td></tr>
+            </table>
+        </section>
+
+        <section class="content-section fade-in">
+            <h2>Configuration Électronique</h2>
+            <div class="formula">1s &lt; 2s &lt; 2p &lt; 3s &lt; 3p &lt; 4s &lt; 3d &lt; 4p...</div>
+            <p><strong>Pauli :</strong> 2 e⁻ max par orbitale (spins opposés)</p>
+            <p><strong>Hund :</strong> Maximiser les spins parallèles</p>
+        </section>
+    </main>
+
+    <footer class="fade-in">
+        <p>Structure de la Matière - Résumé</p>
+    </footer>
+
+    <script src="../JS/config.js"></script>
+    <script src="../JS/theme.js"></script>
+    <script src="../JS/sound.js"></script>
+</body>
+</html>

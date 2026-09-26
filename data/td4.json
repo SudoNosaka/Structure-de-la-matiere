@@ -1,0 +1,59 @@
+{
+  "titre": "TD4 - Configuration électronique",
+  "donnees": [
+    "Ordre de Klechkowski : 1s → 2s → 2p → 3s → 3p → 4s → 3d → 4p → 5s → 4d → 5p → 6s → 4f → 5d → 6p",
+    "Capacités : s(2), p(6), d(10), f(14)",
+    "Exceptions : Cr (3d⁵ 4s¹), Cu (3d¹⁰ 4s¹)"
+  ],
+  "exercices": [
+    {
+      "id": "4.1",
+      "titre": "Modèle de Bohr - Couches",
+      "enonce": "Pour Be₄, C₆, N₇, O₈, Mg₁₂, Si₁₄, Cl₁₇ :\na) Placer les électrons dans les couches\nb) Couches pleines / incomplètes\n2°) Classer par période\n3°) Classer par famille\n4°) Écrire la configuration électronique",
+      "aide": "Max 2n² électrons par couche n",
+      "solution": "Be : K²L² | C : K²L⁴ | N : K²L⁵ | O : K²L⁶ | Mg : K²L⁸M² | Si : K²L⁸M⁴ | Cl : K²L⁸M⁷\nPériode 2 : Be, C, N, O | Période 3 : Mg, Si, Cl\nFamille 2 : Be, Mg | Famille 4 : C, Si | Famille 5 : N | Famille 6 : O | Famille 7 : Cl"
+    },
+    {
+      "id": "4.2",
+      "titre": "Nombres quantiques",
+      "enonce": "1°) Configurations : état fondamental, excité ou impossible ?\na) 1s² 2s¹ 2p¹ | b) 1s² 2s² 2p⁶ 3s² 3p² 3d² | c) 1s² 2p⁶ 3s³ | d) 1s² 2p⁶ 2d² | e) 1s² 2s² 2p⁶ 3s² 3p⁶ 4s² | f) 1s² 2s² 2p⁶ 3s² 3p⁶ 3d⁵ 4s²\n2°) Vrai ou faux ?\na) l=1 → orbitale d | b) n=2 → m peut être -1 | c) électron d → m peut être 3 | d) l=2 → 10 e⁻ max | e) sous-couche f → n peut être 3\n3°) Jeux (n,l,m) possibles ? Quelle sous-couche ?",
+      "aide": "l ∈ [0, n-1] | m ∈ [-l, +l] | max 2(2l+1) e⁻ par sous-couche",
+      "solution": "1°) a) excité | b) fondamental | c) impossible (3s³) | d) impossible (2d n'existe pas) | e) fondamental (Ca) | f) fondamental (Mn)\n2°) a) Faux (p) | b) Vrai | c) Faux (max 2) | d) Vrai | e) Faux (n≥4)\n3°) (2,0,0) : 2s ✓ | (4,1,-2) : impossible | (3,1,-1) : 3p ✓ | (4,-1,0) : impossible | (2,0,-1) : impossible | (5,3,-3) : 5f ✓ | (4,2,2) : 4d ✓ | (2,3,3) : impossible | (3,0,0) : 3s ✓ | (5,2,-2) : 5d ✓"
+    },
+    {
+      "id": "4.3",
+      "titre": "Configuration de l'oxygène",
+      "enonce": "1°) Configuration électronique de O (Z=8)\n2°) Cases quantiques\n3°) Nombres quantiques de chaque électron\n4°) Niveaux d'énergie différents et dégénérescence",
+      "aide": "Klechkowski + Hund",
+      "solution": "1°) 1s² 2s² 2p⁴\n2°) 1s: ↑↓ | 2s: ↑↓ | 2p: ↑↓ ↑ ↑\n3°) 1s: (1,0,0,±½) × 2 | 2s: (2,0,0,±½) × 2 | 2p: (2,1,-1,±½), (2,1,0,+½), (2,1,+1,+½)\n4°) 3 niveaux (1s, 2s, 2p) | dégénérescences : 1, 1, 3"
+    },
+    {
+      "id": "4.4",
+      "titre": "Configurations d'ions",
+      "enonce": "Donner les configurations de : Fe²⁺, Fe³⁺, F⁻, Na⁺, Al³⁺, Ca²⁺, Cu⁺, Cu²⁺, Cr²⁺",
+      "aide": "Enlever d'abord les e⁻ de la couche externe (4s avant 3d)",
+      "solution": "Fe²⁺ : [Ar] 3d⁶ | Fe³⁺ : [Ar] 3d⁵ | F⁻ : [He] 2s² 2p⁶ | Na⁺ : [He] 2s² 2p⁶ | Al³⁺ : [He] 2s² 2p⁶ | Ca²⁺ : [Ar] | Cu⁺ : [Ar] 3d¹⁰ | Cu²⁺ : [Ar] 3d⁹ | Cr²⁺ : [Ar] 3d⁴"
+    },
+    {
+      "id": "4.5",
+      "titre": "Sans tableau périodique",
+      "enonce": "Compléter le tableau : Cl (période 3, 18/20 neutrons, 17 protons) | ? (période 2, VIA, 8 neutrons) | Mg (12 neutrons, A=24) | ? (période 2, 10 neutrons, A=19) | C (VIA)",
+      "aide": "Z = nb protons | A = Z + N | Période = nb de couches occupées",
+      "solution": "Cl : Z=17, A=35 ou 37, config [Ne] 3s² 3p⁵ | O : Z=8, A=16, config [He] 2s² 2p⁴ | Mg : Z=12, A=24, config [Ne] 3s² | F : Z=9, A=19, config [He] 2s² 2p⁵ | C : Z=6, période 2, config [He] 2s² 2p²"
+    },
+    {
+      "id": "4.6",
+      "titre": "Périodes 4, 5, 6",
+      "enonce": "Compléter : Br (période 4, VIIA) | Cu (période 4, IB) | V (période 4, VB)",
+      "aide": "Attention aux exceptions (Cu)",
+      "solution": "Br : Z=35, [Ar] 3d¹⁰ 4s² 4p⁵ | Cu : Z=29, [Ar] 3d¹⁰ 4s¹ (exception) | V : Z=23, [Ar] 3d³ 4s²"
+    },
+    {
+      "id": "4.7",
+      "titre": "Famille chimique",
+      "enonce": "Atome A (A=121) : 1s² 2s² 2p⁶ 3s² 3p⁶ 3d¹⁰ 4s² 4p⁶ 4d¹⁰ 5s² 5p³\n1°) Z et nombre de neutrons\n2°) Période et colonne\n3°) Famille chimique\n4°) Montrer que A appartient à la même famille que Bi (Z=83)",
+      "aide": "Z = somme des électrons | Colonne = électrons de valence",
+      "solution": "1°) Z = 51 (Sb), N = 70\n2°) Période 5, colonne 15 (VA)\n3°) Famille de l'azote\n4°) Bi : [Xe] 4f¹⁴ 5d¹⁰ 6s² 6p³ → même valence 5p³ → même famille"
+    }
+  ]
+}
