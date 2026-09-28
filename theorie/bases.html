@@ -20,332 +20,504 @@
     </header>
 
     <main class="container">
-        <section class="content-section fade-in">
-            <h2>Mathématiques</h2>
+        <div class="accordion-controls">
+            <button class="accordion-btn" onclick="expandAll()">Tout déplier</button>
+            <button class="accordion-btn" onclick="collapseAll()">Tout plier</button>
+        </div>
 
-            <h3>Puissances de 10</h3>
-            <div class="formula">10ⁿ × 10ᵐ = 10ⁿ⁺ᵐ</div>
-            <div class="formula">10ⁿ / 10ᵐ = 10ⁿ⁻ᵐ</div>
-            <div class="formula">a × 10ⁿ × b × 10ᵐ = (a×b) × 10ⁿ⁺ᵐ</div>
+        <!-- MATHÉMATIQUES -->
+        <div class="collapsible" data-collapsed="false">
+            <div class="collapsible-header">
+                <h2>Mathématiques</h2>
+                <span class="collapsible-icon">▼</span>
+            </div>
+            <div class="collapsible-content">
+                <div class="collapsible" data-collapsed="false">
+                    <div class="collapsible-header">
+                        <h3>Puissances de 10</h3>
+                        <span class="collapsible-icon">▼</span>
+                    </div>
+                    <div class="collapsible-content">
+                        <div class="formula">10ⁿ × 10ᵐ = 10ⁿ⁺ᵐ</div>
+                        <div class="formula">10ⁿ / 10ᵐ = 10ⁿ⁻ᵐ</div>
+                        <div class="formula">(10ⁿ)ᵐ = 10ⁿˣᵐ</div>
+                        <div class="formula">a × 10ⁿ × b × 10ᵐ = (a×b) × 10ⁿ⁺ᵐ</div>
+                    </div>
+                </div>
 
-            <h3>Logarithmes</h3>
-            <div class="formula">ln(2) ≈ 0,693</div>
-            <div class="formula">ln(a × b) = ln(a) + ln(b)</div>
-            <div class="formula">ln(a/b) = ln(a) - ln(b)</div>
-            <div class="formula">ln(aⁿ) = n × ln(a)</div>
+                <div class="collapsible" data-collapsed="false">
+                    <div class="collapsible-header">
+                        <h3>Logarithmes</h3>
+                        <span class="collapsible-icon">▼</span>
+                    </div>
+                    <div class="collapsible-content">
+                        <div class="formula">ln(2) ≈ 0,693</div>
+                        <div class="formula">ln(e) = 1 | ln(1) = 0</div>
+                        <div class="formula">ln(a × b) = ln(a) + ln(b)</div>
+                        <div class="formula">ln(a/b) = ln(a) - ln(b)</div>
+                        <div class="formula">ln(aⁿ) = n × ln(a)</div>
+                        <div class="formula">ln(eˣ) = x | e^(ln(x)) = x</div>
+                    </div>
+                </div>
 
-            <h3>Équation différentielle du 1er ordre</h3>
-            <div class="formula">dy/dt = -k·y → y(t) = y₀ · e^(-k·t)</div>
-        </section>
+                <div class="collapsible" data-collapsed="true">
+                    <div class="collapsible-header">
+                        <h3>Dérivées usuelles</h3>
+                        <span class="collapsible-icon">▼</span>
+                    </div>
+                    <div class="collapsible-content">
+                        <div class="formula">d/dx (e^(kx)) = k · e^(kx)</div>
+                        <div class="formula">d/dx (xⁿ) = n · xⁿ⁻¹</div>
+                        <p>La dérivée représente la vitesse de variation d'une fonction.</p>
+                    </div>
+                </div>
 
-        <section class="content-section fade-in">
-            <h2>Unités & Conversions</h2>
+                <div class="collapsible" data-collapsed="true">
+                    <div class="collapsible-header">
+                        <h3>Équation différentielle du 1er ordre</h3>
+                        <span class="collapsible-icon">▼</span>
+                    </div>
+                    <div class="collapsible-content">
+                        <div class="formula">dy/dt = -k·y → y(t) = y₀ · e^(-k·t)</div>
+                        <p>C'est la forme de la loi de désintégration radioactive.</p>
+                    </div>
+                </div>
 
-            <h3>Énergie</h3>
-            <div class="formula">1 eV = 1,6 × 10⁻¹⁹ J</div>
-            <div class="formula">1 MeV = 10⁶ eV</div>
-            <div class="formula">1 cal = 4,184 J</div>
+                <div class="collapsible" data-collapsed="true">
+                    <div class="collapsible-header">
+                        <h3>Résoudre une équation exponentielle</h3>
+                        <span class="collapsible-icon">▼</span>
+                    </div>
+                    <div class="collapsible-content">
+                        <p>Pour résoudre <strong>eˣ = a</strong> :</p>
+                        <div class="formula">x = ln(a)</div>
+                        <p>Pour résoudre <strong>A(t) = A₀ · e^(-λt)</strong> en trouvant t :</p>
+                        <div class="formula">t = -ln(A(t)/A₀) / λ</div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-            <h3>Longueur</h3>
-            <div class="formula">1 Å = 10⁻¹⁰ m</div>
-            <div class="formula">1 nm = 10⁻⁹ m = 10 Å</div>
-            <div class="formula">1 fm = 10⁻¹⁵ m (taille d'un noyau)</div>
+        <!-- UNITÉS & CONVERSIONS -->
+        <div class="collapsible" data-collapsed="false">
+            <div class="collapsible-header">
+                <h2>Unités & Conversions</h2>
+                <span class="collapsible-icon">▼</span>
+            </div>
+            <div class="collapsible-content">
+                <div class="collapsible" data-collapsed="false">
+                    <div class="collapsible-header">
+                        <h3>Énergie</h3>
+                        <span class="collapsible-icon">▼</span>
+                    </div>
+                    <div class="collapsible-content">
+                        <div class="formula">1 eV = 1,6 × 10⁻¹⁹ J</div>
+                        <div class="formula">1 MeV = 10⁶ eV</div>
+                        <div class="formula">1 cal = 4,184 J</div>
+                        <div class="formula">1 kcal = 4184 J</div>
+                    </div>
+                </div>
 
-            <h3>Temps</h3>
-            <div class="formula">1 an = 365,25 × 24 × 3600 ≈ 3,156 × 10⁷ s</div>
+                <div class="collapsible" data-collapsed="false">
+                    <div class="collapsible-header">
+                        <h3>Longueur</h3>
+                        <span class="collapsible-icon">▼</span>
+                    </div>
+                    <div class="collapsible-content">
+                        <div class="formula">1 Å = 10⁻¹⁰ m (taille d'un atome)</div>
+                        <div class="formula">1 nm = 10⁻⁹ m = 10 Å</div>
+                        <div class="formula">1 fm = 10⁻¹⁵ m (taille d'un noyau)</div>
+                        <p>Ratio atome/noyau : 10⁵ (l'atome est 100 000 fois plus grand que son noyau).</p>
+                    </div>
+                </div>
 
-            <h3>Masse</h3>
-            <div class="formula">1 u.m.a = 1,66055 × 10⁻²⁷ kg = 931,5 MeV/c²</div>
+                <div class="collapsible" data-collapsed="true">
+                    <div class="collapsible-header">
+                        <h3>Temps</h3>
+                        <span class="collapsible-icon">▼</span>
+                    </div>
+                    <div class="collapsible-content">
+                        <div class="formula">1 an = 365,25 × 24 × 3600 ≈ 3,156 × 10⁷ s</div>
+                        <div class="formula">1 jour = 86 400 s</div>
+                    </div>
+                </div>
 
-            <p class="hint">La plupart des constantes et conversions sont redonnées dans le contexte des exercices.</p>
-        </section>
+                <div class="collapsible" data-collapsed="true">
+                    <div class="collapsible-header">
+                        <h3>Masse</h3>
+                        <span class="collapsible-icon">▼</span>
+                    </div>
+                    <div class="collapsible-content">
+                        <div class="formula">1 u.m.a = 1,66055 × 10⁻²⁷ kg = 931,5 MeV/c²</div>
+                    </div>
+                </div>
 
-        <section class="content-section fade-in">
-            <h2>Constantes Fondamentales</h2>
+                <div class="collapsible" data-collapsed="true">
+                    <div class="collapsible-header">
+                        <h3>Préfixes du SI</h3>
+                        <span class="collapsible-icon">▼</span>
+                    </div>
+                    <div class="collapsible-content">
+                        <table class="table-custom">
+                            <tr><th>Préfixe</th><th>Symbole</th><th>Valeur</th></tr>
+                            <tr><td>Téra</td><td>T</td><td>10¹²</td></tr>
+                            <tr><td>Giga</td><td>G</td><td>10⁹</td></tr>
+                            <tr><td>Méga</td><td>M</td><td>10⁶</td></tr>
+                            <tr><td>kilo</td><td>k</td><td>10³</td></tr>
+                            <tr><td>milli</td><td>m</td><td>10⁻³</td></tr>
+                            <tr><td>micro</td><td>µ</td><td>10⁻⁶</td></tr>
+                            <tr><td>nano</td><td>n</td><td>10⁻⁹</td></tr>
+                            <tr><td>pico</td><td>p</td><td>10⁻¹²</td></tr>
+                            <tr><td>femto</td><td>f</td><td>10⁻¹⁵</td></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-            <table class="table-custom">
-                <tr>
-                    <th>Constante</th>
-                    <th>Symbole</th>
-                    <th>Valeur</th>
-                </tr>
-                <tr>
-                    <td>Constante de Planck</td>
-                    <td>h</td>
-                    <td>6,626 × 10⁻³⁴ J·s</td>
-                </tr>
-                <tr>
-                    <td>Vitesse de la lumière</td>
-                    <td>c</td>
-                    <td>3 × 10⁸ m/s</td>
-                </tr>
-                <tr>
-                    <td>Charge élémentaire</td>
-                    <td>e</td>
-                    <td>1,6 × 10⁻¹⁹ C</td>
-                </tr>
-                <tr>
-                    <td>Nombre d'Avogadro</td>
-                    <td>Nₐ</td>
-                    <td>6,022 × 10²³ mol⁻¹</td>
-                </tr>
-                <tr>
-                    <td>Masse de l'électron</td>
-                    <td>mₑ</td>
-                    <td>9,1 × 10⁻³¹ kg</td>
-                </tr>
-                <tr>
-                    <td>Permittivité du vide</td>
-                    <td>ε₀</td>
-                    <td>8,85 × 10⁻¹² F/m</td>
-                </tr>
-                <tr>
-                    <td>Rayon de Bohr</td>
-                    <td>a₀</td>
-                    <td>0,529 Å = 5,29 × 10⁻¹¹ m</td>
-                </tr>
-                <tr>
-                    <td>Constante de Rydberg</td>
-                    <td>R<sub>H</sub></td>
-                    <td>109 677 cm⁻¹</td>
-                </tr>
-            </table>
+        <!-- CONSTANTES FONDAMENTALES -->
+        <div class="collapsible" data-collapsed="false">
+            <div class="collapsible-header">
+                <h2>Constantes Fondamentales</h2>
+                <span class="collapsible-icon">▼</span>
+            </div>
+            <div class="collapsible-content">
+                <table class="table-custom">
+                    <tr><th>Constante</th><th>Symbole</th><th>Valeur</th></tr>
+                    <tr><td>Planck</td><td>h</td><td>6,626 × 10⁻³⁴ J·s</td></tr>
+                    <tr><td>Planck réduite</td><td>ħ = h/(2π)</td><td>1,055 × 10⁻³⁴ J·s</td></tr>
+                    <tr><td>Lumière</td><td>c</td><td>3 × 10⁸ m/s</td></tr>
+                    <tr><td>Charge élémentaire</td><td>e</td><td>1,6 × 10⁻¹⁹ C</td></tr>
+                    <tr><td>Avogadro</td><td>Nₐ</td><td>6,022 × 10²³ mol⁻¹</td></tr>
+                    <tr><td>Boltzmann</td><td>k<sub>B</sub></td><td>1,38 × 10⁻²³ J/K</td></tr>
+                    <tr><td>Électron</td><td>mₑ</td><td>9,1 × 10⁻³¹ kg</td></tr>
+                    <tr><td>Proton</td><td>mₚ</td><td>1,67 × 10⁻²⁷ kg</td></tr>
+                    <tr><td>Permittivité</td><td>ε₀</td><td>8,85 × 10⁻¹² F/m</td></tr>
+                    <tr><td>Rayon Bohr</td><td>a₀</td><td>0,529 Å</td></tr>
+                    <tr><td>Rydberg</td><td>R<sub>H</sub></td><td>109 677 cm⁻¹</td></tr>
+                </table>
+                <p class="hint">Ces constantes sont dans la majorité des cas redonnées dans le contexte de l'exercice.</p>
+            </div>
+        </div>
 
-            <p class="hint">Ces constantes sont dans la majorité des cas redonnées dans le contexte de l'exercice.</p>
-        </section>
+        <!-- PHYSIQUE & CHIMIE -->
+        <div class="collapsible" data-collapsed="false">
+            <div class="collapsible-header">
+                <h2>Physique & Chimie</h2>
+                <span class="collapsible-icon">▼</span>
+            </div>
+            <div class="collapsible-content">
+                <div class="collapsible" data-collapsed="true">
+                    <div class="collapsible-header">
+                        <h3>Structure de l'Atome</h3>
+                        <span class="collapsible-icon">▼</span>
+                    </div>
+                    <div class="collapsible-content">
+                        <div class="formula">ᴬ_Z X : Z = protons | A = nucléons | N = A - Z = neutrons</div>
+                        <ul>
+                            <li>Atome neutre : nombre d'électrons = Z</li>
+                            <li>Ion : nombre d'électrons = Z - charge</li>
+                            <li>Isotopes : même Z, A différent (mêmes propriétés chimiques)</li>
+                            <li>Isobares : même A, Z différent</li>
+                            <li>Isotones : même N, Z différent</li>
+                        </ul>
+                    </div>
+                </div>
 
-        <section class="content-section fade-in">
-            <h2>Physique & Chimie</h2>
+                <div class="collapsible" data-collapsed="true">
+                    <div class="collapsible-header">
+                        <h3>Radioactivité</h3>
+                        <span class="collapsible-icon">▼</span>
+                    </div>
+                    <div class="collapsible-content">
+                        <div class="formula">α : ⁴₂He (peu pénétrant) | β⁻ : ⁰₋₁e | γ : photon (très pénétrant)</div>
+                        <div class="formula">N(t) = N₀ · e^(-λt)</div>
+                        <div class="formula">T = ln(2)/λ ≈ 0,693/λ</div>
+                        <div class="formula">A(t) = λ·N(t) (en Bq, 1 Bq = 1 désintégration/s)</div>
+                        <ul>
+                            <li>Conservation de A et Z dans les réactions nucléaires</li>
+                            <li>Défaut de masse : Δm = Z·m<sub>p</sub> + N·m<sub>n</sub> - m<sub>noyau</sub></li>
+                            <li>Énergie de liaison : E<sub>l</sub> = Δm × 931,5 MeV</li>
+                        </ul>
+                    </div>
+                </div>
 
-            <h3>Structure de l'Atome</h3>
-            <div class="formula">ᴬ_Z X : Z = protons | A = nucléons | N = A - Z = neutrons</div>
-            <ul>
-                <li>Atome neutre : nombre d'électrons = Z</li>
-                <li>Ion : nombre d'électrons = Z - charge</li>
-                <li>Isotopes : même Z, A différent (mêmes propriétés chimiques)</li>
-                <li>Isobares : même A, Z différent</li>
-                <li>Isotones : même N, Z différent</li>
-            </ul>
+                <div class="collapsible" data-collapsed="true">
+                    <div class="collapsible-header">
+                        <h3>Effet Photoélectrique (Einstein, 1905)</h3>
+                        <span class="collapsible-icon">▼</span>
+                    </div>
+                    <div class="collapsible-content">
+                        <div class="formula">E<sub>photon</sub> = h·ν = h·c/λ</div>
+                        <div class="formula">h·ν = W + ½·m·v²</div>
+                        <ul>
+                            <li>W = travail d'extraction (énergie seuil)</li>
+                            <li>Si ν &lt; ν₀ : aucun électron éjecté</li>
+                            <li>L'intensité change le nombre d'électrons, pas leur énergie</li>
+                        </ul>
+                    </div>
+                </div>
 
-            <h3>Radioactivité</h3>
-            <div class="formula">α : ⁴₂He (peu pénétrant) | β⁻ : ⁰₋₁e | γ : photon (très pénétrant)</div>
-            <div class="formula">N(t) = N₀ · e^(-λt)</div>
-            <div class="formula">T = ln(2)/λ ≈ 0,693/λ</div>
-            <div class="formula">A(t) = λ·N(t) (en Becquerel, 1 Bq = 1 désintégration/s)</div>
-            <ul>
-                <li>Conservation de A et Z dans les réactions nucléaires</li>
-                <li>Défaut de masse : Δm = Z·m<sub>p</sub> + N·m<sub>n</sub> - m<sub>noyau</sub></li>
-                <li>Énergie de liaison : E<sub>l</sub> = Δm × 931,5 MeV</li>
-            </ul>
+                <div class="collapsible" data-collapsed="true">
+                    <div class="collapsible-header">
+                        <h3>Dualité Onde-Corpuscule (de Broglie, 1923)</h3>
+                        <span class="collapsible-icon">▼</span>
+                    </div>
+                    <div class="collapsible-content">
+                        <div class="formula">λ = h/p = h/(m·v)</div>
+                        <ul>
+                            <li>Toute particule a une longueur d'onde associée</li>
+                            <li>Macroscopique : λ indétectable</li>
+                            <li>Microscopique : λ observable (diffraction)</li>
+                        </ul>
+                    </div>
+                </div>
 
-            <h3>Effet Photoélectrique (Einstein, 1905)</h3>
-            <div class="formula">E<sub>photon</sub> = h·ν = h·c/λ</div>
-            <div class="formula">h·ν = W + ½·m·v²</div>
-            <ul>
-                <li>W = travail d'extraction (énergie seuil)</li>
-                <li>Si ν &lt; ν₀ : aucun électron éjecté</li>
-                <li>L'intensité change le nombre d'électrons, pas leur énergie</li>
-            </ul>
+                <div class="collapsible" data-collapsed="true">
+                    <div class="collapsible-header">
+                        <h3>Principe d'Incertitude (Heisenberg, 1927)</h3>
+                        <span class="collapsible-icon">▼</span>
+                    </div>
+                    <div class="collapsible-content">
+                        <div class="formula">Δx · Δp ≥ ħ/2</div>
+                        <div class="formula">ħ = h/(2π) = 1,055 × 10⁻³⁴ J·s</div>
+                        <ul>
+                            <li>Limite fondamentale de la nature, pas technique</li>
+                            <li>Version énergie/temps : ΔE · Δt ≥ ħ/2</li>
+                        </ul>
+                    </div>
+                </div>
 
-            <h3>Dualité Onde-Corpuscule (de Broglie, 1923)</h3>
-            <div class="formula">λ = h/p = h/(m·v)</div>
-            <ul>
-                <li>Toute particule a une longueur d'onde associée</li>
-                <li>Macroscopique : λ indétectable</li>
-                <li>Microscopique : λ observable (diffraction)</li>
-            </ul>
+                <div class="collapsible" data-collapsed="true">
+                    <div class="collapsible-header">
+                        <h3>Modèle de Bohr (1913)</h3>
+                        <span class="collapsible-icon">▼</span>
+                    </div>
+                    <div class="collapsible-content">
+                        <div class="formula">Eₙ = -13,6 × Z²/n² eV</div>
+                        <div class="formula">rₙ = n² × a₀ / Z</div>
+                        <div class="formula">|ΔE| = h·ν = h·c/λ</div>
+                        <ul>
+                            <li>n = 1, 2, 3... (nombre quantique principal)</li>
+                            <li>n=1 : état fondamental | n&gt;1 : états excités | n→∞ : ionisation</li>
+                            <li>Ne fonctionne que pour les atomes hydrogénoïdes (1 électron)</li>
+                        </ul>
+                    </div>
+                </div>
 
-            <h3>Principe d'Incertitude (Heisenberg, 1927)</h3>
-            <div class="formula">Δx · Δp ≥ ħ/2</div>
-            <div class="formula">ħ = h/(2π) = 1,055 × 10⁻³⁴ J·s</div>
-            <ul>
-                <li>Limite fondamentale de la nature, pas technique</li>
-                <li>Version énergie/temps : ΔE · Δt ≥ ħ/2</li>
-            </ul>
+                <div class="collapsible" data-collapsed="true">
+                    <div class="collapsible-header">
+                        <h3>Spectres de l'Hydrogène</h3>
+                        <span class="collapsible-icon">▼</span>
+                    </div>
+                    <div class="collapsible-content">
+                        <div class="formula">1/λ = R<sub>H</sub> × (1/n² - 1/p²) avec p &gt; n</div>
+                        <table class="table-custom">
+                            <tr><th>Série</th><th>n</th><th>Domaine</th></tr>
+                            <tr><td>Lyman</td><td>1</td><td>UV</td></tr>
+                            <tr><td>Balmer</td><td>2</td><td>Visible</td></tr>
+                            <tr><td>Paschen</td><td>3</td><td>IR</td></tr>
+                            <tr><td>Brackett</td><td>4</td><td>IR</td></tr>
+                            <tr><td>Pfund</td><td>5</td><td>IR</td></tr>
+                        </table>
+                    </div>
+                </div>
 
-            <h3>Modèle de Bohr (1913)</h3>
-            <div class="formula">Eₙ = -13,6 × Z²/n² eV</div>
-            <div class="formula">rₙ = n² × a₀ / Z</div>
-            <div class="formula">|ΔE| = h·ν = h·c/λ</div>
-            <ul>
-                <li>n = 1, 2, 3... (nombre quantique principal)</li>
-                <li>n=1 : état fondamental | n&gt;1 : états excités | n→∞ : ionisation</li>
-                <li>Ne fonctionne que pour les atomes hydrogénoïdes (1 électron)</li>
-            </ul>
+                <div class="collapsible" data-collapsed="true">
+                    <div class="collapsible-header">
+                        <h3>Nombres Quantiques</h3>
+                        <span class="collapsible-icon">▼</span>
+                    </div>
+                    <div class="collapsible-content">
+                        <table class="table-custom">
+                            <tr><th>Symbole</th><th>Nom</th><th>Valeurs</th><th>Définit</th></tr>
+                            <tr><td>n</td><td>Principal</td><td>1, 2, 3...</td><td>Couche</td></tr>
+                            <tr><td>l</td><td>Azimutal</td><td>0 à n-1</td><td>Sous-couche (s,p,d,f)</td></tr>
+                            <tr><td>m (ou m<sub>l</sub>)</td><td>Magnétique</td><td>-l à +l</td><td>Orientation</td></tr>
+                            <tr><td>m<sub>s</sub></td><td>Spin</td><td>±½</td><td>Spin électron</td></tr>
+                        </table>
+                    </div>
+                </div>
 
-            <h3>Spectres de l'Hydrogène</h3>
-            <div class="formula">1/λ = R<sub>H</sub> × (1/n² - 1/p²) avec p &gt; n</div>
-            <table class="table-custom">
-                <tr>
-                    <th>Série</th>
-                    <th>n</th>
-                    <th>Domaine</th>
-                </tr>
-                <tr><td>Lyman</td><td>1</td><td>UV</td></tr>
-                <tr><td>Balmer</td><td>2</td><td>Visible</td></tr>
-                <tr><td>Paschen</td><td>3</td><td>IR</td></tr>
-                <tr><td>Brackett</td><td>4</td><td>IR</td></tr>
-                <tr><td>Pfund</td><td>5</td><td>IR</td></tr>
-            </table>
+                <div class="collapsible" data-collapsed="true">
+                    <div class="collapsible-header">
+                        <h3>Orbitales Atomiques</h3>
+                        <span class="collapsible-icon">▼</span>
+                    </div>
+                    <div class="collapsible-content">
+                        <div class="formula">Ψ(r,θ,φ) = R(r) · Y(θ,φ)</div>
+                        <div class="formula">dP = |Ψ|² · dτ (densité de probabilité)</div>
+                        <table class="table-custom">
+                            <tr><th>l</th><th>Type</th><th>Forme</th><th>Nb orbitales</th><th>Nb e⁻ max</th></tr>
+                            <tr><td>0</td><td>s</td><td>Sphère</td><td>1</td><td>2</td></tr>
+                            <tr><td>1</td><td>p</td><td>Haltère</td><td>3</td><td>6</td></tr>
+                            <tr><td>2</td><td>d</td><td>Trèfle</td><td>5</td><td>10</td></tr>
+                            <tr><td>3</td><td>f</td><td>Complexe</td><td>7</td><td>14</td></tr>
+                        </table>
+                        <ul>
+                            <li>Nb d'orbitales dans couche n = n²</li>
+                            <li>Nb max e⁻ dans couche n = 2n²</li>
+                            <li>Nœuds : radiaux = n-l-1 | angulaires = l | total = n-1</li>
+                        </ul>
+                    </div>
+                </div>
 
-            <h3>Nombres Quantiques</h3>
-            <table class="table-custom">
-                <tr>
-                    <th>Symbole</th>
-                    <th>Nom</th>
-                    <th>Valeurs</th>
-                    <th>Définit</th>
-                </tr>
-                <tr><td>n</td><td>Principal</td><td>1, 2, 3...</td><td>Couche</td></tr>
-                <tr><td>l</td><td>Azimutal</td><td>0 à n-1</td><td>Sous-couche (s,p,d,f)</td></tr>
-                <tr><td>m (ou m<sub>l</sub>)</td><td>Magnétique</td><td>-l à +l</td><td>Orientation</td></tr>
-                <tr><td>m<sub>s</sub></td><td>Spin</td><td>±½</td><td>Spin électron</td></tr>
-            </table>
+                <div class="collapsible" data-collapsed="true">
+                    <div class="collapsible-header">
+                        <h3>Configuration Électronique</h3>
+                        <span class="collapsible-icon">▼</span>
+                    </div>
+                    <div class="collapsible-content">
+                        <div class="formula">Ordre : 1s &lt; 2s &lt; 2p &lt; 3s &lt; 3p &lt; 4s &lt; 3d &lt; 4p &lt; 5s &lt; 4d &lt; 5p &lt; 6s &lt; 4f &lt; 5d...</div>
+                        <ul>
+                            <li><strong>Pauli :</strong> 2 e⁻ max par orbitale (spins opposés)</li>
+                            <li><strong>Klechkowski :</strong> Remplissage par n+l croissants</li>
+                            <li><strong>Hund :</strong> Maximiser les spins parallèles</li>
+                            <li>Exceptions : Cr (3d⁵ 4s¹), Cu (3d¹⁰ 4s¹), Mo, Ag, Au</li>
+                        </ul>
+                        <div class="warning">L'ordre de remplissage ≠ l'ordre d'écriture ! On écrit par ordre de n croissant.</div>
+                    </div>
+                </div>
 
-            <h3>Orbitales Atomiques</h3>
-            <div class="formula">Ψ(r,θ,φ) = R(r) · Y(θ,φ)</div>
-            <div class="formula">dP = |Ψ|² · dτ (densité de probabilité)</div>
-            <table class="table-custom">
-                <tr>
-                    <th>l</th>
-                    <th>Type</th>
-                    <th>Forme</th>
-                    <th>Nb orbitales</th>
-                    <th>Nb e⁻ max</th>
-                </tr>
-                <tr><td>0</td><td>s</td><td>Sphère</td><td>1</td><td>2</td></tr>
-                <tr><td>1</td><td>p</td><td>Haltère</td><td>3</td><td>6</td></tr>
-                <tr><td>2</td><td>d</td><td>Trèfle</td><td>5</td><td>10</td></tr>
-                <tr><td>3</td><td>f</td><td>Complexe</td><td>7</td><td>14</td></tr>
-            </table>
-            <ul>
-                <li>Nb d'orbitales dans couche n = n²</li>
-                <li>Nb max e⁻ dans couche n = 2n²</li>
-                <li>Nœuds : radiaux = n-l-1 | angulaires = l | total = n-1</li>
-            </ul>
+                <div class="collapsible" data-collapsed="true">
+                    <div class="collapsible-header">
+                        <h3>Charge Effective (Slater)</h3>
+                        <span class="collapsible-icon">▼</span>
+                    </div>
+                    <div class="collapsible-content">
+                        <div class="formula">Z<sub>eff</sub> = Z - σ</div>
+                        <div class="formula">E<sub>n</sub> = -13,6 × Z<sub>eff</sub>²/n² eV</div>
+                        <table class="table-custom">
+                            <tr><th>Pour électron dans...</th><th>Même sous-couche</th><th>Couche n-1</th><th>Couches ≤ n-2</th></tr>
+                            <tr><td>ns ou np</td><td>0,35</td><td>0,85</td><td>1,00</td></tr>
+                            <tr><td>nd</td><td>0,35</td><td>1,00</td><td>1,00</td></tr>
+                        </table>
+                        <ul>
+                            <li>Un électron n'est pas écranté par lui-même</li>
+                            <li>Les électrons d'une couche externe n'ont aucun effet (σ = 0)</li>
+                            <li>Avec Slater : E(ns) = E(np) (même Z<sub>eff</sub>)</li>
+                        </ul>
+                    </div>
+                </div>
 
-            <h3>Configuration Électronique</h3>
-            <div class="formula">Ordre : 1s &lt; 2s &lt; 2p &lt; 3s &lt; 3p &lt; 4s &lt; 3d &lt; 4p &lt; 5s &lt; 4d &lt; 5p &lt; 6s &lt; 4f &lt; 5d...</div>
-            <ul>
-                <li><strong>Pauli :</strong> 2 e⁻ max par orbitale (spins opposés)</li>
-                <li><strong>Klechkowski :</strong> Remplissage par n+l croissants</li>
-                <li><strong>Hund :</strong> Maximiser les spins parallèles</li>
-                <li>Exceptions : Cr (3d⁵ 4s¹), Cu (3d¹⁰ 4s¹), Mo, Ag, Au</li>
-            </ul>
-            <div class="warning">L'ordre de remplissage ≠ l'ordre d'écriture ! On écrit par ordre de n croissant.</div>
+                <div class="collapsible" data-collapsed="true">
+                    <div class="collapsible-header">
+                        <h3>Tableau Périodique</h3>
+                        <span class="collapsible-icon">▼</span>
+                    </div>
+                    <div class="collapsible-content">
+                        <ul>
+                            <li>7 périodes (lignes) | 18 colonnes (familles)</li>
+                            <li>Blocs : s (1-2), p (13-18), d (3-12), f (lanthanides/actinides)</li>
+                            <li>Même colonne = même config de valence = propriétés similaires</li>
+                        </ul>
+                        <table class="table-custom">
+                            <tr><th>Famille</th><th>Colonne</th><th>Config. valence</th><th>Exemples</th></tr>
+                            <tr><td>Alcalins</td><td>1</td><td>ns¹</td><td>Li, Na, K</td></tr>
+                            <tr><td>Alcalino-terreux</td><td>2</td><td>ns²</td><td>Be, Mg, Ca</td></tr>
+                            <tr><td>Halogènes</td><td>17</td><td>ns² np⁵</td><td>F, Cl, Br, I</td></tr>
+                            <tr><td>Gaz nobles</td><td>18</td><td>ns² np⁶</td><td>He, Ne, Ar</td></tr>
+                        </table>
+                    </div>
+                </div>
 
-            <h3>Charge Effective (Slater)</h3>
-            <div class="formula">Z<sub>eff</sub> = Z - σ</div>
-            <div class="formula">E<sub>n</sub> = -13,6 × Z<sub>eff</sub>²/n² eV</div>
-            <table class="table-custom">
-                <tr>
-                    <th>Pour électron dans...</th>
-                    <th>Même sous-couche</th>
-                    <th>Couche n-1</th>
-                    <th>Couches ≤ n-2</th>
-                </tr>
-                <tr><td>ns ou np</td><td>0,35</td><td>0,85</td><td>1,00</td></tr>
-                <tr><td>nd</td><td>0,35</td><td>1,00</td><td>1,00</td></tr>
-            </table>
-            <ul>
-                <li>Un électron n'est pas écranté par lui-même</li>
-                <li>Les électrons d'une couche externe n'ont aucun effet (σ = 0)</li>
-                <li>Avec Slater : E(ns) = E(np) (même Z<sub>eff</sub>)</li>
-            </ul>
+                <div class="collapsible" data-collapsed="true">
+                    <div class="collapsible-header">
+                        <h3>Propriétés Périodiques</h3>
+                        <span class="collapsible-icon">▼</span>
+                    </div>
+                    <div class="collapsible-content">
+                        <table class="table-custom">
+                            <tr><th>Propriété</th><th>Le long d'une période (→)</th><th>Le long d'une colonne (↓)</th></tr>
+                            <tr><td>Rayon atomique</td><td>Diminue</td><td>Augmente</td></tr>
+                            <tr><td>Énergie d'ionisation</td><td>Augmente</td><td>Diminue</td></tr>
+                            <tr><td>Affinité électronique</td><td>Augmente</td><td>Diminue</td></tr>
+                            <tr><td>Électronégativité</td><td>Augmente</td><td>Diminue</td></tr>
+                            <tr><td>Caractère métallique</td><td>Diminue</td><td>Augmente</td></tr>
+                        </table>
+                        <div class="warning">Anomalies : EI(O) &lt; EI(N) et EI(B) &lt; EI(Be) à cause de la stabilité des sous-couches pleines/demi-pleines.</div>
+                    </div>
+                </div>
 
-            <h3>Tableau Périodique</h3>
-            <ul>
-                <li>7 périodes (lignes) | 18 colonnes (familles)</li>
-                <li>Blocs : s (1-2), p (13-18), d (3-12), f (lanthanides/actinides)</li>
-                <li>Même colonne = même config de valence = propriétés similaires</li>
-            </ul>
-            <table class="table-custom">
-                <tr>
-                    <th>Famille</th>
-                    <th>Colonne</th>
-                    <th>Config. valence</th>
-                    <th>Exemples</th>
-                </tr>
-                <tr><td>Alcalins</td><td>1</td><td>ns¹</td><td>Li, Na, K</td></tr>
-                <tr><td>Alcalino-terreux</td><td>2</td><td>ns²</td><td>Be, Mg, Ca</td></tr>
-                <tr><td>Halogènes</td><td>17</td><td>ns² np⁵</td><td>F, Cl, Br, I</td></tr>
-                <tr><td>Gaz nobles</td><td>18</td><td>ns² np⁶</td><td>He, Ne, Ar</td></tr>
-            </table>
+                <div class="collapsible" data-collapsed="true">
+                    <div class="collapsible-header">
+                        <h3>Structure de Lewis</h3>
+                        <span class="collapsible-icon">▼</span>
+                    </div>
+                    <div class="collapsible-content">
+                        <ul>
+                            <li>Représenter les électrons de valence (points ou tirets)</li>
+                            <li><strong>Règle de l'octet :</strong> Atomes stables avec 8 e⁻ de valence (2 pour H, He)</li>
+                            <li>Liaison covalente = doublet partagé</li>
+                            <li>Doublet non-liant = doublet libre</li>
+                            <li>Charge formelle = nb e⁻ valence - (nb e⁻ non-liants + nb liaisons)</li>
+                        </ul>
+                    </div>
+                </div>
 
-            <h3>Propriétés Périodiques</h3>
-            <table class="table-custom">
-                <tr>
-                    <th>Propriété</th>
-                    <th>Le long d'une période (→)</th>
-                    <th>Le long d'une colonne (↓)</th>
-                </tr>
-                <tr><td>Rayon atomique</td><td>Diminue</td><td>Augmente</td></tr>
-                <tr><td>Énergie d'ionisation</td><td>Augmente</td><td>Diminue</td></tr>
-                <tr><td>Affinité électronique</td><td>Augmente</td><td>Diminue</td></tr>
-                <tr><td>Électronégativité</td><td>Augmente</td><td>Diminue</td></tr>
-                <tr><td>Caractère métallique</td><td>Diminue</td><td>Augmente</td></tr>
-            </table>
-            <div class="warning">Anomalies : EI(O) &lt; EI(N) et EI(B) &lt; EI(Be) à cause de la stabilité des sous-couches pleines/demi-pleines.</div>
+                <div class="collapsible" data-collapsed="true">
+                    <div class="collapsible-header">
+                        <h3>Théorie VSEPR</h3>
+                        <span class="collapsible-icon">▼</span>
+                    </div>
+                    <div class="collapsible-content">
+                        <div class="formula">AX<sub>m</sub>E<sub>n</sub> : A = atome central | X = atome lié | E = doublet libre</div>
+                        <table class="table-custom">
+                            <tr><th>Formule</th><th>Géométrie</th><th>Angle</th><th>Exemple</th></tr>
+                            <tr><td>AX₂</td><td>Linéaire</td><td>180°</td><td>CO₂</td></tr>
+                            <tr><td>AX₃</td><td>Trigonale plane</td><td>120°</td><td>BF₃</td></tr>
+                            <tr><td>AX₂E₁</td><td>Coudée</td><td>&lt;120°</td><td>SO₂</td></tr>
+                            <tr><td>AX₄</td><td>Tétraédrique</td><td>109,5°</td><td>CH₄</td></tr>
+                            <tr><td>AX₃E₁</td><td>Pyramidale</td><td>&lt;109,5°</td><td>NH₃</td></tr>
+                            <tr><td>AX₂E₂</td><td>Coudée</td><td>&lt;109,5°</td><td>H₂O</td></tr>
+                            <tr><td>AX₅</td><td>Bipyramidale trigonale</td><td>90°, 120°</td><td>PF₅</td></tr>
+                            <tr><td>AX₆</td><td>Octaédrique</td><td>90°</td><td>SF₆</td></tr>
+                        </table>
+                    </div>
+                </div>
 
-            <h3>Structure de Lewis</h3>
-            <ul>
-                <li>Représenter les électrons de valence (points ou tirets)</li>
-                <li><strong>Règle de l'octet :</strong> Atomes stables avec 8 e⁻ de valence (2 pour H, He)</li>
-                <li>Liaison covalente = doublet partagé</li>
-                <li>Doublet non-liant = doublet libre</li>
-                <li>Charge formelle = nb e⁻ valence - (nb e⁻ non-liants + nb liaisons)</li>
-            </ul>
+                <div class="collapsible" data-collapsed="true">
+                    <div class="collapsible-header">
+                        <h3>Hybridation</h3>
+                        <span class="collapsible-icon">▼</span>
+                    </div>
+                    <div class="collapsible-content">
+                        <table class="table-custom">
+                            <tr><th>Hybridation</th><th>Géométrie</th><th>Angle</th></tr>
+                            <tr><td>sp</td><td>Linéaire</td><td>180°</td></tr>
+                            <tr><td>sp²</td><td>Trigonale plane</td><td>120°</td></tr>
+                            <tr><td>sp³</td><td>Tétraédrique</td><td>109,5°</td></tr>
+                            <tr><td>sp³d</td><td>Bipyramidale trigonale</td><td>90°, 120°</td></tr>
+                            <tr><td>sp³d²</td><td>Octaédrique</td><td>90°</td></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-            <h3>Théorie VSEPR</h3>
-            <div class="formula">AX<sub>m</sub>E<sub>n</sub> : A = atome central | X = atome lié | E = doublet libre</div>
-            <table class="table-custom">
-                <tr>
-                    <th>Formule</th>
-                    <th>Géométrie</th>
-                    <th>Angle</th>
-                    <th>Exemple</th>
-                </tr>
-                <tr><td>AX₂</td><td>Linéaire</td><td>180°</td><td>CO₂</td></tr>
-                <tr><td>AX₃</td><td>Trigonale plane</td><td>120°</td><td>BF₃</td></tr>
-                <tr><td>AX₂E₁</td><td>Coudée</td><td>&lt;120°</td><td>SO₂</td></tr>
-                <tr><td>AX₄</td><td>Tétraédrique</td><td>109,5°</td><td>CH₄</td></tr>
-                <tr><td>AX₃E₁</td><td>Pyramidale</td><td>&lt;109,5°</td><td>NH₃</td></tr>
-                <tr><td>AX₂E₂</td><td>Coudée</td><td>&lt;109,5°</td><td>H₂O</td></tr>
-                <tr><td>AX₅</td><td>Bipyramidale trigonale</td><td>90°, 120°</td><td>PF₅</td></tr>
-                <tr><td>AX₆</td><td>Octaédrique</td><td>90°</td><td>SF₆</td></tr>
-            </table>
-
-            <h3>Hybridation</h3>
-            <table class="table-custom">
-                <tr>
-                    <th>Hybridation</th>
-                    <th>Géométrie</th>
-                    <th>Angle</th>
-                </tr>
-                <tr><td>sp</td><td>Linéaire</td><td>180°</td></tr>
-                <tr><td>sp²</td><td>Trigonale plane</td><td>120°</td></tr>
-                <tr><td>sp³</td><td>Tétraédrique</td><td>109,5°</td></tr>
-                <tr><td>sp³d</td><td>Bipyramidale trigonale</td><td>90°, 120°</td></tr>
-                <tr><td>sp³d²</td><td>Octaédrique</td><td>90°</td></tr>
-            </table>
-        </section>
-
-        <section class="content-section fade-in">
-            <h2>🎯 Checklist : Suis-je prêt pour le cours ?</h2>
-            <ul>
-                <li>☐ Je manipule les puissances de 10 et les logarithmes</li>
-                <li>☐ Je connais ln(2) ≈ 0,693</li>
-                <li>☐ Je convertis entre J, eV, m, nm, Å</li>
-                <li>☐ Je connais h, c, e, Nₐ par cœur</li>
-                <li>☐ Je comprends la notation ᴬ_Z X</li>
-                <li>☐ Je connais les 3 types de radioactivité (α, β, γ)</li>
-                <li>☐ Je sais utiliser N(t) = N₀·e^(-λt) et T = ln(2)/λ</li>
-                <li>☐ Je connais les 4 nombres quantiques (n, l, m, m<sub>s</sub>)</li>
-                <li>☐ Je sais écrire une configuration électronique</li>
-                <li>☐ Je connais les règles de Pauli, Klechkowski, Hund</li>
-                <li>☐ Je sais lire le tableau périodique (blocs, familles, périodes)</li>
-            </ul>
-        </section>
+        <!-- CHECKLIST -->
+        <div class="collapsible" data-collapsed="false">
+            <div class="collapsible-header">
+                <h2>Checklist : Suis-je prêt pour le cours ?</h2>
+                <span class="collapsible-icon">▼</span>
+            </div>
+            <div class="collapsible-content">
+                <ul>
+                    <li>☐ Je manipule les puissances de 10 et les logarithmes</li>
+                    <li>☐ Je connais ln(2) ≈ 0,693</li>
+                    <li>☐ Je convertis entre J, eV, m, nm, Å</li>
+                    <li>☐ Je connais h, c, e, Nₐ par cœur</li>
+                    <li>☐ Je comprends la notation ᴬ_Z X</li>
+                    <li>☐ Je connais les 3 types de radioactivité (α, β, γ)</li>
+                    <li>☐ Je sais utiliser N(t) = N₀·e^(-λt) et T = ln(2)/λ</li>
+                    <li>☐ Je connais les 4 nombres quantiques (n, l, m, m<sub>s</sub>)</li>
+                    <li>☐ Je sais écrire une configuration électronique</li>
+                    <li>☐ Je connais les règles de Pauli, Klechkowski, Hund</li>
+                    <li>☐ Je sais lire le tableau périodique (blocs, familles, périodes)</li>
+                    <li>☐ Je connais les règles de Lewis et VSEPR</li>
+                </ul>
+            </div>
+        </div>
     </main>
 
     <footer class="fade-in">
@@ -355,5 +527,6 @@
     <script src="../JS/config.js"></script>
     <script src="../JS/theme.js"></script>
     <script src="../JS/sound.js"></script>
+    <script src="../JS/accordion.js"></script>
 </body>
 </html>

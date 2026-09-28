@@ -26,19 +26,48 @@ function initTextesATrous(data) {
 function renderContent() {
     const container = document.getElementById('content');
     let html = '';
+    
+    // Boutons globaux
+    html += `<div class="accordion-controls">
+        <button class="accordion-btn" onclick="expandAll()">Tout déplier</button>
+        <button class="accordion-btn" onclick="collapseAll()">Tout plier</button>
+    </div>`;
+    
     textesData.sections.forEach(section => {
-        html += `<section class="content-section fade-in"><h2>${section.title}</h2>`;
+        html += `<div class="collapsible" data-collapsed="false">
+            <div class="collapsible-header">
+                <h2>${section.title}</h2>
+                <span class="collapsible-icon">▼</span>
+            </div>
+            <div class="collapsible-content">`;
+        
         section.texts.forEach(t => {
             const content = t.content.replace(/\{([^}]+)\}/g, (match, answer) => {
                 return `<input type="text" class="fill-blank" data-answer="${answer}" placeholder="?">`;
             });
             html += `<div class="text-block"><p>${content}</p>`;
-            if (t.hint) html += `<p class="hint">💡 ${t.hint}</p>`;
+            if (t.hint) {
+                html += `<div class="collapsible" data-collapsed="true">
+                    <div class="collapsible-header">
+                        <h4>💡 Indice</h4>
+                        <span class="collapsible-icon">▼</span>
+                    </div>
+                    <div class="collapsible-content">
+                        <p class="hint">${t.hint}</p>
+                    </div>
+                </div>`;
+            }
             html += `</div>`;
         });
-        html += `</section>`;
+        
+        html += `</div></div>`;
     });
+    
     container.innerHTML = html;
+    
+    if (typeof initAccordions === 'function') {
+        initAccordions();
+    }
 }
 
 function checkAll() {
@@ -83,7 +112,7 @@ function showError(e) {
     document.getElementById('title').textContent = '⚠️ Erreur de chargement';
     document.getElementById('content').innerHTML = `
         <div class="warning">
-            <p>Impossible de charger les textes à trous. Utilise un serveur local.</p>
+            <p>Impossible de charger. Utilise un serveur local.</p>
         </div>
     `;
 }
