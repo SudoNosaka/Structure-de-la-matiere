@@ -1,92 +1,224 @@
 {
-  "title": "Constituants de la Matière & Radioactivité",
-  "subtitle": "De l'atome aux rayonnements ionisants",
+  "title": "Constituants de la Matière",
+  "subtitle": "De la Grèce antique aux particules élémentaires",
   "sections": [
     {
       "id": "intro",
       "title": "Introduction",
-      "content": "La structure de la matière commence par comprendre ce qui compose l'atome. En L1, tu dois maîtriser la notation symbolique, les notions d'isotopes, et les bases de la radioactivité. Ces concepts sont fondamentaux pour la suite (chimie, biologie, physique nucléaire)."
+      "content": "L'Univers est un gigantesque jeu de construction où l'Homme a cherché à définir les blocs fondamentaux. De la Grèce antique à la physique moderne, notre compréhension de la matière a évolué : des atomes indivisibles aux quarks et aux forces fondamentales.",
+      "list": [
+        "Grèce antique (Démocrite, 400 av. JC) : atome ≡ indivisible",
+        "Microscopes optiques et électroniques : du millimètre à quelques angströms (1 Å = 10⁻¹⁰ m)",
+        "Microscopie à forte résolution : « voir » les atomes !",
+        "Que se passe-t-il à l'échelle subatomique ? L'atome n'est pas insécable !"
+      ]
     },
     {
-      "id": "structure-atome",
-      "title": "Structure de l'Atome",
+      "id": "histoire",
+      "title": "Histoire du Modèle Atomique",
       "subsections": [
         {
-          "title": "Le Noyau",
-          "content": "Le noyau est constitué de nucléons :",
+          "title": "Grèce antique (philosophie)",
           "list": [
-            "Protons (p) : charge +e, masse ≈ 1,672 × 10⁻²⁷ kg",
-            "Neutrons (n) : charge neutre, masse ≈ 1,674 × 10⁻²⁷ kg"
+            "Leucippe (460-370 av-JC) puis Démocrite (460-360 av. JC) : matière et vide, atome ≡ indivisible",
+            "Épicure (341-270 av-JC) puis Lucrèce (98-55 av-JC) : forme des atomes en accord avec leurs propriétés (rond pour les liquides, piquants pour les acides...)",
+            "Empédocle (485-425 av-JC) : 4 éléments (air, terre, eau et feu)",
+            "Platon (427-347 av-JC) puis Aristote (384-322 av-JC) : matière divisible à l'infini, transmutation d'un élément en un autre → alchimie"
           ]
         },
         {
-          "title": "Le Cortège Électronique",
-          "content": "Les électrons (e⁻) gravitent autour du noyau. Leur masse est négligeable devant celle des nucléons (≈ 1/1836). Dans un atome neutre : nombre d'électrons = nombre de protons = Z."
+          "title": "Renouveau de la théorie atomique",
+          "list": [
+            "Descartes (1596-1650) : association d'atome ≡ molécule",
+            "Newton (1642-1727) : analogie entre l'infiniment petit et l'infiniment grand, postule l'existence d'autres formes d'interactions entre atomes",
+            "Lavoisier (1743-1794) : définit l'élément chimique (1777) comme dernier terme auquel parvient l'analyse chimique",
+            "Lois pondérales : Proust (1754-1826), Dalton (1766-1844)",
+            "Lois volumiques : Gay-Lussac (1808) et Avogadro (1811)"
+          ]
+        },
+        {
+          "title": "Découvertes majeures (1896-1932)",
+          "list": [
+            "1896 : Becquerel observe la radioactivité",
+            "1897 : Perrin et Thomson mettent en évidence l'électron (charge -e)",
+            "1909 : Rutherford découvre le noyau (charge +Ze)",
+            "1919 : Rutherford découvre le proton (+e)",
+            "1920 : Rutherford imagine le neutron (non chargé)",
+            "1932 : Chadwick observe le neutron"
+          ]
         }
       ]
     },
     {
-      "id": "notation",
-      "title": "Notation Symbolique",
+      "id": "constituants",
+      "title": "Constituants de l'Atome",
+      "content": "On note un atome avec Z le nombre de protons (caractéristique de l'élément X considéré), A nucléons, donc A-Z neutrons et Z électrons.",
       "formula": "ᴬ_Z X",
-      "content": "Où :",
       "list": [
-        "X : symbole de l'élément (ex: C pour carbone)",
-        "A : nombre de masse = nombre total de nucléons (protons + neutrons)",
-        "Z : numéro atomique = nombre de protons",
-        "N = A - Z : nombre de neutrons"
+        "Pour un ion : le nombre d'électrons est Z-q",
+        "Anion : charge q < 0",
+        "Cation : charge q > 0",
+        "Il existe environ 110 éléments différents"
       ],
-      "example": "¹²₆C → 6 protons, 6 neutrons, 6 électrons (atome neutre)"
-    },
-    {
-      "id": "isotopes",
-      "title": "Isotopes, Isobares, Isotones",
       "table": [
-        {"term": "Isotopes", "definition": "Même Z (même élément), mais A différent", "example": "¹²C, ¹³C, ¹⁴C"},
-        {"term": "Isobares", "definition": "Même A, mais Z différent", "example": "¹⁴C et ¹⁴N"},
-        {"term": "Isotones", "definition": "Même N (nombre de neutrons), mais Z différent", "example": "¹³C (N=7) et ¹⁴N (N=7)"}
+        {"particule": "Électron", "diametre": "< 10⁻¹⁸ m", "charge": "-e (-1,6.10⁻¹⁹ C)", "masse": "9,108.10⁻³¹ kg"},
+        {"particule": "Proton", "diametre": "~ 1,5.10⁻¹⁵ m", "charge": "+e", "masse": "1,672614.10⁻²⁷ kg"},
+        {"particule": "Neutron", "diametre": "~ 1,5.10⁻¹⁵ m", "charge": "0", "masse": "1,674920.10⁻²⁷ kg"}
       ],
-      "warning": "Les isotopes ont les mêmes propriétés chimiques (même Z = même configuration électronique), mais des propriétés physiques différentes (masse, stabilité nucléaire)."
-    },
-    {
-      "id": "radioactivite",
-      "title": "Radioactivité : Les 3 Rayonnements",
-      "content": "Un noyau instable se désintègre spontanément en émettant un rayonnement pour atteindre un état plus stable.",
-      "types": [
+      "subsections": [
         {
-          "name": "Alpha (α)",
-          "emission": "Noyau d'hélium (⁴₂He)",
-          "charge": "+2e",
-          "penetration": "Très faible",
-          "protection": "Feuille de papier"
+          "title": "Unité de masse atomique (uma)",
+          "content": "On utilise parfois l'unité de masse atomique (uma) pour décrire les masses atomiques :",
+          "formula": "1 uma = 10⁻³/NA kg ≈ 1,66053.10⁻²⁷ kg",
+          "content2": "On a longtemps pensé que ces particules constituaient des particules élémentaires, la plus petite partie indivisible. C'est toujours vrai pour l'électron, ça ne l'est plus pour les autres !"
         },
         {
-          "name": "Bêta Moins (β⁻)",
-          "emission": "Électron (⁰₋₁e)",
-          "charge": "-e",
-          "penetration": "Moyenne",
-          "protection": "Quelques mm d'aluminium"
-        },
-        {
-          "name": "Gamma (γ)",
-          "emission": "Photon",
-          "charge": "0",
-          "penetration": "Très élevée",
-          "protection": "Plusieurs cm de plomb"
+          "title": "Isotopes",
+          "content": "Pour un élément X donné (Z fixé), les nucléides de valeurs de A différentes sont appelés des isotopes.",
+          "example": "Exemple : ¹⁶O, ¹⁷O et ¹⁸O pour l'oxygène",
+          "content2": "La masse atomique molaire de l'élément X se calcule à partir de l'abondance naturelle et de la masse de chacun des isotopes de l'élément."
         }
       ]
     },
     {
-      "id": "conservation",
-      "title": "Conservation dans les Réactions Nucléaires",
-      "content": "Dans toute réaction nucléaire, il y a conservation :",
-      "list": [
-        "du nombre de masse A (nombre total de nucléons)",
-        "du numéro atomique Z (charge électrique totale)",
-        "de l'énergie totale",
-        "de la quantité de mouvement"
+      "id": "particules-elementaires",
+      "title": "Particules Élémentaires",
+      "content": "Il existe 3 grandes catégories de particules élémentaires :",
+      "table": [
+        {"categorie": "Quarks", "description": "Imaginés en 1964 par Gell-Mann & Zweig, observés début 1970", "details": "6 différents, de charge fractionnaire +2/3 et -1/3. Ne s'observent jamais seuls : paquets (hadrons) de 2 (mésons) ou 3 (baryons)"},
+        {"categorie": "Leptons", "description": "Au nombre de 6", "details": "3 chargés négativement (dont l'électron) et 3 neutres (neutrinos, difficiles à observer)"},
+        {"categorie": "Bosons de jauge", "description": "« Particules de rayonnement », au nombre de 12", "details": "Reliés aux forces entre ces particules"}
       ],
-      "example": "¹⁴₆C → ¹⁴₇N + ⁰₋₁e : A : 14 = 14 + 0 ✓ | Z : 6 = 7 + (-1) ✓"
+      "subsections": [
+        {
+          "title": "Antimatière",
+          "content": "Pour chaque type de particule, il existe une antiparticule dont toutes les caractéristiques, exceptée la masse, ont un signe opposé.",
+          "example": "La première particule d'antimatière, le positron (anti-électron), fut découverte en 1933.",
+          "warning": "Quand une particule rencontre son antiparticule, elles s'annihilent totalement et se transforment en énergie (ΔE = Δm·c²)"
+        },
+        {
+          "title": "Où se situent les espèces qui nous intéressent ?",
+          "list": [
+            "Protons, neutrons : ne sont PAS des particules élémentaires car ils sont constitués de quarks",
+            "Électrons : leptons",
+            "Photons : bosons"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "forces",
+      "title": "Forces et Cohésion entre Particules",
+      "content": "Il existe 4 types de forces dans l'univers :",
+      "table": [
+        {"force": "Électromagnétique", "boson": "Photon", "role": "Interactions entre charges électriques"},
+        {"force": "Nucléaire forte", "boson": "Gluons (8)", "role": "Cohésion du noyau"},
+        {"force": "Nucléaire faible", "boson": "Bosons faibles (3)", "role": "Radioactivité β du neutron"},
+        {"force": "Gravitation", "boson": "Graviton ? (pas encore découvert)", "role": "Pesanteur, mouvement des planètes"}
+      ],
+      "content2": "Les bosons de jauge transmettent la force qui leur est associée.",
+      "warning": "Questions sans réponses pour le moment : 12 particules et 4 forces ? Quarks et leptons particules élémentaires ? Inclusion de la gravitation dans le modèle unifié de la physique ?"
+    },
+    {
+      "id": "structure-hierarchique",
+      "title": "Structure Hiérarchique de la Matière",
+      "content": "La matière s'organise en niveaux d'échelle :",
+      "list": [
+        "Molécules",
+        "Atomes : noyau (Z, A) + électrons (mₑ = 9,1.10⁻³¹ kg, qₑ = -1,6.10⁻¹⁹ C) (leptons)",
+        "Noyau : Z protons (mₚ ≈ 1,673.10⁻²⁷ kg, qₚ = 1,6.10⁻¹⁹ C) + (A-Z) neutrons (mₙ ≈ 1,675.10⁻²⁷ kg, qₙ = 0)",
+        "Nucléons → Quarks",
+        "Protons : uud | Neutrons : udd (hadrons de type baryon : 3 quarks)"
+      ],
+      "table": [
+        {"niveau": "Molécules", "domaine": "Chimie"},
+        {"niveau": "Atomes", "domaine": "Chimie"},
+        {"niveau": "Noyau + électrons", "domaine": "Physique atomique"},
+        {"niveau": "Nucléons (protons, neutrons)", "domaine": "Physique nucléaire"},
+        {"niveau": "Quarks", "domaine": "Physique des particules"}
+      ]
+    },
+    {
+      "id": "energie",
+      "title": "Principales Formes d'Énergie",
+      "subsections": [
+        {
+          "title": "Énergie potentielle",
+          "content": "Liée à la position du système (statique).",
+          "examples": [
+            "Énergie potentielle élastique",
+            "Énergie potentielle gravitationnelle",
+            "Énergie potentielle électrostatique"
+          ]
+        },
+        {
+          "title": "Énergie cinétique",
+          "content": "Liée au mouvement du système (dynamique). L'agitation thermique est reliée à l'énergie cinétique moyenne des molécules :",
+          "formula": "E_cinétique = (3/2) · k_B · T",
+          "content2": "Avec k_B = 1,38.10⁻²³ J.K⁻¹ (constante de Boltzmann)"
+        }
+      ]
+    },
+    {
+      "id": "radioactivite-notions",
+      "title": "Radioactivité - Notions Générales",
+      "content": "La radioactivité est la transformation d'un noyau atomique en un ou plusieurs noyaux d'autres éléments avec émission d'une particule (α, β, γ, RX).",
+      "list": [
+        "Découverte en 1896 par Becquerel",
+        "La radioactivité peut être naturelle ou artificielle"
+      ],
+      "subsections": [
+        {
+          "title": "Caractéristiques de la désintégration radioactive",
+          "list": [
+            "Aléatoire (lois statistiques)",
+            "Spontanée (sans intervention extérieure)",
+            "Indépendante de la combinaison chimique dont le noyau radioactif fait partie (U, UO₂ ou UF₆)",
+            "Indépendante de l'état physique de la substance (solide, liquide, ou gaz), de la température et de la pression"
+          ]
+        },
+        {
+          "title": "Les 3 types de rayonnement",
+          "content": "Les neutrinos impliqués lors de ces réactions n'apparaissent pas dans les réactions.",
+          "types": [
+            {
+              "name": "Alpha (α)",
+              "emission": "Émission d'un noyau ⁴He",
+              "exemple": "²³²₉₀Th → ²²⁸₈₈Ra + ⁴₂He",
+              "charge": "+2e",
+              "ionisant": "Très ionisant",
+              "penetration": "Peu pénétrante (feuille de papier)"
+            },
+            {
+              "name": "Bêta (β)",
+              "emission": "Émission d'une particule β⁺ ou β⁻",
+              "exemple": "¹⁴₆C → ¹⁴₇N + ⁰₋₁e",
+              "charge": "+e (positron) ou -e (électron)",
+              "ionisant": "Ionisant",
+              "penetration": "Pénétrante (feuille d'aluminium)"
+            },
+            {
+              "name": "Gamma (γ)",
+              "emission": "Émission d'un photon",
+              "exemple": "(noyau B)* → noyau B + hν",
+              "charge": "0 (non chargée)",
+              "ionisant": "Peu ionisant",
+              "penetration": "Très pénétrante (plusieurs cm de plomb)"
+            }
+          ],
+          "content2": "Souvent, on observe l'émission simultanée de plusieurs types de rayonnement.",
+          "example": "Exemple : ⁵⁹Fe est un émetteur β et γ"
+        },
+        {
+          "title": "Lois de conservation",
+          "content": "Dans toute réaction nucléaire, il y a conservation :",
+          "list": [
+            "Du nombre de masse A (nombre total de nucléons)",
+            "De la charge Z (numéro atomique)"
+          ],
+          "warning": "La loi de désintégration radioactive N(t) = N₀·e^(-λt) et la demi-vie seront vues dans la Notion 2."
+        }
+      ]
     }
   ]
 }

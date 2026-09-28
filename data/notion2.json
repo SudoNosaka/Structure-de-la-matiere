@@ -5,7 +5,12 @@
     {
       "id": "intro",
       "title": "Introduction",
-      "content": "La radioactivité est un phénomène aléatoire à l'échelle d'un noyau, mais prévisible statistiquement à l'échelle d'un grand nombre de noyaux. Cette loi exponentielle est fondamentale et tombe très souvent en examen."
+      "content": "La radioactivité est un phénomène aléatoire à l'échelle d'un noyau, mais prévisible statistiquement à l'échelle d'un grand nombre de noyaux. Cette loi exponentielle est fondamentale et tombe très souvent en examen.",
+      "list": [
+        "La radioactivité est un phénomène aléatoire à l'échelle d'un noyau",
+        "Mais prévisible statistiquement à l'échelle d'un grand nombre de noyaux",
+        "Cette loi exponentielle est fondamentale et tombe très souvent en examen"
+      ]
     },
     {
       "id": "loi",

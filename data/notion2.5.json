@@ -1,0 +1,137 @@
+{
+  "title": "Radioactivité Générale & Transition vers la Structure Électronique",
+  "subtitle": "Des rayonnements aux premiers modèles atomiques",
+  "sections": [
+    {
+      "id": "radioactivite-notions",
+      "title": "Radioactivité - Notions Générales",
+      "content": "La radioactivité est la transformation d'un noyau atomique en un ou plusieurs noyaux d'autres éléments avec émission d'une particule (α, β, γ, RX). Découverte en 1896 par Becquerel, elle peut être naturelle ou artificielle.",
+      "subsections": [
+        {
+          "title": "Caractéristiques de la désintégration radioactive",
+          "list": [
+            "Aléatoire (lois statistiques)",
+            "Spontanée (sans intervention extérieure)",
+            "Indépendante de la combinaison chimique dont le noyau radioactif fait partie (U, UO₂ ou UF₆)",
+            "Indépendante de l'état physique de la substance (solide, liquide, ou gaz), de la température et de la pression"
+          ]
+        },
+        {
+          "title": "Les 3 types de rayonnement",
+          "content": "Les neutrinos impliqués lors de ces réactions n'apparaissent pas dans les réactions.",
+          "types": [
+            {
+              "name": "Alpha (α)",
+              "emission": "Émission d'un noyau ⁴He",
+              "exemple": "²³²₉₀Th → ²²⁸₈₈Ra + ⁴₂He",
+              "charge": "+2e",
+              "ionisant": "Très ionisant",
+              "penetration": "Peu pénétrante (feuille de papier)"
+            },
+            {
+              "name": "Bêta (β)",
+              "emission": "Émission d'une particule β⁺ ou β⁻",
+              "exemple": "¹⁴₆C → ¹⁴₇N + ⁰₋₁e",
+              "charge": "+e (positron) ou -e (électron)",
+              "ionisant": "Ionisant",
+              "penetration": "Pénétrante (feuille d'aluminium)"
+            },
+            {
+              "name": "Gamma (γ)",
+              "emission": "Émission d'un photon",
+              "exemple": "(noyau B)* → noyau B + hν",
+              "charge": "0 (non chargée)",
+              "ionisant": "Peu ionisant",
+              "penetration": "Très pénétrante (plusieurs cm de plomb)"
+            }
+          ],
+          "content2": "Souvent, on observe l'émission simultanée de plusieurs types de rayonnement.",
+          "example": "Exemple : ⁵⁹Fe est un émetteur β et γ"
+        },
+        {
+          "title": "Lois de conservation",
+          "content": "Dans toute réaction nucléaire, il y a conservation :",
+          "list": [
+            "Du nombre de masse A (nombre total de nucléons)",
+            "De la charge Z (numéro atomique)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "transition-intro",
+      "title": "Transition : Vers la Structure Électronique",
+      "content": "Sciences = perpétuelle confrontation entre prévision théorique et réalité expérimentale :",
+      "list": [
+        "Expériences : permettent d'affiner le modèle",
+        "Théorie : permet une meilleure interprétation des expériences"
+      ],
+      "content2": "3 grands points dans le développement du modèle atomique :",
+      "list2": [
+        "Découverte de la nature électrique de la matière (1900) : tubes de Crookes, électrolyse de Faraday",
+        "Découverte de l'atome = noyau entouré d'électrons (1911) : expérience de Rutherford",
+        "Découverte des lois régissant le comportement des électrons dans les atomes (1925)"
+      ]
+    },
+    {
+      "id": "nature-electrique",
+      "title": "Nature Électrique de la Matière",
+      "list": [
+        "1833 : travaux de Faraday sur l'électrolyse → relation entre matière et charge électrique",
+        "1879 : tubes de Crookes → mise en évidence expérimentale de l'électron, particule chargée",
+        "1897 : expérience de J. J. Thomson → rapport e/m, modèle de l'atome 'plum-pudding'",
+        "1907 : expérience de la goutte de Millikan → charge e et masse m de l'électron",
+        "1909 : expérience de Rutherford → modèle planétaire de l'atome"
+      ],
+      "warning": "L'atome de Rutherford devrait être instable selon l'électromagnétisme classique ! Résolu en partie par Niels Bohr."
+    },
+    {
+      "id": "aube-quantique",
+      "title": "À l'Aube de la Mécanique Quantique",
+      "content": "À la fin du 19° siècle, les scientifiques pensaient que toutes les découvertes fondamentales avaient été effectuées :",
+      "list": [
+        "Concept de la molécule (S. Cannizzaro)",
+        "Classification périodique (D. Mendeleiev)",
+        "Principe de la réaction chimique (S. Arrhenius)",
+        "Thermodynamique : équivalence chaleur/travail (J. Joule), entropie (S. Carnot)",
+        "Lois de l'optique et de l'électromagnétisme (C. Maxwell, H. Hertz)"
+      ],
+      "content2": "Les lois de la physique avaient un rapport avec la compréhension des systèmes chimiques...",
+      "content3": "... et pourtant, 2 découvertes majeures allaient être faites au début du 20° siècle :",
+      "list2": [
+        "Théorie de la relativité (A. Einstein)",
+        "Mécanique quantique"
+      ]
+    },
+    {
+      "id": "effet-photoelectrique",
+      "title": "L'Effet Photoélectrique (Einstein, 1905)",
+      "content": "Expérience de Hertz en 1887 : une radiation électromagnétique arrache des électrons d'une surface métallique.",
+      "observations": [
+        "i = 0 si ν < ν₀, quelle que soit l'intensité I",
+        "Si ν > ν₀, l'énergie cinétique Ec varie linéairement avec ν",
+        "Pour ν fixée, si on modifie I, le courant i change mais Ec ne varie pas"
+      ],
+      "formula": "h·ν = h·ν₀ + ½·m·v²",
+      "interpretation": "Einstein explique ce phénomène en proposant que la lumière est quantifiée en photons. L'énergie d'un photon : E = h·ν",
+      "warning": "Ce résultat contredit la théorie ondulatoire classique !"
+    },
+    {
+      "id": "spectres",
+      "title": "Spectres d'Émission et d'Absorption",
+      "content": "Étude de la lumière émise (spectre d'émission) ou absorbée (spectre d'absorption) : seules certaines fréquences sont observées → seules certaines quantités d'énergie sont échangées par les électrons des atomes ou des molécules.",
+      "formula": "1/λ = R_H · (1/n² - 1/p²)",
+      "list": [
+        "n = 1 : série de Lyman (UV)",
+        "n = 2 : série de Balmer (visible)",
+        "n = 3 : série de Paschen (IR)",
+        "n = 4 : série de Brackett (IR)",
+        "n = 5 : série de Pfund (IR)",
+        "p > n : entier",
+        "R_H = 109 677 cm⁻¹ : constante de Rydberg"
+      ],
+      "conclusion": "La longueur d'onde du photon ne peut pas être quelconque mais doit avoir des valeurs bien définies → l'énergie de l'électron est quantifiée. |ΔE| = E_photon = h·ν = h·c/λ",
+      "content2": "Bohr imagina un modèle simple de l'atome d'hydrogène afin d'expliquer ces observations. → Voir Notion 3"
+    }
+  ]
+}

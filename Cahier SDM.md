@@ -1,6 +1,6 @@
 # Cahier SDM - Structure de la Matière
 
-*MAJ : 26-09-26*
+*MAJ : 28-09-26*
 
 ## Architecture du projet
 /
@@ -63,6 +63,7 @@ Nous en sommes au 6ème cours de 1h30 soit : 47% du total de cours sur le semest
 ### Cours traités
 - [x] 09-09-26 : Constituants de la matière & Radioactivité
 - [x] 10-06-26 : Loi de désintégration radioactive
+- [x] 10-09-26 (pages 8-13) + 14-09-26 (pages 19-24) : Radioactivité générale & Transition
 - [x] 14-06-26 : Structure électronique quantique (Bohr, de Broglie, Heisenberg)
 - [x] 16-09-26 : Équation de Schrödinger & Orbitales
 - [x] 21-09-26 : Configuration électronique (Pauli, Klechkowski, Hund)
