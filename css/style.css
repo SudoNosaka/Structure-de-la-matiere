@@ -726,3 +726,26 @@ footer {
     .main-nav { gap: 1rem; }
     .hero h2 { font-size: 1.5rem; }
 }
+
+/* ============================================
+   TABLES RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+    .table-custom {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .table-custom::after {
+        content: "← Faites défiler →";
+        display: block;
+        text-align: center;
+        padding: 0.5rem;
+        font-size: 0.8rem;
+        color: var(--text-secondary);
+        font-style: italic;
+    }
+}
