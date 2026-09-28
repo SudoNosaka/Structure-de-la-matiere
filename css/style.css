@@ -749,3 +749,139 @@ footer {
         font-style: italic;
     }
 }
+
+/* ============================================
+   TEXTES À TROUS - AMÉLIORATIONS
+   ============================================ */
+
+.fill-blank {
+    min-width: 150px;
+    max-width: 400px;
+    width: auto;
+    padding: 0.5rem 0.8rem;
+    font-size: 1rem;
+    margin: 0.3rem 0.5rem;
+}
+
+.answer-feedback {
+    display: block;
+    margin-top: 0.5rem;
+    padding: 0.6rem 1rem;
+    background: #FEF3C7;
+    border-left: 4px solid #F59E0B;
+    border-radius: 6px;
+    color: #92400E;
+    font-size: 0.9rem;
+    animation: fadeIn 0.3s ease-out;
+}
+
+[data-theme="dark"] .answer-feedback {
+    background: #78350F;
+    color: #FDE68A;
+}
+
+.text-block {
+    line-height: 2.5;
+}
+
+.fill-blank:focus {
+    min-width: 200px;
+    transition: min-width 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .fill-blank {
+        min-width: 120px;
+        max-width: 100%;
+        font-size: 0.9rem;
+    }
+    
+    .fill-blank:focus {
+        min-width: 150px;
+    }
+}
+
+/* ============================================
+   TEXTES À TROUS - CORRECTIONS
+   ============================================ */
+
+.blank-wrapper {
+    display: inline-block;
+    position: relative;
+    margin: 0 0.3rem;
+    vertical-align: baseline;
+}
+
+.fill-blank {
+    min-width: 150px;
+    max-width: 400px;
+    width: auto;
+    padding: 0.5rem 0.8rem;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.fill-blank:focus {
+    min-width: 200px;
+    transition: min-width 0.3s ease;
+}
+
+.answer-feedback {
+    display: block;
+    margin-top: 0.5rem;
+    padding: 0.6rem 1rem;
+    background: #FEF3C7;
+    border-left: 4px solid #F59E0B;
+    border-radius: 6px;
+    color: #92400E;
+    font-size: 0.9rem;
+    animation: fadeIn 0.3s ease-out;
+    position: relative;
+    z-index: 10;
+}
+
+[data-theme="dark"] .answer-feedback {
+    background: #78350F;
+    color: #FDE68A;
+}
+
+.correct-answer {
+    font-family: 'Courier New', monospace;
+    font-weight: 600;
+    color: #92400E;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    margin-left: 0.5rem;
+}
+
+[data-theme="dark"] .correct-answer {
+    color: #FDE68A;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.text-block {
+    line-height: 2.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .fill-blank {
+        min-width: 120px;
+        max-width: 100%;
+        font-size: 0.9rem;
+    }
+    
+    .fill-blank:focus {
+        min-width: 150px;
+    }
+    
+    .blank-wrapper {
+        display: block;
+        margin: 0.5rem 0;
+    }
+    
+    .answer-feedback {
+        font-size: 0.85rem;
+    }
+}
