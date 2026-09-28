@@ -41,12 +41,6 @@ function renderNotionData(notion, notionKey) {
     const contentDiv = document.getElementById('content');
     let html = '';
     
-    // Boutons globaux
-    html += `<div class="accordion-controls">
-        <button class="accordion-btn" onclick="expandAll()">Tout déplier</button>
-        <button class="accordion-btn" onclick="collapseAll()">Tout plier</button>
-    </div>`;
-    
     if (notion.sections && Array.isArray(notion.sections)) {
         notion.sections.forEach(section => {
             html += renderSection(section);
@@ -54,201 +48,114 @@ function renderNotionData(notion, notionKey) {
     }
     
     contentDiv.innerHTML = html;
-    
-    // Initialiser les accordéons APRès insertion du HTML
-    if (typeof initAccordions === 'function') {
-        initAccordions();
-    }
     addSoundEffects();
 }
 
 function renderSection(section) {
     if (!section) return '';
+    let html = `<section class="content-section fade-in">`;
     
-    let html = `<div class="collapsible" data-collapsed="false">
-        <div class="collapsible-header">
-            <h2>${section.title || ''}</h2>
-            <span class="collapsible-icon">▼</span>
-        </div>
-        <div class="collapsible-content">`;
-    
+    if (section.title) html += `<h2>${section.title}</h2>`;
     if (section.content) html += `<p>${section.content}</p>`;
     if (section.formulation) html += `<p><em>${section.formulation}</em></p>`;
     if (section.interpretation) html += `<p><em>${section.interpretation}</em></p>`;
     
-    // Formules
-    if (section.formula) html += renderFormulaCollapsible(section.formula);
-    if (section.formula2) html += renderFormulaCollapsible(section.formula2);
-    if (section.equation) html += renderFormulaCollapsible(section.equation);
-    if (section.solution) html += renderFormulaCollapsible(section.solution);
+    if (section.formula) html += `<div class="formula">${section.formula}</div>`;
+    if (section.formula2) html += `<div class="formula">${section.formula2}</div>`;
+    if (section.equation) html += `<div class="formula">${section.equation}</div>`;
+    if (section.solution) html += `<div class="formula">${section.solution}</div>`;
     if (section.formulas && Array.isArray(section.formulas)) {
-        section.formulas.forEach(f => html += renderFormulaCollapsible(f));
+        section.formulas.forEach(f => html += `<div class="formula">${f}</div>`);
     }
     
-    // Listes
     if (section.list && Array.isArray(section.list)) {
         html += `<ul>${section.list.map(i => `<li>${i}</li>`).join('')}</ul>`;
     }
     if (section.observations && Array.isArray(section.observations)) {
-        html += renderCollapsibleBlock('Observations', `<ul>${section.observations.map(i => `<li>${i}</li>`).join('')}</ul>`);
+        html += `<ul>${section.observations.map(i => `<li>${i}</li>`).join('')}</ul>`;
     }
     if (section.applications && Array.isArray(section.applications)) {
-        html += renderCollapsibleBlock('Applications', `<ul>${section.applications.map(i => `<li>${i}</li>`).join('')}</ul>`);
+        html += `<ul>${section.applications.map(i => `<li>${i}</li>`).join('')}</ul>`;
     }
     if (section.method && Array.isArray(section.method)) {
-        html += renderCollapsibleBlock('Méthode', `<ol>${section.method.map(i => `<li>${i}</li>`).join('')}</ol>`);
+        html += `<ol>${section.method.map(i => `<li>${i}</li>`).join('')}</ol>`;
     }
     if (section.structure && Array.isArray(section.structure)) {
         html += `<ul>${section.structure.map(i => `<li>${i}</li>`).join('')}</ul>`;
     }
     
-    // Exemples
-    if (section.example) {
-        html += renderCollapsibleBlock('Exemple', section.example, 'example-collapsible');
-    }
+    if (section.example) html += `<div class="example"><strong>Exemple :</strong> ${section.example}</div>`;
     if (section.examples && Array.isArray(section.examples) && section.examples.length > 0) {
-        html += renderTableCollapsible('Exemples', section.examples);
+        html += renderTableFromObjects(section.examples);
     }
-    
-    // Tableaux
     if (section.table && Array.isArray(section.table) && section.table.length > 0) {
-        html += renderTableCollapsible('Tableau', section.table);
+        html += renderTableFromObjects(section.table);
     }
     if (section.types && Array.isArray(section.types) && section.types.length > 0) {
-        html += renderTableCollapsible('Types', section.types);
+        html += renderTableFromObjects(section.types);
     }
     if (section.calculations && Array.isArray(section.calculations) && section.calculations.length > 0) {
-        html += renderTableCollapsible('Calculs', section.calculations);
+        html += renderTableFromObjects(section.calculations);
     }
     
-    // Avertissements et conséquences
-    if (section.warning) {
-        html += `<div class="collapsible warning-collapsible" data-collapsed="true">
-            <div class="collapsible-header">
-                <h4>⚠️ Attention</h4>
-                <span class="collapsible-icon">▼</span>
-            </div>
-            <div class="collapsible-content">
-                <p>${section.warning}</p>
-            </div>
-        </div>`;
-    }
-    if (section.consequence) {
-        html += renderCollapsibleBlock('Conséquence', section.consequence);
-    }
+    if (section.warning) html += `<div class="warning">${section.warning}</div>`;
+    if (section.consequence) html += `<div class="consequence"><strong>Conséquence :</strong> ${section.consequence}</div>`;
+    if (section.total) html += `<div class="formula"><strong>Total :</strong> ${section.total}</div>`;
     
-    // Total
-    if (section.total) html += renderFormulaCollapsible('Total : ' + section.total);
-    
-    // Sous-sections (accordéons imbriqués)
     if (section.subsections && Array.isArray(section.subsections)) {
         section.subsections.forEach(sub => {
             if (!sub) return;
-            html += `<div class="collapsible" data-collapsed="true">
-                <div class="collapsible-header">
-                    <h3>${sub.title || ''}</h3>
-                    <span class="collapsible-icon">▼</span>
-                </div>
-                <div class="collapsible-content">`;
-            
+            html += `<h3>${sub.title || ''}</h3>`;
             if (sub.content) html += `<p>${sub.content}</p>`;
             if (sub.content2) html += `<p>${sub.content2}</p>`;
             if (sub.formulation) html += `<p><em>${sub.formulation}</em></p>`;
             if (sub.interpretation) html += `<p><em>${sub.interpretation}</em></p>`;
-            if (sub.formula) html += renderFormulaCollapsible(sub.formula);
-            if (sub.formula2) html += renderFormulaCollapsible(sub.formula2);
+            if (sub.formula) html += `<div class="formula">${sub.formula}</div>`;
+            if (sub.formula2) html += `<div class="formula">${sub.formula2}</div>`;
             if (sub.formulas && Array.isArray(sub.formulas)) {
-                sub.formulas.forEach(f => html += renderFormulaCollapsible(f));
+                sub.formulas.forEach(f => html += `<div class="formula">${f}</div>`);
             }
             if (sub.list && Array.isArray(sub.list)) {
                 html += `<ul>${sub.list.map(i => `<li>${i}</li>`).join('')}</ul>`;
             }
             if (sub.table && Array.isArray(sub.table) && sub.table.length > 0) {
-                html += renderTableCollapsible('Tableau', sub.table);
+                html += renderTableFromObjects(sub.table);
             }
             if (sub.calculations && Array.isArray(sub.calculations) && sub.calculations.length > 0) {
-                html += renderTableCollapsible('Calculs', sub.calculations);
+                html += renderTableFromObjects(sub.calculations);
             }
-            if (sub.warning) {
-                html += `<div class="collapsible warning-collapsible" data-collapsed="true">
-                    <div class="collapsible-header">
-                        <h4>⚠️ Attention</h4>
-                        <span class="collapsible-icon">▼</span>
-                    </div>
-                    <div class="collapsible-content">
-                        <p>${sub.warning}</p>
-                    </div>
-                </div>`;
-            }
-            if (sub.consequence) {
-                html += renderCollapsibleBlock('Conséquence', sub.consequence);
-            }
-            
-            html += `</div></div>`;
+            if (sub.warning) html += `<div class="warning">${sub.warning}</div>`;
+            if (sub.consequence) html += `<div class="consequence"><strong>Conséquence :</strong> ${sub.consequence}</div>`;
         });
     }
     
-    html += `</div></div>`;
+    html += `</section>`;
     return html;
 }
 
-// Fonctions utilitaires pour les accordéons
-function renderFormulaCollapsible(formula) {
-    return `<div class="collapsible formula-collapsible" data-collapsed="true">
-        <div class="collapsible-header">
-            <h4>📐 Formule</h4>
-            <span class="collapsible-icon">▼</span>
-        </div>
-        <div class="collapsible-content">
-            <div class="formula">${formula}</div>
-        </div>
-    </div>`;
-}
-
-function renderCollapsibleBlock(title, content, extraClass = '') {
-    return `<div class="collapsible ${extraClass}" data-collapsed="true">
-        <div class="collapsible-header">
-            <h4>${title}</h4>
-            <span class="collapsible-icon">▼</span>
-        </div>
-        <div class="collapsible-content">
-            ${typeof content === 'string' ? `<p>${content}</p>` : content}
-        </div>
-    </div>`;
-}
-
-function renderTableCollapsible(title, arr) {
+function renderTableFromObjects(arr) {
     if (!arr || !Array.isArray(arr) || arr.length === 0) return '';
     
     try {
         const keys = Object.keys(arr[0]);
-        let tableHtml = `<table class="table-custom"><tr>`;
+        let html = `<table class="table-custom"><tr>`;
         keys.forEach(k => {
-            tableHtml += `<th>${k.replace(/_/g, ' ')}</th>`;
+            html += `<th>${k.replace(/_/g, ' ')}</th>`;
         });
-        tableHtml += `</tr>`;
+        html += `</tr>`;
         arr.forEach(row => {
-            tableHtml += `<tr>`;
+            html += `<tr>`;
             keys.forEach(k => {
                 const val = row[k] !== undefined && row[k] !== null ? row[k] : '';
-                tableHtml += `<td>${val}</td>`;
+                html += `<td>${val}</td>`;
             });
-            tableHtml += `</tr>`;
+            html += `</tr>`;
         });
-        tableHtml += `</table>`;
-        
-        return `<div class="collapsible table-collapsible" data-collapsed="true">
-            <div class="collapsible-header">
-                <h4>📊 ${title}</h4>
-                <span class="collapsible-icon">▼</span>
-            </div>
-            <div class="collapsible-content">
-                ${tableHtml}
-            </div>
-        </div>`;
+        html += `</table>`;
+        return html;
     } catch (e) {
-        console.error('Erreur tableau:', e);
-        return '<p><em>Erreur d\'affichage</em></p>';
+        console.error('Erreur tableau:', e, arr);
+        return '<p><em>Erreur d\'affichage du tableau</em></p>';
     }
 }
 

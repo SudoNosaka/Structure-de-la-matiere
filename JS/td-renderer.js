@@ -59,11 +59,7 @@ function showError(e) {
     document.getElementById('td-title').textContent = '⚠️ Erreur de chargement';
     document.getElementById('exercices-container').innerHTML = `
         <div class="warning">
-            <p>Impossible de charger le TD. Utilise un serveur local :</p>
-            <ul>
-                <li><strong>VS Code :</strong> Extension "Live Server"</li>
-                <li><strong>Python :</strong> <code>python -m http.server 8000</code></li>
-            </ul>
+            <p>Impossible de charger le TD. Utilise un serveur local.</p>
         </div>
     `;
 }

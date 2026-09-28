@@ -26,48 +26,19 @@ function initTextesATrous(data) {
 function renderContent() {
     const container = document.getElementById('content');
     let html = '';
-    
-    // Boutons globaux
-    html += `<div class="accordion-controls">
-        <button class="accordion-btn" onclick="expandAll()">Tout déplier</button>
-        <button class="accordion-btn" onclick="collapseAll()">Tout plier</button>
-    </div>`;
-    
     textesData.sections.forEach(section => {
-        html += `<div class="collapsible" data-collapsed="false">
-            <div class="collapsible-header">
-                <h2>${section.title}</h2>
-                <span class="collapsible-icon">▼</span>
-            </div>
-            <div class="collapsible-content">`;
-        
+        html += `<section class="content-section fade-in"><h2>${section.title}</h2>`;
         section.texts.forEach(t => {
             const content = t.content.replace(/\{([^}]+)\}/g, (match, answer) => {
                 return `<input type="text" class="fill-blank" data-answer="${answer}" placeholder="?">`;
             });
             html += `<div class="text-block"><p>${content}</p>`;
-            if (t.hint) {
-                html += `<div class="collapsible" data-collapsed="true">
-                    <div class="collapsible-header">
-                        <h4>💡 Indice</h4>
-                        <span class="collapsible-icon">▼</span>
-                    </div>
-                    <div class="collapsible-content">
-                        <p class="hint">${t.hint}</p>
-                    </div>
-                </div>`;
-            }
+            if (t.hint) html += `<p class="hint">💡 ${t.hint}</p>`;
             html += `</div>`;
         });
-        
-        html += `</div></div>`;
+        html += `</section>`;
     });
-    
     container.innerHTML = html;
-    
-    if (typeof initAccordions === 'function') {
-        initAccordions();
-    }
 }
 
 function checkAll() {

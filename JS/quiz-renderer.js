@@ -60,41 +60,17 @@ function startTimer() {
 function renderQuiz() {
     const container = document.getElementById('quiz-container');
     let html = '';
-    
-    // Boutons globaux
-    html += `<div class="accordion-controls">
-        <button class="accordion-btn" onclick="expandAll()">Tout déplier</button>
-        <button class="accordion-btn" onclick="collapseAll()">Tout plier</button>
-    </div>`;
-    
     currentQuiz.questions.forEach((q, i) => {
-        html += `<div class="collapsible" data-collapsed="false">
-            <div class="collapsible-header">
-                <h3>Question ${i+1}</h3>
-                <span class="collapsible-icon">▼</span>
-            </div>
-            <div class="collapsible-content">
-                <p><strong>${q.question}</strong></p>`;
+        html += `<section class="content-section fade-in">
+            <h3>Question ${i+1}</h3>
+            <p>${q.question}</p>`;
         q.options.forEach((opt, j) => {
             html += `<div class="quiz-option" onclick="selectOption(${i}, ${j})" id="q${i}-opt${j}">${opt}</div>`;
         });
-        html += `<div class="collapsible" data-collapsed="true">
-            <div class="collapsible-header">
-                <h4>💡 Explication</h4>
-                <span class="collapsible-icon">▼</span>
-            </div>
-            <div class="collapsible-content">
-                <p>${q.explanation}</p>
-            </div>
-        </div>`;
-        html += `</div></div>`;
+        html += `<div class="explanation" id="exp${i}"><strong>Explication :</strong> ${q.explanation}</div></section>`;
     });
     html += `<button class="btn-primary" onclick="submitQuiz()">Valider mes réponses</button>`;
     container.innerHTML = html;
-    
-    if (typeof initAccordions === 'function') {
-        initAccordions();
-    }
 }
 
 function selectOption(qi, oi) {
@@ -114,6 +90,7 @@ function submitQuiz() {
         if (userAnswers[i] !== -1 && userAnswers[i] !== q.correct) {
             document.getElementById(`q${i}-opt${userAnswers[i]}`).classList.add('incorrect');
         }
+        document.getElementById(`exp${i}`).classList.add('show');
         if (userAnswers[i] === q.correct) score++;
     });
     
