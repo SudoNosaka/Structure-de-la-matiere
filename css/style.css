@@ -103,49 +103,70 @@ header h1 {
 }
 
 /* ============================================
-   LAYOUT
+   LAYOUT - RATIO 9:16
    ============================================ */
 
 .container {
-    max-width: 1200px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 2rem;
+    aspect-ratio: 9 / 16;
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent) var(--bg-tertiary);
 }
 
-.hero {
-    text-align: center;
-    padding: 3rem 2rem;
-    background: var(--bg-secondary);
-    border-radius: 12px;
-    margin-bottom: 2rem;
+.container::-webkit-scrollbar {
+    width: 8px;
 }
 
-.hero h2 {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
+.container::-webkit-scrollbar-track {
+    background: var(--bg-tertiary);
+    border-radius: 4px;
 }
 
-.hero p {
-    color: var(--text-secondary);
-    font-size: 1.1rem;
+.container::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 4px;
 }
 
-.section-title {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: var(--text-primary);
-    border-bottom: 2px solid var(--border);
-    padding-bottom: 0.5rem;
+.container::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-hover);
 }
 
-.sub-title {
-    color: var(--accent);
-    margin: 2rem 0 0.5rem;
-    font-size: 1.2rem;
+/* Pour les écrans larges, centrer le contenu */
+@media (min-width: 1200px) {
+    .container {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        box-shadow: 0 4px 20px var(--shadow);
+        border-radius: 12px;
+        background: var(--bg-primary);
+    }
+}
+
+/* Pour les écrans moyens, adapter */
+@media (max-width: 1199px) and (min-width: 769px) {
+    .container {
+        max-width: 85%;
+        aspect-ratio: auto;
+        max-height: none;
+    }
+}
+
+/* Pour mobile, plein écran */
+@media (max-width: 768px) {
+    .container {
+        max-width: 100%;
+        aspect-ratio: auto;
+        max-height: none;
+        padding: 1rem;
+    }
 }
 
 /* ============================================
-   CARROUSEL - CLASSES UNIQUES SANS CONFLIT
+   CARROUSEL - SCROLL-SNAP (cartes réduites)
    ============================================ */
 
 .carousel-wrapper {
@@ -162,8 +183,8 @@ header h1 {
     flex-wrap: nowrap;
     overflow-x: auto;
     overflow-y: hidden;
-    gap: 1rem;
-    padding: 1rem 0.5rem;
+    gap: 0.75rem;
+    padding: 0.75rem 0.5rem;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
@@ -185,16 +206,17 @@ header h1 {
     border-radius: 3px;
 }
 
+/* CARTES RÉDUITES : 180x100px au lieu de 220x120px */
 .carousel-card {
-    flex: 0 0 220px;
-    width: 220px;
-    min-width: 220px;
-    max-width: 220px;
-    height: 120px;
+    flex: 0 0 180px;
+    width: 180px;
+    min-width: 180px;
+    max-width: 180px;
+    height: 100px;
     background: var(--bg-secondary);
     border: 2px solid var(--border);
-    border-radius: 12px;
-    padding: 1.25rem;
+    border-radius: 10px;
+    padding: 0.9rem;
     text-decoration: none;
     color: var(--text-primary);
     scroll-snap-align: start;
@@ -205,15 +227,15 @@ header h1 {
 }
 
 .carousel-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 8px 20px var(--shadow);
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px var(--shadow);
     border-color: var(--accent);
 }
 
 .carousel-card h3 {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
     color: var(--accent);
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.3rem;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -221,19 +243,19 @@ header h1 {
 
 .carousel-card p {
     color: var(--text-secondary);
-    font-size: 0.85rem;
-    line-height: 1.4;
+    font-size: 0.75rem;
+    line-height: 1.3;
 }
 
 .carousel-arrow {
     flex-shrink: 0;
-    width: 42px;
-    height: 42px;
+    width: 38px;
+    height: 38px;
     border: 2px solid var(--border);
     border-radius: 50%;
     background: var(--bg-secondary);
     color: var(--accent);
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: bold;
     cursor: pointer;
     transition: all 0.2s;
@@ -265,6 +287,38 @@ header h1 {
     color: var(--accent);
     border-color: var(--border);
     transform: none;
+}
+
+.carousel-subtitle {
+    color: var(--accent);
+    margin: 2rem 0 0.5rem;
+    font-size: 1.2rem;
+}
+
+/* Responsive mobile */
+@media (max-width: 768px) {
+    .carousel-card {
+        flex: 0 0 150px;
+        width: 150px;
+        min-width: 150px;
+        max-width: 150px;
+        height: 85px;
+        padding: 0.7rem;
+    }
+    
+    .carousel-card h3 {
+        font-size: 0.85rem;
+    }
+    
+    .carousel-card p {
+        font-size: 0.7rem;
+    }
+    
+    .carousel-arrow {
+        width: 32px;
+        height: 32px;
+        font-size: 1.2rem;
+    }
 }
 
 /* ============================================
@@ -1040,6 +1094,280 @@ body:has(.vertical-carousel) footer {
     font-size: 0.85rem;
 }
 
+/* ============================================
+   ADAPTATION ZONE DE SÉCURITÉ 9:16
+   ============================================ */
+
+/* Container principal - zone 9:16 */
+.container {
+    max-width: 900px;
+    width: min(900px, 56.25vh); /* ratio 9:16 */
+    margin: 0 auto;
+    padding: 1.5rem;
+    min-height: calc(100vh - 140px);
+}
+
+/* Hero section plus compact */
+.hero {
+    padding: 2rem 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero h2 {
+    font-size: 1.6rem;
+}
+
+.hero p {
+    font-size: 1rem;
+}
+
+/* Sections de contenu plus compactes */
+.content-section {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.content-section h2 {
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+    padding-bottom: 0.4rem;
+}
+
+.content-section h3 {
+    font-size: 1.15rem;
+    margin: 1.2rem 0 0.8rem;
+}
+
+.content-section p {
+    margin-bottom: 0.8rem;
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+.content-section ul, 
+.content-section ol {
+    margin: 0.8rem 0;
+    padding-left: 1.5rem;
+}
+
+.content-section li {
+    margin-bottom: 0.4rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Formules plus compactes */
+.formula {
+    padding: 0.7rem 1rem;
+    margin: 0.8rem 0;
+    font-size: 0.95rem;
+}
+
+/* Exemples et warnings */
+.example {
+    padding: 0.8rem;
+    margin: 0.8rem 0;
+    font-size: 0.9rem;
+}
+
+.warning {
+    padding: 0.8rem;
+    margin: 0.8rem 0;
+    font-size: 0.9rem;
+}
+
+.consequence {
+    padding: 0.8rem;
+    margin: 0.8rem 0;
+    font-size: 0.9rem;
+}
+
+/* Tableaux adaptés */
+.table-custom {
+    margin: 1rem 0;
+    font-size: 0.85rem;
+}
+
+.table-custom th {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.85rem;
+}
+
+.table-custom td {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.85rem;
+}
+
+/* Navigation entre notions */
+.navigation-section {
+    margin: 2rem 0;
+    gap: 0.8rem;
+}
+
+.nav-btn {
+    padding: 0.8rem 1rem;
+    font-size: 0.9rem;
+}
+
+/* Quiz */
+.quiz-option {
+    padding: 0.8rem;
+    margin: 0.4rem 0;
+    font-size: 0.9rem;
+}
+
+.explanation {
+    padding: 0.8rem;
+    margin-top: 0.8rem;
+    font-size: 0.9rem;
+}
+
+.score {
+    font-size: 2.5rem;
+    margin: 0.8rem 0;
+}
+
+/* Textes à trous */
+.fill-blank {
+    min-width: 120px;
+    max-width: 300px;
+    padding: 0.4rem 0.6rem;
+    font-size: 0.9rem;
+    margin: 0.2rem 0.4rem;
+}
+
+.text-block {
+    padding: 0.8rem;
+    margin: 0.8rem 0;
+    line-height: 2;
+    font-size: 0.9rem;
+}
+
+.hint {
+    padding: 0.6rem;
+    margin-top: 0.4rem;
+    font-size: 0.85rem;
+}
+
+/* TD */
+.enonce {
+    padding: 0.8rem;
+    margin: 0.8rem 0;
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+.solution {
+    padding: 0.8rem;
+    margin-top: 0.8rem;
+    font-size: 0.9rem;
+}
+
+/* Boutons */
+.btn-primary,
+.btn-secondary {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.9rem;
+}
+
+/* Settings */
+.setting-card {
+    padding: 1.2rem;
+    margin-bottom: 0.8rem;
+}
+
+.setting-info h3 {
+    font-size: 1rem;
+}
+
+.setting-info p {
+    font-size: 0.85rem;
+}
+
+.toggle-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+}
+
+/* Header compact */
+header {
+    padding: 1rem 1.5rem;
+}
+
+header h1 {
+    font-size: 1.5rem;
+}
+
+.subtitle {
+    font-size: 0.85rem;
+}
+
+.main-nav {
+    gap: 1.5rem;
+}
+
+.nav-link {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+}
+
+/* Footer compact */
+footer {
+    padding: 1rem;
+    margin-top: 2rem;
+    font-size: 0.85rem;
+}
+
+/* Timer quiz */
+.timer {
+    top: 70px;
+    right: 15px;
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+}
+
+/* Responsive pour zone 9:16 */
+@media (max-width: 768px) {
+    .container {
+        max-width: 100%;
+        width: 100%;
+        padding: 1rem;
+    }
+    
+    .content-section {
+        padding: 1.2rem;
+    }
+    
+    .content-section h2 {
+        font-size: 1.3rem;
+    }
+    
+    .content-section h3 {
+        font-size: 1.05rem;
+    }
+    
+    .formula {
+        font-size: 0.85rem;
+        padding: 0.6rem 0.8rem;
+    }
+    
+    .table-custom {
+        font-size: 0.8rem;
+    }
+    
+    .table-custom th,
+    .table-custom td {
+        padding: 0.5rem 0.6rem;
+    }
+}
+
+/* Pour les très grands écrans, limiter la largeur */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 900px;
+        width: 900px;
+    }
+}
 /* ============================================
    BOUTONS & INDICATEUR
    ============================================ */

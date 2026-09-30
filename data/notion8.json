@@ -1,0 +1,159 @@
+{
+  "title": "Géométrie Moléculaire et VSEPR",
+  "subtitle": "Prédire la forme des molécules",
+  "sections": [
+    {
+      "id": "intro",
+      "title": "Introduction",
+      "content": "La géométrie d'une molécule influence ses propriétés physiques et chimiques (polarité, réactivité, point d'ébullition...). La théorie VSEPR permet de prédire cette géométrie.",
+      "list": [
+        "VSEPR = Valence Shell Electron Pair Repulsion",
+        "Principe : les doublets d'électrons (liants et non-liants) se repoussent et s'arrangent pour minimiser ces répulsions",
+        "Ordre de répulsion : doublet non-liant > doublet liant"
+      ]
+    },
+    {
+      "id": "theorie-vsepr",
+      "title": "Théorie VSEPR",
+      "content": "La théorie VSEPR permet de prédire la géométrie d'une molécule à partir de sa structure de Lewis.",
+      "subsections": [
+        {
+          "title": "Notation AXₘEₙ",
+          "content": "A = atome central | X = atome lié | E = doublet non-liant",
+          "list": [
+            "m = nombre d'atomes liés à A",
+            "n = nombre de doublets non-liants sur A",
+            "Nombre stérique = m + n"
+          ]
+        },
+        {
+          "title": "Méthode de prédiction",
+          "method": [
+            "Dessiner la structure de Lewis",
+            "Compter le nombre de doublets autour de l'atome central (liants + non-liants)",
+            "Déterminer la géométrie de base selon le nombre stérique",
+            "Ajuster la géométrie en tenant compte des doublets non-liants"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "geometries",
+      "title": "Géométries Moléculaires",
+      "subsections": [
+        {
+          "title": "Nombre stérique = 2",
+          "table": [
+            {"notation": "AX₂", "geometrie": "Linéaire", "angle": "180°", "exemple": "CO₂, BeCl₂", "hybridation": "sp"}
+          ]
+        },
+        {
+          "title": "Nombre stérique = 3",
+          "table": [
+            {"notation": "AX₃", "geometrie": "Trigonale plane", "angle": "120°", "exemple": "BF₃, SO₃", "hybridation": "sp²"},
+            {"notation": "AX₂E₁", "geometrie": "Coudée (angulaire)", "angle": "< 120°", "exemple": "SO₂, O₃", "hybridation": "sp²"}
+          ]
+        },
+        {
+          "title": "Nombre stérique = 4",
+          "table": [
+            {"notation": "AX₄", "geometrie": "Tétraédrique", "angle": "109,5°", "exemple": "CH₄, NH₄⁺", "hybridation": "sp³"},
+            {"notation": "AX₃E₁", "geometrie": "Pyramidale trigonale", "angle": "< 109,5°", "exemple": "NH₃, PCl₃", "hybridation": "sp³"},
+            {"notation": "AX₂E₂", "geometrie": "Coudée (angulaire)", "angle": "< 109,5°", "exemple": "H₂O, H₂S", "hybridation": "sp³"}
+          ]
+        },
+        {
+          "title": "Nombre stérique = 5",
+          "table": [
+            {"notation": "AX₅", "geometrie": "Bipyramidale trigonale", "angle": "90°, 120°", "exemple": "PCl₅", "hybridation": "sp³d"},
+            {"notation": "AX₄E₁", "geometrie": "Bascule (see-saw)", "angle": "< 90°, < 120°", "exemple": "SF₄", "hybridation": "sp³d"},
+            {"notation": "AX₃E₂", "geometrie": "En T", "angle": "< 90°", "exemple": "ClF₃", "hybridation": "sp³d"},
+            {"notation": "AX₂E₃", "geometrie": "Linéaire", "angle": "180°", "exemple": "XeF₂", "hybridation": "sp³d"}
+          ]
+        },
+        {
+          "title": "Nombre stérique = 6",
+          "table": [
+            {"notation": "AX₆", "geometrie": "Octaédrique", "angle": "90°", "exemple": "SF₆", "hybridation": "sp³d²"},
+            {"notation": "AX₅E₁", "geometrie": "Pyramidale à base carrée", "angle": "< 90°", "exemple": "BrF₅", "hybridation": "sp³d²"},
+            {"notation": "AX₄E₂", "geometrie": "Carrée plane", "angle": "90°", "exemple": "XeF₄", "hybridation": "sp³d²"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hybridation",
+      "title": "Hybridation des Orbitales",
+      "content": "L'hybridation explique la géométrie des molécules en combinant les orbitales atomiques.",
+      "subsections": [
+        {
+          "title": "Types d'hybridation",
+          "table": [
+            {"hybridation": "sp", "orbitales": "1s + 1p", "geometrie": "Linéaire", "angle": "180°", "exemple": "CO₂, BeCl₂"},
+            {"hybridation": "sp²", "orbitales": "1s + 2p", "geometrie": "Trigonale plane", "angle": "120°", "exemple": "BF₃, C₂H₄"},
+            {"hybridation": "sp³", "orbitales": "1s + 3p", "geometrie": "Tétraédrique", "angle": "109,5°", "exemple": "CH₄, NH₃"},
+            {"hybridation": "sp³d", "orbitales": "1s + 3p + 1d", "geometrie": "Bipyramidale trigonale", "angle": "90°, 120°", "exemple": "PCl₅"},
+            {"hybridation": "sp³d²", "orbitales": "1s + 3p + 2d", "geometrie": "Octaédrique", "angle": "90°", "exemple": "SF₆"}
+          ]
+        },
+        {
+          "title": "Relation avec le nombre stérique",
+          "list": [
+            "Nombre stérique = 2 → sp",
+            "Nombre stérique = 3 → sp²",
+            "Nombre stérique = 4 → sp³",
+            "Nombre stérique = 5 → sp³d",
+            "Nombre stérique = 6 → sp³d²"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "polarite",
+      "title": "Polarité des Molécules",
+      "content": "Une molécule est polaire si elle possède un moment dipolaire global non nul.",
+      "subsections": [
+        {
+          "title": "Conditions",
+          "list": [
+            "Présence de liaisons polaires (Δχ ≠ 0)",
+            "Géométrie asymétrique (les moments dipolaires ne s'annulent pas)"
+          ]
+        },
+        {
+          "title": "Exemples",
+          "table": [
+            {"molecule": "H₂O", "polarite": "Polaire", "raison": "Géométrie coudée, moments dipolaires ne s'annulent pas"},
+            {"molecule": "CO₂", "polarite": "Apolaire", "raison": "Géométrie linéaire, moments dipolaires s'annulent"},
+            {"molecule": "NH₃", "polarite": "Polaire", "raison": "Géométrie pyramidale, moment dipolaire non nul"},
+            {"molecule": "CH₄", "polarite": "Apolaire", "raison": "Géométrie tétraédrique symétrique"},
+            {"molecule": "CCl₄", "polarite": "Apolaire", "raison": "Géométrie tétraédrique symétrique"}
+          ]
+        },
+        {
+          "title": "Conséquences de la polarité",
+          "list": [
+            "Point d'ébullition plus élevé (interactions dipôle-dipôle)",
+            "Solubilité dans les solvants polaires (eau)",
+            "Réactivité chimique influencée"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "methodologie",
+      "title": "Méthodologie Complète",
+      "content": "Pour déterminer la géométrie d'une molécule :",
+      "method": [
+        "Écrire la structure de Lewis",
+        "Compter le nombre de doublets autour de l'atome central (liants + non-liants)",
+        "Déterminer le nombre stérique",
+        "Identifier la géométrie de base (table VSEPR)",
+        "Ajuster selon les doublets non-liants",
+        "Déterminer l'hybridation",
+        "Évaluer la polarité (symétrie + liaisons polaires)"
+      ],
+      "example": "NH₃ : 3 liaisons N-H + 1 doublet non-liant → AX₃E₁ → pyramidale trigonale → sp³ → polaire"
+    }
+  ]
+}

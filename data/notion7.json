@@ -1,0 +1,182 @@
+{
+  "title": "Liaison Chimique et Structure de Lewis",
+  "subtitle": "De la liaison covalente à la résonance",
+  "sections": [
+    {
+      "id": "intro",
+      "title": "Introduction",
+      "content": "Les atomes s'associent pour former des molécules afin d'atteindre une configuration électronique plus stable. La liaison chimique est l'interaction qui maintient les atomes ensemble dans une molécule.",
+      "list": [
+        "Liaison ionique : transfert d'électrons",
+        "Liaison covalente : partage d'électrons",
+        "Liaison métallique : nuage d'électrons délocalisés"
+      ]
+    },
+    {
+      "id": "liaison-covalente",
+      "title": "La Liaison Covalente",
+      "content": "Une liaison covalente se forme lorsque deux atomes partagent une ou plusieurs paires d'électrons.",
+      "subsections": [
+        {
+          "title": "Types de liaisons covalentes",
+          "list": [
+            "Liaison simple : 1 doublet partagé (ex: H-H)",
+            "Liaison double : 2 doublets partagés (ex: O=O)",
+            "Liaison triple : 3 doublets partagés (ex: N≡N)"
+          ]
+        },
+        {
+          "title": "Énergie de liaison",
+          "content": "L'énergie de liaison est l'énergie nécessaire pour rompre une liaison. Plus l'énergie de liaison est élevée, plus la liaison est forte.",
+          "table": [
+            {"liaison": "H-H", "energie": "436 kJ/mol"},
+            {"liaison": "O=O", "energie": "498 kJ/mol"},
+            {"liaison": "N≡N", "energie": "945 kJ/mol"},
+            {"liaison": "C-H", "energie": "413 kJ/mol"},
+            {"liaison": "C-C", "energie": "347 kJ/mol"},
+            {"liaison": "C=C", "energie": "614 kJ/mol"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "electronegativite",
+      "title": "Électronégativité et Polarité",
+      "content": "L'électronégativité (χ) mesure la capacité d'un atome à attirer les électrons dans une liaison.",
+      "subsections": [
+        {
+          "title": "Échelle de Pauling",
+          "table": [
+            {"element": "F", "electronegativite": "4,0"},
+            {"element": "O", "electronegativite": "3,5"},
+            {"element": "N", "electronegativite": "3,0"},
+            {"element": "C", "electronegativite": "2,5"},
+            {"element": "H", "electronegativite": "2,1"}
+          ]
+        },
+        {
+          "title": "Types de liaisons selon Δχ",
+          "list": [
+            "Δχ < 0,4 : liaison covalente apolaire (ex: C-H)",
+            "0,4 ≤ Δχ < 1,7 : liaison covalente polaire (ex: O-H)",
+            "Δχ ≥ 1,7 : liaison ionique (ex: Na-Cl)"
+          ]
+        },
+        {
+          "title": "Moment dipolaire",
+          "formula": "μ = q × d",
+          "content": "Le moment dipolaire mesure la polarité d'une liaison. Il est dirigé de l'atome le moins électronégatif vers le plus électronégatif.",
+          "list": [
+            "Unité : Debye (D) ou C·m",
+            "1 D = 3,336 × 10⁻³⁰ C·m",
+            "μ = 0 : liaison apolaire",
+            "μ > 0 : liaison polaire"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "structure-lewis",
+      "title": "Structure de Lewis",
+      "content": "La structure de Lewis représente les électrons de valence et les liaisons dans une molécule.",
+      "subsections": [
+        {
+          "title": "Règles de construction",
+          "method": [
+            "Compter le nombre total d'électrons de valence",
+            "Identifier l'atome central (généralement le moins électronégatif, sauf H)",
+            "Placer les atomes autour de l'atome central et les relier par des liaisons simples",
+            "Compléter les octets des atomes externes avec des doublets non-liants",
+            "Placer les électrons restants sur l'atome central",
+            "Si l'atome central n'a pas son octet, former des liaisons multiples (doublets partageant des doublets non-liants des atomes externes)"
+          ]
+        },
+        {
+          "title": "Règle de l'octet",
+          "content": "Les atomes tendent à former des liaisons pour atteindre 8 électrons de valence (configuration du gaz noble).",
+          "warning": "Exceptions : H (2 e⁻), Be (4 e⁻), B (6 e⁻), et les éléments de la période 3+ qui peuvent étendre leur octet (P, S, Cl...)"
+        },
+        {
+          "title": "Charge formelle",
+          "formula": "CF = (nb e⁻ valence) - (nb e⁻ non-liants) - (nb liaisons)",
+          "content": "La charge formelle permet d'évaluer la stabilité d'une structure de Lewis.",
+          "list": [
+            "CF = 0 : structure idéale",
+            "CF minimale : structure préférée",
+            "Les charges négatives doivent être sur les atomes les plus électronégatifs"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exemples",
+      "title": "Exemples de Structures de Lewis",
+      "table": [
+        {"molecule": "H₂O", "electrons_valence": "8", "structure": "O central avec 2 liaisons O-H et 2 doublets non-liants"},
+        {"molecule": "CO₂", "electrons_valence": "16", "structure": "C central avec 2 doubles liaisons C=O"},
+        {"molecule": "NH₃", "electrons_valence": "8", "structure": "N central avec 3 liaisons N-H et 1 doublet non-liant"},
+        {"molecule": "CH₄", "electrons_valence": "8", "structure": "C central avec 4 liaisons C-H"},
+        {"molecule": "SO₄²⁻", "electrons_valence": "32", "structure": "S central avec 4 liaisons S-O (2 doubles, 2 simples)"}
+      ]
+    },
+    {
+      "id": "resonance",
+      "title": "Résonance",
+      "content": "Certaines molécules ne peuvent pas être représentées par une seule structure de Lewis. On utilise alors plusieurs structures de résonance.",
+      "subsections": [
+        {
+          "title": "Définition",
+          "content": "La résonance décrit une molécule comme un hybride de plusieurs structures de Lewis (formes limites de résonance).",
+          "example": "O₃ (ozone) : 2 structures de résonance avec une double liaison alternée"
+        },
+        {
+          "title": "Règles",
+          "list": [
+            "Les atomes ne bougent pas, seuls les électrons se déplacent",
+            "Le nombre total d'électrons doit être conservé",
+            "Les structures doivent avoir la même énergie (ou proche)",
+            "L'hybride de résonance est plus stable que chaque forme limite"
+          ]
+        },
+        {
+          "title": "Exemples",
+          "table": [
+            {"molecule": "Benzène C₆H₆", "description": "2 structures avec alternance de doubles liaisons"},
+            {"molecule": "Carbonate CO₃²⁻", "description": "3 structures équivalentes"},
+            {"molecule": "Nitrate NO₃⁻", "description": "3 structures équivalentes"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exceptions-octet",
+      "title": "Exceptions à la Règle de l'Octet",
+      "subsections": [
+        {
+          "title": "Déficit en électrons",
+          "content": "Certains atomes peuvent être stables avec moins de 8 électrons.",
+          "table": [
+            {"element": "H, He", "electrons": "2 (duet)"},
+            {"element": "Be", "electrons": "4"},
+            {"element": "B", "electrons": "6"}
+          ],
+          "example": "BF₃ : B a seulement 6 électrons"
+        },
+        {
+          "title": "Octet étendu",
+          "content": "Les éléments de la période 3 et au-delà peuvent avoir plus de 8 électrons (orbitales d disponibles).",
+          "table": [
+            {"molecule": "PCl₅", "electrons_sur_P": "10"},
+            {"molecule": "SF₆", "electrons_sur_S": "12"},
+            {"molecule": "XeF₄", "electrons_sur_Xe": "12"}
+          ]
+        },
+        {
+          "title": "Radicaux libres",
+          "content": "Molécules avec un nombre impair d'électrons (électron non apparié).",
+          "example": "NO (11 e⁻), NO₂ (17 e⁻)"
+        }
+      ]
+    }
+  ]
+}

@@ -1,44 +1,44 @@
 // ============================================
-// CARROUSELS
+// CARROUSELS HORIZONTAUX (SCROLL-SNAP)
 // ============================================
 
-function scrollCarousel(trackId, direction) {
-    const track = document.getElementById(trackId);
-    if (!track) return;
-
-    const card = track.querySelector('.carousel-card');
+function scrollCarousel(carouselId, direction) {
+    const carousel = document.getElementById(carouselId);
+    if (!carousel) return;
+    
+    const card = carousel.querySelector('.carousel-card');
     if (!card) return;
-
+    
     const cardWidth = card.offsetWidth + 16;
-    track.scrollBy({
+    carousel.scrollBy({
         left: cardWidth * direction,
         behavior: 'smooth'
     });
-
+    
     if (typeof playSound === 'function') {
         playSound('swipe');
     }
 }
 
 function initCarousels() {
-    const wrappers = document.querySelectorAll('.carousel-wrapper');
-
-    wrappers.forEach(wrapper => {
-        const track = wrapper.querySelector('.carousel-track');
-        const leftBtn = wrapper.querySelector('.carousel-arrow.left');
-        const rightBtn = wrapper.querySelector('.carousel-arrow.right');
-
-        if (!track) return;
-
-        function updateArrows() {
-            const maxScroll = track.scrollWidth - track.clientWidth - 1;
-            if (leftBtn) leftBtn.disabled = track.scrollLeft <= 0;
-            if (rightBtn) rightBtn.disabled = track.scrollLeft >= maxScroll;
+    const carousels = document.querySelectorAll('.carousel-track');
+    
+    carousels.forEach(carousel => {
+        const wrapper = carousel.closest('.carousel-wrapper');
+        if (!wrapper) return;
+        
+        const prevBtn = wrapper.querySelector('.carousel-arrow.left');
+        const nextBtn = wrapper.querySelector('.carousel-arrow.right');
+        
+        function updateButtons() {
+            const maxScroll = carousel.scrollWidth - carousel.clientWidth - 1;
+            if (prevBtn) prevBtn.disabled = carousel.scrollLeft <= 0;
+            if (nextBtn) nextBtn.disabled = carousel.scrollLeft >= maxScroll;
         }
-
-        track.addEventListener('scroll', updateArrows);
-        window.addEventListener('resize', updateArrows);
-        setTimeout(updateArrows, 200);
+        
+        carousel.addEventListener('scroll', updateButtons);
+        window.addEventListener('resize', updateButtons);
+        setTimeout(updateButtons, 200);
     });
 }
 
@@ -53,10 +53,26 @@ function updateProgress(pct) {
     if (text) text.textContent = pct + '% complété';
 }
 
+function saveProgress(pct) {
+    if (typeof CONFIG !== 'undefined' && CONFIG.progress) {
+        localStorage.setItem(CONFIG.progress.storageKey, pct);
+    }
+}
+
+function loadProgress() {
+    if (typeof CONFIG !== 'undefined' && CONFIG.progress) {
+        const saved = localStorage.getItem(CONFIG.progress.storageKey);
+        return saved ? parseInt(saved) : 0;
+    }
+    return 0;
+}
+
 // ============================================
-// INIT
+// INITIALISATION
 // ============================================
 
 document.addEventListener('DOMContentLoaded', () => {
     initCarousels();
+    const progress = loadProgress();
+    updateProgress(progress);
 });
