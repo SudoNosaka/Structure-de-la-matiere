@@ -1,0 +1,401 @@
+{
+  "title": "Flashcards - Formules Clés",
+  "subtitle": "Rappel actif des formules essentielles",
+  "categories": [
+    {"id": "n1", "name": "Constituants & Radioactivité", "color": "#7C3AED"},
+    {"id": "n2", "name": "Loi de Désintégration", "color": "#6D28D9"},
+    {"id": "n3", "name": "Modèle de Bohr", "color": "#5B21B6"},
+    {"id": "n4", "name": "Schrödinger & Orbitales", "color": "#4C1D95"},
+    {"id": "n5", "name": "Configuration Électronique", "color": "#7C3AED"},
+    {"id": "n6", "name": "Slater & Tableau Périodique", "color": "#6D28D9"},
+    {"id": "n7", "name": "Liaison & Lewis", "color": "#5B21B6"},
+    {"id": "n8", "name": "VSEPR & Géométrie", "color": "#4C1D95"}
+  ],
+  "cards": [
+    {
+      "id": 1,
+      "category": "n1",
+      "front": "Notation d'un atome",
+      "back": "ᴬ_Z X\n\nA = nombre de masse (nucléons)\nZ = numéro atomique (protons)\nN = A - Z (neutrons)",
+      "difficulty": "facile"
+    },
+    {
+      "id": 2,
+      "category": "n1",
+      "front": "Nombre d'électrons d'un ion",
+      "back": "électrons = Z - q\n\nAnion (q < 0) : plus d'électrons\nCation (q > 0) : moins d'électrons",
+      "difficulty": "facile"
+    },
+    {
+      "id": 3,
+      "category": "n1",
+      "front": "Unité de masse atomique (uma)",
+      "back": "1 uma = 10⁻³ / Nₐ kg\n     ≈ 1,6605 × 10⁻²⁷ kg\n     = 931,5 MeV/c²",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 4,
+      "category": "n1",
+      "front": "Énergie cinétique moyenne (agitation thermique)",
+      "back": "E_cin = (3/2) · k_B · T\n\nk_B = 1,38 × 10⁻²³ J/K (Boltzmann)",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 5,
+      "category": "n2",
+      "front": "Loi de désintégration radioactive",
+      "back": "N(t) = N₀ · e^(-λt)\n\nN₀ : noyaux initiaux\nλ : constante radioactive (s⁻¹)",
+      "difficulty": "facile"
+    },
+    {
+      "id": 6,
+      "category": "n2",
+      "front": "Équation différentielle de la radioactivité",
+      "back": "dN/dt = -λ · N(t)\n\nLe signe - indique la décroissance",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 7,
+      "category": "n2",
+      "front": "Demi-vie (période T)",
+      "back": "T = ln(2) / λ ≈ 0,693 / λ\n\nTemps pour que N soit divisé par 2",
+      "difficulty": "facile"
+    },
+    {
+      "id": 8,
+      "category": "n2",
+      "front": "Activité radioactive A(t)",
+      "back": "A(t) = -dN/dt = λ · N(t)\n     = A₀ · e^(-λt)\n\nUnité : Becquerel (Bq) = 1 désintégration/s",
+      "difficulty": "facile"
+    },
+    {
+      "id": 9,
+      "category": "n2",
+      "front": "Curie (Ci)",
+      "back": "1 Ci = 3,7 × 10¹⁰ Bq\n\nActivité d'1 g de ²²⁶Ra",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 10,
+      "category": "n2",
+      "front": "Énergie de désintégration (Einstein)",
+      "back": "ΔE = Δm · c²\n\nΔm = défaut de masse\nE_cohésion = ΔE",
+      "difficulty": "facile"
+    },
+    {
+      "id": 11,
+      "category": "n2",
+      "front": "Formule après n périodes",
+      "back": "A(nT) = A₀ / 2ⁿ\n\nAprès n demi-vies, l'activité est divisée par 2ⁿ",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 12,
+      "category": "n2",
+      "front": "Datation au ¹⁴C (formule du temps)",
+      "back": "t = -ln(A(t)/A₀) / λ\n  = (T/ln2) · ln(A₀/A(t))\n\nLimite : ~50 000 ans",
+      "difficulty": "difficile"
+    },
+    {
+      "id": 13,
+      "category": "n3",
+      "front": "Énergie d'un photon",
+      "back": "E = h · ν = h · c / λ\n\nh = 6,626 × 10⁻³⁴ J·s",
+      "difficulty": "facile"
+    },
+    {
+      "id": 14,
+      "category": "n3",
+      "front": "Effet photoélectrique (Einstein)",
+      "back": "h · ν = W + ½ · m · v²\n\nW = travail d'extraction (énergie seuil)\nSi ν < ν₀ → aucun électron éjecté",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 15,
+      "category": "n3",
+      "front": "Longueur d'onde de de Broglie",
+      "back": "λ = h / p = h / (m · v)\n\nToute particule a une longueur d'onde associée",
+      "difficulty": "facile"
+    },
+    {
+      "id": 16,
+      "category": "n3",
+      "front": "Principe d'incertitude de Heisenberg",
+      "back": "Δx · Δp ≥ ħ / 2\n\nħ = h / (2π) = 1,055 × 10⁻³⁴ J·s",
+      "difficulty": "facile"
+    },
+    {
+      "id": 17,
+      "category": "n3",
+      "front": "Heisenberg (couple énergie-temps)",
+      "back": "ΔE · Δt ≥ ħ / 2",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 18,
+      "category": "n3",
+      "front": "Modèle de Bohr - Énergie",
+      "back": "Eₙ = -13,6 × Z² / n²  (en eV)\n\nn = 1, 2, 3... (couche)\nZ = numéro atomique",
+      "difficulty": "facile"
+    },
+    {
+      "id": 19,
+      "category": "n3",
+      "front": "Modèle de Bohr - Rayon",
+      "back": "rₙ = n² · a₀ / Z\n\na₀ = 0,529 Å (rayon de Bohr)",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 20,
+      "category": "n3",
+      "front": "Spectre de l'hydrogène (Rydberg)",
+      "back": "1/λ = R_H × (1/n² - 1/p²)\n\nR_H = 109 677 cm⁻¹\np > n (entiers)",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 21,
+      "category": "n3",
+      "front": "Séries spectrales de l'hydrogène",
+      "back": "n=1 : Lyman (UV)\nn=2 : Balmer (visible)\nn=3 : Paschen (IR)\nn=4 : Brackett (IR)\nn=5 : Pfund (IR)",
+      "difficulty": "facile"
+    },
+    {
+      "id": 22,
+      "category": "n4",
+      "front": "Équation de Schrödinger",
+      "back": "Ĥ · Ψ = E · Ψ\n\nĤ = opérateur hamiltonien\nΨ = fonction d'onde\nE = énergie",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 23,
+      "category": "n4",
+      "front": "Densité de probabilité",
+      "back": "dP = |Ψ|² · dτ\n\nΨ = R(r) · Y(θ,φ)",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 24,
+      "category": "n4",
+      "front": "Les 4 nombres quantiques",
+      "back": "n : principal (1, 2, 3...) → couche\nl : azimutal (0 à n-1) → sous-couche\nm : magnétique (-l à +l) → orientation\nmₛ : spin (±½) → spin électron",
+      "difficulty": "facile"
+    },
+    {
+      "id": 25,
+      "category": "n4",
+      "front": "Capacité des sous-couches",
+      "back": "s (l=0) : 1 orbitale → 2 e⁻ max\np (l=1) : 3 orbitales → 6 e⁻ max\nd (l=2) : 5 orbitales → 10 e⁻ max\nf (l=3) : 7 orbitales → 14 e⁻ max\n\nFormule : 2(2l+1) e⁻ max",
+      "difficulty": "facile"
+    },
+    {
+      "id": 26,
+      "category": "n4",
+      "front": "Capacité d'une couche n",
+      "back": "Nb orbitales = n²\nNb e⁻ max = 2n²\n\nn=1 : 2 e⁻\nn=2 : 8 e⁻\nn=3 : 18 e⁻\nn=4 : 32 e⁻",
+      "difficulty": "facile"
+    },
+    {
+      "id": 27,
+      "category": "n4",
+      "front": "Nombre de nœuds d'une orbitale",
+      "back": "Nœuds radiaux = n - l - 1\nNœuds angulaires = l\nTotal = n - 1",
+      "difficulty": "difficile"
+    },
+    {
+      "id": 28,
+      "category": "n5",
+      "front": "Principe de Pauli",
+      "back": "2 électrons max par orbitale\n(spins opposés : +½ et -½)\n\n2 électrons d'un atome ne peuvent avoir les 4 mêmes nombres quantiques",
+      "difficulty": "facile"
+    },
+    {
+      "id": 29,
+      "category": "n5",
+      "front": "Règle de Klechkowski",
+      "back": "Remplissage par n+l croissants\n\nSi égalité : plus petit n d'abord\n\nOrdre : 1s < 2s < 2p < 3s < 3p < 4s < 3d < 4p < 5s < 4d < 5p < 6s < 4f < 5d...",
+      "difficulty": "facile"
+    },
+    {
+      "id": 30,
+      "category": "n5",
+      "front": "Règle de Hund",
+      "back": "Maximiser les spins parallèles\n\nLes électrons occupent d'abord toutes les orbitales d'une sous-couche avant de s'apparier",
+      "difficulty": "facile"
+    },
+    {
+      "id": 31,
+      "category": "n5",
+      "front": "Exceptions à Klechkowski",
+      "back": "Cr (Z=24) : [Ar] 3d⁵ 4s¹\nCu (Z=29) : [Ar] 3d¹⁰ 4s¹\nMo, Ag, Au aussi\n\nStabilité des sous-couches demi-pleines ou pleines",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 32,
+      "category": "n5",
+      "front": "Ordre de remplissage vs écriture",
+      "back": "Remplissage : par n+l croissants\nÉcriture : par n croissants\n\nExemple Fe : \nOR : ...4s² 3d⁶\nConfig : ...3d⁶ 4s²",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 33,
+      "category": "n6",
+      "front": "Charge effective (Slater)",
+      "back": "Z_eff = Z - σ\n\nσ = constante d'écran (somme des contributions)",
+      "difficulty": "facile"
+    },
+    {
+      "id": 34,
+      "category": "n6",
+      "front": "Énergie avec Slater",
+      "back": "Eₙ = -13,6 × Z_eff² / n²  (en eV)\n\nApproximation hydrogénoïde",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 35,
+      "category": "n6",
+      "front": "Règles de Slater (ns, np)",
+      "back": "Même sous-couche : 0,35\nCouche n-1 : 0,85\nCouches ≤ n-2 : 1,00\n\nÉlectrons externes : σ = 0",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 36,
+      "category": "n6",
+      "front": "Règles de Slater (nd)",
+      "back": "Même sous-couche : 0,35\nTOUT le reste : 1,00\n\n(Couche n-1 et ≤ n-2 : 1,00)",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 37,
+      "category": "n6",
+      "front": "Propriétés périodiques - Rayon atomique",
+      "back": "Période (→) : diminue\nColonne (↓) : augmente\n\nZ augmente plus vite que l'effet d'écran",
+      "difficulty": "facile"
+    },
+    {
+      "id": 38,
+      "category": "n6",
+      "front": "Propriétés périodiques - Énergie d'ionisation",
+      "back": "Période (→) : augmente\nColonne (↓) : diminue\n\nAnomalies : EI(O) < EI(N) et EI(B) < EI(Be)",
+      "difficulty": "facile"
+    },
+    {
+      "id": 39,
+      "category": "n6",
+      "front": "Propriétés périodiques - Électronégativité",
+      "back": "Période (→) : augmente\nColonne (↓) : diminue\n\nF = 4,0 (max) | Fr = 0,7 (min)",
+      "difficulty": "facile"
+    },
+    {
+      "id": 40,
+      "category": "n6",
+      "front": "Rayon atomique vs ionique",
+      "back": "Cation : r(X) > r(Xⁿ⁺)  (plus petit)\nAnion : r(X) < r(Xⁿ⁻)  (plus gros)\n\nMême config : plus petit = plus gros Z",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 41,
+      "category": "n7",
+      "front": "Charge formelle",
+      "back": "CF = (e⁻ valence) - (e⁻ non-liants) - (nb liaisons)\n\nCF = 0 : structure idéale",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 42,
+      "category": "n7",
+      "front": "Énergie de liaison",
+      "back": "H-H : 436 kJ/mol\nO=O : 498 kJ/mol\nN≡N : 945 kJ/mol\nC-H : 413 kJ/mol\nC-C : 347 kJ/mol\nC=C : 614 kJ/mol",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 43,
+      "category": "n7",
+      "front": "Types de liaisons selon Δχ",
+      "back": "Δχ < 0,4 : covalente apolaire\n0,4 ≤ Δχ < 1,7 : covalente polaire\nΔχ ≥ 1,7 : ionique",
+      "difficulty": "facile"
+    },
+    {
+      "id": 44,
+      "category": "n7",
+      "front": "Moment dipolaire",
+      "back": "μ = q × d\n\nUnité : Debye (D)\n1 D = 3,336 × 10⁻³⁰ C·m",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 45,
+      "category": "n7",
+      "front": "Caractère ionique d'une liaison (Pauling)",
+      "back": "% ionique = 100 × (μ_exp / μ_th)\n\nμ_th = charge × distance",
+      "difficulty": "difficile"
+    },
+    {
+      "id": 46,
+      "category": "n7",
+      "front": "Règle de l'octet",
+      "back": "Atomes stables avec 8 e⁻ de valence\n(2 pour H, He)\n\nExceptions : Be (4), B (6), hypervalence (P, S, Cl...)",
+      "difficulty": "facile"
+    },
+    {
+      "id": 47,
+      "category": "n7",
+      "front": "Indice de liaison (OM)",
+      "back": "IL = (n_e-liant - n_e-antiliant) / 2\n\nIL > 0 : molécule existe\nIL = 0 : molécule n'existe pas",
+      "difficulty": "difficile"
+    },
+    {
+      "id": 48,
+      "category": "n7",
+      "front": "Règles de combinaison des OA",
+      "back": "1. Symétrie compatible (S ≠ 0)\n2. Électrons de valence\n3. OA proches en énergie (ΔE < 10-12 eV)",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 49,
+      "category": "n8",
+      "front": "Théorie VSEPR - Notation",
+      "back": "AXₘEₙ\n\nA = atome central\nX = atome lié\nE = doublet non-liant\nNombre stérique = m + n",
+      "difficulty": "facile"
+    },
+    {
+      "id": 50,
+      "category": "n8",
+      "front": "Géométries VSEPR - NS = 2, 3, 4",
+      "back": "NS=2 : AX₂ → linéaire (180°)\nNS=3 : AX₃ → trigonale (120°)\n         AX₂E → coudée (<120°)\nNS=4 : AX₄ → tétraèdre (109,5°)\n         AX₃E → pyramidale\n         AX₂E₂ → coudée",
+      "difficulty": "facile"
+    },
+    {
+      "id": 51,
+      "category": "n8",
+      "front": "Géométries VSEPR - NS = 5, 6",
+      "back": "NS=5 : AX₅ → bipyramide trigonale\n         AX₄E → bascule (see-saw)\n         AX₃E₂ → en T\n         AX₂E₃ → linéaire\nNS=6 : AX₆ → octaèdre\n         AX₅E → pyramidale base carrée\n         AX₄E₂ → carrée plane",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 52,
+      "category": "n8",
+      "front": "Hybridations",
+      "back": "sp : linéaire (180°)\nsp² : trigonale (120°)\nsp³ : tétraèdre (109,5°)\nsp³d : bipyramide (90°, 120°)\nsp³d² : octaèdre (90°)",
+      "difficulty": "facile"
+    },
+    {
+      "id": 53,
+      "category": "n8",
+      "front": "Relation NS ↔ hybridation",
+      "back": "NS = 2 → sp\nNS = 3 → sp²\nNS = 4 → sp³\nNS = 5 → sp³d\nNS = 6 → sp³d²",
+      "difficulty": "facile"
+    },
+    {
+      "id": 54,
+      "category": "n8",
+      "front": "Polarité d'une molécule",
+      "back": "Polaire si :\n1. Liaisons polaires (Δχ ≠ 0)\n2. Géométrie asymétrique\n\nExemples : H₂O (polaire), CO₂ (apolaire), NH₃ (polaire), CH₄ (apolaire)",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 55,
+      "category": "n8",
+      "front": "Ordre de répulsion VSEPR",
+      "back": "Doublet non-liant > Doublet liant\n\nLes doublets non-liants \"écrasent\" les angles",
+      "difficulty": "facile"
+    }
+  ]
+}

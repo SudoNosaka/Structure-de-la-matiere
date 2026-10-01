@@ -1368,6 +1368,345 @@ footer {
         width: 900px;
     }
 }
+
+/* ============================================
+   FLASHCARDS
+   ============================================ */
+
+.fc-filters {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    border: 2px solid var(--border);
+}
+
+.fc-filter-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.fc-filter-group label {
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: 0.9rem;
+}
+
+.fc-filter-group select {
+    padding: 0.5rem 0.8rem;
+    border: 2px solid var(--border);
+    border-radius: 6px;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    cursor: pointer;
+    min-width: 180px;
+}
+
+.fc-filter-group select:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+/* PROGRESSION */
+.fc-progress {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+#fc-counter {
+    font-weight: 700;
+    color: var(--accent);
+    font-size: 1.1rem;
+    min-width: 60px;
+}
+
+.fc-progress-bar {
+    flex: 1;
+    height: 8px;
+    background: var(--bg-tertiary);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.fc-progress-fill {
+    height: 100%;
+    background: var(--accent);
+    border-radius: 4px;
+    transition: width 0.4s ease;
+    width: 0%;
+}
+
+/* CARTE PRINCIPALE */
+.fc-main {
+    background: var(--bg-secondary);
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.fc-card-container {
+    perspective: 1000px;
+    margin: 1.5rem 0;
+    cursor: pointer;
+}
+
+.fc-card {
+    position: relative;
+    width: 100%;
+    min-height: 280px;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+}
+
+.fc-card.flipped {
+    transform: rotateY(180deg);
+}
+
+.fc-card.slide-in {
+    animation: slideIn 0.4s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fc-card.flipped.slide-in {
+    animation: slideInFlipped 0.4s ease;
+}
+
+@keyframes slideInFlipped {
+    from {
+        opacity: 0;
+        transform: translateX(30px) rotateY(180deg);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0) rotateY(180deg);
+    }
+}
+
+.fc-card-face {
+    position: absolute;
+    width: 100%;
+    min-height: 280px;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border-radius: 12px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 2px solid var(--border);
+}
+
+.fc-front {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+.fc-back {
+    background: var(--accent);
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.fc-category-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: white;
+}
+
+.fc-card-content {
+    font-size: 1.3rem;
+    font-weight: 600;
+    line-height: 1.6;
+    max-width: 100%;
+    word-wrap: break-word;
+}
+
+.fc-back .fc-card-content {
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-align: left;
+}
+
+.fc-card-hint {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+/* CONTRÔLES */
+.fc-controls {
+    display: flex;
+    gap: 0.8rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+
+.fc-btn {
+    padding: 0.7rem 1.2rem;
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.9rem;
+}
+
+.fc-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px var(--shadow);
+}
+
+.fc-btn-prev, .fc-btn-next {
+    background: var(--bg-tertiary);
+}
+
+.fc-btn-prev:hover, .fc-btn-next:hover {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+}
+
+.fc-btn-review {
+    background: #FEF3C7;
+    border-color: #F59E0B;
+    color: #92400E;
+}
+
+.fc-btn-review:hover, .fc-btn-review.active {
+    background: #F59E0B;
+    color: white;
+}
+
+.fc-btn-mastered {
+    background: #D1FAE5;
+    border-color: var(--success);
+    color: #065F46;
+}
+
+.fc-btn-mastered:hover, .fc-btn-mastered.active {
+    background: var(--success);
+    color: white;
+}
+
+[data-theme="dark"] .fc-btn-review {
+    background: #78350F;
+    border-color: #F59E0B;
+    color: #FDE68A;
+}
+
+[data-theme="dark"] .fc-btn-mastered {
+    background: #064E3B;
+    border-color: var(--success);
+    color: #6EE7B7;
+}
+
+/* STATS */
+.fc-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.fc-stat {
+    background: var(--bg-secondary);
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    padding: 1.2rem;
+    text-align: center;
+}
+
+.fc-stat-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 0.3rem;
+}
+
+.fc-stat-label {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .fc-filters {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .fc-filter-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .fc-filter-group select {
+        width: 100%;
+    }
+    
+    .fc-card {
+        min-height: 220px;
+    }
+    
+    .fc-card-face {
+        min-height: 220px;
+        padding: 1.5rem;
+    }
+    
+    .fc-card-content {
+        font-size: 1.1rem;
+    }
+    
+    .fc-back .fc-card-content {
+        font-size: 0.95rem;
+    }
+    
+    .fc-controls {
+        flex-direction: column;
+    }
+    
+    .fc-btn {
+        width: 100%;
+    }
+    
+    .fc-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 /* ============================================
    BOUTONS & INDICATEUR
    ============================================ */
@@ -1380,3 +1719,4 @@ footer {
     border-radius: 50%;
     background: var(--bg-secondary);
     color
+    

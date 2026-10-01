@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcards - Formules</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/animations.css">
+</head>
+<body>
+    <header class="fade-in">
+        <div class="header-content">
+            <h1 id="fc-title">Chargement...</h1>
+            <p class="subtitle" id="fc-subtitle"></p>
+        </div>
+        <nav class="main-nav">
+            <a href="../index.html" class="nav-link">Accueil</a>
+            <a href="../parametres.html" class="nav-link settings-icon">⚙</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <!-- FILTRES -->
+        <section class="fc-filters fade-in">
+            <div class="fc-filter-group">
+                <label>Catégorie :</label>
+                <select id="category-filter" onchange="filterCards()">
+                    <option value="all">Toutes</option>
+                </select>
+            </div>
+            <div class="fc-filter-group">
+                <label>Mode :</label>
+                <select id="mode-filter" onchange="filterCards()">
+                    <option value="all">Toutes les cartes</option>
+                    <option value="toreview">À revoir</option>
+                    <option value="mastered">Maîtrisées</option>
+                </select>
+            </div>
+            <button class="btn-secondary" onclick="resetProgress()">Réinitialiser</button>
+        </section>
+
+        <!-- CARTE PRINCIPALE -->
+        <section class="fc-main fade-in">
+            <div class="fc-progress">
+                <span id="fc-counter">0 / 0</span>
+                <div class="fc-progress-bar">
+                    <div class="fc-progress-fill" id="fc-progress-fill"></div>
+                </div>
+            </div>
+
+            <div class="fc-card-container" onclick="flipCard()">
+                <div class="fc-card" id="fc-card">
+                    <div class="fc-card-face fc-front">
+                        <div class="fc-category-badge" id="fc-category-badge">Catégorie</div>
+                        <div class="fc-card-content" id="fc-front-content">Question</div>
+                        <div class="fc-card-hint">Clique pour retourner</div>
+                    </div>
+                    <div class="fc-card-face fc-back">
+                        <div class="fc-card-content" id="fc-back-content">Réponse</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CONTRÔLES -->
+            <div class="fc-controls">
+                <button class="fc-btn fc-btn-prev" onclick="previousCard()">← Précédent</button>
+                <button class="fc-btn fc-btn-review" onclick="markToReview()" id="btn-review">À revoir</button>
+                <button class="fc-btn fc-btn-mastered" onclick="markMastered()" id="btn-mastered">Maîtrisée ✓</button>
+                <button class="fc-btn fc-btn-next" onclick="nextCard()">Suivant →</button>
+            </div>
+        </section>
+
+        <!-- STATS -->
+        <section class="fc-stats fade-in">
+            <div class="fc-stat">
+                <div class="fc-stat-value" id="stat-total">0</div>
+                <div class="fc-stat-label">Total</div>
+            </div>
+            <div class="fc-stat">
+                <div class="fc-stat-value" id="stat-mastered">0</div>
+                <div class="fc-stat-label">Maîtrisées</div>
+            </div>
+            <div class="fc-stat">
+                <div class="fc-stat-value" id="stat-review">0</div>
+                <div class="fc-stat-label">À revoir</div>
+            </div>
+            <div class="fc-stat">
+                <div class="fc-stat-value" id="stat-percent">0%</div>
+                <div class="fc-stat-label">Progression</div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="fade-in">
+        <p>Structure de la Matière - Flashcards</p>
+    </footer>
+
+    <script src="../JS/config.js"></script>
+    <script src="../JS/theme.js"></script>
+    <script src="../JS/sound.js"></script>
+    <script src="../JS/flashcards-renderer.js"></script>
+</body>
+</html>
